@@ -1,6 +1,6 @@
 {
   "partner": "Lamatsch Roland",
-  "frissitve": "2026.06.15. 15:10",
+  "frissitve": "2026.06.15. 15:27",
   "ugyletek": [
     {
       "ugyfel": "Montvai Gábor",
@@ -8,7 +8,7 @@
       "bank": "",
       "statusz": "2. Beadás alatt",
       "eh": 433,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Gartai Ádám",
@@ -24,7 +24,7 @@
       "bank": "Erste",
       "statusz": "3. Bírálat",
       "eh": 360,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Montvai Gábor",
@@ -32,7 +32,7 @@
       "bank": "Erste",
       "statusz": "0. Új",
       "eh": 60,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Június"
     },
     {
       "ugyfel": "Magyar Nikolett",
@@ -40,7 +40,7 @@
       "bank": "Erste",
       "statusz": "0. Új",
       "eh": 60,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Június"
     }
   ]
 }
