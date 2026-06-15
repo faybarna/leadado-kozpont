@@ -419,6 +419,8 @@ a.folder-card:hover{
 .folder-label{ flex: 1; font-weight: 600; font-size: 15px; }
 .folder-arrow{ color: var(--brass); font-size: 18px; flex-shrink: 0; }
 
+a.folder-card--wide{ grid-column: 1 / -1; }
+
 @media(max-width: 540px){
   .folder-grid{ grid-template-columns: 1fr; }
 }
