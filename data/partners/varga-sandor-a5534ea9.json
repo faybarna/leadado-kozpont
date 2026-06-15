@@ -1,0 +1,78 @@
+{
+  "partner": "Varga Sándor",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Tóth Barnabás",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 280,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Tóth Ádám",
+      "termek": "Jelzálog",
+      "bank": "K&H",
+      "statusz": "5. Folyósítva",
+      "eh": 266,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Hunyák Dávid",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 42,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szigetvári Emma",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 20,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Szigetvári Emma",
+      "termek": "Babaváró",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 16,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Móra Alexandra",
+      "termek": "Munkáshitel",
+      "bank": "UniCredit",
+      "statusz": "5. Folyósítva",
+      "eh": 8,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Barta Dénes",
+      "termek": "Babaváró",
+      "bank": "",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Barta Dénes",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Barta Dénes felesége",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
