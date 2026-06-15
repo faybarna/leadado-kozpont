@@ -1,0 +1,182 @@
+{
+  "partner": "Hajtó Krisztián",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Kohut Szilárd",
+      "termek": "Jelzálog",
+      "bank": "K&H",
+      "statusz": "5. Folyósítva",
+      "eh": 430,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Pálfy András",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "3. Bírálat",
+      "eh": 333,
+      "elszamolasi_honap": "2026. Augusztus"
+    },
+    {
+      "ugyfel": "Búzás Rita",
+      "termek": "Jelzálog",
+      "bank": "UniCredit",
+      "statusz": "3. Bírálat",
+      "eh": 333,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Kovács Fanni",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "2. Beadás alatt",
+      "eh": 333,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Torma Péter",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 282,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Varga Balázs",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 219,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Tóth Balázs",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "5. Folyósítva",
+      "eh": 200,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Balogh Angelika",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 186,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Csaplárék",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 166,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Csikós Kinga",
+      "termek": "Jelzálog",
+      "bank": "UniCredit",
+      "statusz": "4. Jóváhagyva",
+      "eh": 133,
+      "elszamolasi_honap": "2026. Augusztus"
+    },
+    {
+      "ugyfel": "Torma Hertner Zsuzsanna",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 133,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Marchut Réka",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "2. Beadás alatt",
+      "eh": 100,
+      "elszamolasi_honap": "2026. Augusztus"
+    },
+    {
+      "ugyfel": "Pálfy András",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Varga Balázs",
+      "termek": "SZK",
+      "bank": "CIB",
+      "statusz": "5. Folyósítva",
+      "eh": 54,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Bakó László",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "2. Beadás alatt",
+      "eh": 47,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Tabajdi",
+      "termek": "Jelzálog",
+      "bank": "K&H",
+      "statusz": "3. Bírálat",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szimilkó Máté",
+      "termek": "Jelzálog",
+      "bank": "MBH",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Gazsi Adrienn",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Czégény Ágnes",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Lázár Marcell",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Vincze Marcell",
+      "termek": "Jelzálog",
+      "bank": "K&H",
+      "statusz": "2. Beadás alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Kovács Fanni",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
