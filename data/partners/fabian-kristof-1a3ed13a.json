@@ -1,0 +1,150 @@
+{
+  "partner": "Fábián Kristóf",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Róth István",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "5. Folyósítva",
+      "eh": 300,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Szűcs Armand",
+      "termek": "SZK",
+      "bank": "CIB",
+      "statusz": "5. Folyósítva",
+      "eh": 300,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Szatmári László",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "3. Bírálat",
+      "eh": 166,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Sándor Szimonetta",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Takács Alexandra",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Németh Attila",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Bartos Tímea",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "Pingelés",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Hén Dominik",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szatmári László",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Szatmáriné Kapás Marian",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Zalavári Ádám",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "Pingelés",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Kelemen Alex",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "Pingelés",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Váradi Nelli",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "Pingelés",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Bakos Olivér",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Lánczi Bálint",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "Pingelés",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Illés Katalin",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 25,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Magyar Zsolt",
+      "termek": "Munkáshitel",
+      "bank": "Erste",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 8,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Fonyó Diána",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
