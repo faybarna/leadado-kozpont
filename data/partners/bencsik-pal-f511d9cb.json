@@ -1,0 +1,182 @@
+{
+  "partner": "Bencsik Pál",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Németh András",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "3. Bírálat",
+      "eh": 220,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Virágos Tóth család",
+      "termek": "Jelzálog",
+      "bank": "MBH",
+      "statusz": "3. Bírálat",
+      "eh": 200,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Kocsis Sarolta",
+      "termek": "SZK",
+      "bank": "MBH",
+      "statusz": "2. Beadás alatt",
+      "eh": 150,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Bágyi István",
+      "termek": "SZK",
+      "bank": "MBH",
+      "statusz": "2. Beadás alatt",
+      "eh": 150,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Bak Alexandra",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "3. Bírálat",
+      "eh": 140,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Kis Attila",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "2. Beadás alatt",
+      "eh": 136,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Spillenberg Richárd",
+      "termek": "SZK",
+      "bank": "Erste",
+      "statusz": "2. Beadás alatt",
+      "eh": 116,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Jahoda Ágota",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 84,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Kocsis Sarolta",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Spillenberg Richárd",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 42,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Baranyi Fábián",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "Pingelés",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Bak Alexandra",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Kis Attila",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Farkas Barna Norbert",
+      "termek": "Babaváró",
+      "bank": "CIB",
+      "statusz": "5. Folyósítva",
+      "eh": 16,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Kosiczki József",
+      "termek": "Jelzálog",
+      "bank": "MBH",
+      "statusz": "2. Beadás alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szabó Attila",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szalinka Richárd",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szalinka Richárd",
+      "termek": "SZK",
+      "bank": "",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Spillengerg Réka",
+      "termek": "Jelzálog",
+      "bank": "MBH",
+      "statusz": "2. Beadás alatt",
+      "eh": 0,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Spillenberg Réka",
+      "termek": "Bankszámla",
+      "bank": "MBH",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Petrikovits család",
+      "termek": "Jelzálog",
+      "bank": "MBH",
+      "statusz": "2. Beadás alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Papp Szabó Vivien",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
