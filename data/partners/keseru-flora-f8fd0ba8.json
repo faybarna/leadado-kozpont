@@ -1,0 +1,102 @@
+{
+  "partner": "Keserű Flóra Luca",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Mészáros László",
+      "termek": "Jelzálog",
+      "bank": "CIB",
+      "statusz": "2. Beadás alatt",
+      "eh": 266,
+      "elszamolasi_honap": "2026. Augusztus"
+    },
+    {
+      "ugyfel": "Bálint Erika",
+      "termek": "Jelzálog",
+      "bank": "K&H",
+      "statusz": "3. Bírálat",
+      "eh": 176,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Pásztor Jázmin",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Séra Milán",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Mártanfalvi Zoltán",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Mártanfalvi Zoltán",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Erdős Attila",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Irlanda Benedek",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Kőszegi Kornél",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Mártanfalvi Zoltán",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Irlanda Benedek",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Erdős Attila",
+      "termek": "Munkáshitel",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 8,
+      "elszamolasi_honap": "2026. Július"
+    }
+  ]
+}

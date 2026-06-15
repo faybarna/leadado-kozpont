@@ -1,0 +1,46 @@
+{
+  "partner": "Lamatsch Roland",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Montvai Gábor",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "2. Beadás alatt",
+      "eh": 433,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Gartai Ádám",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "4. Jóváhagyva",
+      "eh": 400,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Németh Márkék újép",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "3. Bírálat",
+      "eh": 360,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Montvai Gábor",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "0. Új",
+      "eh": 60,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Magyar Nikolett",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "0. Új",
+      "eh": 60,
+      "elszamolasi_honap": ""
+    }
+  ]
+}

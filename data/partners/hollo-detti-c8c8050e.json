@@ -1,0 +1,54 @@
+{
+  "partner": "Holló Detti",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Czink László",
+      "termek": "Jelzálog",
+      "bank": "OTP",
+      "statusz": "5. Folyósítva",
+      "eh": 100,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Ullmann-Nagy Boglárka",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "3. Megkötve",
+      "eh": 60,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Szilágyi Levente",
+      "termek": "SZK",
+      "bank": "UniCredit",
+      "statusz": "3. Bírálat",
+      "eh": 40,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Pápai Péter",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Medvedovszky Ádám",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Unghy Noémi",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    }
+  ]
+}

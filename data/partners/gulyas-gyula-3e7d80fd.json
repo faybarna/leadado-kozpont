@@ -1,0 +1,14 @@
+{
+  "partner": "Gulyás Gyula",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Gulyás Máté",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 42,
+      "elszamolasi_honap": ""
+    }
+  ]
+}

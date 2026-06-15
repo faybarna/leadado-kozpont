@@ -1,0 +1,142 @@
+{
+  "partner": "Pirka András Levente",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Nánási Noémi",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "5. Folyósítva",
+      "eh": 333,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Sellei Abigél",
+      "termek": "SZK",
+      "bank": "UniCredit",
+      "statusz": "2. Beadás alatt",
+      "eh": 280,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Simon Bálint",
+      "termek": "Jelzálog",
+      "bank": "UniCredit",
+      "statusz": "3. Bírálat",
+      "eh": 113,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Martina és párja",
+      "termek": "Jelzálog",
+      "bank": "MBH",
+      "statusz": "2. Beadás alatt",
+      "eh": 80,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Molnár Tamás",
+      "termek": "SZK",
+      "bank": "Erste",
+      "statusz": "5. Folyósítva",
+      "eh": 66,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Nánási Noémi",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "3. Megkötve",
+      "eh": 60,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Ökrös Szabolcs",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 58,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Encze Emese",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 47,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Sellei Abigél",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Sellei Abigél",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Márkus Molli",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "3. Megkötve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Veress András",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "Pingelés",
+      "eh": 42,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Pirka András Levente",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Hidasiné Nánási Nikolett",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Hidasi Zsolt Milán",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szabó Sallai Beatrix",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Martina és párja",
+      "termek": "Bankszámla",
+      "bank": "MBH",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    }
+  ]
+}

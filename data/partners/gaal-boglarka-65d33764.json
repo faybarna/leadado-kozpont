@@ -1,0 +1,54 @@
+{
+  "partner": "Gaál Boglárka",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Tyukodi Dávid",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "Pingelés",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Túróné Burai",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "Pingelés",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Bakó Klaudia",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Berki",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Berkiné Varga Beatrix",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Bogye Judit",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 20,
+      "elszamolasi_honap": "2026. Június"
+    }
+  ]
+}

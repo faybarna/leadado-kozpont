@@ -1,0 +1,70 @@
+{
+  "partner": "Gentischer Richárd",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Sárkövi Ádám",
+      "termek": "Jelzálog",
+      "bank": "OTP",
+      "statusz": "2. Beadás alatt",
+      "eh": 186,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Csordás",
+      "termek": "Jelzálog",
+      "bank": "CIB",
+      "statusz": "3. Bírálat",
+      "eh": 60,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Horváth Krisztián",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Április"
+    },
+    {
+      "ugyfel": "Törteli Hajna",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Kovács Péter",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szmolen Dénes",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "3. Megkötve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Tugyi Istvánné",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "3. Megkötve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Sárkövi Ádám",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
