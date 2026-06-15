@@ -1,0 +1,70 @@
+{
+  "partner": "Angelcsev Zoé",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Ernszt Ildikó",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 83,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Nagy Krisztina",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Angelcsev Zoé saját",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Aranyosi Péter",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Seres Viktória",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "0. Új",
+      "eh": 41,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Seres Viktória",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "0. Új",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Aranyosi Péter céges",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "Pingelés",
+      "eh": 16,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Mizsei Erzsébet",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 16,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
