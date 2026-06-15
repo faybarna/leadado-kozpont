@@ -1,0 +1,94 @@
+{
+  "partner": "Steinmetz Edvárd",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Kacsics István",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 117,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Trepka Helga Virág",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "3. Bírálat",
+      "eh": 66,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Nap Áron",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Sándor Fanni Bernadett",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Kacsics István",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Trepka Helga Virág",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Nap Áron",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "3. Bírálat",
+      "eh": 25,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Tóth-Kiss Boglárka",
+      "termek": "Babaváró",
+      "bank": "",
+      "statusz": "2. Beadás alatt",
+      "eh": 16,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Pásztor Péter Pál",
+      "termek": "SZK",
+      "bank": "Erste",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Tóth-Kiss Boglárka",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Tóth Alex",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
