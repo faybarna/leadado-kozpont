@@ -392,6 +392,37 @@ a:hover{ text-decoration: underline; }
   margin-bottom: 10px;
 }
 
+/* ============================== FOLDER GRID (Drive mappa kártyák) ============================== */
+
+.folder-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+a.folder-card{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .15s, box-shadow .15s;
+}
+a.folder-card:hover{
+  border-color: var(--brass);
+  box-shadow: 0 4px 14px rgba(168,118,62,.15);
+}
+.folder-icon{ font-size: 22px; flex-shrink: 0; }
+.folder-label{ flex: 1; font-weight: 600; font-size: 15px; }
+.folder-arrow{ color: var(--brass); font-size: 18px; flex-shrink: 0; }
+
+@media(max-width: 540px){
+  .folder-grid{ grid-template-columns: 1fr; }
+}
+
 /* ============================== TOOL CARD (interaktív eszköz link) ============================== */
 
 a.tool-card{
