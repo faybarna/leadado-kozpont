@@ -1,6 +1,6 @@
 {
   "partner": "Holló Detti",
-  "frissitve": "2026.06.15. 18:31",
+  "frissitve": "2026.06.15. 20:42",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -21,7 +21,7 @@
     {
       "ugyfel": "Szilágyi Levente",
       "termek": "SZK",
-      "bank": "UniCredit",
+      "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 40,
       "elszamolasi_honap": "2026. Július"
@@ -47,6 +47,14 @@
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szilágyi Levente",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "1. Kalkuláció kiküldve",
       "eh": 33,
       "elszamolasi_honap": ""
     }
