@@ -1,0 +1,54 @@
+{
+  "partner": "Kópis László",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Lamos Dávid",
+      "termek": "Jelzálog",
+      "bank": "MBH",
+      "statusz": "5. Folyósítva",
+      "eh": 266,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Lamos Dávid",
+      "termek": "Bankszámla",
+      "bank": "MBH",
+      "statusz": "3. Megkötve",
+      "eh": 123,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Szilágyi Csaba",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 25,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Scsibrán Ádám",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "Pingelés",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Máté Gábor",
+      "termek": "SZK",
+      "bank": "",
+      "statusz": "2. Beadás alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Máté Gábor",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
