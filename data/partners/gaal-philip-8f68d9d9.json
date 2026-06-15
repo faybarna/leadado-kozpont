@@ -1,0 +1,62 @@
+{
+  "partner": "Gaál Philip Paul",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Kakucsi Sándor",
+      "termek": "SZK",
+      "bank": "CIB",
+      "statusz": "5. Folyósítva",
+      "eh": 226,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Magyariné Szén Fruzsina",
+      "termek": "SZK",
+      "bank": "MBH",
+      "statusz": "5. Folyósítva",
+      "eh": 74,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Sántha Amália",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "3. Bírálat",
+      "eh": 33,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Sántha Amália",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 33,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Nagy Nikolett Bodza",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Heliman Benjámin és párja",
+      "termek": "Babaváró",
+      "bank": "CIB",
+      "statusz": "3. Bírálat",
+      "eh": 16,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Száva Katalin",
+      "termek": "Munkáshitel",
+      "bank": "Raiffeisen",
+      "statusz": "3. Bírálat",
+      "eh": 8,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
