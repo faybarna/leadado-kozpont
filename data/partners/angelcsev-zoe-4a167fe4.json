@@ -1,6 +1,6 @@
 {
   "partner": "Angelcsev Zoé",
-  "frissitve": "2026.06.15. 18:31",
+  "frissitve": "2026.06.15. 20:42",
   "ugyletek": [
     {
       "ugyfel": "Ernszt Ildikó",
@@ -38,7 +38,7 @@
       "ugyfel": "Seres Viktória",
       "termek": "SZK",
       "bank": "Raiffeisen",
-      "statusz": "0. Új",
+      "statusz": "1. Előminősítés alatt",
       "eh": 41,
       "elszamolasi_honap": ""
     },
@@ -46,7 +46,7 @@
       "ugyfel": "Seres Viktória",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
-      "statusz": "0. Új",
+      "statusz": "1. Kalkuláció kiküldve",
       "eh": 33,
       "elszamolasi_honap": ""
     },
