@@ -1,0 +1,118 @@
+{
+  "partner": "Lőrincz Sándor",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Takács Makó Eszter",
+      "termek": "Jelzálog",
+      "bank": "OTP",
+      "statusz": "2. Beadás alatt",
+      "eh": 626,
+      "elszamolasi_honap": "2026. Augusztus"
+    },
+    {
+      "ugyfel": "Kunné Csizi Petra",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "5. Folyósítva",
+      "eh": 333,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Pirisi Attila",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 313,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szakmárié",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "2. Beadás alatt",
+      "eh": 260,
+      "elszamolasi_honap": "2026. Augusztus"
+    },
+    {
+      "ugyfel": "Szabó Adrienn",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "3. Bírálat",
+      "eh": 240,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Gólya Gergő",
+      "termek": "Jelzálog",
+      "bank": "MBH",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 220,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Kóczán Emese",
+      "termek": "Jelzálog",
+      "bank": "UniCredit",
+      "statusz": "5. Folyósítva",
+      "eh": 110,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Takács Márk",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Takács-Makó Réka",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szabó Csaba",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Tulipán- Farkas Regina",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 33,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Gólya Gergő",
+      "termek": "Babaváró",
+      "bank": "Erste",
+      "statusz": "5. Folyósítva",
+      "eh": 16,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Varga Szabolcs",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Muzslai - Szakmári",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "2. Beadás alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
