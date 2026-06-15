@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.15. 14:14",
+  "frissitve": "2026.06.15. 14:35",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -68,7 +68,7 @@
     },
     {
       "ugyfel": "Márton Zoltán",
-      "termak": "Jelzálog",
+      "termek": "Jelzálog",
       "bank": "Raiffeisen",
       "statusz": "Ügyfélre/munkatársra várunk",
       "eh": 73,
@@ -99,7 +99,7 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Habenyak Krisztina",
+      "ugyfel": "Habenyák Krisztina",
       "termek": "Bankszámla",
       "bank": "CIB",
       "statusz": "2. Kötési kiküldve",
@@ -188,9 +188,9 @@
     },
     {
       "ugyfel": "Bugyis Dominika",
-      "termek": "Munkáhitel",
+      "termek": "Munkáshitel",
       "bank": "",
-      "statusz": "1. Előminñsítés alatt",
+      "statusz": "1. Előminősítés alatt",
       "eh": 8,
       "elszamolasi_honap": ""
     },
@@ -211,7 +211,7 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Gerznyi párja",
+      "ugyfel": "Gerényi párja",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "0. Új",
