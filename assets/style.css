@@ -287,6 +287,20 @@ a:hover{ text-decoration: underline; }
 }
 .btn-outline:hover{ background: var(--paper); }
 
+.contact-strip{
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.btn-contact{
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+  font-size: 13px;
+}
+.btn-contact:hover{ background: var(--paper); text-decoration: none; }
+
 /* Quick-link grid a kezdőlapon */
 .grid{
   display: grid;

@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "leadado-kozpont",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8789"],
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "8789", "."],
       "port": 8789
     }
   ]
