@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dokumentum Checklist — Fáy Barna Hitelspecialista</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --dark:#0f1923;--dark2:#1a2633;--dark3:#243142;
+  --cream:#f4f1ec;--cream2:#ede9e2;
+  --text:#1a2633;--muted:#8a9ab0;--border:#2e3f52;
+  --green:#22c97a;--green-lt:#f0fdf6;--green-bd:#bbf0d6;
+  --amber:#f0a30a;--amber-lt:#fffbf0;--amber-bd:#f5e0a0;
+  --blue:#3b9eff;--blue-lt:#f0f7ff;--blue-bd:#bbd8f8;
+  --red:#e84040;--red-lt:#fff5f5;--red-bd:#ffc5c5;
+  --font:'Sora',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--cream);font-family:var(--font);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh;}
+.wrap{max-width:720px;margin:0 auto;}
+
+/* HEADER */
+.header{background:var(--dark);padding:28px 40px 24px;}
+.brand{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.brand-dot{width:4px;height:4px;border-radius:50%;background:var(--blue);display:inline-block;}
+.h-title{font-size:21px;font-weight:600;color:#fff;letter-spacing:-.02em;margin-bottom:3px;}
+.h-sub{font-size:13px;color:var(--muted);font-weight:300;}
+
+/* CONFIG */
+.config{background:var(--dark2);padding:24px 40px;border-bottom:1px solid var(--border);}
+.field{margin-bottom:18px;}
+.field:last-child{margin-bottom:0;}
+.label{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;display:block;}
+.row{display:flex;gap:8px;flex-wrap:wrap;}
+.pill{font-size:13px;font-weight:500;padding:8px 18px;border:1px solid var(--border);border-radius:20px;color:var(--muted);background:transparent;cursor:pointer;transition:all .15s;white-space:nowrap;font-family:var(--font);}
+.pill:hover{border-color:#4a6280;color:#c8d8e8;}
+.pill.active{background:var(--blue);border-color:var(--blue);color:#fff;}
+.pill.active.green{background:var(--green);border-color:var(--green);color:#0a3d22;}
+.pill.active.amber{background:var(--amber);border-color:var(--amber);color:#3d2700;}
+.pill.active.red{background:var(--red);border-color:var(--red);color:#fff;}
+.ugyfel-input{background:var(--dark3);border:1px solid var(--border);border-radius:8px;color:#e0eaf8;font-family:var(--font);font-size:14px;padding:9px 14px;width:100%;outline:none;transition:border-color .15s;}
+.ugyfel-input::placeholder{color:var(--muted);}
+.ugyfel-input:focus{border-color:var(--blue);}
+
+/* BODY */
+.body{padding:28px 40px;}
+.empty-state{text-align:center;padding:60px 20px;color:var(--muted);}
+.empty-icon{font-size:32px;margin-bottom:12px;opacity:.4;}
+.empty-text{font-size:14px;}
+
+/* PROGRESS */
+.progress-bar-wrap{margin-bottom:24px;}
+.progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.progress-label{font-family:var(--mono);font-size:11px;color:var(--muted);}
+.progress-count{font-family:var(--mono);font-size:13px;font-weight:500;}
+.progress-track{height:4px;background:var(--cream2);border-radius:2px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--green);border-radius:2px;transition:width .3s ease;}
+
+/* SECTIONS */
+.section{margin-bottom:24px;}
+.section-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--cream2);}
+.section-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.section-dot.blue{background:var(--blue);}
+.section-dot.green{background:var(--green);}
+.section-dot.amber{background:var(--amber);}
+.section-dot.purple{background:#a78bfa;}
+.section-dot.teal{background:#2dd4bf;}
+.section-title{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+
+/* NOTICE */
+.notice{display:flex;gap:10px;align-items:flex-start;background:var(--amber-lt);border:1px solid var(--amber-bd);border-radius:8px;padding:12px 14px;margin-bottom:16px;}
+.notice-icon{color:var(--amber);flex-shrink:0;margin-top:1px;font-style:normal;}
+.notice-text{font-size:13px;line-height:1.6;}
+
+/* ITEMS */
+.item{display:flex;align-items:flex-start;gap:12px;padding:13px 14px;border-radius:8px;margin-bottom:6px;border:1px solid #e5e0d8;background:#fff;cursor:pointer;transition:background .1s,border-color .1s;user-select:none;}
+.item:hover{background:#faf8f5;}
+.item.checked{background:var(--green-lt);border-color:var(--green-bd);}
+.item-box{width:18px;height:18px;border-radius:4px;border:1.5px solid #c5bdb0;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.item.checked .item-box{background:var(--green);border-color:var(--green);}
+.item-check{display:none;color:#fff;font-size:11px;font-weight:700;}
+.item.checked .item-check{display:block;}
+.item-body{flex:1;}
+.item-text{font-size:14px;font-weight:500;line-height:1.4;}
+.item.checked .item-text{color:#5a7a6a;text-decoration:line-through;text-decoration-color:var(--green);}
+.item-note{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.5;}
+.item-note a{color:var(--blue);text-decoration:none;}
+.item-note a:hover{text-decoration:underline;}
+.item.checked .item-note{color:#a0c0b0;}
+.expires-badge{font-family:var(--mono);font-size:10px;font-weight:500;padding:2px 7px;border-radius:4px;margin-top:5px;display:inline-block;background:var(--red-lt);color:var(--red);border:1px solid var(--red-bd);}
+.item.checked .expires-badge{opacity:.5;}
+
+/* DONE BANNER */
+.done-banner{display:none;text-align:center;padding:20px;background:var(--green-lt);border:1px solid var(--green-bd);border-radius:10px;margin-top:12px;}
+.done-banner.show{display:block;}
+.done-banner-title{font-size:16px;font-weight:600;color:#0d6e3e;margin-bottom:4px;}
+.done-banner-sub{font-size:13px;color:#3a8a60;}
+
+/* BUTTONS */
+.action-row{display:flex;gap:10px;margin-top:16px;}
+.pdf-btn{flex:1;padding:11px;border:none;border-radius:8px;background:var(--blue);font-family:var(--font);font-size:13px;font-weight:600;color:#fff;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:6px;}
+.pdf-btn:hover{background:#2a8aee;}
+.reset-btn{padding:11px 20px;border:1px solid #d5cfc7;border-radius:8px;background:transparent;font-family:var(--font);font-size:13px;color:var(--muted);cursor:pointer;transition:all .15s;}
+.reset-btn:hover{border-color:#b0a898;color:var(--text);}
+
+/* SCREEN FOOTER */
+.footer{background:var(--dark);padding:20px 40px;margin-top:24px;}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;}
+.fn{font-size:13px;font-weight:600;color:#fff;}
+.fc{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.6;}
+.fc a{color:var(--blue);text-decoration:none;}
+.frole{font-family:var(--mono);font-size:10px;color:var(--muted);text-align:right;letter-spacing:.06em;line-height:1.7;}
+
+/* PRINT FOOTER (screen-hidden) */
+.print-footer{display:none;}
+
+/* ===================== PRINT ===================== */
+@media print {
+  @page{margin:18mm 16mm;}
+  body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .config{display:none!important;}
+  .action-row{display:none!important;}
+  .footer{display:none!important;}
+  .empty-state{display:none!important;}
+  .wrap{max-width:100%;}
+  .header{-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:20px 28px 18px;}
+  .body{padding:20px 28px;}
+  .item{border:1px solid #ddd;break-inside:avoid;padding:10px 12px;margin-bottom:4px;}
+  .item.checked{background:#f0fdf6!important;border-color:#bbf0d6!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .item-box{border:1.5px solid #999;}
+  .item.checked .item-box{background:var(--green)!important;border-color:var(--green)!important;}
+  .item.checked .item-check{display:block!important;}
+  .item.checked .item-text{color:#5a7a6a!important;text-decoration:line-through!important;}
+  .item-note a{color:var(--blue)!important;}
+  .section-head{border-bottom:1px solid #ddd;}
+  .print-footer{display:block!important;margin-top:24px;padding-top:16px;border-top:2px solid #0f1923;}
+  .pf-name{font-size:14px;font-weight:700;color:#0f1923;margin-bottom:4px;}
+  .pf-role{font-size:11px;color:#555;margin-bottom:8px;}
+  .pf-emails{font-size:12px;color:#1a2633;margin-bottom:6px;line-height:1.7;}
+  .pf-instruction{font-size:12px;color:#0f1923;background:#f4f1ec;padding:8px 12px;border-radius:6px;border-left:3px solid #3b9eff;}
+  .pf-date{font-size:11px;color:#888;margin-top:8px;font-family:'JetBrains Mono',monospace;}
+  .done-banner{display:none!important;}
+  .notice{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .expires-badge{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .progress-bar-wrap{display:none;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="brand">
+      <span>Fáy Barna</span>
+      <span class="brand-dot"></span>
+      <span>Hitelspecialista</span>
+      <span class="brand-dot"></span>
+      <span>OVB Allfinanz</span>
+    </div>
+    <div class="h-title">Dokumentum Checklist</div>
+    <div class="h-sub">Töltsd ki az ügyfél adatait, pipáld ki a meglevő dokumentumokat</div>
+  </div>
+
+  <!-- CONFIG -->
+  <div class="config no-print">
+    <div class="field">
+      <span class="label">Ügyfél neve</span>
+      <input class="ugyfel-input" type="text" id="ugyfelNev" placeholder="pl. Kovács Péter" oninput="renderChecklist()">
+    </div>
+    <div class="field">
+      <span class="label">Termék</span>
+      <div class="row" id="termekRow">
+        <button class="pill" data-val="jelzalog" onclick="selectField('termek',this)">Jelzálog</button>
+        <button class="pill" data-val="szk" onclick="selectField('termek',this)">Személyi kölcsön</button>
+        <button class="pill" data-val="babavaro" onclick="selectField('termek',this)">Babaváró</button>
+        <button class="pill" data-val="munkashitel" onclick="selectField('termek',this)">Munkáshitel</button>
+      </div>
+    </div>
+    <div class="field" id="jovAdosField" style="display:none">
+      <span class="label" id="jovAdosLabel">Adós — jövedelemtípus</span>
+      <div class="row">
+        <button class="pill green" data-val="alkalmazott" onclick="selectField('jovAdos',this)">Alkalmazott</button>
+        <button class="pill amber" data-val="vallalkozo" onclick="selectField('jovAdos',this)">Vállalkozó</button>
+      </div>
+    </div>
+    <div class="field" id="adostarsField" style="display:none">
+      <span class="label">Adóstárs</span>
+      <div class="row">
+        <button class="pill" data-val="nincs" onclick="selectField('adostars',this)">Nincs adóstárs</button>
+        <button class="pill" data-val="van" onclick="selectField('adostars',this)">Van adóstárs</button>
+      </div>
+    </div>
+    <div class="field" id="jovAdostarsField" style="display:none">
+      <span class="label">Adóstárs — jövedelemtípus</span>
+      <div class="row">
+        <button class="pill green" data-val="alkalmazott" onclick="selectField('jovAdostars',this)">Alkalmazott</button>
+        <button class="pill amber" data-val="vallalkozo" onclick="selectField('jovAdostars',this)">Vállalkozó</button>
+      </div>
+    </div>
+    <div class="field" id="ospCsokField" style="display:none">
+      <span class="label">OSP / CSOK igénylés</span>
+      <div class="row">
+        <button class="pill" data-val="nem" onclick="selectField('ospCsok',this)">Nem</button>
+        <button class="pill red" data-val="igen" onclick="selectField('ospCsok',this)">Igen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKLIST BODY -->
+  <div class="body" id="checklistBody">
+    <div class="empty-state">
+      <div class="empty-icon">📋</div>
+      <div class="empty-text">Válaszd ki a terméket és a jövedelemtípust</div>
+    </div>
+  </div>
+
+  <!-- SCREEN FOOTER -->
+  <div class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="fn">Fáy Barna</div>
+        <div class="fc">
+          <a href="mailto:fay.barna@ovb.hu">fay.barna@ovb.hu</a> &nbsp;·&nbsp;
+          <a href="mailto:info.faybarna@gmail.com">info.faybarna@gmail.com</a>
+        </div>
+      </div>
+      <div class="frole">Hitelspecialista<br>OVB Allfinanz</div>
+    </div>
+  </div>
+
+</div><!-- .wrap -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+// ============================================================
+// STATE
+// ============================================================
+const state = {
+  termek: null,
+  jovAdos: null,
+  adostars: null,
+  jovAdostars: null,
+  ospCsok: 'nem',
+  checked: {}
+};
+
+// ============================================================
+// DATA
+// ============================================================
+const LEAD_ATADAS_ADOS   = { id: 'lead_ados',    text: 'Adós lead a portálon átadva' };
+const LEAD_ATADAS_ADOSTARS = { id: 'lead_adostars', text: 'Adóstárs lead a portálon átadva' };
+const LEAD_ATADAS_SINGLE = { id: 'lead_single',   text: 'Lead a portálon átadva' };
+
+const DATA = {
+  jelzalog: {
+    label: 'Jelzálog',
+    hasAdostars: true,
+    hasOspCsok: true,
+    alwaysPair: false,
+    notice: null,
+    common: [
+      { id: 'jel_adatlap', text: 'Kitöltött jelzáloghitel adatlap', note: 'Minden mező kitöltve: meglévő hitelek, önerő, igényelt támogatás' }
+    ],
+    ospCsokItem: { id: 'jel_tb_osp', text: 'TB igazolás (OSP / CSOK)', note: 'Egyik féltől elegendő. Lekérhető: <a href="https://magyarorszag.hu/szuf_ugyleiras?id=1d417c67-6b9d-4267-853f-73db59f6e0bf" target="_blank">magyarorszag.hu</a>' },
+    ingatlan: [
+      { id: 'jel_energetikai', text: 'Energetikai tanúsítvány', note: 'Ha még nincs kész, az ügyvéd vagy az eladó tud segíteni' },
+      { id: 'jel_alaprajz', text: 'Alaprajz', note: 'Bármilyen formátum elfogadott' }
+    ],
+    alkalmazott: [
+      { id: 'jel_alk_munk', text: 'Munkáltatói igazolás', expires: true },
+      { id: 'jel_alk_bank', text: 'Bankszámlakivonat — utolsó 3 hónap', note: 'PDF, netbankból letöltve' },
+      { id: 'jel_alk_szem', text: 'Személyi igazolvány + lakcímkártya + adókártya', note: 'Minden oldal lefényképezve' }
+    ],
+    vallalkozo: [
+      { id: 'jel_vk_nav_jov', text: 'NAV jövedelemigazolás', expires: true },
+      { id: 'jel_vk_nav_nul', text: 'NAV nullás bővített adóigazolás', expires: true },
+      { id: 'jel_vk_szja', text: 'SZJA bevallás (2025) VAGY KATA bevallás (2025)', note: 'Amelyik releváns a vállalkozás típusától függően' },
+      { id: 'jel_vk_bank', text: 'Bankszámlakivonat — utolsó 3 hónap', note: 'PDF, netbankból letöltve' },
+      { id: 'jel_vk_szem', text: 'Személyi igazolvány + lakcímkártya + adókártya', note: 'Minden oldal lefényképezve' }
+    ]
+  },
+
+  szk: {
+    label: 'Személyi kölcsön',
+    hasAdostars: false,
+    hasOspCsok: false,
+    alwaysPair: false,
+    notice: null,
+    common: [
+      { id: 'szk_adatlap', text: 'Kitöltött SZK adatlap', note: 'Hitelkiváltásnál: tőketartozás + hátralévő futamidő is szükséges!' }
+    ],
+    ingatlan: null,
+    alkalmazott: [
+      { id: 'szk_alk_munk', text: 'Munkáltatói igazolás', expires: true },
+      { id: 'szk_alk_bank', text: 'Bankszámlakivonat — utolsó 3 hónap', note: 'PDF, netbankból letöltve' },
+      { id: 'szk_alk_szem', text: 'Személyi igazolvány + lakcímkártya + adókártya', note: 'Minden oldal lefényképezve' }
+    ],
+    vallalkozo: [
+      { id: 'szk_vk_nav_jov', text: 'NAV jövedelemigazolás', expires: true },
+      { id: 'szk_vk_nav_nul', text: 'NAV nullás bővített adóigazolás', expires: true },
+      { id: 'szk_vk_szja', text: 'SZJA bevallás (2025) VAGY KATA bevallás (2025)', note: 'Amelyik releváns' },
+      { id: 'szk_vk_bank', text: 'Bankszámlakivonat — utolsó 3 hónap', note: 'PDF, netbankból letöltve' },
+      { id: 'szk_vk_szem', text: 'Személyi igazolvány + lakcímkártya + adókártya', note: 'Minden oldal lefényképezve' }
+    ]
+  },
+
+  babavaro: {
+    label: 'Babaváró',
+    hasAdostars: false,
+    hasOspCsok: false,
+    alwaysPair: true,
+    notice: 'A két leadet <strong>külön-külön kell átadni</strong> a portálon — férj és feleség külön OVB rekordként!',
+    common: [
+      { id: 'baba_adatlap', text: 'Kitöltött Babaváró adatlap', note: 'Férj és feleség adatai külön-külön kitöltve' },
+      { id: 'baba_tb', text: '3 éves TB igazolás', note: 'Egyik féltől elegendő. Lekérhető: <a href="https://magyarorszag.hu/szuf_ugyleiras?id=d0577657-239e-4061-866d-7c1916ada048" target="_blank">magyarorszag.hu</a>' }
+    ],
+    ingatlan: null,
+    alkalmazott: [
+      { id: 'baba_alk_munk', text: 'Munkáltatói igazolás', expires: true },
+      { id: 'baba_alk_bank', text: 'Bankszámlakivonat — utolsó 3 hónap', note: 'PDF, netbankból letöltve' },
+      { id: 'baba_alk_szem', text: 'Személyi igazolvány + lakcímkártya + adókártya', note: 'Minden oldal lefényképezve' }
+    ],
+    vallalkozo: [
+      { id: 'baba_vk_nav_jov', text: 'NAV jövedelemigazolás', expires: true },
+      { id: 'baba_vk_nav_nul', text: 'NAV nullás bővített adóigazolás', expires: true },
+      { id: 'baba_vk_szja', text: 'SZJA bevallás (2025) VAGY KATA bevallás (2025)', note: 'Amelyik releváns' },
+      { id: 'baba_vk_bank', text: 'Bankszámlakivonat — utolsó 3 hónap', note: 'PDF, netbankból letöltve' },
+      { id: 'baba_vk_szem', text: 'Személyi igazolvány + lakcímkártya + adókártya', note: 'Minden oldal lefényképezve' }
+    ]
+  },
+
+  munkashitel: {
+    label: 'Munkáshitel',
+    hasAdostars: false,
+    hasOspCsok: false,
+    alwaysPair: false,
+    notice: null,
+    common: [],
+    ingatlan: null,
+    alkalmazott: [
+      { id: 'mh_munk', text: 'Munkáltatói igazolás', note: 'Min. 20 órás munkaviszony igazolva', expires: true },
+      { id: 'mh_bank', text: 'Bankszámlakivonat — utolsó 3 hónap', note: 'PDF, netbankból letöltve' },
+      { id: 'mh_szem', text: 'Személyi igazolvány + lakcímkártya + adókártya', note: 'Minden oldal lefényképezve' },
+      { id: 'mh_tb', text: 'TB igazolás', note: 'Lekérhető: dap.gov.hu vagy Kormányablak' },
+      { id: 'mh_erkolcs', text: 'Erkölcsi bizonyítvány', note: 'DAP / Ügyfélkapu — érdemes előre beszerezni' }
+    ],
+    vallalkozo: [
+      { id: 'mh_vk_ig', text: 'Vállalkozói jogviszony igazolása', note: 'Min. 20 óra vállalkozói jogviszony igazolva', expires: true },
+      { id: 'mh_vk_bank', text: 'Bankszámlakivonat — utolsó 3 hónap', note: 'PDF, netbankból letöltve' },
+      { id: 'mh_vk_szem', text: 'Személyi igazolvány + lakcímkártya + adókártya', note: 'Minden oldal lefényképezve' },
+      { id: 'mh_vk_tb', text: 'TB igazolás', note: 'Lekérhető: dap.gov.hu vagy Kormányablak' },
+      { id: 'mh_vk_erkolcs', text: 'Erkölcsi bizonyítvány', note: 'DAP / Ügyfélkapu' }
+    ]
+  }
+};
+
+// ============================================================
+// UI CONFIG LOGIC
+// ============================================================
+function selectField(field, btn) {
+  const row = btn.parentElement;
+  row.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  state[field] = btn.dataset.val;
+  state.checked = {};
+
+  if (field === 'termek') {
+    const d = DATA[state.termek];
+    // Reset dependent fields
+    state.jovAdos = null;
+    state.adostars = null;
+    state.jovAdostars = null;
+    state.ospCsok = 'nem';
+    document.querySelectorAll('#jovAdosField .pill, #adostarsField .pill, #jovAdostarsField .pill, #ospCsokField .pill').forEach(p => p.classList.remove('active'));
+
+    // Show adós jövedelemtípus
+    document.getElementById('jovAdosField').style.display = 'block';
+    document.getElementById('jovAdosLabel').textContent = d.alwaysPair ? 'Adós — jövedelemtípus' : 'Adós — jövedelemtípus';
+
+    // Adóstárs toggle
+    if (d.hasAdostars) {
+      document.getElementById('adostarsField').style.display = 'block';
+      document.getElementById('jovAdostarsField').style.display = 'none';
+    } else if (d.alwaysPair) {
+      document.getElementById('adostarsField').style.display = 'none';
+      document.getElementById('jovAdostarsField').style.display = 'block';
+      state.adostars = 'van';
+    } else {
+      document.getElementById('adostarsField').style.display = 'none';
+      document.getElementById('jovAdostarsField').style.display = 'none';
+    }
+
+    // OSP/CSOK
+    document.getElementById('ospCsokField').style.display = d.hasOspCsok ? 'block' : 'none';
+    // Pre-select 'nem' for OSP/CSOK
+    if (d.hasOspCsok) {
+      document.querySelector('#ospCsokField .pill[data-val="nem"]').classList.add('active');
+    }
+  }
+
+  if (field === 'adostars') {
+    const jf = document.getElementById('jovAdostarsField');
+    if (state.adostars === 'van') {
+      jf.style.display = 'block';
+      state.jovAdostars = null;
+      jf.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    } else {
+      jf.style.display = 'none';
+      state.jovAdostars = null;
+    }
+  }
+
+  renderChecklist();
+}
+
+// ============================================================
+// ITEM BUILDERS
+// ============================================================
+function mkItems(items, prefix) {
+  return items.map(item => {
+    const key = prefix ? prefix + '_' + item.id : item.id;
+    return { ...item, id: key, checked: !!state.checked[key] };
+  });
+}
+
+function toggleItem(id) {
+  state.checked[id] = !state.checked[id];
+  renderChecklist();
+}
+
+// ============================================================
+// RENDER
+// ============================================================
+function renderChecklist() {
+  const body = document.getElementById('checklistBody');
+  const ugyfel = document.getElementById('ugyfelNev').value.trim();
+  const { termek, jovAdos, adostars, jovAdostars, ospCsok } = state;
+
+  if (!termek || !jovAdos) {
+    body.innerHTML = '<div class="empty-state"><div class="empty-icon">📋</div><div class="empty-text">Válaszd ki a terméket és a jövedelemtípust</div></div>';
+    return;
+  }
+  const d = DATA[termek];
+  if (d.hasAdostars && adostars === null) {
+    body.innerHTML = '<div class="empty-state"><div class="empty-icon">📋</div><div class="empty-text">Add meg, hogy van-e adóstárs</div></div>';
+    return;
+  }
+  if ((adostars === 'van' || d.alwaysPair) && !jovAdostars) {
+    body.innerHTML = '<div class="empty-state"><div class="empty-icon">📋</div><div class="empty-text">Add meg az adóstárs jövedelemtípusát</div></div>';
+    return;
+  }
+
+  // Build item lists
+  const isPair = adostars === 'van' || d.alwaysPair;
+
+  // Portal átadás
+  let leadItems = [];
+  if (isPair) {
+    leadItems = mkItems([LEAD_ATADAS_ADOS, LEAD_ATADAS_ADOSTARS], null);
+  } else {
+    leadItems = mkItems([LEAD_ATADAS_SINGLE], null);
+  }
+
+  // Common
+  let commonItems = mkItems(d.common, null);
+  if (d.hasOspCsok && ospCsok === 'igen') {
+    commonItems = [...commonItems, ...mkItems([d.ospCsokItem], null)];
+  }
+
+  // Ingatlan
+  const ingatlanItems = d.ingatlan ? mkItems(d.ingatlan, null) : [];
+
+  // Adós
+  const adosItems = mkItems(d[jovAdos] || [], 'ados');
+
+  // Adóstárs
+  const adostarsItems = isPair && jovAdostars ? mkItems(d[jovAdostars] || [], 'adostars') : [];
+
+  const allItems = [...leadItems, ...commonItems, ...ingatlanItems, ...adosItems, ...adostarsItems];
+  const total = allItems.length;
+  const done = allItems.filter(i => i.checked).length;
+  const pct = total > 0 ? Math.round((done/total)*100) : 0;
+  const allDone = done === total && total > 0;
+
+  let html = '';
+
+  // Ügyfél fejléc (print-re is látszik)
+  if (ugyfel) {
+    html += `<div style="font-size:16px;font-weight:600;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--cream2)">${ugyfel} — ${d.label}${isPair && !d.alwaysPair ? ' + adóstárs' : d.alwaysPair ? '' : ''}</div>`;
+  } else {
+    html += `<div style="font-size:15px;font-weight:600;color:var(--muted);margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--cream2)">${d.label}${isPair ? ' — adós + adóstárs' : ''}</div>`;
+  }
+
+  // Progress bar
+  html += `<div class="progress-bar-wrap">
+    <div class="progress-header">
+      <span class="progress-label">Haladás</span>
+      <span class="progress-count" style="color:${allDone?'var(--green)':'var(--text)'}">${done} / ${total} ✓</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" style="width:${pct}%;background:${allDone?'var(--green)':'var(--blue)'}"></div></div>
+  </div>`;
+
+  // Notice
+  if (d.notice) {
+    html += `<div class="notice"><em class="notice-icon">⚠</em><div class="notice-text">${d.notice}</div></div>`;
+  }
+
+  // Portal átadás
+  html += section('blue', 'Portál átadás', leadItems);
+
+  // Közös dokumentumok
+  if (commonItems.length > 0) {
+    html += section('teal', 'Közös dokumentumok', commonItems);
+  }
+
+  // Ingatlan
+  if (ingatlanItems.length > 0) {
+    html += section('purple', 'Ingatlan', ingatlanItems);
+  }
+
+  // Adós
+  html += section('green', `Adós — ${jovAdos === 'alkalmazott' ? 'Alkalmazott' : 'Vállalkozó'}`, adosItems);
+
+  // Adóstárs
+  if (adostarsItems.length > 0) {
+    html += section('amber', `Adóstárs — ${jovAdostars === 'alkalmazott' ? 'Alkalmazott' : 'Vállalkozó'}`, adostarsItems);
+  }
+
+  // Done banner
+  html += `<div class="done-banner ${allDone?'show':''}">
+    <div class="done-banner-title">✓ Minden doku megvan</div>
+    <div class="done-banner-sub">Küldd el Barnának a leaddel és a dokumentumokkal együtt</div>
+  </div>`;
+
+  // Print footer (hidden on screen)
+  const today = new Date().toLocaleDateString('hu-HU', {year:'numeric',month:'long',day:'numeric'});
+  const ugyfelStr = ugyfel ? `<strong>${ugyfel}</strong> — ` : '';
+  html += `<div class="print-footer">
+    <div class="pf-name">Fáy Barna</div>
+    <div class="pf-role">Hitelspecialista · OVB Allfinanz</div>
+    <div class="pf-emails">📧 fay.barna@ovb.hu &nbsp;·&nbsp; info.faybarna@gmail.com</div>
+    <div class="pf-instruction">Küldd el ezt a checklistet a leaddel és a dokumentumokkal együtt a fenti email címekre.</div>
+    <div class="pf-date">Checklist kitöltve: ${today}${ugyfel ? ' · Ügyfél: ' + ugyfel : ''}</div>
+  </div>`;
+
+  // Buttons
+  html += `<div class="action-row">
+    <button class="pdf-btn" onclick="downloadPdf()">📄 PDF letöltése</button>
+    <button class="reset-btn" onclick="resetChecks()">Nullázás</button>
+  </div>`;
+
+  body.innerHTML = html;
+}
+
+function section(color, title, items) {
+  return `<div class="section">
+    <div class="section-head"><div class="section-dot ${color}"></div><span class="section-title">${title}</span></div>
+    ${items.map(itemHtml).join('')}
+  </div>`;
+}
+
+function itemHtml(item) {
+  return `<div class="item ${item.checked?'checked':''}" onclick="toggleItem('${item.id}')">
+    <div class="item-box"><span class="item-check">✓</span></div>
+    <div class="item-body">
+      <div class="item-text">${item.text}</div>
+      ${item.note ? `<div class="item-note">${item.note}</div>` : ''}
+      ${item.expires ? `<span class="expires-badge">⏱ 30 napig érvényes</span>` : ''}
+    </div>
+  </div>`;
+}
+
+function resetChecks() {
+  state.checked = {};
+  renderChecklist();
+}
+
+async function downloadPdf() {
+  const btn = document.querySelector('.pdf-btn');
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '⏳ Generálás...';
+  btn.disabled = true;
+
+  // Temporarily show print footer, hide buttons
+  const printFooter = document.querySelector('.print-footer');
+  const actionRow = document.querySelector('.action-row');
+  const progressWrap = document.querySelector('.progress-bar-wrap');
+  if (printFooter) printFooter.style.display = 'block';
+  if (actionRow) actionRow.style.display = 'none';
+  if (progressWrap) progressWrap.style.display = 'none';
+
+  try {
+    const { jsPDF } = window.jspdf;
+    const source = document.getElementById('checklistBody');
+
+    const canvas = await html2canvas(source, {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: '#f4f1ec',
+      logging: false
+    });
+
+    const imgW = 190; // mm, A4 width minus margins
+    const pageH = 277; // mm, A4 height minus margins
+    const imgH = (canvas.height * imgW) / canvas.width;
+    const pdf = new jsPDF({ unit: 'mm', format: 'a4' });
+
+    // Add header block manually
+    pdf.setFillColor(15, 25, 35);
+    pdf.rect(0, 0, 210, 28, 'F');
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(14);
+    pdf.setTextColor(255, 255, 255);
+    pdf.text('Dokumentum Checklist', 10, 13);
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(8);
+    pdf.setTextColor(138, 154, 176);
+    pdf.text('FÁY BARNA  ·  HITELSPECIALISTA  ·  OVB ALLFINANZ', 10, 20);
+
+    // Paste the rendered canvas below header
+    const imgData = canvas.toDataURL('image/png');
+    let yPos = 32;
+    let remainH = imgH;
+    let srcY = 0;
+
+    while (remainH > 0) {
+      const sliceH = Math.min(remainH, pageH - (yPos === 32 ? 32 : 10));
+      const sliceCanvas = document.createElement('canvas');
+      sliceCanvas.width = canvas.width;
+      sliceCanvas.height = (sliceH / imgW) * canvas.width;
+      const ctx = sliceCanvas.getContext('2d');
+      ctx.drawImage(canvas, 0, srcY, canvas.width, sliceCanvas.height, 0, 0, canvas.width, sliceCanvas.height);
+      const sliceData = sliceCanvas.toDataURL('image/png');
+      pdf.addImage(sliceData, 'PNG', 10, yPos, imgW, sliceH);
+      srcY += sliceCanvas.height;
+      remainH -= sliceH;
+      if (remainH > 0) {
+        pdf.addPage();
+        yPos = 10;
+      }
+    }
+
+    const ugyfel = document.getElementById('ugyfelNev').value.trim();
+    const filename = ugyfel
+      ? `checklist_${ugyfel.replace(/\s+/g,'_')}.pdf`
+      : 'checklist_faybarna.pdf';
+    pdf.save(filename);
+  } catch(e) {
+    alert('PDF generálás sikertelen. Próbáld újra.');
+    console.error(e);
+  } finally {
+    if (printFooter) printFooter.style.display = 'none';
+    if (actionRow) actionRow.style.display = 'flex';
+    if (progressWrap) progressWrap.style.display = 'block';
+    btn.innerHTML = originalText;
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>

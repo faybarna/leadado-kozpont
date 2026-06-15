@@ -392,6 +392,40 @@ a:hover{ text-decoration: underline; }
   margin-bottom: 10px;
 }
 
+/* ============================== TOOL CARD (interaktív eszköz link) ============================== */
+
+a.tool-card{
+  display: block;
+  margin-top: 12px;
+  text-decoration: none;
+  color: inherit;
+  border: 1.5px solid var(--brass);
+  border-radius: 10px;
+  background: var(--card);
+  transition: box-shadow .15s, border-color .15s;
+}
+a.tool-card:hover{
+  box-shadow: 0 4px 16px rgba(168,118,62,.18);
+  border-color: var(--forest);
+}
+.tool-card-inner{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+}
+.tool-icon{
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.tool-arrow{
+  margin-left: auto;
+  font-size: 20px;
+  color: var(--brass);
+  flex-shrink: 0;
+}
+
 /* ============================== ÚJDONSÁGOK / CHANGELOG ============================== */
 
 .changelog-item{

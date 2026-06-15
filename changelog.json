@@ -1,6 +1,11 @@
 [
   {
     "datum": "2026-06-15",
+    "cim": "Interaktív Doku Checklist elérhető",
+    "leiras": "A Dokumentum-igénylisták szekcióban megjelent az Interaktív Doku Checklist eszköz: termék és jövedelemtípus szerint személyre szabott, kipipálható, PDF-be menthető lista."
+  },
+  {
+    "datum": "2026-06-15",
     "cim": "Leadadó Központ elindult",
     "leiras": "Egy linkről elérhető az AI Asszisztens, a hiteladatlapok / sablonok és a termékenkénti dokumentum-igénylisták."
   }
