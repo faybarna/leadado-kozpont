@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.15. 18:31",
+  "frissitve": "2026.06.15. 20:42",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -139,6 +139,14 @@
       "elszamolasi_honap": ""
     },
     {
+      "ugyfel": "Bugyis Dominika",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 25,
+      "elszamolasi_honap": ""
+    },
+    {
       "ugyfel": "Hidi Csukoly Annamária",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
@@ -189,8 +197,8 @@
     {
       "ugyfel": "Bugyis Dominika",
       "termek": "Munkáshitel",
-      "bank": "",
-      "statusz": "1. Előminősítés alatt",
+      "bank": "CIB",
+      "statusz": "3. Bírálat",
       "eh": 8,
       "elszamolasi_honap": ""
     },
@@ -199,14 +207,6 @@
       "termek": "Jelzálog",
       "bank": "CIB",
       "statusz": "Ügyfélre/munkatársra várunk",
-      "eh": 0,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Bugyis Dominika",
-      "termek": "Bankszámla",
-      "bank": "",
-      "statusz": "1. Kalkuláció kiküldve",
       "eh": 0,
       "elszamolasi_honap": ""
     },
