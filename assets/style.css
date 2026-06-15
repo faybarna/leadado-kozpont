@@ -569,6 +569,82 @@ a.tool-card:hover{
 
 body.locked .app{ display: none; }
 
+/* ============================== SAJÁT ÜGYLETEIM ============================== */
+
+.nav-tag--saját{ background: var(--new); color: #fff; }
+
+.pipeline-meta{
+  font-size: 12px;
+  color: var(--text-soft);
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+}
+
+.pipeline-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.pipeline-table th{
+  text-align: left;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  border-bottom: 1.5px solid var(--line);
+  padding: 6px 10px 8px;
+}
+
+.pipeline-table td{
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.pipeline-table tr:last-child td{ border-bottom: none; }
+
+.pipeline-table tr:hover td{ background: var(--brass-soft); }
+
+.statusz-badge{
+  display: inline-block;
+  font-size: 11.5px;
+  font-family: var(--font-mono);
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: var(--brass-soft);
+  color: var(--brass);
+  white-space: nowrap;
+}
+
+.statusz-badge--lezart{
+  background: var(--new-soft);
+  color: var(--new);
+}
+
+.eh-cell{
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.sajat-empty{
+  text-align: center;
+  padding: 32px 20px;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.sajat-locked{
+  padding: 32px 20px;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
 /* ============================== MOBIL NAV ============================== */
 
 .mobile-bar{

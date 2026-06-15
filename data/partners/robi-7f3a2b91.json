@@ -1,0 +1,46 @@
+{
+  "partner": "Lőrinc Róbert",
+  "frissitve": "2026-06-15",
+  "ugyletek": [
+    {
+      "ugyfel": "Nagy Péter",
+      "termek": "Jelzálog",
+      "bank": "OTP",
+      "statusz": "3. Bírálat",
+      "eh": 52,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Horváth Éva",
+      "termek": "SZK",
+      "bank": "Erste",
+      "statusz": "2. Beadás alatt",
+      "eh": 18,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Takács Gábor",
+      "termek": "Jelzálog",
+      "bank": "UniCredit",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 38,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Fekete Andrea",
+      "termek": "Bankszámla",
+      "bank": "K&H",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 8,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Varga László",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 65,
+      "elszamolasi_honap": "2026. Június"
+    }
+  ]
+}

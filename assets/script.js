@@ -4,6 +4,7 @@
    2) Folder-tab navigáció aktív állapot (scroll alapján)
    3) Dokumentum-igénylista tabok
    4) Újdonságok (changelog.json) renderelés + "Frissítve" stamp
+   5) F5 — Saját Ügyleteim (?p= token alapú partner pipeline)
    ========================================================================= */
 
 (function(){
@@ -151,5 +152,80 @@
       listEl.innerHTML = '<p class="changelog-empty">A napló jelenleg nem tölthető be.</p>';
       if (stampEl) stampEl.textContent = "Frissítve: —";
     });
+
+  /* ---------------- 5) SAJÁT ÜGYLETEIM — F5 ---------------- */
+
+  var sajatSection = document.getElementById("sajat-ugyletek");
+  var sajatNav     = document.getElementById("nav-saját");
+  var sajatTar     = document.getElementById("sajat-tartalom");
+  var sajatLead    = document.getElementById("sajat-lead");
+
+  var urlParams = new URLSearchParams(window.location.search);
+  var partnerToken = urlParams.get("p");
+
+  var LEZART_STATUSZOK = ["5. Folyósítva", "3. Megkötve"];
+
+  function statuszBadge(statusz) {
+    var isLezart = LEZART_STATUSZOK.indexOf(statusz) !== -1;
+    var cls = isLezart ? "statusz-badge statusz-badge--lezart" : "statusz-badge";
+    return '<span class="' + cls + '">' + statusz + '</span>';
+  }
+
+  function renderPipelineTable(data) {
+    if (!data.ugyletek || data.ugyletek.length === 0) {
+      return '<div class="sajat-empty">Jelenleg nincs aktív ügyleted.</div>';
+    }
+
+    var rows = data.ugyletek.map(function(u) {
+      var ehStr  = u.eh ? u.eh + " EH" : "—";
+      var honap  = u.elszamolasi_honap || "—";
+      return (
+        "<tr>" +
+          "<td>" + u.ugyfel + "</td>" +
+          "<td>" + u.termek + "</td>" +
+          "<td>" + u.bank + "</td>" +
+          "<td>" + statuszBadge(u.statusz) + "</td>" +
+          '<td class="eh-cell">' + ehStr + "</td>" +
+          "<td>" + honap + "</td>" +
+        "</tr>"
+      );
+    }).join("");
+
+    return (
+      '<p class="pipeline-meta">Frissítve: ' + (data.frissitve || "—") + " · " + data.ugyletek.length + " aktív ügylet</p>" +
+      '<div style="overflow-x:auto"><table class="pipeline-table">' +
+        "<thead><tr>" +
+          "<th>Ügyfél</th><th>Termék</th><th>Bank</th><th>Státusz</th><th>EH</th><th>Elszámolási hónap</th>" +
+        "</tr></thead>" +
+        "<tbody>" + rows + "</tbody>" +
+      "</table></div>"
+    );
+  }
+
+  function loadPartnerData(token) {
+    fetch("data/partners/" + token + ".json")
+      .then(function(res) {
+        if (!res.ok) throw new Error("not found");
+        return res.json();
+      })
+      .then(function(data) {
+        if (sajatLead) sajatLead.textContent = data.partner + " — aktív ügyletek";
+        sajatTar.innerHTML = '<div class="card">' + renderPipelineTable(data) + "</div>";
+      })
+      .catch(function() {
+        sajatTar.innerHTML = '<div class="card"><div class="sajat-empty">Az adatok jelenleg nem elérhetők. Kérjük, próbáld újra később.</div></div>';
+      });
+  }
+
+  if (partnerToken) {
+    if (sajatSection) sajatSection.style.display = "";
+    if (sajatNav)     sajatNav.style.display      = "";
+    loadPartnerData(partnerToken);
+  } else {
+    // Nincs token — szekció rejtett, de ha valaki direktben navigál rá, mutatjuk az üzenetet
+    if (sajatTar) {
+      sajatTar.innerHTML = '<div class="card"><div class="sajat-locked">Ez a nézet személyre szabott — kérd el a saját linkedet Barnától.</div></div>';
+    }
+  }
 
 })();
