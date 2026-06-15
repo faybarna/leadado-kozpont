@@ -1,46 +1,222 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026-06-15",
+  "frissitve": "2026.06.15. 14:14",
   "ugyletek": [
     {
-      "ugyfel": "Nagy Péter",
+      "ugyfel": "Nagy Petra",
       "termek": "Jelzálog",
-      "bank": "OTP",
+      "bank": "Erste",
       "statusz": "3. Bírálat",
-      "eh": 52,
-      "elszamolasi_honap": "2026. Június"
+      "eh": 733,
+      "elszamolasi_honap": "2026. Július"
     },
     {
-      "ugyfel": "Horváth Éva",
-      "termek": "SZK",
+      "ugyfel": "Gerényi István",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "2. Beadás alatt",
+      "eh": 600,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Németh Patrik",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "3. Bírálat",
+      "eh": 600,
+      "elszamolasi_honap": "2026. Augusztus"
+    },
+    {
+      "ugyfel": "Cseri Balázs és Németh Cintia",
+      "termek": "Jelzálog",
       "bank": "Erste",
       "statusz": "2. Beadás alatt",
-      "eh": 18,
+      "eh": 600,
+      "elszamolasi_honap": "2026. Augusztus"
+    },
+    {
+      "ugyfel": "Zsoldi Gabriella",
+      "termek": "Jelzálog",
+      "bank": "CIB",
+      "statusz": "5. Folyósítva",
+      "eh": 420,
       "elszamolasi_honap": "2026. Június"
     },
     {
-      "ugyfel": "Takács Gábor",
+      "ugyfel": "Czira Csilla",
       "termek": "Jelzálog",
-      "bank": "UniCredit",
-      "statusz": "1. Előminősítés alatt",
-      "eh": 38,
+      "bank": "Raiffeisen",
+      "statusz": "3. Bírálat",
+      "eh": 400,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Szél István",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "3. Bírálat",
+      "eh": 400,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Kovács Attila",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "5. Folyósítva",
+      "eh": 266,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Márton Zoltán",
+      "termak": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 73,
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Fekete Andrea",
-      "termek": "Bankszámla",
+      "ugyfel": "Mikola Edit",
+      "termek": "Jelzálog",
       "bank": "K&H",
+      "statusz": "2. Beadás alatt",
+      "eh": 66,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Németh Cintia",
+      "termek": "Bankszámla",
+      "bank": "Erste",
       "statusz": "2. Kötési kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Cseri Balázs",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Habenyak Krisztina",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Márton Zoltán",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Bácsalmásiné",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 40,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szabó Zoltán",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Gazsi Árpád",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Hidi Csukoly Annamária",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Hidi Sándor",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Matula",
+      "termek": "Babaváró",
+      "bank": "CIB",
+      "statusz": "3. Bírálat",
+      "eh": 16,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Hidi Csukoly Annamária",
+      "termek": "Babaváró",
+      "bank": "Raiffeisen",
+      "statusz": "3. Bírálat",
+      "eh": 16,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Habenyak Krisztina",
+      "termek": "Babaváró",
+      "bank": "CIB",
+      "statusz": "3. Bírálat",
+      "eh": 16,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Szabó Zoltán",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "3. Bírálat",
+      "eh": 15,
+      "elszamolasi_honap": "2026. Július"
+    },
+    {
+      "ugyfel": "Bugyis Dominika",
+      "termek": "Munkáhitel",
+      "bank": "",
+      "statusz": "1. Előminñsítés alatt",
       "eh": 8,
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Varga László",
+      "ugyfel": "Kopor Dávid",
       "termek": "Jelzálog",
+      "bank": "CIB",
+      "statusz": "Ügyfélre/munkatársra várunk",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Bugyis Dominika",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Gerznyi párja",
+      "termek": "Bankszámla",
       "bank": "Raiffeisen",
-      "statusz": "5. Folyósítva",
-      "eh": 65,
-      "elszamolasi_honap": "2026. Június"
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
     }
   ]
 }
