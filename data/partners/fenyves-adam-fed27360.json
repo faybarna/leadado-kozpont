@@ -1,0 +1,46 @@
+{
+  "partner": "Fenyves Ádám Kristóf",
+  "frissitve": "2026.06.15. 14:47",
+  "ugyletek": [
+    {
+      "ugyfel": "Szalontai Csaba",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Klein",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Varga Zoltánné",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Kozma-Halamos Zsuzsanna",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 42,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Zsetkó-Harakály Dóra",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
