@@ -62,6 +62,16 @@
     });
   }
 
+  /* ---------------- 1b) MAILTO — PWA FIX ---------------- */
+  // PWA standalone módban a mailto linkek navigációs eseményt váltanak ki.
+  // window.location.href = ... kikényszeríti a mail app megnyitását blank tab nélkül.
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+    el.addEventListener("click", function(e) {
+      e.preventDefault();
+      window.location.href = el.getAttribute("href");
+    });
+  });
+
   /* ---------------- 2) NAV AKTÍV ÁLLAPOT ---------------- */
 
   var navItems = Array.prototype.slice.call(document.querySelectorAll(".nav-item"));
@@ -287,6 +297,7 @@
             "<thead><tr><th>Ügyfél</th><th>Termék</th><th>Bank</th><th>Státusz</th><th>EH</th><th>Elszámolási hónap</th></tr></thead>" +
             "<tbody>" + rows + "</tbody>" +
           "</table></div>" +
+          renderMonthlyBreakdown(tag.ugyletek) +
         "</div>"
       );
     }).join("");
@@ -300,24 +311,68 @@
   }
 
   function renderVezetiView(vezeti) {
+    var HONAP_SORREND = ["Január","Február","Március","Április","Május","Június","Július","Augusztus","Szeptember","Október","November","December"];
+
+    // Collect all unique months across all teams, sort them
+    var honapSet = {};
+    vezeti.forEach(function(v) {
+      if (v.honap_bontas) {
+        Object.keys(v.honap_bontas).forEach(function(h) { honapSet[h] = true; });
+      }
+    });
+    var honapok = Object.keys(honapSet).sort(function(a, b) {
+      var aY = parseInt(a) || 0, bY = parseInt(b) || 0;
+      if (aY !== bY) return aY - bY;
+      var aM = HONAP_SORREND.findIndex(function(m){ return a.indexOf(m) !== -1; });
+      var bM = HONAP_SORREND.findIndex(function(m){ return b.indexOf(m) !== -1; });
+      return aM - bM;
+    });
+
+    // Short month label: "2026. Július" → "Júl."
+    function shortHonap(h) {
+      for (var i = 0; i < HONAP_SORREND.length; i++) {
+        if (h.indexOf(HONAP_SORREND[i]) !== -1) return HONAP_SORREND[i].slice(0, 3) + ".";
+      }
+      return h;
+    }
+
     var totalEh = vezeti.reduce(function(s, v) { return s + (v.eh_sum || 0); }, 0);
+    var honapTotals = {};
+    honapok.forEach(function(h) {
+      honapTotals[h] = vezeti.reduce(function(s, v) { return s + ((v.honap_bontas && v.honap_bontas[h]) || 0); }, 0);
+    });
+
+    var headerCells = "<th>Csapatvezető</th><th>Ügyletek</th>" +
+      honapok.map(function(h) { return "<th>" + shortHonap(h) + " EH</th>"; }).join("") +
+      "<th>Össz. EH</th>";
+
     var rows = vezeti.map(function(v) {
+      var honapCells = honapok.map(function(h) {
+        var eh = (v.honap_bontas && v.honap_bontas[h]) || 0;
+        return '<td class="eh-cell">' + (eh || "—") + (eh ? " EH" : "") + "</td>";
+      }).join("");
       return (
         "<tr>" +
           "<td>" + v.vezeto + "</td>" +
           "<td>" + (v.ugyletek_db || 0) + " ügylet</td>" +
+          honapCells +
           '<td class="eh-cell">' + (v.eh_sum || 0) + " EH</td>" +
         "</tr>"
       );
     }).join("");
+
+    var footerHonapCells = honapok.map(function(h) {
+      return '<td class="eh-cell">' + (honapTotals[h] || 0) + " EH</td>";
+    }).join("");
+
     return (
       '<div class="vezeti-view">' +
         '<h3 class="csapat-view-title">Vezeted csapatok összesítője</h3>' +
         '<div class="card">' +
           '<div style="overflow-x:auto"><table class="pipeline-table monthly-table">' +
-            "<thead><tr><th>Csapatvezető</th><th>Ügyletek</th><th>Csapat EH</th></tr></thead>" +
+            "<thead><tr>" + headerCells + "</tr></thead>" +
             "<tbody>" + rows + "</tbody>" +
-            '<tfoot><tr class="monthly-total"><td>Összesen</td><td></td><td class="eh-cell">' + totalEh + " EH</td></tr></tfoot>" +
+            '<tfoot><tr class="monthly-total"><td>Összesen</td><td></td>' + footerHonapCells + '<td class="eh-cell">' + totalEh + " EH</td></tr></tfoot>" +
           "</table></div>" +
         "</div>" +
       "</div>"
