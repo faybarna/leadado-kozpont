@@ -1,6 +1,6 @@
 {
   "partner": "Kács Szabolcs",
-  "frissitve": "2026.06.16. 17:15",
+  "frissitve": "2026.06.16. 17:39",
   "ugyletek": [
     {
       "ugyfel": "Hangyási Dávid",
@@ -63,6 +63,22 @@
       "termek": "Bankszámla",
       "bank": "",
       "statusz": "2. Kötési kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Tamási Irén",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Tamási Irén",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "2. Beadás alatt",
       "eh": 0,
       "elszamolasi_honap": ""
     }
