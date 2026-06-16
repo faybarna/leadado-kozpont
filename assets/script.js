@@ -257,6 +257,73 @@
     );
   }
 
+  function renderCsapatView(csapat) {
+    var sections = csapat.map(function(tag) {
+      if (!tag.ugyletek || tag.ugyletek.length === 0) {
+        return (
+          '<div class="csapat-tag-block">' +
+            '<h4 class="csapat-tag-name">' + tag.partner + '</h4>' +
+            '<p class="sajat-empty" style="padding:12px 0">Jelenleg nincs aktív ügylet.</p>' +
+          '</div>'
+        );
+      }
+      var rows = tag.ugyletek.map(function(u) {
+        var ehStr = u.eh ? u.eh + " EH" : "—";
+        return (
+          "<tr>" +
+            "<td>" + u.ugyfel + "</td>" +
+            "<td>" + u.termek + "</td>" +
+            "<td>" + u.bank + "</td>" +
+            "<td>" + statuszBadge(u.statusz) + "</td>" +
+            '<td class="eh-cell">' + ehStr + "</td>" +
+            "<td>" + (u.elszamolasi_honap || "—") + "</td>" +
+          "</tr>"
+        );
+      }).join("");
+      return (
+        '<div class="csapat-tag-block">' +
+          '<h4 class="csapat-tag-name">' + tag.partner + '</h4>' +
+          '<div style="overflow-x:auto"><table class="pipeline-table">' +
+            "<thead><tr><th>Ügyfél</th><th>Termék</th><th>Bank</th><th>Státusz</th><th>EH</th><th>Elszámolási hónap</th></tr></thead>" +
+            "<tbody>" + rows + "</tbody>" +
+          "</table></div>" +
+        "</div>"
+      );
+    }).join("");
+
+    return (
+      '<div class="csapat-view">' +
+        '<h3 class="csapat-view-title">Csapatom</h3>' +
+        sections +
+      '</div>'
+    );
+  }
+
+  function renderVezetiView(vezeti) {
+    var totalEh = vezeti.reduce(function(s, v) { return s + (v.eh_sum || 0); }, 0);
+    var rows = vezeti.map(function(v) {
+      return (
+        "<tr>" +
+          "<td>" + v.vezeto + "</td>" +
+          "<td>" + (v.ugyletek_db || 0) + " ügylet</td>" +
+          '<td class="eh-cell">' + (v.eh_sum || 0) + " EH</td>" +
+        "</tr>"
+      );
+    }).join("");
+    return (
+      '<div class="vezeti-view">' +
+        '<h3 class="csapat-view-title">Vezeted csapatok összesítője</h3>' +
+        '<div class="card">' +
+          '<div style="overflow-x:auto"><table class="pipeline-table monthly-table">' +
+            "<thead><tr><th>Csapatvezető</th><th>Ügyletek</th><th>Csapat EH</th></tr></thead>" +
+            "<tbody>" + rows + "</tbody>" +
+            '<tfoot><tr class="monthly-total"><td>Összesen</td><td></td><td class="eh-cell">' + totalEh + " EH</td></tr></tfoot>" +
+          "</table></div>" +
+        "</div>" +
+      "</div>"
+    );
+  }
+
   function loadPartnerData(token) {
     fetch("data/partners/" + token + ".json")
       .then(function(res) {
@@ -265,7 +332,14 @@
       })
       .then(function(data) {
         if (sajatLead) sajatLead.textContent = data.partner + " — aktív ügyletek";
-        sajatTar.innerHTML = '<div class="card">' + renderPipelineTable(data) + "</div>";
+        var html = '<div class="card">' + renderPipelineTable(data) + "</div>";
+        if (data.csapat && data.csapat.length > 0) {
+          html += renderCsapatView(data.csapat);
+        }
+        if (data.vezeti && data.vezeti.length > 0) {
+          html += renderVezetiView(data.vezeti);
+        }
+        sajatTar.innerHTML = html;
       })
       .catch(function() {
         sajatTar.innerHTML = '<div class="card"><div class="sajat-empty">Az adatok jelenleg nem elérhetők. Kérjük, próbáld újra később.</div></div>';

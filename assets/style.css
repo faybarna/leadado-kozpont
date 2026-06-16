@@ -652,6 +652,40 @@ body.locked .app{ display: none; }
   font-size: 14px;
 }
 
+.csapat-view{
+  margin-top: 32px;
+  border-top: 2px solid var(--line);
+  padding-top: 20px;
+}
+
+.csapat-view-title{
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+
+.csapat-tag-block{
+  margin-bottom: 28px;
+}
+
+.csapat-tag-name{
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brass);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin: 0 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.vezeti-view{
+  margin-top: 32px;
+}
+
 .monthly-breakdown{
   margin-top: 28px;
   border-top: 1px solid var(--line);
