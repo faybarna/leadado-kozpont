@@ -1,6 +1,6 @@
 {
   "partner": "Fábián Kristóf",
-  "frissitve": "2026.06.16. 10:41",
+  "frissitve": "2026.06.16. 10:48",
   "ugyletek": [
     {
       "ugyfel": "Róth István",
@@ -145,6 +145,25 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 0,
       "elszamolasi_honap": ""
+    }
+  ],
+  "csapat": [
+    {
+      "partner": "Varga Glória",
+      "ugyletek": []
+    },
+    {
+      "partner": "Gulyás Gyula",
+      "ugyletek": [
+        {
+          "ugyfel": "Gulyás Máté",
+          "termek": "Bankszámla",
+          "bank": "Erste",
+          "statusz": "2. Kötési kiküldve",
+          "eh": 42,
+          "elszamolasi_honap": ""
+        }
+      ]
     }
   ]
 }
