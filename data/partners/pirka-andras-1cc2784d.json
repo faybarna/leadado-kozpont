@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.16. 10:41",
+  "frissitve": "2026.06.16. 10:48",
   "ugyletek": [
     {
       "ugyfel": "Nánási Noémi",
@@ -137,6 +137,81 @@
       "statusz": "0. Új",
       "eh": 0,
       "elszamolasi_honap": ""
+    }
+  ],
+  "csapat": [
+    {
+      "partner": "Sellei Abigél",
+      "ugyletek": []
+    },
+    {
+      "partner": "Konkoly Szilárd",
+      "ugyletek": []
+    },
+    {
+      "partner": "Encz Emese Sarolta",
+      "ugyletek": []
+    },
+    {
+      "partner": "Nánási Fatime",
+      "ugyletek": []
+    },
+    {
+      "partner": "Kis Izabella",
+      "ugyletek": []
+    },
+    {
+      "partner": "Gaál Boglárka",
+      "ugyletek": [
+        {
+          "ugyfel": "Tyukodi Dávid",
+          "termek": "Bankszámla",
+          "bank": "UniCredit",
+          "statusz": "Pingelés",
+          "eh": 46,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Túróné Burai",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "Pingelés",
+          "eh": 33,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Bakó Klaudia",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "2. Kötési kiküldve",
+          "eh": 20,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Berki",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "2. Kötési kiküldve",
+          "eh": 20,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Berkiné Varga Beatrix",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "2. Kötési kiküldve",
+          "eh": 20,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Bogye Judit",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "3. Megkötve",
+          "eh": 20,
+          "elszamolasi_honap": "2026. Június"
+        }
+      ]
     }
   ]
 }
