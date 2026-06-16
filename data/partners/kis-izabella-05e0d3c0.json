@@ -1,0 +1,30 @@
+{
+  "partner": "Kis Izabella",
+  "frissitve": "2026.06.16. 17:15",
+  "ugyletek": [
+    {
+      "ugyfel": "Pintér Noémi",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Márkus Molli",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "3. Megkötve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Pintér Noémi",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
