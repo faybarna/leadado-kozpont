@@ -1,6 +1,6 @@
 {
   "partner": "Lamatsch Roland",
-  "frissitve": "2026.06.16. 10:41",
+  "frissitve": "2026.06.16. 10:48",
   "ugyletek": [
     {
       "ugyfel": "Montvai Gábor",
@@ -41,6 +41,48 @@
       "statusz": "0. Új",
       "eh": 60,
       "elszamolasi_honap": "2026. Június"
+    }
+  ],
+  "csapat": [
+    {
+      "partner": "Rostás Tibor",
+      "ugyletek": [
+        {
+          "ugyfel": "Patkó Tamásné",
+          "termek": "SZK",
+          "bank": "CIB",
+          "statusz": "5. Folyósítva",
+          "eh": 12,
+          "elszamolasi_honap": "2026. Június"
+        }
+      ]
+    }
+  ],
+  "vezeti": [
+    {
+      "vezeto": "Perecz Gergely",
+      "ugyletek_db": 2,
+      "eh_sum": 526
+    },
+    {
+      "vezeto": "Keserű Flóra Luca",
+      "ugyletek_db": 12,
+      "eh_sum": 922
+    },
+    {
+      "vezeto": "Lőrinc Róbert",
+      "ugyletek_db": 35,
+      "eh_sum": 4862
+    },
+    {
+      "vezeto": "Pirka András Levente",
+      "ugyletek_db": 23,
+      "eh_sum": 1449
+    },
+    {
+      "vezeto": "Fábián Kristóf",
+      "ugyletek_db": 19,
+      "eh_sum": 1340
     }
   ]
 }
