@@ -1,6 +1,6 @@
 {
   "partner": "Gaál Philip Paul",
-  "frissitve": "2026.06.16. 11:20",
+  "frissitve": "2026.06.16. 17:15",
   "ugyletek": [
     {
       "ugyfel": "Kakucsi Sándor",
@@ -41,6 +41,14 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 20,
       "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Gaál Kincső",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 20,
+      "elszamolasi_honap": "2026. Június"
     },
     {
       "ugyfel": "Heliman Benjámin és párja",
