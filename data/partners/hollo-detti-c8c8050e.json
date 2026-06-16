@@ -1,6 +1,6 @@
 {
-  "partner": "Holló Detti",
-  "frissitve": "2026.06.16. 10:41",
+  "partner": "Holló Bernadett",
+  "frissitve": "2026.06.16. 11:20",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -57,6 +57,16 @@
       "statusz": "1. Kalkuláció kiküldve",
       "eh": 33,
       "elszamolasi_honap": ""
+    }
+  ],
+  "csapat": [
+    {
+      "partner": "Esch Patricia",
+      "ugyletek": []
+    },
+    {
+      "partner": "Bagócsi Renáta",
+      "ugyletek": []
     }
   ]
 }
