@@ -1,6 +1,6 @@
 {
   "partner": "Keserű Flóra Luca",
-  "frissitve": "2026.06.16. 11:20",
+  "frissitve": "2026.06.16. 17:15",
   "ugyletek": [
     {
       "ugyfel": "Mészáros László",
@@ -102,7 +102,16 @@
   "csapat": [
     {
       "partner": "Séra Milán",
-      "ugyletek": []
+      "ugyletek": [
+        {
+          "ugyfel": "Hörnyéki Johanna",
+          "termek": "Bankszámla",
+          "bank": "UniCredit",
+          "statusz": "1. Kalkuláció kiküldve",
+          "eh": 46,
+          "elszamolasi_honap": ""
+        }
+      ]
     }
   ]
 }
