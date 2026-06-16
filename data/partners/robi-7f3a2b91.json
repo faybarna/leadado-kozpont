@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.16. 17:39",
+  "frissitve": "2026.06.16. 18:08",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -235,9 +235,9 @@
           "ugyfel": "Hangyási Dávid",
           "termek": "Bankszámla",
           "bank": "UniCredit",
-          "statusz": "2. Kötési kiküldve",
+          "statusz": "3. Megkötve",
           "eh": 46,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "2026. Június"
         },
         {
           "ugyfel": "Varga Ágnes",
