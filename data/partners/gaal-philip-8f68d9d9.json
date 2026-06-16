@@ -1,6 +1,6 @@
 {
   "partner": "Gaál Philip Paul",
-  "frissitve": "2026.06.16. 08:35",
+  "frissitve": "2026.06.16. 10:41",
   "ugyletek": [
     {
       "ugyfel": "Kakucsi Sándor",
@@ -20,19 +20,19 @@
     },
     {
       "ugyfel": "Sántha Amália",
-      "termek": "SZK",
-      "bank": "Raiffeisen",
-      "statusz": "3. Bírálat",
-      "eh": 33,
-      "elszamolasi_honap": "2026. Július"
-    },
-    {
-      "ugyfel": "Sántha Amália",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 33,
       "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Sántha Amália",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "5. Folyósítva",
+      "eh": 33,
+      "elszamolasi_honap": "2026. Július"
     },
     {
       "ugyfel": "Nagy Nikolett Bodza",
