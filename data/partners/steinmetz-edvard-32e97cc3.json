@@ -1,6 +1,6 @@
 {
   "partner": "Steinmetz Edvárd",
-  "frissitve": "2026.06.16. 10:41",
+  "frissitve": "2026.06.16. 10:48",
   "ugyletek": [
     {
       "ugyfel": "Kacsics István",
@@ -89,6 +89,12 @@
       "statusz": "1. Kalkuláció kiküldve",
       "eh": 0,
       "elszamolasi_honap": ""
+    }
+  ],
+  "csapat": [
+    {
+      "partner": "Kozma Dávid",
+      "ugyletek": []
     }
   ]
 }
