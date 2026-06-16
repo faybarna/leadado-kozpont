@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.16. 10:41",
+  "frissitve": "2026.06.16. 10:48",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -217,6 +217,81 @@
       "statusz": "0. Új",
       "eh": 0,
       "elszamolasi_honap": ""
+    }
+  ],
+  "csapat": [
+    {
+      "partner": "Kács Szabolcs",
+      "ugyletek": [
+        {
+          "ugyfel": "Hangyási Dávid",
+          "termek": "SZK",
+          "bank": "UniCredit",
+          "statusz": "1. Előminősítés alatt",
+          "eh": 132,
+          "elszamolasi_honap": "2026. Augusztus"
+        },
+        {
+          "ugyfel": "Hangyási Dávid",
+          "termek": "Bankszámla",
+          "bank": "UniCredit",
+          "statusz": "2. Kötési kiküldve",
+          "eh": 46,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Varga Ágnes",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "2. Kötési kiküldve",
+          "eh": 20,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Jantek Dóra",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "2. Kötési kiküldve",
+          "eh": 20,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Huszti Márk",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "3. Megkötve",
+          "eh": 20,
+          "elszamolasi_honap": "2026. Június"
+        },
+        {
+          "ugyfel": "Fórizs Márk",
+          "termek": "Munkáshitel",
+          "bank": "Raiffeisen",
+          "statusz": "3. Bírálat",
+          "eh": 8,
+          "elszamolasi_honap": "2026. Július"
+        },
+        {
+          "ugyfel": "Papp Zoltán",
+          "termek": "Jelzálog",
+          "bank": "",
+          "statusz": "Ügyfélre/munkatársra várunk",
+          "eh": 0,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Tamási Győző",
+          "termek": "Bankszámla",
+          "bank": "",
+          "statusz": "2. Kötési kiküldve",
+          "eh": 0,
+          "elszamolasi_honap": ""
+        }
+      ]
+    },
+    {
+      "partner": "Mátyus Dávid",
+      "ugyletek": []
     }
   ]
 }
