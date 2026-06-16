@@ -198,7 +198,62 @@
           "<th>Ügyfél</th><th>Termék</th><th>Bank</th><th>Státusz</th><th>EH</th><th>Elszámolási hónap</th>" +
         "</tr></thead>" +
         "<tbody>" + rows + "</tbody>" +
-      "</table></div>"
+      "</table></div>" +
+      renderMonthlyBreakdown(data.ugyletek)
+    );
+  }
+
+  function renderMonthlyBreakdown(ugyletek) {
+    var grouped = {};
+    var order   = [];
+
+    ugyletek.forEach(function(u) {
+      var honap = u.elszamolasi_honap || "";
+      if (!honap) return;
+      if (!grouped[honap]) {
+        grouped[honap] = { db: 0, eh: 0 };
+        order.push(honap);
+      }
+      grouped[honap].db++;
+      grouped[honap].eh += (u.eh || 0);
+    });
+
+    if (order.length === 0) return "";
+
+    // Sort by the year+month string (lexicographic works for "2026. Június" etc. only within one year;
+    // use a month-name map for correct Hungarian ordering)
+    var HONAP_SORREND = ["Január","Február","Március","Április","Május","Június","Július","Augusztus","Szeptember","Október","November","December"];
+    order.sort(function(a, b) {
+      var aY = parseInt(a) || 0;
+      var bY = parseInt(b) || 0;
+      if (aY !== bY) return aY - bY;
+      var aM = HONAP_SORREND.findIndex(function(m){ return a.indexOf(m) !== -1; });
+      var bM = HONAP_SORREND.findIndex(function(m){ return b.indexOf(m) !== -1; });
+      return aM - bM;
+    });
+
+    var totalEh = order.reduce(function(s, h){ return s + grouped[h].eh; }, 0);
+
+    var rows = order.map(function(honap) {
+      var g = grouped[honap];
+      return (
+        "<tr>" +
+          "<td>" + honap + "</td>" +
+          "<td>" + g.db + " ügylet</td>" +
+          '<td class="eh-cell">' + g.eh + " EH</td>" +
+        "</tr>"
+      );
+    }).join("");
+
+    return (
+      '<div class="monthly-breakdown">' +
+        '<h4 class="monthly-title">Havi összesítő</h4>' +
+        '<div style="overflow-x:auto"><table class="pipeline-table monthly-table">' +
+          "<thead><tr><th>Elszámolási hónap</th><th>Ügyletek</th><th>EH összeg</th></tr></thead>" +
+          "<tbody>" + rows + "</tbody>" +
+          '<tfoot><tr class="monthly-total"><td>Összesen</td><td></td><td class="eh-cell">' + totalEh + " EH</td></tr></tfoot>" +
+        "</table></div>" +
+      "</div>"
     );
   }
 

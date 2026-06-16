@@ -652,6 +652,30 @@ body.locked .app{ display: none; }
   font-size: 14px;
 }
 
+.monthly-breakdown{
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.monthly-title{
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+
+.monthly-table tfoot .monthly-total td{
+  border-top: 2px solid var(--ink);
+  font-weight: 700;
+  background: transparent;
+}
+
+.monthly-table tfoot .monthly-total:hover td{
+  background: transparent;
+}
+
 .sajat-locked{
   padding: 32px 20px;
   text-align: center;
