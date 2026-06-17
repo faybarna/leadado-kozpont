@@ -1,6 +1,6 @@
 {
   "partner": "Keserű Flóra Luca",
-  "frissitve": "2026.06.17. 18:27",
+  "frissitve": "2026.06.17. 18:40",
   "ugyletek": [
     {
       "ugyfel": "Mészáros László",
@@ -27,7 +27,7 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Séra Milán",
+      "ugyfel": "Mártanfalvi Zoltán",
       "termek": "Bankszámla",
       "bank": "Erste",
       "statusz": "2. Kötési kiküldve",
@@ -35,12 +35,12 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Mártanfalvi Zoltán",
+      "ugyfel": "Séra Milán",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "2. Kötési kiküldve",
+      "statusz": "3. Megkötve",
       "eh": 60,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Június"
     },
     {
       "ugyfel": "Mártanfalvi Zoltán",
