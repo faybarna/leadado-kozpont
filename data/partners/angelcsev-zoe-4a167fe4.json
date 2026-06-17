@@ -1,6 +1,6 @@
 {
   "partner": "Angelcsev Zoé",
-  "frissitve": "2026.06.17. 18:17",
+  "frissitve": "2026.06.17. 18:18",
   "ugyletek": [
     {
       "ugyfel": "Ernszt Ildikó",
@@ -14,9 +14,9 @@
       "ugyfel": "Nagy Krisztina",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "2. Kötési kiküldve",
-      "eh": 50,
-      "elszamolasi_honap": ""
+      "statusz": "3. Megkötve",
+      "eh": 60,
+      "elszamolasi_honap": "2026. Június"
     },
     {
       "ugyfel": "Angelcsev Zoé saját",
