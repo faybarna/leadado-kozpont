@@ -63,14 +63,23 @@
   }
 
   /* ---------------- 1b) MAILTO — PWA FIX ---------------- */
-  // PWA standalone módban a mailto linkek navigációs eseményt váltanak ki.
-  // window.location.href = ... kikényszeríti a mail app megnyitását blank tab nélkül.
-  document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-    el.addEventListener("click", function(e) {
-      e.preventDefault();
-      window.location.href = el.getAttribute("href");
+  // iOS PWA standalone módban a mailto linkek webview-navigációt váltanak ki.
+  // Megoldás: dinamikusan létrehozott link .click() — minden módban megbízható.
+  var isStandalone = (window.navigator.standalone === true) ||
+    window.matchMedia("(display-mode: standalone)").matches;
+  if (isStandalone) {
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+      el.addEventListener("click", function(e) {
+        e.preventDefault();
+        var tmp = document.createElement("a");
+        tmp.href = el.getAttribute("href");
+        tmp.style.display = "none";
+        document.body.appendChild(tmp);
+        tmp.click();
+        document.body.removeChild(tmp);
+      });
     });
-  });
+  }
 
   /* ---------------- 2) NAV AKTÍV ÁLLAPOT ---------------- */
 
@@ -410,6 +419,69 @@
     if (sajatTar) {
       sajatTar.innerHTML = '<div class="card"><div class="sajat-locked">Ez a nézet személyre szabott — kérd el a saját linkedet Barnától.</div></div>';
     }
+  }
+
+  /* ---------------- 6) KERESŐSÁV ---------------- */
+
+  var SEARCH_INDEX = [
+    { tag: "AI",  title: "AI Asszisztens",               href: "#ai-asszisztens",  keywords: "ai asszisztens kérdés bankszámla dokumentum mesterséges intelligencia" },
+    { tag: "DOK", title: "Hiteladatlapok & Segédletek",  href: "#hiteladatlapok",  keywords: "hiteladatlap segédlet jelzálog személyi kölcsön babaváró munkáshitel drive mappa" },
+    { tag: "CHK", title: "Dokumentum-igénylisták",       href: "#igenylistak",     keywords: "dokumentum igénylista checklist ügyfél irat bekérés" },
+    { tag: "EDU", title: "Képzési anyagok",              href: "#kepzes",          keywords: "képzés oktatás tananyag hitel bankszámla folyamat" },
+    { tag: "ÚJ",  title: "Újdonságok",                  href: "#ujdonsagok",      keywords: "újdonság változás frissítés napló changelog" },
+    { tag: "🏆",  title: "Versenyek",                   href: "#versenyek",       keywords: "verseny eredmény feltétel" },
+    { tag: "?",   title: "Gyakori kérdések (GYIK)",      href: "#faq",             keywords: "faq gyik kérdés válasz" },
+    { tag: "FŐ",  title: "Áttekintés",                  href: "#attekintes",      keywords: "áttekintés főoldal kezdőlap összefoglaló" }
+  ];
+
+  var searchInput   = document.getElementById("search-input");
+  var searchClear   = document.getElementById("search-clear");
+  var searchResults = document.getElementById("search-results");
+
+  function renderSearch(query) {
+    var q = (query || "").toLowerCase().trim();
+
+    if (!q) {
+      searchResults.classList.remove("visible");
+      searchResults.innerHTML = "";
+      searchClear.classList.remove("visible");
+      return;
+    }
+
+    searchClear.classList.add("visible");
+
+    var hits = SEARCH_INDEX.filter(function(item) {
+      return (item.title + " " + item.keywords).toLowerCase().indexOf(q) !== -1;
+    });
+
+    if (hits.length === 0) {
+      searchResults.innerHTML = '<div class="search-no-result">Nincs találat a „' + query + '" kifejezésre.</div>';
+    } else {
+      searchResults.innerHTML = hits.map(function(item) {
+        return (
+          '<a class="search-result-item" href="' + item.href + '">' +
+            '<span class="search-result-tag">' + item.tag + '</span>' +
+            '<span class="search-result-title">' + item.title + '</span>' +
+            '<span style="margin-left:auto; color:var(--brass); font-size:16px;">→</span>' +
+          '</a>'
+        );
+      }).join("");
+    }
+    searchResults.classList.add("visible");
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", function() {
+      renderSearch(searchInput.value);
+    });
+  }
+
+  if (searchClear) {
+    searchClear.addEventListener("click", function() {
+      searchInput.value = "";
+      renderSearch("");
+      searchInput.focus();
+    });
   }
 
 })();
