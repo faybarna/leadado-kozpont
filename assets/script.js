@@ -421,7 +421,77 @@
     }
   }
 
-  /* ---------------- 6) KERESŐSÁV ---------------- */
+  /* ---------------- 6) MOBIL BOTTOM NAV ---------------- */
+
+  var mbnItems      = Array.prototype.slice.call(document.querySelectorAll(".mbn-item[data-mbn]"));
+  var mbnMoreBtn    = document.getElementById("mbn-more-btn");
+  var moreOverlay   = document.getElementById("mobile-more-overlay");
+  var morePanel     = document.getElementById("mobile-more-panel");
+  var mmpClose      = document.getElementById("mmp-close");
+  var mmpItems      = Array.prototype.slice.call(document.querySelectorAll(".mmp-item"));
+
+  function openMorePanel() {
+    if (!moreOverlay) return;
+    moreOverlay.classList.add("open");
+    if (mbnMoreBtn) mbnMoreBtn.setAttribute("aria-expanded", "true");
+  }
+
+  function closeMorePanel() {
+    if (!moreOverlay) return;
+    moreOverlay.classList.remove("open");
+    if (mbnMoreBtn) mbnMoreBtn.setAttribute("aria-expanded", "false");
+  }
+
+  if (mbnMoreBtn) mbnMoreBtn.addEventListener("click", openMorePanel);
+  if (mmpClose)   mmpClose.addEventListener("click", closeMorePanel);
+
+  if (moreOverlay) {
+    moreOverlay.addEventListener("click", function(e) {
+      if (e.target === moreOverlay) closeMorePanel();
+    });
+  }
+
+  // Panel linkekre kattintva zárul + aktív állapot frissítése
+  mmpItems.forEach(function(item) {
+    item.addEventListener("click", function() {
+      closeMorePanel();
+      var sectionId = item.getAttribute("data-mbn");
+      setMbnActive(sectionId);
+    });
+  });
+
+  // Bottom nav aktív állapot beállítása
+  function setMbnActive(sectionId) {
+    mbnItems.forEach(function(n) { n.classList.remove("active"); });
+    var match = document.querySelector(".mbn-item[data-mbn='" + sectionId + "']");
+    if (match) match.classList.add("active");
+  }
+
+  // IntersectionObserver szinkronizálása a bottom nav-val
+  if ("IntersectionObserver" in window) {
+    var mbnSectionIds = ["attekintes","ai-asszisztens","hiteladatlapok","igenylistak",
+                         "kepzes","ujdonsagok","versenyek","faq","sajat-ugyletek"];
+    var mbnObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          setMbnActive(entry.target.id);
+        }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+
+    mbnSectionIds.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) mbnObserver.observe(el);
+    });
+  }
+
+  // Ha partner token van, a SAJÁT item a panelben is megjelenik
+  if (partnerToken) {
+    var mmpSajat = document.getElementById("mmp-sajat");
+    if (mmpSajat) mmpSajat.style.display = "";
+  }
+
+  /* ---------------- 7) KERESŐSÁV ---------------- */
 
   var SEARCH_INDEX = [
     { tag: "AI",  title: "AI Asszisztens",               href: "#ai-asszisztens",  keywords: "ai asszisztens kérdés bankszámla dokumentum mesterséges intelligencia" },
