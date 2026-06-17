@@ -1,6 +1,6 @@
 {
   "partner": "Kács Szabolcs",
-  "frissitve": "2026.06.17. 13:00",
+  "frissitve": "2026.06.17. 17:49",
   "ugyletek": [
     {
       "ugyfel": "Hangyási Dávid",
@@ -13,9 +13,17 @@
     {
       "ugyfel": "Tamási Irén",
       "termek": "SZK",
-      "bank": "Raiffeisen",
+      "bank": "Erste",
       "statusz": "2. Beadás alatt",
       "eh": 132,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Tamási Irén",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 60,
       "elszamolasi_honap": ""
     },
     {
@@ -35,23 +43,15 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Jantek Dóra",
+      "ugyfel": "Huszti Márk",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
-      "statusz": "2. Kötési kiküldve",
+      "statusz": "3. Megkötve",
       "eh": 20,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Június"
     },
     {
-      "ugyfel": "Tamási Irén",
-      "termek": "Bankszámla",
-      "bank": "",
-      "statusz": "0. Új",
-      "eh": 20,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Huszti Márk",
+      "ugyfel": "Jantek Dóra",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
@@ -79,6 +79,30 @@
       "termek": "Bankszámla",
       "bank": "",
       "statusz": "2. Kötési kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Ur Viktória",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Tamási gyerek",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Tamási gyerek",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "2. Beadás alatt",
       "eh": 0,
       "elszamolasi_honap": ""
     }
