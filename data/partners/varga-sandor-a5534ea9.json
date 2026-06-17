@@ -1,6 +1,6 @@
 {
   "partner": "Varga Sándor",
-  "frissitve": "2026.06.17. 07:27",
+  "frissitve": "2026.06.17. 08:41",
   "ugyletek": [
     {
       "ugyfel": "Szabó Dávid",
@@ -138,6 +138,14 @@
         {
           "ugyfel": "Máté Gábor",
           "termek": "Bankszámla",
+          "bank": "",
+          "statusz": "0. Új",
+          "eh": 0,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Törös Gábor",
+          "termek": "Jelzálog",
           "bank": "",
           "statusz": "0. Új",
           "eh": 0,
