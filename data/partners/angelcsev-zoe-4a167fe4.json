@@ -1,6 +1,6 @@
 {
   "partner": "Angelcsev Zoé",
-  "frissitve": "2026.06.17. 18:18",
+  "frissitve": "2026.06.17. 18:26",
   "ugyletek": [
     {
       "ugyfel": "Ernszt Ildikó",
@@ -62,9 +62,9 @@
       "ugyfel": "Mizsei Erzsébet",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "2. Kötési kiküldve",
+      "statusz": "3. Megkötve",
       "eh": 16,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Június"
     }
   ]
 }
