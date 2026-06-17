@@ -5,17 +5,17 @@
    ========================================================================= */
 
 :root{
-  --ink:        #1f2c28;   /* mély erdőzöld-antracit — sidebar, fejléc */
+  --ink:        #1a2420;   /* mély erdőzöld-antracit — sidebar, fejléc */
   --ink-soft:   #4d5e57;   /* másodlagos szöveg sötét felületen */
-  --paper:      #f6f2e9;   /* meleg papír — fő háttér */
-  --card:       #ffffff;   /* kártya felület */
-  --line:       #e3dccb;   /* hajszálvonal, elválasztó */
-  --brass:      #a8763e;   /* bross/réz — link, kiemelés, "pecsét" */
-  --brass-soft: #e7d3b6;   /* halvány bross — badge háttér */
+  --paper:      #f4efe3;   /* meleg papír — fő háttér */
+  --card:       #fafaf7;   /* kártya felület — meleg off-white, nem steril fehér */
+  --line:       #ddd5c0;   /* hajszálvonal, elválasztó */
+  --brass:      #9e6a2e;   /* bross/réz — link, kiemelés, "pecsét" */
+  --brass-soft: #f0e3cd;   /* halvány bross — badge háttér */
   --text:       #2a322e;   /* fő szövegszín */
   --text-soft:  #6d7670;   /* halvány szöveg */
-  --new:        #2f6e4f;   /* "Új" jelölés zöld */
-  --new-soft:   #dcebe2;
+  --new:        #2a5e42;   /* "Új" jelölés zöld */
+  --new-soft:   #d8ebe1;
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -161,21 +161,22 @@ a:hover{ text-decoration: underline; }
   max-width: 880px;
 }
 
-/* Stamp badge — "frissítve" jelölés, enyhén elforgatva mint egy pecsét */
+/* Stamp badge — "frissítve" jelölés, mint egy valódi iktatói pecsét */
 .stamp{
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: .08em;
+  font-size: 11.5px;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--brass);
-  border: 1.5px solid var(--brass);
+  border: 2px solid var(--brass);
   border-radius: 3px;
-  padding: 5px 10px;
-  transform: rotate(-1.5deg);
+  padding: 6px 12px;
+  transform: rotate(-2deg);
   background: var(--brass-soft);
+  opacity: .9;
 }
 
 /* ============================== HERO ============================== */
@@ -186,25 +187,32 @@ a:hover{ text-decoration: underline; }
 
 .hero h1{
   font-family: var(--font-display);
-  font-size: 38px;
+  font-size: 44px;
   font-weight: 600;
-  letter-spacing: -.01em;
+  letter-spacing: -.02em;
   color: var(--ink);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  line-height: 1.1;
 }
 
 .hero p{
   font-size: 16px;
   color: var(--text-soft);
-  max-width: 56ch;
+  max-width: 52ch;
   margin-bottom: 18px;
 }
 
 /* ============================== SECTIONS / "DOSSZIÉK" ============================== */
 
 .section{
-  margin-bottom: 48px;
+  margin-bottom: 52px;
   scroll-margin-top: 24px;
+  padding-left: 18px;
+  border-left: 2px solid var(--line);
+  transition: border-color .2s ease;
+}
+.section:hover{
+  border-left-color: var(--brass);
 }
 
 .section-tab{
@@ -219,21 +227,26 @@ a:hover{ text-decoration: underline; }
   padding: 7px 14px 6px;
   position: relative;
   top: 1px;
+  margin-left: -18px; /* igazítás a border-left-hez */
 }
 
 .section h2{
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
   color: var(--ink);
-  margin: 4px 0 6px;
+  margin: 6px 0 8px;
+  letter-spacing: -.01em;
 }
 
 .section .lead{
+  font-family: var(--font-display);
+  font-style: italic;
   color: var(--text-soft);
-  font-size: 14.5px;
-  margin-bottom: 16px;
-  max-width: 62ch;
+  font-size: 15px;
+  margin-bottom: 18px;
+  max-width: 60ch;
+  line-height: 1.65;
 }
 
 .card{
@@ -241,6 +254,10 @@ a:hover{ text-decoration: underline; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 22px 24px;
+  transition: box-shadow .2s ease;
+}
+.card:hover{
+  box-shadow: 0 4px 18px rgba(26,36,32,.07);
 }
 
 .card + .card{ margin-top: 12px; }
@@ -807,7 +824,129 @@ body.locked .app{ display: none; }
   padding: 8px 0;
 }
 
-/* ============================== MOBIL NAV ============================== */
+/* ============================== MOBIL BOTTOM NAV ============================== */
+
+.mobile-bottom-nav{
+  display: none; /* desktop: rejtett */
+}
+
+.mbn-item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 0 4px;
+  color: var(--text-soft);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: color .15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.mbn-item.active{ color: var(--brass); }
+.mbn-item:focus-visible{ outline: 2px solid var(--brass); outline-offset: -2px; }
+
+.mbn-icon{ font-size: 19px; line-height: 1; }
+.mbn-label{
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* Több — slide-up panel */
+.mobile-more-overlay{
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  background: rgba(26,36,32,.45);
+  backdrop-filter: blur(2px);
+}
+.mobile-more-overlay.open{ display: block; }
+
+.mobile-more-panel{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card);
+  border-radius: 16px 16px 0 0;
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+  transform: translateY(100%);
+  transition: transform .25s cubic-bezier(.32,.72,0,1);
+}
+.mobile-more-overlay.open .mobile-more-panel{
+  transform: translateY(0);
+}
+
+.mmp-handle{
+  width: 36px; height: 4px;
+  background: var(--line);
+  border-radius: 2px;
+  margin: 12px auto 8px;
+}
+.mmp-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 20px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.mmp-title{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.mmp-close{
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--text-soft);
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+}
+.mmp-nav{ padding: 6px 0; }
+.mmp-item{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 20px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--line);
+  transition: background .1s;
+}
+.mmp-item:last-child{ border-bottom: none; }
+.mmp-item:active{ background: var(--paper); }
+.mmp-tag{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .06em;
+  color: var(--brass);
+  background: var(--brass-soft);
+  border-radius: 3px;
+  padding: 2px 7px;
+  flex-shrink: 0;
+}
+.mmp-tag--sajat{ background: var(--new); color: #fff; }
+.mmp-footer{
+  padding: 14px 20px 6px;
+  font-size: 12px;
+  color: var(--text-soft);
+  border-top: 1px solid var(--line);
+}
+.mmp-footer a{ color: var(--brass-soft); }
+
+/* ============================== MOBIL BAR (legacy placeholder) ============================== */
 
 .mobile-bar{
   display: none;
@@ -818,39 +957,15 @@ body.locked .app{ display: none; }
 @media (max-width: 860px){
   .app{ grid-template-columns: 1fr; }
 
-  .sidebar{
-    position: relative;
-    height: auto;
-    padding: 16px 0 8px;
-  }
+  /* Sidebar eltűnik mobilon — a bottom nav veszi át */
+  .sidebar{ display: none; }
 
-  .brand{ padding: 0 20px 14px; }
-  .brand-name{ font-size: 19px; }
+  .main{ padding: 24px 16px 100px; }
 
-  .nav{
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 0 12px 6px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-  }
-  .nav::-webkit-scrollbar{ display: none; }
+  .hero h1{ font-size: 30px; }
 
-  .nav-item{
-    flex-shrink: 0;
-    border-left: none;
-    border-bottom: 3px solid transparent;
-    border-radius: var(--radius) var(--radius) 0 0;
-    padding: 12px 14px; /* nagyobb touch target */
-    font-size: 13px;
-  }
-  .nav-item.active{ border-bottom-color: var(--brass); }
-
-  .sidebar-footer{ display: none; }
-
-  .main{ padding: 24px 16px 80px; }
-
-  .hero h1{ font-size: 28px; }
+  .section{ padding-left: 14px; }
+  .section-tab{ margin-left: -14px; }
 
   .grid{ grid-template-columns: 1fr; }
 
@@ -861,6 +976,20 @@ body.locked .app{ display: none; }
   /* contact strip gombok egész szélességű mobilon */
   .contact-strip{ flex-direction: column; }
   .btn-contact{ justify-content: center; text-align: center; }
+
+  /* Bottom nav megjelenítése mobilon */
+  .mobile-bottom-nav{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    padding: 4px 0 env(safe-area-inset-bottom, 8px);
+    box-shadow: 0 -4px 20px rgba(26,36,32,.08);
+  }
 }
 
 /* ============================== REDUCED MOTION ============================== */

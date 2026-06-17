@@ -79,16 +79,16 @@
       <span class="stamp" id="stamp">Frissítve: —</span>
       <h1>Leadadó Központ</h1>
       <p>
-        Egy hely, ahonnan minden eszköz elérhető, amit Barna a leadadóknak épít:
-        az AI asszisztens, a hiteladatlapok, a dokumentum-igénylisták és minden
-        frissítés. Nincs keresgélés régi e-mailekben — ez a link mindig friss.
+        Minden, ami a munkához kell — egy helyen. Az AI asszisztens,
+        hiteladatlapok, dokumentum-igénylisták, frissítések.
+        Nincs keresgélés régi e-mailekben.
       </p>
 
       <div class="grid">
         <a class="grid-card" href="#ai-asszisztens">
           <span class="tag">AI</span>
           <h3>AI Asszisztens</h3>
-          <p>Kérdezz bankszámla-feltételekről, dokumentumokról, ügyfélszituációkról — mielőtt felhívnál.</p>
+          <p>Bankszámla-feltételek, dokumentumok, tipikus ügyfélhelyzetek — kérdezd meg, mielőtt felhívod Barnát.</p>
         </a>
         <a class="grid-card" href="#hiteladatlapok">
           <span class="tag">DOK</span>
@@ -121,17 +121,15 @@
       <span class="section-tab">AI · Asszisztens</span>
       <h2>Leadadó AI Asszisztens</h2>
       <p class="lead">
-        Mielőtt felhívnál Barnát egy kérdéssel — kérdezd meg innen. Az asszisztens
-        ismeri a bankszámla-feltételeket, a szükséges dokumentumlistákat és a
-        leggyakoribb ügyfélszituációk megoldását.
+        Mielőtt felhívod Barnát — kérdezd meg innen. Bankszámlafeltételek,
+        dokumentumlisták, tipikus ügyfélhelyzetek: az asszisztens naprakész.
       </p>
 
       <div class="card">
         <h3>Mire jó</h3>
         <p>
-          Bankszámla-konstrukciók és feltételek termékenkénti összehasonlítása ·
-          melyik dokumentum kell egy adott ügyfélhelyzethez · gyors válasz, ha
-          egy ügyfél valamit megkérdez és nem akarsz várni Barnára.
+          Bankszámla-konstrukciók termékenként · melyik dokumentum kell az adott
+          ügyfélhelyzethez · gyors válasz, ha nem akarsz várni Barnára.
         </p>
         <a class="btn btn-brass" href="https://notebooklm.google.com/notebook/4b939d1c-cc3c-4eef-80ed-22fcb004c2bb" target="_blank" rel="noopener">
           Megnyitás →
@@ -218,16 +216,14 @@
       <span class="section-tab">EDU · Képzés</span>
       <h2>Képzési anyagok</h2>
       <p class="lead">
-        Hitel- és bankszámla-folyamatok átfogó bemutatása — saját tempóban
-        átnézhető.
+        Hitel- és bankszámla-folyamatok lépésről lépésre — saját tempóban átnézhető.
       </p>
 
       <div class="card placeholder-card">
         <span class="tag-soon">Hamarosan</span>
         <h3>Hitel- és Bankszámla-képzés</h3>
         <p style="margin-bottom:0;">
-          A képzési anyagok feltöltése folyamatban — az Újdonságok rovatban
-          jelezzük, amint élesedik.
+          Hamarosan kerül fel — az Újdonságok rovatban szólunk, amint elérhető.
         </p>
       </div>
     </section>
@@ -237,7 +233,7 @@
       <span class="section-tab">ÚJ · Napló</span>
       <h2>Újdonságok</h2>
       <p class="lead">
-        Amit Barna újonnan tesz fel ide, itt jelenik meg elsőként.
+        Amit Barna felrak, itt látod először — időrendben.
       </p>
 
       <div class="card">
@@ -262,7 +258,7 @@
     <section class="section" id="faq">
       <span class="section-tab">? · GYIK</span>
       <h2>Gyakori kérdések</h2>
-      <p class="lead">A leggyakrabban felmerülő kérdések és válaszok.</p>
+      <p class="lead">Amit a legtöbben kérdeznek — megválaszolva.</p>
 
       <div class="card">
         <p class="changelog-empty">A GYIK tartalma hamarosan kerül ide.</p>
@@ -283,6 +279,61 @@
     </section>
 
   </main>
+</div>
+
+<!-- ===================== MOBIL BOTTOM NAV ===================== -->
+<nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Főnavigáció">
+  <a class="mbn-item active" href="#attekintes" data-mbn="attekintes">
+    <span class="mbn-icon">⊞</span>
+    <span class="mbn-label">FŐ</span>
+  </a>
+  <a class="mbn-item" href="#ai-asszisztens" data-mbn="ai-asszisztens">
+    <span class="mbn-icon">◈</span>
+    <span class="mbn-label">AI</span>
+  </a>
+  <a class="mbn-item" href="#hiteladatlapok" data-mbn="hiteladatlapok">
+    <span class="mbn-icon">📁</span>
+    <span class="mbn-label">DOK</span>
+  </a>
+  <a class="mbn-item" href="#igenylistak" data-mbn="igenylistak">
+    <span class="mbn-icon">☑</span>
+    <span class="mbn-label">CHK</span>
+  </a>
+  <button class="mbn-item" id="mbn-more-btn" aria-haspopup="true" aria-expanded="false">
+    <span class="mbn-icon">≡</span>
+    <span class="mbn-label">Több</span>
+  </button>
+</nav>
+
+<!-- ===================== MOBIL TÖBB PANEL ===================== -->
+<div class="mobile-more-overlay" id="mobile-more-overlay" role="dialog" aria-modal="true" aria-label="Menü">
+  <div class="mobile-more-panel" id="mobile-more-panel">
+    <div class="mmp-handle"></div>
+    <div class="mmp-header">
+      <span class="mmp-title">Menü</span>
+      <button class="mmp-close" id="mmp-close" aria-label="Bezárás">×</button>
+    </div>
+    <nav class="mmp-nav">
+      <a class="mmp-item" href="#kepzes" data-mbn="kepzes">
+        <span class="mmp-tag">EDU</span> Képzési anyagok
+      </a>
+      <a class="mmp-item" href="#ujdonsagok" data-mbn="ujdonsagok">
+        <span class="mmp-tag">ÚJ</span> Újdonságok
+      </a>
+      <a class="mmp-item" href="#versenyek" data-mbn="versenyek">
+        <span class="mmp-tag">🏆</span> Versenyek
+      </a>
+      <a class="mmp-item" href="#faq" data-mbn="faq">
+        <span class="mmp-tag">?</span> Gyakori kérdések
+      </a>
+      <a class="mmp-item" href="#sajat-ugyletek" id="mmp-sajat" data-mbn="sajat-ugyletek" style="display:none">
+        <span class="mmp-tag mmp-tag--sajat">SAJÁT</span> Saját Ügyleteim
+      </a>
+    </nav>
+    <div class="mmp-footer">
+      Fáy Barna · <a href="mailto:fay.barna@ovb.hu">fay.barna@ovb.hu</a>
+    </div>
+  </div>
 </div>
 
 <script src="assets/script.js"></script>
