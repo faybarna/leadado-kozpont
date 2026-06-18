@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.18. 19:31",
+  "frissitve": "2026.06.18. 19:36",
   "ugyletek": [
     {
       "ugyfel": "Nánási Noémi",
@@ -142,7 +142,16 @@
   "csapat": [
     {
       "partner": "Sellei Abigél",
-      "ugyletek": []
+      "ugyletek": [
+        {
+          "ugyfel": "Sellei Abigél",
+          "termek": "Bankszámla",
+          "bank": "Erste",
+          "statusz": "2. Kötési kiküldve",
+          "eh": 60,
+          "elszamolasi_honap": ""
+        }
+      ]
     },
     {
       "partner": "Konkoly Szilárd",
