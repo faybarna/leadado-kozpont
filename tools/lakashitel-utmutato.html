@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakáshitel Útmutató — Fáy Barna · Hitelspecialista</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:        #1a2420;
+  --ink-soft:   #4d5e57;
+  --paper:      #f4efe3;
+  --card:       #fafaf7;
+  --line:       #ddd5c0;
+  --brass:      #9e6a2e;
+  --brass-dark: #7a5122;
+  --brass-soft: #f0e3cd;
+  --brass-mid:  #c8964a;
+  --text:       #2a322e;
+  --text-soft:  #6d7670;
+  --green:      #2a5e42;
+  --green-soft: #d8ebe1;
+  --orange:     #b85c1a;
+  --orange-soft:#fce9d8;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', 'Consolas', monospace;
+  --radius: 4px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--brass); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ──────── HERO ──────── */
+.hero {
+  background: var(--ink);
+  color: #e7eee9;
+  padding: 72px 40px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 15% 25%, rgba(158,106,46,0.14) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 70% at 85% 80%, rgba(26,36,32,0.9) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--brass-mid);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  animation: fadeUp .7s ease forwards .1s;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--brass-mid);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #fff;
+  max-width: 720px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp .7s ease forwards .25s;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--brass-mid);
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: rgba(231,238,233,.6);
+  max-width: 520px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp .7s ease forwards .4s;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(158,106,46,.18);
+  border: 1px solid rgba(200,150,74,.35);
+  border-radius: 3px;
+  padding: 9px 18px;
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  color: var(--brass-soft);
+  opacity: 0;
+  animation: fadeUp .7s ease forwards .55s;
+}
+
+/* ──────── WRAPPER ──────── */
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ──────── SECTION BASE ──────── */
+.section {
+  padding: 72px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--brass);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--brass);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 40px;
+}
+
+/* ──────── INTRO STRIP ──────── */
+.intro-strip {
+  background: var(--card);
+  border-top: 3px solid var(--brass);
+  border-bottom: 1px solid var(--line);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.intro-text p {
+  font-size: .97rem;
+  line-height: 1.8;
+  color: var(--text-soft);
+  margin-bottom: 14px;
+}
+
+.intro-text p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Promise card */
+.promise-card {
+  background: var(--ink);
+  border-radius: var(--radius);
+  padding: 32px;
+  color: rgba(231,238,233,.85);
+}
+
+.promise-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--brass-soft);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.promise-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 13px;
+  align-items: flex-start;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.promise-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brass-mid);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+/* ──────── PROCESS ──────── */
+.process-section {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.legend {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-soft);
+  letter-spacing: .04em;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.step-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  border-left: 3px solid transparent;
+  transition: box-shadow .2s ease;
+}
+
+.step-card:hover {
+  box-shadow: 0 4px 20px rgba(26,36,32,.07);
+}
+
+.step-card.client   { border-left-color: var(--orange); }
+.step-card.advisor  { border-left-color: var(--green); }
+.step-card.special  { border-left-color: var(--brass); }
+
+.step-card.shared {
+  border-left: none;
+  position: relative;
+}
+
+.step-card.shared::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  bottom: -1px;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--orange) 50%, var(--green) 50%);
+}
+
+.step-card.shared .step-who { color: var(--brass); }
+
+.step-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--line);
+  flex-shrink: 0;
+  min-width: 40px;
+}
+
+.step-who {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.step-card.advisor .step-who { color: var(--green); }
+.step-card.client  .step-who { color: var(--orange); }
+.step-card.special .step-who { color: var(--brass); }
+
+.step-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 7px;
+}
+
+.step-desc {
+  font-size: .875rem;
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+
+.step-desc strong { color: var(--text); font-weight: 600; }
+.step-desc em { font-style: italic; color: var(--text-soft); }
+
+.extra-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 5px;
+}
+
+/* ──────── TIMELINE TABLE ──────── */
+.timeline-section {
+  background: var(--ink);
+  color: rgba(231,238,233,.85);
+}
+
+.timeline-section .section-tag { color: var(--brass-mid); }
+.timeline-section .section-tag::before { background: var(--brass-mid); }
+.timeline-section .section-title { color: #fff; }
+
+.timeline-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+}
+
+.timeline-table thead th {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--brass-mid);
+  border-bottom: 1px solid rgba(221,213,192,.2);
+  padding: 0 0 12px;
+  text-align: left;
+}
+
+.timeline-table thead th:last-child { text-align: right; }
+
+.timeline-table tbody tr {
+  border-bottom: 1px solid rgba(221,213,192,.08);
+}
+
+.timeline-table tbody td {
+  padding: 14px 0;
+  color: rgba(231,238,233,.75);
+}
+
+.timeline-table tbody td:last-child {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: .88rem;
+  color: rgba(231,238,233,.9);
+}
+
+.timeline-table tbody tr:last-child td {
+  color: var(--brass-mid);
+  font-weight: 600;
+  border-bottom: none;
+  padding-top: 20px;
+}
+
+.timeline-table tbody tr:last-child td:last-child {
+  color: var(--brass-soft);
+}
+
+.phase-icon {
+  margin-right: 10px;
+  opacity: .75;
+}
+
+/* ──────── COMPARISON ──────── */
+.comparison-section {
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.savings-hero {
+  background: var(--ink);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  color: rgba(231,238,233,.85);
+  border-left: 3px solid var(--brass);
+}
+
+.savings-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--brass-mid);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.savings-amount {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.savings-label {
+  font-size: .85rem;
+  color: rgba(231,238,233,.55);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.savings-sub {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: rgba(200,150,74,.7);
+}
+
+.comparison-intro {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.comparison-intro-text p {
+  font-size: .93rem;
+  line-height: 1.8;
+  color: var(--text-soft);
+  margin-bottom: 12px;
+}
+
+.comparison-intro-text p strong { color: var(--text); font-weight: 600; }
+
+.loan-summary-bar {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.ls-item {
+  flex: 1;
+  padding: 14px 18px;
+  border-right: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.ls-item:last-child { border-right: none; }
+
+.ls-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 4px;
+}
+
+.ls-value {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Comparison table */
+.comp-table-wrap {
+  overflow-x: auto;
+}
+
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .88rem;
+}
+
+.comp-table thead th {
+  padding: 12px 16px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 2px solid var(--line);
+  background: var(--paper);
+}
+
+.comp-table thead .col-us {
+  color: var(--brass);
+}
+
+.comp-table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.comp-table tbody tr:hover td { background: rgba(244,239,227,.5); }
+
+.comp-table .row-label {
+  font-weight: 500;
+  color: var(--text);
+  min-width: 200px;
+}
+
+.comp-table .col-bank { color: var(--text-soft); }
+.comp-table .col-us   { color: var(--text); }
+
+.comp-table .highlight-row td { background: var(--brass-soft); }
+.comp-table .total-row td {
+  font-weight: 600;
+  background: var(--ink);
+  color: #fff;
+  border-bottom: none;
+}
+
+.comp-table .total-row .col-us { color: var(--brass-mid); }
+
+.badge-better {
+  display: inline-block;
+  background: var(--green-soft);
+  color: var(--green);
+  border: 1px solid rgba(42,94,66,.2);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  padding: 1px 7px;
+  margin-left: 6px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.badge-same {
+  display: inline-block;
+  background: var(--paper);
+  color: var(--text-soft);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  padding: 1px 7px;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+/* ──────── CONDITIONS ──────── */
+.conditions-section {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.conditions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.cond-block {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+}
+
+.cond-block h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.cond-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.cond-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cond-text {
+  font-size: .9rem;
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+
+.cond-text strong { color: var(--text); font-weight: 600; }
+
+.cond-note {
+  font-size: .83rem;
+  color: var(--text-soft);
+  font-style: italic;
+  margin-top: 14px;
+  line-height: 1.6;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+/* ──────── NEXT STEPS ──────── */
+.nextsteps-section {
+  background: var(--card);
+  border-top: 3px solid var(--brass);
+}
+
+.nextsteps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.ns-card {
+  border-radius: var(--radius);
+  padding: 28px 30px;
+}
+
+.ns-card.client-ns {
+  background: var(--orange-soft);
+  border: 1px solid rgba(184,92,26,.2);
+}
+
+.ns-card.advisor-ns {
+  background: var(--green-soft);
+  border: 1px solid rgba(42,94,66,.2);
+}
+
+.ns-who {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.client-ns .ns-who { color: var(--orange); }
+.advisor-ns .ns-who { color: var(--green); }
+
+.ns-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.ns-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ns-list li {
+  font-size: .88rem;
+  line-height: 1.65;
+  color: var(--text);
+  position: relative;
+  padding-left: 18px;
+}
+
+.ns-list li::before {
+  content: '—';
+  color: var(--text-soft);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ns-list strong { font-weight: 600; }
+
+/* Contact block */
+.contact-block {
+  background: var(--ink);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.contact-text h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.contact-text p {
+  font-size: .88rem;
+  color: rgba(231,238,233,.55);
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.contact-pill {
+  background: rgba(158,106,46,.18);
+  border: 1px solid rgba(200,150,74,.3);
+  border-radius: 3px;
+  padding: 9px 18px;
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  color: var(--brass-soft);
+  white-space: nowrap;
+}
+
+.contact-pill a {
+  color: var(--brass-soft);
+  text-decoration: none;
+}
+
+.contact-pill a:hover { text-decoration: underline; }
+
+/* ──────── FOOTER ──────── */
+.footer {
+  background: var(--ink);
+  color: rgba(231,238,233,.35);
+  text-align: center;
+  padding: 24px 40px;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  letter-spacing: .04em;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+/* ──────── REVEAL ANIMATION ──────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ──────── RESPONSIVE ──────── */
+@media (max-width: 760px) {
+  .intro-grid,
+  .steps-grid,
+  .comparison-intro,
+  .conditions-grid,
+  .nextsteps-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section { padding: 52px 24px; }
+  .hero { padding: 56px 24px 64px; }
+
+  .loan-summary-bar {
+    flex-wrap: wrap;
+  }
+
+  .ls-item {
+    flex: 1 1 45%;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contact-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/* ──────── PRINT / PDF ──────── */
+@media print {
+  /* Háttérszínek és design megtartása PDF-ben */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Reveal-elemek mindig láthatók nyomtatáskor */
+  .reveal,
+  .hero-eyebrow,
+  .hero h1,
+  .hero-sub,
+  .hero-badge {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  body { font-size: 12px; }
+
+  /* Tömörebb térközök papíron */
+  .section { padding: 32px 36px; }
+  .hero { padding: 40px 36px 44px; }
+  .section-title { margin-bottom: 24px; }
+
+  /* Ne törjön ketté kártya / blokk lapváltásnál */
+  .step-card,
+  .cond-block,
+  .ns-card,
+  .promise-card,
+  .savings-hero,
+  .contact-block,
+  .loan-summary-bar,
+  .comp-table tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Nagy szekciók új oldalon kezdődjenek a tisztább tördelésért */
+  .process-section,
+  .comparison-section,
+  .conditions-section,
+  .nextsteps-section {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* A böngésző fej- és láblécének elrejtése javasolt a nyomtatás párbeszédben */
+  @page { margin: 12mm; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Fáy Barna · Hitelspecialista</p>
+    <h1>Lakáshitelének <em>teljes körű</em> intézése — lépésről lépésre</h1>
+    <p class="hero-sub">Egy találkozótól a kulcsátvételig. Minden lépésben mellette vagyok, hogy a legjobb döntést hozhassa meg.</p>
+    <div class="hero-badge">Átlagos átfutás: &nbsp;<strong>3–6 hét</strong></div>
+  </div>
+</section>
+
+<!-- ══════════ INTRO ══════════ -->
+<section class="intro-strip">
+  <div class="section intro-grid reveal">
+    <div class="intro-text">
+      <span class="section-tag">Miért érdemes velünk dolgozni?</span>
+      <h2 class="section-title" style="margin-bottom: 20px">Nem csak hitelt intézünk —<br>pénzügyi döntést hozunk</h2>
+      <p>A legtöbb ügyfél egyetlen bankot keres meg, és fogadja el az első ajánlatot. Ezzel a megközelítéssel <strong>akár több millió forintot is hagyhat az asztalon</strong> a futamidő alatt.</p>
+      <p>Nálunk legalább <strong>három vezető bank ajánlatát</strong> versenyeztetjük egymással, és olyan partnerkedvezményeket kérünk ki, amelyek nem publikusak — csak közvetítői csatornán érhetők el.</p>
+      <p>Emellett a hitelintézés mellett <strong>biztosítási és előtörlesztési stratégiát</strong> is kidolgozunk, hogy a döntés hosszú távon is optimális legyen.</p>
+    </div>
+    <div class="promise-card reveal">
+      <h3>Az Ön hitelügylete tartalmaz:</h3>
+      <div class="promise-item"><div class="promise-dot"></div><span>Legalább 3 bank versengő ajánlatának összehasonlítása</span></div>
+      <div class="promise-item"><div class="promise-dot"></div><span>3–4 hónapos kamatígérvény és előzetes hitelképességi igazolás</span></div>
+      <div class="promise-item"><div class="promise-dot"></div><span>Elő- és végtörlesztési terv hosszú távra</span></div>
+      <div class="promise-item"><div class="promise-dot"></div><span>Lakás- és életbiztosítási kalkulációk összehasonlítva</span></div>
+      <div class="promise-item"><div class="promise-dot"></div><span>Önerő tervezés: babaváró, állampapír, megtakarítások</span></div>
+      <div class="promise-item"><div class="promise-dot"></div><span>Ügyvédi kapcsolat az adásvételihez, kedvezményes áron</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROCESS ══════════ -->
+<section class="process-section">
+  <div class="section">
+    <span class="section-tag reveal">A folyamat</span>
+    <h2 class="section-title reveal">Minden lépés — átláthatóan</h2>
+
+    <div class="legend reveal">
+      <div class="legend-item"><div class="legend-dot" style="background: var(--green)"></div><span>Tanácsadó intézi</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background: var(--orange)"></div><span>Ön intézi</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background: var(--brass)"></div><span>Exkluzív plusz szolgáltatás</span></div>
+    </div>
+
+    <div class="steps-grid">
+
+      <div class="step-card shared reveal">
+        <div class="step-num">0</div>
+        <div class="step-body">
+          <div class="step-who">Ön + Tanácsadó intézi</div>
+          <div class="step-title">Adatlap kitöltése</div>
+          <div class="step-desc">A folyamat indítása az adatbekérő hiánytalan kitöltésével és az alap dokumentumok összegyűjtésével kezdődik — ebben Tanácsadó kollégánk segít Önnek.<br>Becsült adat is jobb, mint a semmi — ez alapján elindítjuk a banki előszűrést.</div>
+        </div>
+      </div>
+
+      <div class="step-card advisor reveal">
+        <div class="step-num">1–2</div>
+        <div class="step-body">
+          <div class="step-who">Tanácsadó intézi</div>
+          <div class="step-title">Adatlap ellenőrzés & kapcsolatfelvétel</div>
+          <div class="step-desc">Beérkezés után ellenőrzöm az adatlapot. <strong>48 órán belül</strong> felveszem Önnel a kapcsolatot egy egyeztetés céljából.</div>
+        </div>
+      </div>
+
+      <div class="step-card advisor reveal">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-who">Tanácsadó intézi</div>
+          <div class="step-title">Banki ajánlatok bekérése</div>
+          <div class="step-desc">Pontosítjuk az adatokat, majd legalább <strong>3 vezető banktól</strong> versengő ajánlatot kérünk be. Miközben a bankokkal tárgyalunk, Tanácsadója összekészíti a biztosítási terveket is.</div>
+        </div>
+      </div>
+
+      <div class="step-card special reveal">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="extra-tag">⭐ Exkluzív szolgáltatás</div>
+          <div class="step-title">Bankválasztás & kamatígérvény</div>
+          <div class="step-desc">Eldől a befutó bank. <strong>3–4 hónapos kamatígérvényt és előzetes hitelképességi igazolást</strong> szerzünk — így a készpénzes vevőkkel is versenyképes tud lenni, ha megtetszik egy ingatlan.</div>
+        </div>
+      </div>
+
+      <div class="step-card client reveal">
+        <div class="step-num">5–7</div>
+        <div class="step-body">
+          <div class="step-who">Ön intézi</div>
+          <div class="step-title">Ingatlan kiválasztása & adásvétel</div>
+          <div class="step-desc">Megtalálja a lakást, megköti az előszerződést / adásvételit, megfizeti az 5–10% előleget. <strong>Ügyvédi kapcsolatot biztosítok</strong> kedvezményes áron, ha szükséges.</div>
+        </div>
+      </div>
+
+      <div class="step-card advisor reveal">
+        <div class="step-num">8–10</div>
+        <div class="step-body">
+          <div class="step-who">Tanácsadó intézi</div>
+          <div class="step-title">Banki igénylés & értékbecslés</div>
+          <div class="step-desc">Összeállítjuk és leadjuk a teljes banki igénylőcsomagot. A bank értékbecslőt küld az ingatlanhoz, majd megkezdődik a hitelbírálat. <strong>Előzetes értékbecslésben is tudunk segíteni</strong> — a folyamat biztosítása és gyorsítása érdekében.</div>
+        </div>
+      </div>
+
+      <div class="step-card advisor reveal">
+        <div class="step-num">11–12</div>
+        <div class="step-body">
+          <div class="step-who">Tanácsadó intézi</div>
+          <div class="step-title">Hitelszerződés & biztosítás</div>
+          <div class="step-desc">Jóváhagyás után <strong>közjegyző előtt aláírjuk a hitelszerződést</strong>. Legkésőbb ezen a ponton megkötetjük a lakás- és életbiztosítást is.</div>
+        </div>
+      </div>
+
+      <div class="step-card advisor reveal">
+        <div class="step-num">13</div>
+        <div class="step-body">
+          <div class="step-who">Tanácsadó intézi</div>
+          <div class="step-title">Folyósítás 🎉</div>
+          <div class="step-desc">A bank kiutalja az összeget az eladónak. <strong>Hívhatja a költöztető céget!</strong></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TIMELINE ══════════ -->
+<section class="timeline-section">
+  <div class="section">
+    <span class="section-tag reveal">Menetrend</span>
+    <h2 class="section-title reveal">Átlagos időzítés, ha minden rendben halad</h2>
+
+    <table class="timeline-table reveal">
+      <thead>
+        <tr>
+          <th style="width: 55%">Fázis</th>
+          <th>Becsült idő</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="phase-icon">🔍</span>Előbírálat</td><td>2–4 munkanap</td></tr>
+        <tr><td><span class="phase-icon">🏠</span>Értékbecslés</td><td>3–7 munkanap</td></tr>
+        <tr><td><span class="phase-icon">⚖️</span>Banki bírálat</td><td>1–2 hét</td></tr>
+        <tr><td><span class="phase-icon">✍️</span>Szerződéskötés</td><td>3–7 munkanap</td></tr>
+        <tr><td><span class="phase-icon">💸</span>Folyósítás</td><td>3–15 munkanap</td></tr>
+        <tr><td><strong>Teljes folyamat összesen</strong></td><td><strong>~3–6 hét</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════ COMPARISON ══════════ -->
+<section class="comparison-section">
+  <div class="section">
+    <span class="section-tag reveal">Miért nem érdemes egyedül bankba menni?</span>
+    <h2 class="section-title reveal">Egy valós példa — <em style="font-style: italic; color: var(--brass)">mit jelent ez forintban?</em></h2>
+
+    <div class="comparison-intro reveal">
+      <div class="comparison-intro-text">
+        <p>Az alábbi összehasonlítás egy <strong>30 000 000 Ft összegű, 25 éves futamidejű piaci hitelre</strong> vonatkozik. A különbség, amit a bankfüggetlen tanácsadás jelent, <strong>nem néhány ezer forint, hanem több mint 8,7 millió forint</strong>.</p>
+        <p>A kamatban mutatkozó 1,5 százalékpontos különbség a teljes visszafizetésnél közel 9 millió forintos előnyt eredményez. Ráadásul az ügyfeleinknél az induló költségek egy része is megszűnik.</p>
+        <p style="font-size: .83rem; color: var(--text-soft); font-style: italic">* A táblázat szemléltetési céllal készült. Az Ön konkrét ajánlata a jövedelem, ingatlan és bankválasztás alapján változhat.</p>
+      </div>
+      <div class="savings-hero">
+        <span class="savings-eyebrow">Pénzügyi előny összesen</span>
+        <div class="savings-amount">8 726 323 Ft</div>
+        <div class="savings-label">megtakarítás a teljes futamidő alatt<br>a bankban intézett hitelhez képest</div>
+        <span class="savings-sub">30 M Ft · 25 év · 10 éves kamatperiódus</span>
+      </div>
+    </div>
+
+    <div class="loan-summary-bar reveal">
+      <div class="ls-item"><div class="ls-label">Hitelösszeg</div><div class="ls-value">30 000 000 Ft</div></div>
+      <div class="ls-item"><div class="ls-label">Futamidő</div><div class="ls-value">25 év</div></div>
+      <div class="ls-item"><div class="ls-label">Havi törlesztő</div><div class="ls-value">194 913 Ft</div></div>
+      <div class="ls-item"><div class="ls-label">THM</div><div class="ls-value">6,25%</div></div>
+      <div class="ls-item"><div class="ls-label">Kamatperiódus</div><div class="ls-value">10 évig fixált</div></div>
+    </div>
+
+    <div class="comp-table-wrap reveal">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th class="col-row-label">Mit kap</th>
+            <th class="col-bank">Banki ajánlat</th>
+            <th class="col-us">Velünk intézve</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td class="row-label">Kamat</td>
+            <td class="col-bank">7,49%</td>
+            <td class="col-us">5,99% <span class="badge-better">−1,5%</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Teljes visszafizetés (csak törlesztő)</td>
+            <td class="col-bank">67 266 097 Ft</td>
+            <td class="col-us">58 539 774 Ft <span class="badge-better">−8 726 323 Ft</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Induló költség visszatérítés után</td>
+            <td class="col-bank">79 750 Ft</td>
+            <td class="col-us">79 750 Ft <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Értékbecslés (társasházi lakás)</td>
+            <td class="col-bank">57 150 Ft — teljes egészében visszatérítésre kerül</td>
+            <td class="col-us">57 150 Ft — teljes egészében visszatérítésre kerül <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Tulajdoni lap (e-hiteles)</td>
+            <td class="col-bank">4 800 Ft</td>
+            <td class="col-us">4 800 Ft <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Közjegyzői díj (becsült összeg)</td>
+            <td class="col-bank">104 950 Ft, amelyből 50 000 Ft visszatérítésre kerül</td>
+            <td class="col-us">104 950 Ft, amelyből 50 000 Ft visszatérítésre kerül <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Jelzálog bejegyzési díj</td>
+            <td class="col-bank">20 000 Ft</td>
+            <td class="col-us">20 000 Ft <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Folyósítási jutalék</td>
+            <td class="col-bank">0 Ft</td>
+            <td class="col-us">0 Ft <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr class="highlight-row">
+            <td class="row-label">Elő- és végtörlesztési díj</td>
+            <td class="col-bank">Piaci díjszabás szerint</td>
+            <td class="col-us">0 Ft <span class="badge-better">Partner kedvezmény</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Díjtétel (végtörlesztés önerőből)</td>
+            <td class="col-bank">2%</td>
+            <td class="col-us">2% <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr class="total-row">
+            <td class="row-label">Pénzügyi előny összesen</td>
+            <td class="col-bank">—</td>
+            <td class="col-us">8 726 323 Ft</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONDITIONS ══════════ -->
+<section class="conditions-section">
+  <div class="section">
+    <span class="section-tag reveal">Amit érdemes tudni</span>
+    <h2 class="section-title reveal">Alapfeltételek & fontos tudnivalók</h2>
+
+    <div class="conditions-grid reveal">
+      <div class="cond-block">
+        <h3>⚡ Alapfeltételek</h3>
+        <div class="cond-item"><span class="cond-icon">📅</span><p class="cond-text">Legalább <strong>3–6 hónap</strong> folyamatos munkaviszony</p></div>
+        <div class="cond-item"><span class="cond-icon">📋</span><p class="cond-text">Nem szerepelhet a <strong>KHR negatív listán</strong></p></div>
+        <div class="cond-item"><span class="cond-icon">💼</span><p class="cond-text">Igazolható, rendszeres <strong>jövedelem</strong></p></div>
+        <div class="cond-item"><span class="cond-icon">📊</span><p class="cond-text">A havi törlesztő általában <strong>nem haladhatja meg a jövedelem 50%-át</strong> — magasabb jövedelemnél max. 60%-át</p></div>
+        <p class="cond-note">Ha valamelyik pont bizonytalan — még nem elveszett az ügy. Ilyenkor több bank feltételeit vizsgáljuk meg párhuzamosan.</p>
+      </div>
+
+      <div class="cond-block">
+        <h3>⚠️ A folyamat alatt figyeljen erre</h3>
+        <div class="cond-item"><span class="cond-icon">🏦</span><p class="cond-text">A bankok ellenőrzik a <strong>bankszámlaforgalmat</strong> — legyen áttekinthető</p></div>
+        <div class="cond-item"><span class="cond-icon">🚫</span><p class="cond-text">A hiteligénylés alatt <strong>ne vegyen fel új hitelt</strong> vagy hitelkártyát</p></div>
+        <div class="cond-item"><span class="cond-icon">🔄</span><p class="cond-text">Ha <strong>munkahelyváltást tervez</strong>, előre egyeztessen velünk</p></div>
+        <div class="cond-item"><span class="cond-icon">🏡</span><p class="cond-text">A bank az <strong>értékbecslés alapján</strong> határozza meg a maximális hitelösszeget — így érdemes előzetes értékbecslést készíteni, ebben is segítünk a bankválasztás után</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ NEXT STEPS ══════════ -->
+<section class="nextsteps-section">
+  <div class="section">
+    <span class="section-tag reveal">Következő lépések</span>
+    <h2 class="section-title reveal">Most mit kell tenni?</h2>
+
+    <div class="nextsteps-grid reveal">
+      <div class="ns-card client-ns">
+        <div class="ns-who">Ön teendői</div>
+        <h4>Mindössze 2 dolog</h4>
+        <ul class="ns-list">
+          <li>Töltse ki az <strong>előminősítéshez szükséges adatlapot</strong> — akár Tanácsadója segítségével</li>
+          <li>Készítse elő a <strong>3 havi bankszámlakivonatát</strong> és személyes okmányait szkennelve mellé</li>
+        </ul>
+      </div>
+
+      <div class="ns-card advisor-ns">
+        <div class="ns-who">Mi intézzük Önnek</div>
+        <h4>Amit mi elvégzünk</h4>
+        <ul class="ns-list">
+          <li>Legalább 3 banki ajánlat bekérése és összehasonlítása</li>
+          <li>Elő- és végtörlesztési tervek elkészítése hosszú távra</li>
+          <li>Lakás- és életbiztosítási kalkulációk összehasonlítva</li>
+          <li>Önerő tervezés</li>
+          <li>Ha nincs még ingatlan: jelzünk, ha ügyfelünk köréből megfelelő eladó ingatlan akad</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-block reveal">
+      <div class="contact-text">
+        <h3>Kérdés? Írjon bármikor.</h3>
+        <p>A folyamat bármely pontján elérhetők vagyunk. Ha valami bizonytalannak tűnik, ne várjon — egy e-mail elegendő.</p>
+      </div>
+      <div class="contact-details">
+        <div class="contact-pill">✉ &nbsp; <a href="mailto:fay.barna@ovb.hu">fay.barna@ovb.hu</a> &nbsp;— Fáy Barna · Hitelspecialista</div>
+        <div class="contact-pill">✉ &nbsp; <a href="mailto:info.faybarna@gmail.com">info.faybarna@gmail.com</a> &nbsp;— Gaál Boglárka</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  Fáy Barna · Hitelspecialista &nbsp;·&nbsp; Fáy Consulting Kft.
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakáshitel Útmutató – Az Ön Személyes Pénzügyi Terve</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1b2d;
+    --navy-mid: #162236;
+    --navy-light: #1e3050;
+    --gold: #c8a96e;
+    --gold-light: #e2c898;
+    --cream: #f5f0e8;
+    --cream-dark: #ede6d8;
+    --text-main: #1a1a2e;
+    --text-muted: #5a6a7a;
+    --green: #2d6a4f;
+    --green-light: #40916c;
+    --orange: #e07b39;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-main);
+    font-weight: 300;
+  }
+
+  /* ──────── HERO ──────── */
+  .hero {
+    background: var(--navy);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 20%, rgba(200,169,110,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 80% 80%, rgba(30,48,80,0.8) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.2s;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 780px;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.4s;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.6s;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(200,169,110,0.15);
+    border: 1px solid rgba(200,169,110,0.3);
+    border-radius: 100px;
+    padding: 10px 22px;
+    font-size: 0.88rem;
+    color: var(--gold-light);
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.8s;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 1.2s;
+  }
+
+  .hero-scroll span {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(200,169,110,0.6), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  /* ──────── SECTION BASE ──────── */
+  .section {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 48px;
+  }
+
+  /* ──────── INTRO STRIP ──────── */
+  .intro-strip {
+    background: var(--white);
+    border-top: 4px solid var(--gold);
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+
+  .intro-text p strong {
+    color: var(--text-main);
+    font-weight: 500;
+  }
+
+  .promise-card {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 36px;
+  }
+
+  .promise-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--gold-light);
+  }
+
+  .promise-item {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+  }
+
+  .promise-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .promise-item p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.75);
+  }
+
+  /* ──────── PROCESS ──────── */
+  .process-section {
+    background: var(--cream-dark);
+  }
+
+  .process-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .step-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px 32px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border-left: 4px solid transparent;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+
+  .step-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  }
+
+  .step-card.client { border-left-color: var(--orange); }
+  .step-card.advisor { border-left-color: var(--green-light); }
+  .step-card.special { border-left-color: var(--gold); }
+
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--cream-dark);
+    flex-shrink: 0;
+    min-width: 44px;
+  }
+
+  .step-card.advisor .step-num { color: rgba(45,106,79,0.15); }
+  .step-card.client .step-num { color: rgba(224,123,57,0.15); }
+  .step-card.special .step-num { color: rgba(200,169,110,0.2); }
+
+  .step-body {}
+
+  .step-who {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  .step-card.advisor .step-who { color: var(--green-light); }
+  .step-card.client .step-who { color: var(--orange); }
+  .step-card.special .step-who { color: var(--gold); }
+
+  .step-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-main);
+  }
+
+  .step-desc {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+  }
+
+  .extra-tag {
+    display: inline-block;
+    background: rgba(200,169,110,0.12);
+    border: 1px solid rgba(200,169,110,0.3);
+    color: #8b6e3a;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-bottom: 8px;
+  }
+
+  /* ──────── LEGEND ──────── */
+  .legend {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+
+  /* ──────── TIMELINE TABLE ──────── */
+  .timeline-section {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .timeline-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .timeline-wrapper .section-title { color: var(--white); }
+
+  .timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .timeline-table thead th {
+    text-align: left;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 0 0 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .timeline-table tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.2s;
+  }
+
+  .timeline-table tbody tr:hover { background: rgba(255,255,255,0.04); }
+
+  .timeline-table tbody td {
+    padding: 18px 0;
+    color: rgba(255,255,255,0.8);
+    vertical-align: middle;
+  }
+
+  .timeline-table tbody td:last-child {
+    color: var(--gold-light);
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .phase-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(200,169,110,0.15);
+    margin-right: 14px;
+    font-size: 1rem;
+  }
+
+  /* ──────── CONDITIONS ──────── */
+  .conditions-section {
+    background: var(--white);
+  }
+
+  .conditions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .cond-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--cream-dark);
+  }
+
+  .cond-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+
+  .cond-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .cond-text {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  /* ──────── NEXT STEPS ──────── */
+  .nextsteps-section {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: var(--white);
+  }
+
+  .nextsteps-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .nextsteps-wrapper .section-label { color: var(--gold); }
+  .nextsteps-wrapper .section-title { color: var(--white); }
+
+  .nextsteps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 52px;
+  }
+
+  .ns-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 28px;
+    transition: background 0.3s;
+  }
+
+  .ns-card:hover { background: rgba(255,255,255,0.1); }
+
+  .ns-who {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .ns-card.client-ns .ns-who { color: var(--orange); }
+  .ns-card.advisor-ns .ns-who { color: var(--green-light); }
+
+  .ns-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .ns-list {
+    list-style: none;
+  }
+
+  .ns-list li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+  }
+
+  .ns-list li::before {
+    content: '→';
+    color: var(--gold);
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    margin-top: 1px;
+  }
+
+  /* ──────── CONTACT ──────── */
+  .contact-block {
+    background: rgba(200,169,110,0.1);
+    border: 1px solid rgba(200,169,110,0.2);
+    border-radius: 20px;
+    padding: 36px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .contact-text p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    max-width: 420px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: auto;
+  }
+
+  .contact-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 100px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: var(--gold-light);
+    white-space: nowrap;
+  }
+
+  /* ──────── FOOTER ──────── */
+  .footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+    padding: 28px 40px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer strong { color: var(--gold); }
+
+  /* ──────── ANIMATIONS ──────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; }
+    50%       { opacity: 1; }
+  }
+
+  /* Intersection observer animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ──────── SAVINGS STRATEGY SECTION ──────── */
+  .savings-section {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .savings-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .savings-wrapper .section-title { color: var(--white); }
+
+  /* Two-col intro */
+  .sav-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 64px;
+    align-items: start;
+  }
+
+  .sav-intro-text p {
+    font-size: 0.97rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 14px;
+  }
+
+  .sav-intro-text p strong { color: var(--white); font-weight: 500; }
+
+  /* Loan scenario cards */
+  .loan-scenarios {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .loan-scenario-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    transition: background 0.3s;
+  }
+
+  .loan-scenario-card:hover { background: rgba(255,255,255,0.08); }
+
+  .loan-scenario-card.featured {
+    background: rgba(200,169,110,0.12);
+    border-color: rgba(200,169,110,0.35);
+  }
+
+  .lsc-label {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  .lsc-name {
+    font-size: 0.95rem;
+    color: var(--white);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .loan-scenario-card.featured .lsc-name { color: var(--gold-light); }
+
+  .lsc-right { text-align: right; flex-shrink: 0; }
+
+  .lsc-monthly {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--white);
+    margin-bottom: 2px;
+  }
+
+  .loan-scenario-card.featured .lsc-monthly { color: var(--gold-light); }
+
+  .lsc-total {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* Short-term strategy pills */
+  .shortterm-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+
+  .st-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 24px;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .st-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-2px); }
+
+  .st-icon {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .st-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+  }
+
+  .st-card p {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .st-card p strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+  /* Timeline */
+  .timeline-visual {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 48px 40px 40px;
+    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .timeline-visual::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .tl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .tl-loan-info {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.8;
+  }
+
+  .tl-loan-info strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+  .tl-result-badge {
+    background: rgba(200,169,110,0.15);
+    border: 1px solid rgba(200,169,110,0.3);
+    border-radius: 12px;
+    padding: 14px 22px;
+    text-align: right;
+  }
+
+  .tl-result-badge .trb-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .tl-result-badge .trb-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--gold-light);
+  }
+
+  /* The actual visual timeline track */
+  .tl-track-wrap {
+    position: relative;
+    padding: 0 0 60px;
+  }
+
+  /* Two rows: hitel bar and megtakarítás bar */
+  .tl-bars {
+    position: relative;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  .tl-bar-loan {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .tl-bar-loan-fill {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 65%; /* 13/20 */
+    background: linear-gradient(90deg, rgba(224,123,57,0.35), rgba(224,123,57,0.15));
+    border-right: 2px dashed rgba(224,123,57,0.6);
+  }
+
+  .tl-bar-savings {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 4px;
+  }
+
+  .tl-bar-savings-fill {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(64,145,108,0.2), rgba(64,145,108,0.45));
+    border-radius: 4px;
+  }
+
+  /* Labels on bars */
+  .tl-bar-label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    pointer-events: none;
+  }
+
+  /* Year axis */
+  .tl-axis {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0;
+    margin-bottom: 8px;
+  }
+
+  .tl-axis-item {
+    text-align: center;
+    position: relative;
+    flex: 1;
+  }
+
+  .tl-axis-item span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* Milestone diamonds */
+  .tl-milestones {
+    position: relative;
+    height: 180px;
+    margin-top: 8px;
+  }
+
+  .tl-line {
+    position: absolute;
+    top: 0;
+    left: 0; right: 0;
+    height: 2px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  .tl-milestone {
+    position: absolute;
+    top: -8px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tl-diamond {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    margin-bottom: 16px;
+    flex-shrink: 0;
+  }
+
+  .tl-milestone.m10 { left: 50%; }
+  .tl-milestone.m13 { left: 65%; }
+  .tl-milestone.m20 { left: 100%; }
+
+  .tl-milestone.m10 .tl-diamond { background: var(--gold); }
+  .tl-milestone.m13 .tl-diamond { background: var(--green-light); }
+  .tl-milestone.m20 .tl-diamond { background: rgba(255,255,255,0.3); }
+
+  .tl-info-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.6);
+    min-width: 180px;
+    max-width: 210px;
+    text-align: left;
+  }
+
+  .tl-info-box strong { color: var(--white); display: block; margin-bottom: 4px; font-size: 0.88rem; }
+  .tl-info-box.gold-border { border-color: rgba(200,169,110,0.4); background: rgba(200,169,110,0.07); }
+  .tl-info-box.green-border { border-color: rgba(64,145,108,0.4); background: rgba(64,145,108,0.07); }
+
+  .tl-milestone.m10 .tl-info-box { transform: translateX(-30%); }
+  .tl-milestone.m13 .tl-info-box { transform: translateX(-40%); }
+  .tl-milestone.m20 .tl-info-box { transform: translateX(-80%); }
+
+  /* Savings comparison stat row */
+  .sav-stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .sav-stat {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .sav-stat.highlight-stat {
+    background: rgba(200,169,110,0.1);
+    border-color: rgba(200,169,110,0.25);
+  }
+
+  .sav-stat .ss-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .sav-stat .ss-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .sav-stat.highlight-stat .ss-value { color: var(--gold-light); }
+
+  .sav-stat .ss-sub {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.5;
+  }
+
+  /* Providers */
+  .providers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .provider-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .provider-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-3px); }
+
+  .provider-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .provider-when {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .provider-card p {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .provider-common {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-top: 20px;
+  }
+
+  .provider-common h4 {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .common-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .common-pill {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+  }
+
+  @media (max-width: 760px) {
+    .sav-intro-grid, .shortterm-grid, .sav-stat-row, .providers-grid { grid-template-columns: 1fr; }
+    .savings-wrapper { padding: 60px 20px; }
+    .timeline-visual { padding: 28px 20px; }
+    .tl-info-box { min-width: 140px; font-size: 0.72rem; }
+  }
+
+  /* ──────── COMPARISON SECTION ──────── */
+  .comparison-section {
+    background: var(--cream);
+  }
+
+  .comparison-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .comparison-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 56px;
+    align-items: center;
+  }
+
+  .comparison-intro-text {}
+
+  .comparison-intro-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+
+  .savings-hero {
+    background: var(--navy);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .savings-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 100% 80% at 50% 0%, rgba(200,169,110,0.18) 0%, transparent 70%);
+  }
+
+  .savings-eyebrow {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .savings-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .savings-label {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+
+  .savings-sub {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-top: 1px solid rgba(200,169,110,0.3);
+    padding-top: 14px;
+  }
+
+  /* Example loan summary bar */
+  .loan-summary-bar {
+    background: var(--navy);
+    border-radius: 14px;
+    padding: 20px 32px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+
+  .loan-summary-bar .ls-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+  }
+
+  .loan-summary-bar .ls-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--white);
+  }
+
+  .loan-summary-bar .ls-item { flex: 1; min-width: 120px; }
+
+  /* Comparison table */
+  .comp-table-wrap {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 60px rgba(15,27,45,0.12);
+  }
+
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .comp-table thead {
+    background: var(--navy);
+  }
+
+  .comp-table thead th {
+    padding: 20px 24px;
+    text-align: left;
+    color: rgba(255,255,255,0.5);
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .comp-table thead th.col-us {
+    background: rgba(200,169,110,0.18);
+    color: var(--gold-light);
+  }
+
+  .comp-table thead th.col-row-label { width: 38%; }
+  .comp-table thead th.col-bank { width: 31%; }
+  .comp-table thead th.col-us { width: 31%; }
+
+  .comp-table tbody tr { border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+
+  .comp-table tbody tr:nth-child(odd) { background: var(--white); }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+
+  .comp-table tbody td {
+    padding: 16px 24px;
+    color: var(--text-main);
+    vertical-align: middle;
+    line-height: 1.5;
+  }
+
+  .comp-table tbody td.row-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .comp-table tbody td.col-bank {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .comp-table tbody td.col-us {
+    font-weight: 500;
+    color: var(--text-main);
+    background: rgba(200,169,110,0.07);
+    border-left: 2px solid rgba(200,169,110,0.25);
+  }
+
+  .comp-table tbody tr.highlight-row td { background: var(--navy) !important; color: var(--white) !important; }
+  .comp-table tbody tr.highlight-row td.col-us { background: rgba(200,169,110,0.25) !important; color: var(--gold-light) !important; border-left-color: var(--gold); }
+  .comp-table tbody tr.highlight-row td.row-label { color: rgba(255,255,255,0.7) !important; }
+  .comp-table tbody tr.highlight-row td.col-bank { color: rgba(255,255,255,0.5) !important; }
+
+  .comp-table tbody tr.total-row td {
+    background: var(--navy) !important;
+    padding: 20px 24px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--white) !important;
+  }
+
+  .comp-table tbody tr.total-row td.col-us {
+    background: rgba(200,169,110,0.3) !important;
+    color: var(--gold-light) !important;
+    font-size: 1.15rem;
+    border-left: 2px solid var(--gold) !important;
+  }
+
+  .comp-table tbody tr.total-row td.row-label {
+    color: rgba(255,255,255,0.85) !important;
+  }
+
+  .badge-better {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(45,106,79,0.12);
+    color: var(--green-light);
+    border: 1px solid rgba(64,145,108,0.3);
+    border-radius: 100px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    margin-left: 8px;
+    font-weight: 500;
+  }
+
+  .badge-same {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(90,106,122,0.1);
+    color: var(--text-muted);
+    border-radius: 100px;
+    font-size: 9px;
+    padding: 3px 10px;
+    margin-left: 6px;
+  }
+
+  .col-header-bank {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .bank-icon-small {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+  }
+
+  /* ──────── RESPONSIVE ──────── */
+  @media (max-width: 760px) {
+    .intro-grid, .steps-grid, .conditions-grid, .nextsteps-grid { grid-template-columns: 1fr; }
+    .contact-block { flex-direction: column; }
+    .contact-details { margin-left: 0; }
+    .section, .process-wrapper, .timeline-wrapper, .nextsteps-wrapper, .comparison-wrapper { padding: 60px 20px; }
+    .comparison-intro { grid-template-columns: 1fr; }
+    .loan-summary-bar { gap: 20px; }
+    .comp-table thead th, .comp-table tbody td { padding: 12px 14px; font-size: 0.82rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <p class="hero-eyebrow">Személyre szabott pénzügyi útmutató</p>
+  <h1>Az Ön lakáshitelének <em>teljes körű</em> intézése — lépésről lépésre</h1>
+  <p class="hero-sub">Egy találkozótól a kulcsátvételig. Minden lépésben Ön mellett vagyok, hogy a legjobb döntést hozhassa meg.</p>
+  <div class="hero-badge">
+    🏡 &nbsp; Átlagos átfutás: <strong style="color:var(--gold-light);margin-left:4px">3–6 hét</strong>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Görgessen</span>
+  </div>
+</section>
+
+<!-- ══════════ INTRO ══════════ -->
+<section class="intro-strip">
+  <div class="section intro-grid reveal">
+    <div class="intro-text">
+      <span class="section-label">Miért érdemes velünk dolgozni?</span>
+      <h2 class="section-title" style="margin-bottom:24px">Nem csak hitelt intézünk — <br>pénzügyi döntést hozunk</h2>
+      <p>A legtöbb ügyfél egyetlen bankot keres meg, és fogadja el az első ajánlatot. Ezzel a megközelítéssel <strong>akár több millió forintot is hagyhat az asztalon</strong> a futamidő alatt.</p>
+      <p>Nálunk legalább <strong>három vezető bank ajánlatát</strong> versenyeztetjük egymással, és olyan partnerkedvezményeket kérünk ki, amelyek nem publikusak — csak közvetítői csatornán érhetők el.</p>
+      <p>Emellett a hitelintézés mellett <strong>megtakarítási, biztosítási és előtörlesztési stratégiát</strong> is kidolgozunk Önnek, hogy a döntés hosszú távon is optimális legyen.</p>
+    </div>
+    <div class="promise-card reveal">
+      <h3>Az Ön hitelügylete tartalmaz:</h3>
+      <div class="promise-item">
+        <div class="promise-dot"></div>
+        <p>Legalább 3 bank versengő ajánlatának összehasonlítása</p>
+      </div>
+      <div class="promise-item">
+        <div class="promise-dot"></div>
+        <p>3–4 hónapos kamatígérvény és előzetes hitelképességi igazolás</p>
+      </div>
+      <div class="promise-item">
+        <div class="promise-dot"></div>
+        <p>Elő- és végtörlesztési terv hosszú távra</p>
+      </div>
+      <div class="promise-item">
+        <div class="promise-dot"></div>
+        <p>Lakás- és életbiztosítási kalkulációk összehasonlítva</p>
+      </div>
+      <div class="promise-item">
+        <div class="promise-dot"></div>
+        <p>Önerő tervezés: babaváró, állampapír, megtakarítások</p>
+      </div>
+      <div class="promise-item">
+        <div class="promise-dot"></div>
+        <p>Ügyvédi kapcsolat az adásvételihez, kedvezményes áron</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROCESS ══════════ -->
+<section class="process-section">
+  <div class="process-wrapper">
+    <span class="section-label reveal">A folyamat</span>
+    <h2 class="section-title reveal">Minden lépés — átláthatóan</h2>
+
+    <div class="legend reveal">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--green-light)"></div>
+        <span>Tanácsadó intézi</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--orange)"></div>
+        <span>Ön intézi</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--gold)"></div>
+        <span>Exkluzív plusz szolgáltatás</span>
+      </div>
+    </div>
+
+    <div class="steps-grid">
+
+      <div class="step-card client reveal">
+        <div class="step-num">0</div>
+        <div class="step-body">
+          <div class="step-who">Ön intézi</div>
+          <div class="step-title">Adatlap kitöltése</div>
+          <div class="step-desc">A folyamat indítása az adatbekérő hiánytalan feltöltésével kezdődik: <strong>www.adatlapok.eu</strong><br>Becsült adat is jobb, mint a semmi — ez alapján elindítjuk a banki előszűrést.</div>
+        </div>
+      </div>
+
+      <div class="step-card advisor reveal">
+        <div class="step-num">1–2</div>
+        <div class="step-body">
+          <div class="step-who">Tanácsadó intézi</div>
+          <div class="step-title">Adatlap ellenőrzés & kapcsolatfelvétel</div>
+          <div class="step-desc">Beérkezés után ellenőrzöm az adatlapot. <strong>48 órán belül</strong> hitelspecialista kollégám felveszi Önnel a kapcsolatot.<br><em>(Fáy Barna, +36-20-555-7171)</em></div>
+        </div>
+      </div>
+
+      <div class="step-card advisor reveal">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-who">Tanácsadó intézi</div>
+          <div class="step-title">Banki ajánlatok bekérése</div>
+          <div class="step-desc">A specialista pontosítja az adatokat és legalább <strong>3 vezető banktól</strong> versengő ajánlatot kér be. Miközben ő a bankokkal tárgyal, én elkészítem a megtakarítási és biztosítási terveket.</div>
+        </div>
+      </div>
+
+      <div class="step-card special reveal">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="extra-tag">⭐ Exkluzív szolgáltatás</div>
+          <div class="step-title">Bankválasztás & kamatígérvény</div>
+          <div class="step-desc">Eldől a befutó bank. <strong>3–4 hónapos kamatígérvényt és előzetes hitelképességi igazolást</strong> szerzünk — így a készpénzes vevőkkel is versenyképes tud lenni, ha megtetszik egy ingatlan.</div>
+        </div>
+      </div>
+
+      <div class="step-card client reveal">
+        <div class="step-num">5–7</div>
+        <div class="step-body">
+          <div class="step-who">Ön intézi</div>
+          <div class="step-title">Ingatlan kiválasztása & adásvétel</div>
+          <div class="step-desc">Megtalálja a lakást, megköti az előszerződést / adásvételit, megfizeti az 5–10% előleget. <strong>Ügyvédi kapcsolatot biztosítok</strong> kedvezményes áron, ha szükséges.</div>
+        </div>
+      </div>
+
+      <div class="step-card advisor reveal">
+        <div class="step-num">8–10</div>
+        <div class="step-body">
+          <div class="step-who">Tanácsadó intézi</div>
+          <div class="step-title">Banki igénylés & értékbecslés</div>
+          <div class="step-desc">Összeállítom és leadom a teljes banki igénylőcsomagot. A bank értékbecslőt küld az ingatlanhoz, majd megkezdődik a hitelbírálat.</div>
+        </div>
+      </div>
+
+      <div class="step-card advisor reveal">
+        <div class="step-num">11–12</div>
+        <div class="step-body">
+          <div class="step-who">Tanácsadó intézi</div>
+          <div class="step-title">Hitelszerződés & biztosítás</div>
+          <div class="step-desc">Jóváhagyás után <strong>közjegyző előtt aláírjuk a hitelszerződést</strong>. Legkésőbb ezen a ponton megkötetjük a lakás- és életbiztosítást is.</div>
+        </div>
+      </div>
+
+      <div class="step-card advisor reveal">
+        <div class="step-num">13</div>
+        <div class="step-body">
+          <div class="step-who">Tanácsadó intézi</div>
+          <div class="step-title">Folyósítás 🎉</div>
+          <div class="step-desc">A bank kiutalja az összeget az eladónak. <strong>Hívhatja a költöztető céget!</strong> Az új otthonaként üdvözlöm Önt a célállomáson.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TIMELINE ══════════ -->
+<section class="timeline-section">
+  <div class="timeline-wrapper">
+    <span class="section-label reveal">Menetrendrend</span>
+    <h2 class="section-title reveal">Átlagos időzítés, ha minden<br>rendben halad</h2>
+
+    <table class="timeline-table reveal">
+      <thead>
+        <tr>
+          <th style="width:50%">Fázis</th>
+          <th>Becsült idő</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="phase-icon">🔍</span>Előbírálat</td>
+          <td>2–4 munkanap</td>
+        </tr>
+        <tr>
+          <td><span class="phase-icon">🏠</span>Értékbecslés</td>
+          <td>3–7 munkanap</td>
+        </tr>
+        <tr>
+          <td><span class="phase-icon">⚖️</span>Banki bírálat</td>
+          <td>1–2 hét</td>
+        </tr>
+        <tr>
+          <td><span class="phase-icon">✍️</span>Szerződéskötés</td>
+          <td>3–7 munkanap</td>
+        </tr>
+        <tr>
+          <td><span class="phase-icon">💸</span>Folyósítás</td>
+          <td>3–15 munkanap</td>
+        </tr>
+        <tr style="border-bottom:2px solid rgba(200,169,110,0.4)">
+          <td style="color:var(--gold-light);font-weight:500"><strong>Teljes folyamat összesen</strong></td>
+          <td><strong>~3–6 hét</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════ COMPARISON ══════════ -->
+<section class="comparison-section">
+  <div class="comparison-wrapper">
+    <span class="section-label reveal">Miért nem érdemes egyedül bankba menni?</span>
+    <h2 class="section-title reveal">Egy valós példa —<br><em style="font-style:italic;color:var(--gold)">mit jelent ez forintban?</em></h2>
+
+    <div class="comparison-intro reveal">
+      <div class="comparison-intro-text">
+        <p>Az alábbi összehasonlítás egy <strong>30 000 000 Ft összegű, 25 éves futamidejű piaci hitelre</strong> vonatkozik. Ez egy tipikus eset — a különbség, amit a bankfüggetlen tanácsadás jelent, <strong>nem néhány ezer forint, hanem több mint 8,7 millió forint</strong>.</p>
+        <p>A kamatban mutatkozó 1,5 százalékpontos különbség a teljes visszafizetésnél már közel 9 millió forintos előnyt eredményez. Ráadásul a velünk intézett ügyleteknél az induló költségek egy része is megszűnik.</p>
+        <p style="font-size:0.88rem;color:var(--text-muted);font-style:italic">* A táblázat szemléltetési céllal készült. Az Ön konkrét ajánlata a jövedelem, ingatlan és bankválasztás alapján változhat.</p>
+      </div>
+      <div class="savings-hero reveal">
+        <span class="savings-eyebrow">Pénzügyi előny összesen</span>
+        <div class="savings-amount">8 726 323 Ft</div>
+        <div class="savings-label">megtakarítás a teljes futamidő alatt<br>a bankban intézett hitelhez képest</div>
+        <span class="savings-sub">30 M Ft &nbsp;·&nbsp; 25 év &nbsp;·&nbsp; 10 éves kamatperiódus</span>
+      </div>
+    </div>
+
+    <!-- Loan summary bar -->
+    <div class="loan-summary-bar reveal">
+      <div class="ls-item">
+        <div class="ls-label">Hitelösszeg</div>
+        <div class="ls-value">30 000 000 Ft</div>
+      </div>
+      <div class="ls-item">
+        <div class="ls-label">Futamidő</div>
+        <div class="ls-value">25 év</div>
+      </div>
+      <div class="ls-item">
+        <div class="ls-label">Havi törlesztő</div>
+        <div class="ls-value">194 913 Ft</div>
+      </div>
+      <div class="ls-item">
+        <div class="ls-label">THM</div>
+        <div class="ls-value">6,25%</div>
+      </div>
+      <div class="ls-item">
+        <div class="ls-label">Kamatperiódus</div>
+        <div class="ls-value">10 évig fixált</div>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="comp-table-wrap reveal">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th class="col-row-label">Mit kap</th>
+            <th class="col-bank"><span style="opacity:.6;font-size:11px;margin-right:6px">🏦</span> Banki ajánlat</th>
+            <th class="col-us">⭐ &nbsp;Velünk intézve</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td class="row-label">Kamat</td>
+            <td class="col-bank">7,49%</td>
+            <td class="col-us">5,99% <span class="badge-better">−1,5 pp</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Teljes visszafizetés (csak törlesztő)</td>
+            <td class="col-bank">67 266 097 Ft</td>
+            <td class="col-us">58 539 774 Ft <span class="badge-better">−8 726 323 Ft</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Induló költség visszatérítés után</td>
+            <td class="col-bank">79 750 Ft</td>
+            <td class="col-us">79 750 Ft <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Értékbecslés (társasházi lakás)</td>
+            <td class="col-bank">57 150 Ft — teljes egészében visszatérítésre kerül</td>
+            <td class="col-us">57 150 Ft — teljes egészében visszatérítésre kerül <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Tulajdoni lap (e-hiteles)</td>
+            <td class="col-bank">4 800 Ft</td>
+            <td class="col-us">4 800 Ft <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Közjegyzői díj (becsült összeg)</td>
+            <td class="col-bank">104 950 Ft, amelyből 50 000 Ft visszatérítésre kerül</td>
+            <td class="col-us">104 950 Ft, amelyből 50 000 Ft visszatérítésre kerül <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Jelzálog bejegyzési díj</td>
+            <td class="col-bank">20 000 Ft</td>
+            <td class="col-us">20 000 Ft <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Folyósítási jutalék</td>
+            <td class="col-bank">0 Ft</td>
+            <td class="col-us">0 Ft <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr class="highlight-row">
+            <td class="row-label">Elő- és végtörlesztési díj</td>
+            <td class="col-bank">Piaci díjszabás szerint</td>
+            <td class="col-us">0 Ft <span class="badge-better">Partner kedvezmény</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Díjtétel (végtörlesztés önerőből)</td>
+            <td class="col-bank">2%</td>
+            <td class="col-us">2% <span class="badge-same">azonos</span></td>
+          </tr>
+          <tr class="total-row">
+            <td class="row-label">Pénzügyi előny összesen</td>
+            <td class="col-bank">—</td>
+            <td class="col-us">8 726 323 Ft</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ SAVINGS STRATEGY ══════════ -->
+<section class="savings-section">
+  <div class="savings-wrapper">
+
+    <span class="section-label reveal">Megtakarítás & előtörlesztési stratégia</span>
+    <h2 class="section-title reveal">Az önerő felhalmozásától<br>a <em style="font-style:italic;color:var(--gold)">hitel korai kifizetéséig</em></h2>
+
+    <!-- Intro + loan scenarios -->
+    <div class="sav-intro-grid reveal">
+      <div class="sav-intro-text">
+        <p>Ebben az időszakban <strong>két ismeretlen tényező</strong> van: nem tudjuk még pontosan melyik ingatlant, és pontosan mennyi hitelt kell majd felvenni. Ez nem baj — becsléssel dolgozunk, és rugalmasan alkalmazkodunk.</p>
+        <p>Ami viszont már most biztosan felépíthető: az önerő és a <strong>hosszú távú elő- és végtörlesztési stratégia</strong>. Ez utóbbi akár éveket spórolhat a futamidőből és milliókat a visszafizetendő összegből.</p>
+        <p>A számítások alapja: <strong>25 000 000 Ft becsült hitelösszeg</strong>, egyéb hitelek nélkül.</p>
+      </div>
+      <div class="loan-scenarios">
+        <div class="loan-scenario-card">
+          <div>
+            <div class="lsc-label">Piaci hitel · 6% kamat · 20 év</div>
+            <div class="lsc-name">Normál piaci konstrukció</div>
+          </div>
+          <div class="lsc-right">
+            <div class="lsc-monthly">179 000 Ft / hó</div>
+            <div class="lsc-total">Teljes visszafizetés: 42,9 M Ft</div>
+          </div>
+        </div>
+        <div class="loan-scenario-card featured">
+          <div>
+            <div class="lsc-label">Otthon Start · 3% kamat · 20 év</div>
+            <div class="lsc-name">Állami program — javasolt</div>
+          </div>
+          <div class="lsc-right">
+            <div class="lsc-monthly">138 650 Ft / hó</div>
+            <div class="lsc-total">Teljes visszafizetés: 33,2 M Ft</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Short term section label -->
+    <div class="reveal" style="margin-bottom:24px">
+      <span class="section-label" style="color:rgba(255,255,255,0.4)">1. lépés</span>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--white)">Rövidtáv — az önerő okos gyűjtése</h3>
+    </div>
+
+    <div class="shortterm-grid reveal">
+      <div class="st-card">
+        <span class="st-icon">📜</span>
+        <h4>Állampapír — Webkincstár</h4>
+        <p>Nagyobb összegű megtakarítások (<strong>100 000–200 000 Ft/hó</strong>) 3–12 hónapos állampapírban gyűjtve ingyenesen. <strong>3–4% kamat</strong>, 1–2 napon belül hozzáférhető egyenleg — az infláció nem rontja a tőkéd.</p>
+      </div>
+      <div class="st-card">
+        <span class="st-icon">👶</span>
+        <h4>Babaváró hitel</h4>
+        <p>Házaspároknak elérhető <strong>11 millió Ft kamatmentes hitel</strong>, 90 nap után 100%-ban önerőként is felhasználható. 5 éven belül 1 gyermek kell a kamatmentességhez — de felvehető azonnal, bármikor.</p>
+      </div>
+      <div class="st-card">
+        <span class="st-icon">👨‍👩‍👧</span>
+        <h4>Családi előrehozott támogatás</h4>
+        <p>Ha szóba jöhet a <strong>felmenőktől kapható örökségrész</strong>, érdemes ezt is bekalkulálni a lakásprojekt tervezésekor. Meglepően sokszor ez a leggyorsabb önerő-kiegészítési forrás.</p>
+      </div>
+      <div class="st-card">
+        <span class="st-icon">🛋️</span>
+        <h4>Tartalék a beköltözésre</h4>
+        <p>Ügyvédi díj, esetleges festés, konyhabútor, apró felújítás — érdemes <strong>1–2 millió Ft-ot</strong> félretenni erre, hogy ne nullán álljon az ember a kulcsátvétel napján.</p>
+      </div>
+    </div>
+
+    <!-- Long term section label -->
+    <div class="reveal" style="margin-bottom:24px">
+      <span class="section-label" style="color:rgba(255,255,255,0.4)">2. lépés</span>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--white)">Hosszútáv — megtakarítással végtörlesztés</h3>
+    </div>
+
+    <!-- Stats row -->
+    <div class="sav-stat-row reveal">
+      <div class="sav-stat">
+        <span class="ss-label">Havi megtakarítás</span>
+        <div class="ss-value">25 000 Ft</div>
+        <div class="ss-sub">8% hozam · 5% éves indexálás</div>
+      </div>
+      <div class="sav-stat">
+        <span class="ss-label">Folyószámlán gyűjtve · 15 év</span>
+        <div class="ss-value">4 500 000 Ft</div>
+        <div class="ss-sub">Kamat nulla, infláció rontja</div>
+      </div>
+      <div class="sav-stat highlight-stat">
+        <span class="ss-label">Megtakarítási számlán · 15 év</span>
+        <div class="ss-value">9 563 000 Ft</div>
+        <div class="ss-sub">Hitel tőketartozása ekkor: 7 835 000 Ft<br>→ kifizeted és még marad 1,7 M Ft</div>
+      </div>
+    </div>
+
+    <!-- Timeline visual -->
+    <div class="timeline-visual reveal">
+      <div class="tl-header">
+        <div class="tl-loan-info">
+          <strong>Minta hitel:</strong> 25 000 000 Ft &nbsp;/&nbsp; 20 év &nbsp;/&nbsp; Kamat: 6% &nbsp;/&nbsp; Törlesztő: 180 000 Ft<br>
+          <strong>Minta megtakarítás:</strong> 50 000 Ft / hó &nbsp;/&nbsp; 15 év &nbsp;/&nbsp; Hozam: 8% &nbsp;/&nbsp; Értékkövetés: 5%
+        </div>
+        <div class="tl-result-badge">
+          <span class="trb-label">Megtakarított kamat + idő</span>
+          <div class="trb-value">2,8 M Ft be NEM fizetett kamat<br>+ 7 év megspórolt futamidő</div>
+        </div>
+      </div>
+
+      <!-- Bars -->
+      <div style="margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+          <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3)">Hitel futamideje</span>
+          <span style="font-size:9px;color:rgba(224,123,57,0.7)">végtörlesztés a 13. évben ↗</span>
+        </div>
+        <div style="position:relative;height:38px;background:rgba(255,255,255,0.06);border-radius:6px;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;bottom:0;width:65%;background:linear-gradient(90deg,rgba(224,123,57,0.3),rgba(224,123,57,0.12));border-right:2px dashed rgba(224,123,57,0.5)"></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;padding:0 14px">
+            <span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3)">Aktív törlesztés</span>
+          </div>
+          <!-- Year markers -->
+          <div style="position:absolute;top:0;bottom:0;left:50%;border-left:1px solid rgba(255,255,255,0.1)"></div>
+          <div style="position:absolute;top:0;bottom:0;left:65%;border-left:1px dashed rgba(200,169,110,0.5)"></div>
+          <div style="position:absolute;top:0;bottom:0;right:0;border-left:1px solid rgba(255,255,255,0.1)"></div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:32px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+          <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3)">Megtakarítás növekedése</span>
+          <span style="font-size:9px;color:rgba(64,145,108,0.8)">adómentes hozam ↗</span>
+        </div>
+        <div style="position:relative;height:38px;background:rgba(255,255,255,0.04);border-radius:6px;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;bottom:0;width:100%;background:linear-gradient(90deg,rgba(64,145,108,0.15),rgba(64,145,108,0.4));border-radius:6px"></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;padding:0 14px">
+            <span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3)">Kamatos kamat növekedés</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year axis -->
+      <div style="display:flex;justify-content:space-between;margin-bottom:32px;padding:0 0">
+        <span style="font-family:'Playfair Display',serif;font-size:1rem;color:rgba(255,255,255,0.25)">0</span>
+        <span style="font-family:'Playfair Display',serif;font-size:1rem;color:rgba(255,255,255,0.25);margin-left:auto;margin-right:calc(35% - 1rem)">10. év</span>
+        <span style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold);margin-right:calc(35% - 2.5rem)">13. év</span>
+        <span style="font-family:'Playfair Display',serif;font-size:1rem;color:rgba(255,255,255,0.25)">20. év</span>
+      </div>
+
+      <!-- Milestone info boxes -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+        <div class="tl-info-box gold-border">
+          <strong>10. év — első elő­törlesztés</strong>
+          Megtakarítás egyenlege: <strong style="color:var(--gold-light)">8,8 millió Ft</strong><br>
+          Adómentes hozam · törlesztő csökkentése lehetséges · első előtörlesztési ablak
+        </div>
+        <div class="tl-info-box green-border">
+          <strong>13. év — végtörlesztés</strong>
+          Megtakarítás: <strong style="color:#6fcf97">13,7 millió Ft</strong><br>
+          Hitel tőke­tartozás: 12,5 millió Ft<br>
+          Marad: <strong style="color:#6fcf97">1,2 millió Ft</strong> felújításra, stb.
+        </div>
+        <div class="tl-info-box">
+          <strong>20. év — ha megőrzöd</strong>
+          A megtakarítási számla adó­mentessé vált — önerő egy következő lakáshoz, vagy bérbeadásra szánt ingatlan­vásárláshoz
+        </div>
+      </div>
+    </div>
+
+    <!-- Providers -->
+    <div class="reveal" style="margin-bottom:24px">
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--white);margin-bottom:6px">Ajánlott megtakarítási szolgáltatók</h3>
+      <p style="font-size:0.88rem;color:rgba(255,255,255,0.4)">Mindhárom a kategória csúcsminőségű opciója — egyik mellett sem lehet mellényúlni.</p>
+    </div>
+
+    <div class="providers-grid reveal">
+      <div class="provider-card">
+        <div class="provider-name">Generali</div>
+        <span class="provider-when">Válassza, ha…</span>
+        <p>Fontos a <strong style="color:rgba(255,255,255,0.85)">presztízs</strong> és a nagy múlt — közel 200 éves vállalat. Kiemelkedő rugalmasság a futamidő során.</p>
+      </div>
+      <div class="provider-card">
+        <div class="provider-name">Signal</div>
+        <span class="provider-when">Válassza, ha…</span>
+        <p>Magas <strong style="color:rgba(255,255,255,0.85)">hűségbónusz</strong> a futamidő során — lejáratkor több pénzt jelent. Hosszú elköteleződés esetén a legjobb végeredmény.</p>
+      </div>
+      <div class="provider-card">
+        <div class="provider-name">UNIQA</div>
+        <span class="provider-when">Válassza, ha…</span>
+        <p>Széles <strong style="color:rgba(255,255,255,0.85)">vagyonkezelési stratégia</strong>-választék, EUR befizetési lehetőség HUF mellett. Rugalmas portfólió-összetétel.</p>
+      </div>
+    </div>
+
+    <div class="provider-common reveal">
+      <h4>Mindháromra jellemző</h4>
+      <div class="common-pills">
+        <span class="common-pill">⏸ Szüneteltethető</span>
+        <span class="common-pill">↕ Havi összeg változtatható</span>
+        <span class="common-pill">🔒 3 év hűségidőszak</span>
+        <span class="common-pill">💰 Kamatadó mentes hozam</span>
+        <span class="common-pill">📤 Részleges pénzkivonás lehetséges</span>
+        <span class="common-pill">🛡 Biztonsági háló válság esetén</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ CONDITIONS ══════════ -->
+<section class="conditions-section">
+  <div class="section reveal">
+    <span class="section-label">Amit érdemes tudni</span>
+    <h2 class="section-title">Alapfeltételek & fontos tudnivalók</h2>
+
+    <div class="conditions-grid">
+      <div class="cond-block">
+        <h3>⚡ Alapfeltételek</h3>
+        <div class="cond-item">
+          <span class="cond-icon">📅</span>
+          <p class="cond-text">Legalább <strong>3–6 hónap</strong> folyamatos munkaviszony</p>
+        </div>
+        <div class="cond-item">
+          <span class="cond-icon">📋</span>
+          <p class="cond-text">Nem szerepelhet a <strong>KHR negatív listán</strong></p>
+        </div>
+        <div class="cond-item">
+          <span class="cond-icon">💼</span>
+          <p class="cond-text">Igazolható, rendszeres <strong>jövedelem</strong></p>
+        </div>
+        <div class="cond-item">
+          <span class="cond-icon">📊</span>
+          <p class="cond-text">A havi törlesztő általában <strong>nem haladhatja meg a jövedelem ~40–50%-át</strong></p>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin-top:16px;line-height:1.6">Ha valamelyik pont bizonytalan — még nem elveszett az ügy. Ilyenkor több bank feltételeit vizsgáljuk meg párhuzamosan.</p>
+      </div>
+
+      <div class="cond-block">
+        <h3>⚠️ A folyamat alatt figyeljen erre</h3>
+        <div class="cond-item">
+          <span class="cond-icon">🏦</span>
+          <p class="cond-text">A bankok ellenőrzik a <strong>bankszámlaforgalmat</strong> — legyen áttekinthető</p>
+        </div>
+        <div class="cond-item">
+          <span class="cond-icon">🚫</span>
+          <p class="cond-text">A hiteligénylés alatt <strong>ne vegyen fel új hitelt</strong> vagy hitelkártyát</p>
+        </div>
+        <div class="cond-item">
+          <span class="cond-icon">🔄</span>
+          <p class="cond-text">Ha <strong>munkahelyváltást tervez</strong>, előre egyeztessen velem</p>
+        </div>
+        <div class="cond-item">
+          <span class="cond-icon">🏡</span>
+          <p class="cond-text">A bank az <strong>értékbecslés alapján</strong> határozza meg a maximális hitelösszeget</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ NEXT STEPS ══════════ -->
+<section class="nextsteps-section">
+  <div class="nextsteps-wrapper">
+    <span class="section-label reveal">Következő lépések</span>
+    <h2 class="section-title reveal">Most mit kell tenni?</h2>
+
+    <div class="nextsteps-grid reveal">
+      <div class="ns-card client-ns">
+        <div class="ns-who">Ön teendői</div>
+        <h4>Mindössze 2 dolog</h4>
+        <ul class="ns-list">
+          <li>Töltse ki az adatlapot: <strong>www.adatlapok.eu</strong> — néhány perc, és elindítom a folyamatot</li>
+          <li>Készítse elő a <strong>3 havi bankszámlakivonatot</strong> és a személyes okmányokat (szkennelve)</li>
+        </ul>
+      </div>
+
+      <div class="ns-card advisor-ns">
+        <div class="ns-who">Én intézem Önnek</div>
+        <h4>Amit én elvégzek</h4>
+        <ul class="ns-list">
+          <li>Elő- és végtörlesztési tervek elkészítése hosszú távra (e-mailben elküldöm + megmagyarázom)</li>
+          <li>Megtakarítási számlák összehasonlítása</li>
+          <li>Önerő tervezés: babaváró, állampapír, eloszlások</li>
+          <li>Lakás- és életbiztosítási kalkulációk összehasonlítva</li>
+          <li>Ha nincs még ingatlan: jelzem, ha ügyfelem köréből megfelelő eladó ingatlan akad</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-block reveal">
+      <div class="contact-text">
+        <h3>Kérdés? Írjon vagy hívjon bármikor.</h3>
+        <p>A folyamat bármely pontján elérhető vagyok. Ha valami bizonytalannak tűnik, ne várjon — egy üzenet elegendő.</p>
+      </div>
+      <div class="contact-details">
+        <div class="contact-pill">📞 &nbsp; Fáy Barna — +36-20-555-7171</div>
+        <div class="contact-pill">🌐 &nbsp; www.adatlapok.eu</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <strong>OVB</strong> &nbsp;·&nbsp; Független pénzügyi tanácsadás &nbsp;·&nbsp; Személyre szabott megoldások
+</footer>
+
+<script>
+  // Intersection Observer a reveal animációhoz
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
