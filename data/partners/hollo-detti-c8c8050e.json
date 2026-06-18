@@ -1,6 +1,6 @@
 {
   "partner": "Holló Bernadett",
-  "frissitve": "2026.06.18. 15:01",
+  "frissitve": "2026.06.18. 16:59",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -73,6 +73,14 @@
       "statusz": "3. Megkötve",
       "eh": 33,
       "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "György-Vince Gitta",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
     }
   ],
   "csapat": [
