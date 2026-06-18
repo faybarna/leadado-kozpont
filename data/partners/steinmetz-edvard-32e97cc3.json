@@ -1,6 +1,6 @@
 {
   "partner": "Steinmetz Edvárd",
-  "frissitve": "2026.06.18. 15:01",
+  "frissitve": "2026.06.18. 16:59",
   "ugyletek": [
     {
       "ugyfel": "Kacsics István",
@@ -31,6 +31,14 @@
       "termek": "Bankszámla",
       "bank": "UniCredit",
       "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Czibik Balázs Zoltán",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "1. Kalkuláció kiküldve",
       "eh": 46,
       "elszamolasi_honap": ""
     },
