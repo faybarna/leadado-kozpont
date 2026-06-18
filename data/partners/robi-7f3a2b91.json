@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.18. 10:16",
+  "frissitve": "2026.06.18. 15:01",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -137,6 +137,14 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 25,
       "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Gazsi Árpád",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "3. Megkötve",
+      "eh": 25,
+      "elszamolasi_honap": "2026. Június"
     },
     {
       "ugyfel": "Hidi Csukoly Annamária",
