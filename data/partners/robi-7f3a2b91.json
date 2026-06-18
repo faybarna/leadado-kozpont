@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.18. 09:26",
+  "frissitve": "2026.06.18. 09:36",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -126,14 +126,6 @@
       "ugyfel": "Szabó Zoltán",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
-      "statusz": "2. Kötési kiküldve",
-      "eh": 33,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Gazsi Árpád",
-      "termek": "Bankszámla",
-      "bank": "CIB",
       "statusz": "2. Kötési kiküldve",
       "eh": 33,
       "elszamolasi_honap": ""
