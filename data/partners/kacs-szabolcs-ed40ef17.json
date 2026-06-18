@@ -1,6 +1,6 @@
 {
   "partner": "Kács Szabolcs",
-  "frissitve": "2026.06.17. 19:04",
+  "frissitve": "2026.06.18. 07:27",
   "ugyletek": [
     {
       "ugyfel": "Hangyási Dávid",
@@ -83,6 +83,14 @@
       "elszamolasi_honap": ""
     },
     {
+      "ugyfel": "Tamási gyerek",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "2. Beadás alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
       "ugyfel": "Ur Viktória",
       "termek": "Bankszámla",
       "bank": "",
@@ -95,14 +103,6 @@
       "termek": "Bankszámla",
       "bank": "",
       "statusz": "0. Új",
-      "eh": 0,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Tamási gyerek",
-      "termek": "Jelzálog",
-      "bank": "",
-      "statusz": "2. Beadás alatt",
       "eh": 0,
       "elszamolasi_honap": ""
     }
