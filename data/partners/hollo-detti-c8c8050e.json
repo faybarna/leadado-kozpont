@@ -1,6 +1,6 @@
 {
   "partner": "Holló Bernadett",
-  "frissitve": "2026.06.18. 08:16",
+  "frissitve": "2026.06.18. 08:36",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -25,14 +25,6 @@
       "statusz": "3. Bírálat",
       "eh": 40,
       "elszamolasi_honap": "2026. Július"
-    },
-    {
-      "ugyfel": "Medvedovszky Ádám",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "2. Kötési kiküldve",
-      "eh": 33,
-      "elszamolasi_honap": ""
     },
     {
       "ugyfel": "Szilágyi Levente",
@@ -60,6 +52,14 @@
     },
     {
       "ugyfel": "Pápai Péter",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 33,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Medvedovszky Ádám",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
