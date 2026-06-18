@@ -25,6 +25,14 @@ FIGYELEM_STATUSZOK = {"Ügyfélre/munkatársra várunk", "0. Új"}
 AKTUALIS_HONAP = "2026. Június"
 KOVETKEZO_HONAP = "2026. Július"
 
+BASE_URL = "https://faybarna.github.io/leadado-kozpont"
+
+
+def keresztnev(teljes_nev):
+    """Magyar névsorrend: vezetéknév elöl, keresztnév a második tag."""
+    reszek = teljes_nev.split()
+    return reszek[1] if len(reszek) >= 2 else teljes_nev
+
 
 def digest_for(path):
     data = json.load(open(path, encoding="utf-8"))
@@ -32,11 +40,16 @@ def digest_for(path):
     frissitve = data.get("frissitve", "—")
     ugyletek = data.get("ugyletek", [])
 
+    token = os.path.basename(path)[:-5]
+    link = f"{BASE_URL}/?p={token}"
+    nev = keresztnev(partner)
+
     if not ugyletek:
         return (
-            f"Szia {partner}!\n\n"
+            f"Szia {nev},\n\n"
             f"A héten nincs aktív ügyleted a rendszerben. "
             f"Ha van leadnivalód, töltsd fel az adatlapot — egy üzenet és indítjuk.\n\n"
+            f"Saját Ügyleteim: {link}\n"
             f"(Frissítve: {frissitve})"
         )
 
@@ -54,7 +67,7 @@ def digest_for(path):
     eh_aktiv = sum(u.get("eh", 0) for u in aktiv)
 
     sorok = []
-    sorok.append(f"Szia {partner}!\n")
+    sorok.append(f"Szia {nev},\n")
     sorok.append("Heti pillanatkép a pipeline-odról:\n")
     sorok.append(f"  • Aktív ügylet: {len(aktiv)} db (összesen {eh_aktiv} EH)")
     sorok.append(f"  • Lezárt / folyósított: {len(lezart)} db")
@@ -69,7 +82,7 @@ def digest_for(path):
         nev = ", ".join(u["ugyfel"] for u in figyelem)
         sorok.append(f"\n  ⚠ Rád/ügyfélre vár ({len(figyelem)} db): {nev} — ezeken érdemes mozdítani.")
 
-    sorok.append(f"\nRészletes nézeted bármikor: a Saját Ügyleteim linked.")
+    sorok.append(f"\nRészletes nézeted bármikor: {link}")
     sorok.append(f"(Frissítve: {frissitve})")
     return "\n".join(sorok)
 
