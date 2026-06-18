@@ -1,6 +1,6 @@
 {
   "partner": "Lamatsch Roland",
-  "frissitve": "2026.06.18. 09:36",
+  "frissitve": "2026.06.18. 17:00",
   "ugyletek": [
     {
       "ugyfel": "Montvai Gábor",
@@ -27,20 +27,20 @@
       "elszamolasi_honap": "2026. Augusztus"
     },
     {
-      "ugyfel": "Montvai Gábor",
-      "termek": "Bankszámla",
-      "bank": "Erste",
-      "statusz": "0. Új",
-      "eh": 60,
-      "elszamolasi_honap": "2026. Június"
-    },
-    {
       "ugyfel": "Magyar Nikolett",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "0. Új",
+      "statusz": "1. Kalkuláció kiküldve",
       "eh": 60,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Montvai Gábor",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": ""
     }
   ],
   "csapat": [
@@ -79,12 +79,12 @@
     },
     {
       "vezeto": "Lőrinc Róbert",
-      "ugyletek_db": 39,
-      "eh_sum": 5021,
+      "ugyletek_db": 40,
+      "eh_sum": 5046,
       "honap_bontas": {
         "2026. Július": 2504,
         "2026. Augusztus": 1332,
-        "2026. Június": 522
+        "2026. Június": 547
       }
     },
     {
@@ -93,7 +93,7 @@
       "eh_sum": 1495,
       "honap_bontas": {
         "2026. Július": 526,
-        "2026. Június": 429
+        "2026. Június": 449
       }
     },
     {
