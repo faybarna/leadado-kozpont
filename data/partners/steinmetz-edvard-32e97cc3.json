@@ -1,6 +1,6 @@
 {
   "partner": "Steinmetz Edvárd",
-  "frissitve": "2026.06.18. 10:16",
+  "frissitve": "2026.06.18. 15:01",
   "ugyletek": [
     {
       "ugyfel": "Kacsics István",
@@ -56,30 +56,6 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 25,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Tóth-Kiss Boglárka",
-      "termek": "Babaváró",
-      "bank": "",
-      "statusz": "1. Előminősítés alatt",
-      "eh": 16,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Tóth-Kiss Boglárka",
-      "termek": "Bankszámla",
-      "bank": "",
-      "statusz": "1. Kalkuláció kiküldve",
-      "eh": 0,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Tóth Alex",
-      "termek": "Bankszámla",
-      "bank": "",
-      "statusz": "1. Kalkuláció kiküldve",
-      "eh": 0,
       "elszamolasi_honap": ""
     }
   ],
