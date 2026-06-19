@@ -1,6 +1,6 @@
 {
   "partner": "Bencsik Pál",
-  "frissitve": "2026.06.19. 07:27",
+  "frissitve": "2026.06.19. 08:36",
   "ugyletek": [
     {
       "ugyfel": "Németh András",
@@ -70,9 +70,9 @@
       "ugyfel": "Kocsis Sarolta",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "2. Kötési kiküldve",
+      "statusz": "3. Megkötve",
       "eh": 60,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Június"
     },
     {
       "ugyfel": "Spillenberg Richárd",
