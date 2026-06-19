@@ -1,6 +1,6 @@
 {
   "partner": "Hajtó Krisztián",
-  "frissitve": "2026.06.19. 16:39",
+  "frissitve": "2026.06.19. 16:54",
   "ugyletek": [
     {
       "ugyfel": "Kohut Szilárd",
@@ -19,20 +19,20 @@
       "elszamolasi_honap": "2026. Augusztus"
     },
     {
-      "ugyfel": "Búzás Rita",
-      "termek": "Jelzálog",
-      "bank": "UniCredit",
-      "statusz": "3. Bírálat",
-      "eh": 333,
-      "elszamolasi_honap": "2026. Július"
-    },
-    {
       "ugyfel": "Kovács Fanni",
       "termek": "Jelzálog",
       "bank": "",
       "statusz": "2. Beadás alatt",
       "eh": 333,
       "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Búzás Rita",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "2. Beadás alatt",
+      "eh": 333,
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Torma Péter",
@@ -120,6 +120,14 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 47,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Buzás Rita",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "0. Új",
+      "eh": 46,
       "elszamolasi_honap": ""
     },
     {
