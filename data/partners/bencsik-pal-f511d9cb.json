@@ -1,7 +1,15 @@
 {
   "partner": "Bencsik Pál",
-  "frissitve": "2026.06.19. 13:08",
+  "frissitve": "2026.06.19. 15:34",
   "ugyletek": [
+    {
+      "ugyfel": "Kovács Sándor",
+      "termek": "Jelzálog",
+      "bank": "OTP",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 353,
+      "elszamolasi_honap": ""
+    },
     {
       "ugyfel": "Németh András",
       "termek": "Jelzálog",
