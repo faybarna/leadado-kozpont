@@ -1,6 +1,6 @@
 {
   "partner": "Fábián Kristóf",
-  "frissitve": "2026.06.19. 15:34",
+  "frissitve": "2026.06.19. 15:54",
   "ugyletek": [
     {
       "ugyfel": "Róth István",
@@ -119,6 +119,14 @@
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "Pingelés",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Pipics-Lysewycz",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
       "eh": 33,
       "elszamolasi_honap": ""
     },
