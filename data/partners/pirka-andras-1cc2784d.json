@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.19. 07:27",
+  "frissitve": "2026.06.19. 08:36",
   "ugyletek": [
     {
       "ugyfel": "Nánási Noémi",
@@ -40,6 +40,14 @@
       "bank": "Erste",
       "statusz": "5. Folyósítva",
       "eh": 66,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Encz István",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "3. Megkötve",
+      "eh": 60,
       "elszamolasi_honap": "2026. Június"
     },
     {
