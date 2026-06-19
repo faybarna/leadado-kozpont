@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.19. 16:39",
+  "frissitve": "2026.06.19. 16:54",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -78,7 +78,7 @@
       "ugyfel": "Mikola Edit",
       "termek": "Jelzálog",
       "bank": "K&H",
-      "statusz": "2. Beadás alatt",
+      "statusz": "3. Bírálat",
       "eh": 66,
       "elszamolasi_honap": "2026. Július"
     },
@@ -120,14 +120,6 @@
       "bank": "Raiffeisen",
       "statusz": "Ügyfélre/munkatársra várunk",
       "eh": 40,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Szabó Zoltán",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "2. Kötési kiküldve",
-      "eh": 33,
       "elszamolasi_honap": ""
     },
     {
@@ -209,14 +201,6 @@
       "statusz": "2. Beadás alatt",
       "eh": 16,
       "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Szabó Zoltán",
-      "termek": "SZK",
-      "bank": "Raiffeisen",
-      "statusz": "3. Bírálat",
-      "eh": 15,
-      "elszamolasi_honap": "2026. Július"
     },
     {
       "ugyfel": "Bugyis Dominika",
