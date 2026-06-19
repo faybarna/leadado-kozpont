@@ -1,7 +1,15 @@
 {
   "partner": "Kács Szabolcs",
-  "frissitve": "2026.06.19. 15:54",
+  "frissitve": "2026.06.19. 16:39",
   "ugyletek": [
+    {
+      "ugyfel": "Bánki-Szabó Kristóf",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 166,
+      "elszamolasi_honap": ""
+    },
     {
       "ugyfel": "Hangyási Dávid",
       "termek": "SZK",
@@ -39,6 +47,14 @@
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Bánki-Szabó Kristóf",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "0. Új",
       "eh": 20,
       "elszamolasi_honap": ""
     },
