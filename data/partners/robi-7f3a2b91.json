@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.19. 13:08",
+  "frissitve": "2026.06.19. 15:34",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -8,7 +8,7 @@
       "bank": "Erste",
       "statusz": "3. Bírálat",
       "eh": 733,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Gerényi István",
@@ -131,6 +131,22 @@
       "elszamolasi_honap": ""
     },
     {
+      "ugyfel": "Dancs Norbert",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "0. Új",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Sztárosztenkó Gabriella",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "0. Új",
+      "eh": 33,
+      "elszamolasi_honap": ""
+    },
+    {
       "ugyfel": "Bugyis Dominika",
       "termek": "Bankszámla",
       "bank": "CIB",
@@ -185,6 +201,14 @@
       "statusz": "3. Bírálat",
       "eh": 16,
       "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Dancs Norbert",
+      "termek": "Babaváró",
+      "bank": "Raiffeisen",
+      "statusz": "2. Beadás alatt",
+      "eh": 16,
+      "elszamolasi_honap": ""
     },
     {
       "ugyfel": "Szabó Zoltán",
