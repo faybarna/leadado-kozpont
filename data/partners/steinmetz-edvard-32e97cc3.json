@@ -1,6 +1,6 @@
 {
   "partner": "Steinmetz Edvárd",
-  "frissitve": "2026.06.19. 13:08",
+  "frissitve": "2026.06.19. 15:34",
   "ugyletek": [
     {
       "ugyfel": "Kacsics István",
@@ -64,6 +64,22 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 25,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Schettrer Mónika",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Schettrer Mónika",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 0,
       "elszamolasi_honap": ""
     }
   ],
