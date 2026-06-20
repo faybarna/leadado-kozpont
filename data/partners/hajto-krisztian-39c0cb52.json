@@ -1,6 +1,6 @@
 {
   "partner": "Hajtó Krisztián",
-  "frissitve": "2026.06.20. 07:27",
+  "frissitve": "2026.06.20. 08:27",
   "ugyletek": [
     {
       "ugyfel": "Kohut Szilárd",
@@ -17,14 +17,6 @@
       "statusz": "3. Bírálat",
       "eh": 333,
       "elszamolasi_honap": "2026. Augusztus"
-    },
-    {
-      "ugyfel": "Kovács Fanni",
-      "termek": "Jelzálog",
-      "bank": "",
-      "statusz": "2. Beadás alatt",
-      "eh": 333,
-      "elszamolasi_honap": ""
     },
     {
       "ugyfel": "Búzás Rita",
@@ -175,14 +167,6 @@
       "termek": "Jelzálog",
       "bank": "K&H",
       "statusz": "2. Beadás alatt",
-      "eh": 0,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Kovács Fanni",
-      "termek": "Bankszámla",
-      "bank": "",
-      "statusz": "0. Új",
       "eh": 0,
       "elszamolasi_honap": ""
     }
