@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.21. 20:34",
+  "frissitve": "2026.06.21. 20:45",
   "ugyletek": [
     {
       "ugyfel": "Nánási Noémi",
@@ -9,14 +9,6 @@
       "statusz": "5. Folyósítva",
       "eh": 333,
       "elszamolasi_honap": "2026. Július"
-    },
-    {
-      "ugyfel": "Sellei Abigél",
-      "termek": "SZK",
-      "bank": "UniCredit",
-      "statusz": "3. Bírálat",
-      "eh": 280,
-      "elszamolasi_honap": ""
     },
     {
       "ugyfel": "Simon Bálint",
@@ -64,22 +56,6 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 47,
-      "elszamolasi_honap": "2026. Június"
-    },
-    {
-      "ugyfel": "Sellei Abigél",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 46,
-      "elszamolasi_honap": "2026. Június"
-    },
-    {
-      "ugyfel": "Sellei Abigél",
-      "termek": "Bankszámla",
-      "bank": "UniCredit",
-      "statusz": "3. Megkötve",
-      "eh": 46,
       "elszamolasi_honap": "2026. Június"
     },
     {
@@ -153,11 +129,35 @@
       "ugyletek": [
         {
           "ugyfel": "Sellei Abigél",
+          "termek": "SZK",
+          "bank": "Erste",
+          "statusz": "3. Bírálat",
+          "eh": 233,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Sellei Abigél",
           "termek": "Bankszámla",
           "bank": "Erste",
           "statusz": "2. Kötési kiküldve",
           "eh": 60,
           "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Sellei Abigél",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "3. Megkötve",
+          "eh": 46,
+          "elszamolasi_honap": "2026. Június"
+        },
+        {
+          "ugyfel": "Sellei Abigél",
+          "termek": "Bankszámla",
+          "bank": "UniCredit",
+          "statusz": "3. Megkötve",
+          "eh": 46,
+          "elszamolasi_honap": "2026. Június"
         }
       ]
     },
