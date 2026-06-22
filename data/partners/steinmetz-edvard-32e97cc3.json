@@ -1,6 +1,6 @@
 {
   "partner": "Steinmetz Edvárd",
-  "frissitve": "2026.06.22. 13:45",
+  "frissitve": "2026.06.22. 15:14",
   "ugyletek": [
     {
       "ugyfel": "Kacsics István",
@@ -54,7 +54,7 @@
       "ugyfel": "Peitli Bence",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "0. Új",
+      "statusz": "1. Kalkuláció kiküldve",
       "eh": 42,
       "elszamolasi_honap": ""
     },
@@ -78,7 +78,7 @@
       "ugyfel": "Peitli Bence",
       "termek": "Munkáshitel",
       "bank": "Erste",
-      "statusz": "1. Előminősítés alatt",
+      "statusz": "2. Beadás alatt",
       "eh": 8,
       "elszamolasi_honap": ""
     },
