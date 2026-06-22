@@ -1,6 +1,6 @@
 {
   "partner": "Lőrincz Sándor",
-  "frissitve": "2026.06.22. 07:27",
+  "frissitve": "2026.06.22. 12:44",
   "ugyletek": [
     {
       "ugyfel": "Takács Makó Eszter",
@@ -119,22 +119,6 @@
       "termek": "Jelzálog",
       "bank": "Raiffeisen",
       "statusz": "2. Beadás alatt",
-      "eh": 0,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Elek Tibor",
-      "termek": "Bankszámla",
-      "bank": "",
-      "statusz": "0. Új",
-      "eh": 0,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Molnár Evelin",
-      "termek": "Bankszámla",
-      "bank": "",
-      "statusz": "0. Új",
       "eh": 0,
       "elszamolasi_honap": ""
     }
