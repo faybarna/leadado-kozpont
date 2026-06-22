@@ -1,6 +1,6 @@
 {
   "partner": "Steinmetz Edvárd",
-  "frissitve": "2026.06.22. 13:05",
+  "frissitve": "2026.06.22. 13:45",
   "ugyletek": [
     {
       "ugyfel": "Kacsics István",
@@ -51,6 +51,14 @@
       "elszamolasi_honap": "2026. Június"
     },
     {
+      "ugyfel": "Peitli Bence",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "0. Új",
+      "eh": 42,
+      "elszamolasi_honap": ""
+    },
+    {
       "ugyfel": "Trepka Helga Virág",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
@@ -64,6 +72,14 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 25,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Peitli Bence",
+      "termek": "Munkáshitel",
+      "bank": "Erste",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 8,
       "elszamolasi_honap": ""
     },
     {
