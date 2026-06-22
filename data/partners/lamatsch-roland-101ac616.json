@@ -1,6 +1,6 @@
 {
   "partner": "Lamatsch Roland",
-  "frissitve": "2026.06.22. 07:27",
+  "frissitve": "2026.06.22. 12:44",
   "ugyletek": [
     {
       "ugyfel": "Montvai Gábor",
@@ -30,7 +30,7 @@
       "ugyfel": "Magyar Nikolett",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "1. Kalkuláció kiküldve",
+      "statusz": "2. Kötési kiküldve",
       "eh": 60,
       "elszamolasi_honap": ""
     },
@@ -38,7 +38,7 @@
       "ugyfel": "Montvai Gábor",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "1. Kalkuláció kiküldve",
+      "statusz": "2. Kötési kiküldve",
       "eh": 60,
       "elszamolasi_honap": ""
     }
