@@ -1,6 +1,6 @@
 {
   "partner": "Lőrincz Sándor",
-  "frissitve": "2026.06.22. 13:45",
+  "frissitve": "2026.06.22. 15:14",
   "ugyletek": [
     {
       "ugyfel": "Takács Makó Eszter",
@@ -59,6 +59,14 @@
       "elszamolasi_honap": ""
     },
     {
+      "ugyfel": "Musitz - Szakmári",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
+      "statusz": "2. Beadás alatt",
+      "eh": 119,
+      "elszamolasi_honap": ""
+    },
+    {
       "ugyfel": "Kóczán Emese",
       "termek": "Jelzálog",
       "bank": "UniCredit",
@@ -111,14 +119,6 @@
       "termek": "Jelzálog",
       "bank": "",
       "statusz": "Ügyfélre/munkatársra várunk",
-      "eh": 0,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Muzslai - Szakmári",
-      "termek": "Jelzálog",
-      "bank": "Raiffeisen",
-      "statusz": "2. Beadás alatt",
       "eh": 0,
       "elszamolasi_honap": ""
     }
