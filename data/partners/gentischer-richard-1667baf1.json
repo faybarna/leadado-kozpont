@@ -1,6 +1,6 @@
 {
   "partner": "Gentischer Richárd",
-  "frissitve": "2026.06.23. 12:13",
+  "frissitve": "2026.06.23. 13:00",
   "ugyletek": [
     {
       "ugyfel": "Sárkövi Ádám",
@@ -89,8 +89,8 @@
     },
     {
       "vezeto": "Angelcsev Zoé",
-      "ugyletek_db": 8,
-      "eh_sum": 345,
+      "ugyletek_db": 9,
+      "eh_sum": 370,
       "honap_bontas": {
         "2026. Június": 159
       }
