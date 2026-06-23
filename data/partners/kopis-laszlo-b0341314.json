@@ -1,6 +1,6 @@
 {
   "partner": "Kópis László",
-  "frissitve": "2026.06.23. 11:44",
+  "frissitve": "2026.06.23. 12:13",
   "ugyletek": [
     {
       "ugyfel": "Lamos Dávid",
@@ -8,14 +8,6 @@
       "bank": "MBH",
       "statusz": "5. Folyósítva",
       "eh": 266,
-      "elszamolasi_honap": "2026. Június"
-    },
-    {
-      "ugyfel": "Lamos Dávid",
-      "termek": "Bankszámla",
-      "bank": "MBH",
-      "statusz": "3. Megkötve",
-      "eh": 123,
       "elszamolasi_honap": "2026. Július"
     },
     {
