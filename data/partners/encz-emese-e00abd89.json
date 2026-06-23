@@ -1,0 +1,22 @@
+{
+  "partner": "Encz Emese Sarolta",
+  "frissitve": "2026.06.23. 13:52",
+  "ugyletek": [
+    {
+      "ugyfel": "Encz István",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "3. Megkötve",
+      "eh": 60,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Encz Emese",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 47,
+      "elszamolasi_honap": "2026. Június"
+    }
+  ]
+}
