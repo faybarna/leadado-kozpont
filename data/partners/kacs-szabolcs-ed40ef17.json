@@ -1,6 +1,6 @@
 {
   "partner": "Kács Szabolcs",
-  "frissitve": "2026.06.23. 14:20",
+  "frissitve": "2026.06.23. 15:02",
   "ugyletek": [
     {
       "ugyfel": "Bánki-Szabó Kristóf",
@@ -54,9 +54,9 @@
       "ugyfel": "Varga Ágnes",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
-      "statusz": "2. Kötési kiküldve",
+      "statusz": "3. Megkötve",
       "eh": 20,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Június"
     },
     {
       "ugyfel": "Huszti Márk",
