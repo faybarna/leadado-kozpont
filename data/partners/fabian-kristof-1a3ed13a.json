@@ -1,6 +1,6 @@
 {
   "partner": "Fábián Kristóf",
-  "frissitve": "2026.06.23. 14:20",
+  "frissitve": "2026.06.23. 15:02",
   "ugyletek": [
     {
       "ugyfel": "Róth István",
@@ -123,12 +123,20 @@
       "elszamolasi_honap": ""
     },
     {
+      "ugyfel": "Varga Glória",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 33,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
       "ugyfel": "Pipics-Lysewycz Adrienn",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
-      "statusz": "2. Kötési kiküldve",
+      "statusz": "3. Megkötve",
       "eh": 33,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Június"
     },
     {
       "ugyfel": "Illés Katalin",
