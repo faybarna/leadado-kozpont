@@ -1,14 +1,14 @@
 {
   "partner": "Bencsik Pál",
-  "frissitve": "2026.06.23. 11:44",
+  "frissitve": "2026.06.23. 12:13",
   "ugyletek": [
     {
       "ugyfel": "Kovács Sándor",
       "termek": "Jelzálog",
       "bank": "OTP",
-      "statusz": "1. Előminősítés alatt",
+      "statusz": "2. Beadás alatt",
       "eh": 353,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Németh András",
@@ -16,7 +16,7 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 220,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Virágos Tóth család",
@@ -48,7 +48,7 @@
       "bank": "UniCredit",
       "statusz": "3. Bírálat",
       "eh": 136,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Július"
     },
     {
       "ugyfel": "Spillenberg Richárd",
@@ -166,9 +166,9 @@
       "ugyfel": "Spillengerg Réka",
       "termek": "Jelzálog",
       "bank": "MBH",
-      "statusz": "1. Előminősítés alatt",
+      "statusz": "Ügyfélre/munkatársra várunk",
       "eh": 0,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": ""
     }
   ]
 }
