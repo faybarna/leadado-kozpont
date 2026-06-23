@@ -1,6 +1,6 @@
 {
   "partner": "Bencsik Pál",
-  "frissitve": "2026.06.23. 08:46",
+  "frissitve": "2026.06.23. 09:40",
   "ugyletek": [
     {
       "ugyfel": "Kovács Sándor",
@@ -41,14 +41,6 @@
       "statusz": "3. Bírálat",
       "eh": 150,
       "elszamolasi_honap": "2026. Június"
-    },
-    {
-      "ugyfel": "Bak Alexandra",
-      "termek": "Jelzálog",
-      "bank": "Raiffeisen",
-      "statusz": "4. Jóváhagyva",
-      "eh": 140,
-      "elszamolasi_honap": "2026. Július"
     },
     {
       "ugyfel": "Kis Attila",
@@ -147,14 +139,6 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Spillengerg Réka",
-      "termek": "Jelzálog",
-      "bank": "MBH",
-      "statusz": "2. Beadás alatt",
-      "eh": 0,
-      "elszamolasi_honap": "2026. Július"
-    },
-    {
       "ugyfel": "Spillenberg Réka",
       "termek": "Bankszámla",
       "bank": "MBH",
@@ -177,6 +161,14 @@
       "statusz": "0. Új",
       "eh": 0,
       "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Spillengerg Réka",
+      "termek": "Jelzálog",
+      "bank": "MBH",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 0,
+      "elszamolasi_honap": "2026. Július"
     }
   ]
 }
