@@ -1,6 +1,6 @@
 {
   "partner": "Bencsik Pál",
-  "frissitve": "2026.06.23. 13:37",
+  "frissitve": "2026.06.23. 13:52",
   "ugyletek": [
     {
       "ugyfel": "Kovács Sándor",
@@ -83,15 +83,15 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Baranyi Fábián",
+      "ugyfel": "Bak Alexandra",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
-      "statusz": "Pingelés",
+      "statusz": "2. Kötési kiküldve",
       "eh": 33,
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Bak Alexandra",
+      "ugyfel": "Baranyi Fábián",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
