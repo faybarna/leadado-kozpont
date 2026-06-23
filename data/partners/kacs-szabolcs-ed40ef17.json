@@ -1,6 +1,6 @@
 {
   "partner": "Kács Szabolcs",
-  "frissitve": "2026.06.23. 11:44",
+  "frissitve": "2026.06.23. 12:13",
   "ugyletek": [
     {
       "ugyfel": "Bánki-Szabó Kristóf",
@@ -8,13 +8,13 @@
       "bank": "UniCredit",
       "statusz": "2. Beadás alatt",
       "eh": 200,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Hangyási Dávid",
       "termek": "SZK",
       "bank": "UniCredit",
-      "statusz": "1. Előminősítés alatt",
+      "statusz": "2. Beadás alatt",
       "eh": 132,
       "elszamolasi_honap": "2026. Augusztus"
     },
@@ -24,7 +24,7 @@
       "bank": "Erste",
       "statusz": "2. Beadás alatt",
       "eh": 132,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Tamási Irén",
