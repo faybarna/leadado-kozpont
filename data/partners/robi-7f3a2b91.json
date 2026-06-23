@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.23. 08:46",
+  "frissitve": "2026.06.23. 09:40",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -107,14 +107,6 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Márton Zoltán",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "2. Kötési kiküldve",
-      "eh": 46,
-      "elszamolasi_honap": ""
-    },
-    {
       "ugyfel": "Bácsalmásiné",
       "termek": "SZK",
       "bank": "Raiffeisen",
@@ -169,14 +161,6 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 20,
       "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Matula",
-      "termek": "Babaváró",
-      "bank": "CIB",
-      "statusz": "3. Bírálat",
-      "eh": 16,
-      "elszamolasi_honap": "2026. Július"
     },
     {
       "ugyfel": "Hidi Csukoly Annamária",
@@ -234,9 +218,9 @@
         {
           "ugyfel": "Bánki-Szabó Kristóf",
           "termek": "SZK",
-          "bank": "Raiffeisen",
+          "bank": "UniCredit",
           "statusz": "2. Beadás alatt",
-          "eh": 166,
+          "eh": 200,
           "elszamolasi_honap": ""
         },
         {
@@ -264,6 +248,14 @@
           "elszamolasi_honap": ""
         },
         {
+          "ugyfel": "Bánki-Szabó Kristóf",
+          "termek": "Bankszámla",
+          "bank": "UniCredit",
+          "statusz": "2. Kötési kiküldve",
+          "eh": 46,
+          "elszamolasi_honap": ""
+        },
+        {
           "ugyfel": "Hangyási Dávid",
           "termek": "Bankszámla",
           "bank": "UniCredit",
@@ -276,14 +268,6 @@
           "termek": "Bankszámla",
           "bank": "Raiffeisen",
           "statusz": "2. Kötési kiküldve",
-          "eh": 20,
-          "elszamolasi_honap": ""
-        },
-        {
-          "ugyfel": "Bánki-Szabó Kristóf",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "1. Kalkuláció kiküldve",
           "eh": 20,
           "elszamolasi_honap": ""
         },
