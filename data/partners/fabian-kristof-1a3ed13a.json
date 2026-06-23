@@ -1,6 +1,6 @@
 {
   "partner": "Fábián Kristóf",
-  "frissitve": "2026.06.23. 13:37",
+  "frissitve": "2026.06.23. 13:52",
   "ugyletek": [
     {
       "ugyfel": "Róth István",
@@ -51,15 +51,15 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Bartos Tímea",
+      "ugyfel": "Hén Dominik",
       "termek": "Bankszámla",
       "bank": "UniCredit",
-      "statusz": "Pingelés",
+      "statusz": "2. Kötési kiküldve",
       "eh": 46,
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Hén Dominik",
+      "ugyfel": "Bartos Tímea",
       "termek": "Bankszámla",
       "bank": "UniCredit",
       "statusz": "2. Kötési kiküldve",
@@ -123,7 +123,7 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Pipics-Lysewycz",
+      "ugyfel": "Pipics-Lysewycz Adrienn",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
