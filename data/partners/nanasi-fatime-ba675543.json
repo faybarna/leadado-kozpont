@@ -1,7 +1,15 @@
 {
   "partner": "Nánási Fatime",
-  "frissitve": "2026.06.23. 13:52",
+  "frissitve": "2026.06.23. 13:53",
   "ugyletek": [
+    {
+      "ugyfel": "Nánási Noémi",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "5. Folyósítva",
+      "eh": 333,
+      "elszamolasi_honap": "2026. Július"
+    },
     {
       "ugyfel": "Nánási Noémi",
       "termek": "Bankszámla",
