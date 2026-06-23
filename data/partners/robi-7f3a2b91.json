@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.23. 13:37",
+  "frissitve": "2026.06.23. 13:52",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -235,7 +235,7 @@
           "ugyfel": "Tamási Irén",
           "termek": "SZK",
           "bank": "Erste",
-          "statusz": "2. Beadás alatt",
+          "statusz": "3. Bírálat",
           "eh": 132,
           "elszamolasi_honap": "2026. Augusztus"
         },
@@ -243,9 +243,9 @@
           "ugyfel": "Tamási Irén",
           "termek": "Bankszámla",
           "bank": "Erste",
-          "statusz": "2. Kötési kiküldve",
+          "statusz": "3. Megkötve",
           "eh": 60,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "2026. Június"
         },
         {
           "ugyfel": "Bánki-Szabó Kristóf",
