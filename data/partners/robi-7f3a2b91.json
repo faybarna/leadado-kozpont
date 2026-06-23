@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.23. 11:44",
+  "frissitve": "2026.06.23. 12:13",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -16,21 +16,13 @@
       "bank": "Raiffeisen",
       "statusz": "2. Beadás alatt",
       "eh": 600,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Németh Patrik",
       "termek": "Jelzálog",
       "bank": "Erste",
       "statusz": "3. Bírálat",
-      "eh": 600,
-      "elszamolasi_honap": "2026. Augusztus"
-    },
-    {
-      "ugyfel": "Cseri Balázs és Németh Cintia",
-      "termek": "Jelzálog",
-      "bank": "Erste",
-      "statusz": "2. Beadás alatt",
       "eh": 600,
       "elszamolasi_honap": "2026. Augusztus"
     },
@@ -48,7 +40,7 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 400,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Szél István",
@@ -168,7 +160,7 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 16,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Habenyak Krisztina",
@@ -203,6 +195,14 @@
       "elszamolasi_honap": ""
     },
     {
+      "ugyfel": "Cseri Balázs és Németh Cintia",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "2. Beadás alatt",
+      "eh": 0,
+      "elszamolasi_honap": ""
+    },
+    {
       "ugyfel": "Gerényi párja",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
@@ -221,13 +221,13 @@
           "bank": "UniCredit",
           "statusz": "2. Beadás alatt",
           "eh": 200,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "2026. Augusztus"
         },
         {
           "ugyfel": "Hangyási Dávid",
           "termek": "SZK",
           "bank": "UniCredit",
-          "statusz": "1. Előminősítés alatt",
+          "statusz": "2. Beadás alatt",
           "eh": 132,
           "elszamolasi_honap": "2026. Augusztus"
         },
@@ -237,7 +237,7 @@
           "bank": "Erste",
           "statusz": "2. Beadás alatt",
           "eh": 132,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "2026. Augusztus"
         },
         {
           "ugyfel": "Tamási Irén",
