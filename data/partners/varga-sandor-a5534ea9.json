@@ -1,6 +1,6 @@
 {
   "partner": "Varga Sándor",
-  "frissitve": "2026.06.23. 11:44",
+  "frissitve": "2026.06.23. 12:13",
   "ugyletek": [
     {
       "ugyfel": "Szabó Dávid",
@@ -8,7 +8,7 @@
       "bank": "Raiffeisen",
       "statusz": "2. Beadás alatt",
       "eh": 333,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "2026. Augusztus"
     },
     {
       "ugyfel": "Tóth Barnabás",
@@ -101,14 +101,6 @@
           "bank": "MBH",
           "statusz": "5. Folyósítva",
           "eh": 266,
-          "elszamolasi_honap": "2026. Június"
-        },
-        {
-          "ugyfel": "Lamos Dávid",
-          "termek": "Bankszámla",
-          "bank": "MBH",
-          "statusz": "3. Megkötve",
-          "eh": 123,
           "elszamolasi_honap": "2026. Július"
         },
         {
