@@ -1,6 +1,6 @@
 {
   "partner": "Steinmetz Edvárd",
-  "frissitve": "2026.06.23. 14:20",
+  "frissitve": "2026.06.23. 15:02",
   "ugyletek": [
     {
       "ugyfel": "Kacsics István",
@@ -17,14 +17,6 @@
       "statusz": "3. Bírálat",
       "eh": 66,
       "elszamolasi_honap": "2026. Július"
-    },
-    {
-      "ugyfel": "Nap Áron",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "2. Kötési kiküldve",
-      "eh": 46,
-      "elszamolasi_honap": ""
     },
     {
       "ugyfel": "Czibik Balázs Zoltán",
@@ -44,6 +36,14 @@
     },
     {
       "ugyfel": "Kacsics István",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Nap Áron",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
