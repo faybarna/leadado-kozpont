@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.23. 13:37",
+  "frissitve": "2026.06.23. 13:52",
   "ugyletek": [
     {
       "ugyfel": "Nánási Noémi",
@@ -35,14 +35,6 @@
       "elszamolasi_honap": "2026. Június"
     },
     {
-      "ugyfel": "Encz István",
-      "termek": "Bankszámla",
-      "bank": "Erste",
-      "statusz": "3. Megkötve",
-      "eh": 60,
-      "elszamolasi_honap": "2026. Június"
-    },
-    {
       "ugyfel": "Ökrös Szabolcs",
       "termek": "SZK",
       "bank": "Raiffeisen",
@@ -51,44 +43,12 @@
       "elszamolasi_honap": "2026. Június"
     },
     {
-      "ugyfel": "Encze Emese",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 47,
-      "elszamolasi_honap": "2026. Június"
-    },
-    {
-      "ugyfel": "Veress András",
-      "termek": "Bankszámla",
-      "bank": "Erste",
-      "statusz": "Pingelés",
-      "eh": 42,
-      "elszamolasi_honap": ""
-    },
-    {
       "ugyfel": "Pirka András Levente",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
       "eh": 33,
       "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Hidasiné Nánási Nikolett",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 20,
-      "elszamolasi_honap": "2026. Június"
-    },
-    {
-      "ugyfel": "Hidasi Zsolt Milán",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 20,
-      "elszamolasi_honap": "2026. Június"
     },
     {
       "ugyfel": "Szabó Sallai Beatrix",
@@ -163,11 +123,37 @@
     },
     {
       "partner": "Konkoly Szilárd",
-      "ugyletek": []
+      "ugyletek": [
+        {
+          "ugyfel": "Veress András",
+          "termek": "Bankszámla",
+          "bank": "Erste",
+          "statusz": "Pingelés",
+          "eh": 42,
+          "elszamolasi_honap": ""
+        }
+      ]
     },
     {
       "partner": "Encz Emese Sarolta",
-      "ugyletek": []
+      "ugyletek": [
+        {
+          "ugyfel": "Encz István",
+          "termek": "Bankszámla",
+          "bank": "Erste",
+          "statusz": "3. Megkötve",
+          "eh": 60,
+          "elszamolasi_honap": "2026. Június"
+        },
+        {
+          "ugyfel": "Encz Emese",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "3. Megkötve",
+          "eh": 47,
+          "elszamolasi_honap": "2026. Június"
+        }
+      ]
     },
     {
       "partner": "Nánási Fatime",
@@ -178,6 +164,22 @@
           "bank": "Erste",
           "statusz": "3. Megkötve",
           "eh": 60,
+          "elszamolasi_honap": "2026. Június"
+        },
+        {
+          "ugyfel": "Hidasiné Nánási Nikolett",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "3. Megkötve",
+          "eh": 20,
+          "elszamolasi_honap": "2026. Június"
+        },
+        {
+          "ugyfel": "Hidasi Zsolt Milán",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "3. Megkötve",
+          "eh": 20,
           "elszamolasi_honap": "2026. Június"
         }
       ]
