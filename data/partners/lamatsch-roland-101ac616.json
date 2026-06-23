@@ -1,11 +1,11 @@
 {
   "partner": "Lamatsch Roland",
-  "frissitve": "2026.06.23. 08:46",
+  "frissitve": "2026.06.23. 09:40",
   "ugyletek": [
     {
       "ugyfel": "Montvai Gábor",
       "termek": "Jelzálog",
-      "bank": "",
+      "bank": "Erste",
       "statusz": "2. Beadás alatt",
       "eh": 433,
       "elszamolasi_honap": "2026. Augusztus"
@@ -79,11 +79,11 @@
     },
     {
       "vezeto": "Lőrinc Róbert",
-      "ugyletek_db": 43,
-      "eh_sum": 5266,
+      "ugyletek_db": 41,
+      "eh_sum": 5264,
       "honap_bontas": {
         "2026. Augusztus": 2065,
-        "2026. Július": 1756,
+        "2026. Július": 1740,
         "2026. Június": 547
       }
     },
