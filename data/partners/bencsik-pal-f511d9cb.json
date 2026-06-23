@@ -1,6 +1,6 @@
 {
   "partner": "Bencsik Pál",
-  "frissitve": "2026.06.23. 11:22",
+  "frissitve": "2026.06.23. 11:44",
   "ugyletek": [
     {
       "ugyfel": "Kovács Sándor",
@@ -27,7 +27,7 @@
       "elszamolasi_honap": "2026. Július"
     },
     {
-      "ugyfel": "Kocsis Sarolta",
+      "ugyfel": "Bágyi István",
       "termek": "SZK",
       "bank": "MBH",
       "statusz": "3. Bírálat",
@@ -35,10 +35,10 @@
       "elszamolasi_honap": "2026. Június"
     },
     {
-      "ugyfel": "Bágyi István",
+      "ugyfel": "Kocsis Sarolta",
       "termek": "SZK",
       "bank": "MBH",
-      "statusz": "3. Bírálat",
+      "statusz": "5. Folyósítva",
       "eh": 150,
       "elszamolasi_honap": "2026. Június"
     },
