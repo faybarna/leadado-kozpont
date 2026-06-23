@@ -1,0 +1,14 @@
+{
+  "partner": "Konkoly Szilárd",
+  "frissitve": "2026.06.23. 13:52",
+  "ugyletek": [
+    {
+      "ugyfel": "Veress András",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "Pingelés",
+      "eh": 42,
+      "elszamolasi_honap": ""
+    }
+  ]
+}
