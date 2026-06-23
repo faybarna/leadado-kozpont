@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.23. 14:20",
+  "frissitve": "2026.06.23. 15:02",
   "ugyletek": [
     {
       "ugyfel": "Simon Bálint",
@@ -41,6 +41,14 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 33,
       "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szabó Dominik",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 20,
+      "elszamolasi_honap": "2026. Június"
     },
     {
       "ugyfel": "Martina és párja",
