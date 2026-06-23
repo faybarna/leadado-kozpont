@@ -1,15 +1,7 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.23. 13:52",
+  "frissitve": "2026.06.23. 13:53",
   "ugyletek": [
-    {
-      "ugyfel": "Nánási Noémi",
-      "termek": "Jelzálog",
-      "bank": "Erste",
-      "statusz": "5. Folyósítva",
-      "eh": 333,
-      "elszamolasi_honap": "2026. Július"
-    },
     {
       "ugyfel": "Simon Bálint",
       "termek": "Jelzálog",
@@ -48,14 +40,6 @@
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
       "eh": 33,
-      "elszamolasi_honap": ""
-    },
-    {
-      "ugyfel": "Szabó Sallai Beatrix",
-      "termek": "Bankszámla",
-      "bank": "UniCredit",
-      "statusz": "1. Kalkuláció kiküldve",
-      "eh": 0,
       "elszamolasi_honap": ""
     },
     {
@@ -158,6 +142,14 @@
     {
       "partner": "Nánási Fatime",
       "ugyletek": [
+        {
+          "ugyfel": "Nánási Noémi",
+          "termek": "Jelzálog",
+          "bank": "Erste",
+          "statusz": "5. Folyósítva",
+          "eh": 333,
+          "elszamolasi_honap": "2026. Július"
+        },
         {
           "ugyfel": "Nánási Noémi",
           "termek": "Bankszámla",
