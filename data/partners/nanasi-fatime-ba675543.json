@@ -1,6 +1,6 @@
 {
   "partner": "Nánási Fatime",
-  "frissitve": "2026.06.23. 13:37",
+  "frissitve": "2026.06.23. 13:52",
   "ugyletek": [
     {
       "ugyfel": "Nánási Noémi",
@@ -8,6 +8,22 @@
       "bank": "Erste",
       "statusz": "3. Megkötve",
       "eh": 60,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Hidasiné Nánási Nikolett",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 20,
+      "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Hidasi Zsolt Milán",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 20,
       "elszamolasi_honap": "2026. Június"
     }
   ]
