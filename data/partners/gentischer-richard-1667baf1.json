@@ -1,6 +1,6 @@
 {
   "partner": "Gentischer Richárd",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Sárkövi Ádám",
@@ -8,7 +8,8 @@
       "bank": "OTP",
       "statusz": "2. Beadás alatt",
       "eh": 186,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Csordásék",
@@ -16,7 +17,8 @@
       "bank": "CIB",
       "statusz": "3. Bírálat",
       "eh": 50,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Horváth Krisztián",
@@ -24,7 +26,8 @@
       "bank": "UniCredit",
       "statusz": "2. Kötési kiküldve",
       "eh": 46,
-      "elszamolasi_honap": "2026. Április"
+      "elszamolasi_honap": "2026. Április",
+      "ping": "PING 2"
     },
     {
       "ugyfel": "Törteli Hajna",
@@ -32,7 +35,8 @@
       "bank": "UniCredit",
       "statusz": "2. Kötési kiküldve",
       "eh": 46,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": "PING 2"
     },
     {
       "ugyfel": "Kovács Péter",
@@ -40,7 +44,8 @@
       "bank": "UniCredit",
       "statusz": "2. Kötési kiküldve",
       "eh": 46,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Szmolen Dénes",
@@ -48,7 +53,8 @@
       "bank": "UniCredit",
       "statusz": "3. Megkötve",
       "eh": 46,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Tugyi Istvánné",
@@ -56,7 +62,8 @@
       "bank": "UniCredit",
       "statusz": "3. Megkötve",
       "eh": 46,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Sárkövi Ádám",
@@ -64,7 +71,8 @@
       "bank": "",
       "statusz": "0. Új",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     }
   ],
   "vezeti": [
