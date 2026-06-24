@@ -1,6 +1,6 @@
 {
   "partner": "Fábián Kristóf",
-  "frissitve": "2026.06.24. 14:04",
+  "frissitve": "2026.06.24. 16:13",
   "ugyletek": [
     {
       "ugyfel": "Róth István",
@@ -152,6 +152,22 @@
       "bank": "CIB",
       "statusz": "2. Kötési kiküldve",
       "eh": 25,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Muszáj Nóra",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Szimeiszter Blanka",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
       "elszamolasi_honap": ""
     },
     {
