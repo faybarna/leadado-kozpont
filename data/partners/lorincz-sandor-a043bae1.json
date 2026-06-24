@@ -1,6 +1,6 @@
 {
   "partner": "Lőrincz Sándor",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Takács Makó Eszter",
@@ -8,7 +8,8 @@
       "bank": "OTP",
       "statusz": "2. Beadás alatt",
       "eh": 626,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Kunné Csizi Petra",
@@ -16,7 +17,8 @@
       "bank": "Erste",
       "statusz": "5. Folyósítva",
       "eh": 333,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Pirisi Attila",
@@ -24,7 +26,8 @@
       "bank": "Raiffeisen",
       "statusz": "Ügyfélre/munkatársra várunk",
       "eh": 313,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Szakmárié",
@@ -32,7 +35,8 @@
       "bank": "Raiffeisen",
       "statusz": "2. Beadás alatt",
       "eh": 260,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Gólya Gergő",
@@ -40,7 +44,8 @@
       "bank": "MBH",
       "statusz": "Ügyfélre/munkatársra várunk",
       "eh": 220,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Elek Tibor",
@@ -48,7 +53,8 @@
       "bank": "Erste",
       "statusz": "2. Beadás alatt",
       "eh": 190,
-      "elszamolasi_honap": "2026. Szeptember"
+      "elszamolasi_honap": "2026. Szeptember",
+      "ping": null
     },
     {
       "ugyfel": "Musitz - Szakmári",
@@ -56,7 +62,8 @@
       "bank": "Raiffeisen",
       "statusz": "2. Beadás alatt",
       "eh": 119,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Kóczán Emese",
@@ -64,7 +71,8 @@
       "bank": "UniCredit",
       "statusz": "5. Folyósítva",
       "eh": 110,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Takács Márk",
@@ -72,7 +80,8 @@
       "bank": "CIB",
       "statusz": "2. Kötési kiküldve",
       "eh": 50,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Takács-Makó Réka",
@@ -80,7 +89,8 @@
       "bank": "CIB",
       "statusz": "2. Kötési kiküldve",
       "eh": 50,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Szabó Csaba",
@@ -88,7 +98,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 33,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Tulipán- Farkas Regina",
@@ -96,7 +107,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 33,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Gólya Gergő",
@@ -104,7 +116,8 @@
       "bank": "Erste",
       "statusz": "5. Folyósítva",
       "eh": 16,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Varga Szabolcs",
@@ -112,7 +125,8 @@
       "bank": "",
       "statusz": "Ügyfélre/munkatársra várunk",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     }
   ]
 }
