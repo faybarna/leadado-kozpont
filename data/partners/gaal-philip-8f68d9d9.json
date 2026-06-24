@@ -1,6 +1,6 @@
 {
   "partner": "Gaál Philip Paul",
-  "frissitve": "2026.06.24. 09:33",
+  "frissitve": "2026.06.24. 13:44",
   "ugyletek": [
     {
       "ugyfel": "Kakucsi Sándor",
@@ -35,6 +35,14 @@
       "elszamolasi_honap": "2026. Július"
     },
     {
+      "ugyfel": "Mártha Márk",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 25,
+      "elszamolasi_honap": ""
+    },
+    {
       "ugyfel": "Nagy Nikolett Bodza",
       "termek": "Bankszámla",
       "bank": "CIB",
@@ -63,6 +71,14 @@
       "termek": "Munkáshitel",
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
+      "eh": 8,
+      "elszamolasi_honap": ""
+    },
+    {
+      "ugyfel": "Mártha Márk",
+      "termek": "Munkáshitel",
+      "bank": "CIB",
+      "statusz": "2. Beadás alatt",
       "eh": 8,
       "elszamolasi_honap": ""
     }
