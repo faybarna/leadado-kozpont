@@ -1,6 +1,6 @@
 {
   "partner": "Holló Bernadett",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -8,7 +8,8 @@
       "bank": "OTP",
       "statusz": "4. Jóváhagyva",
       "eh": 100,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Ullmann-Nagy Boglárka",
@@ -16,7 +17,8 @@
       "bank": "Erste",
       "statusz": "3. Megkötve",
       "eh": 60,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Szilágyi Levente",
@@ -24,7 +26,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 40,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Július",
+      "ping": null
     },
     {
       "ugyfel": "Szilágyi Levente",
@@ -32,7 +35,8 @@
       "bank": "Raiffeisen",
       "statusz": "1. Kalkuláció kiküldve",
       "eh": 33,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Murinai-Angelusz Röné",
@@ -40,7 +44,8 @@
       "bank": "Raiffeisen",
       "statusz": "1. Kalkuláció kiküldve",
       "eh": 33,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": "PING 1"
     },
     {
       "ugyfel": "Pápai Péter",
@@ -48,7 +53,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 33,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Medvedovszky Ádám",
@@ -56,7 +62,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 33,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Unghy Noémi",
@@ -64,7 +71,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 33,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Dzsudzsák Alíz",
@@ -72,7 +80,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 33,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     }
   ],
   "csapat": [
@@ -85,7 +94,8 @@
           "bank": "MBH",
           "statusz": "2. Beadás alatt",
           "eh": 133,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "",
+          "ping": null
         }
       ]
     },
