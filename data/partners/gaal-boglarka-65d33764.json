@@ -1,6 +1,6 @@
 {
   "partner": "Gaál Boglárka",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Tyukodi Dávid",
@@ -8,7 +8,8 @@
       "bank": "UniCredit",
       "statusz": "Pingelés",
       "eh": 46,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Túróné Burai",
@@ -16,7 +17,8 @@
       "bank": "Raiffeisen",
       "statusz": "Pingelés",
       "eh": 33,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Bakó Klaudia",
@@ -24,7 +26,8 @@
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
       "eh": 20,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": "PING 2"
     },
     {
       "ugyfel": "Berki",
@@ -32,7 +35,8 @@
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
       "eh": 20,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": "PING 2"
     },
     {
       "ugyfel": "Berkiné Varga Beatrix",
@@ -40,7 +44,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 20,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Bogye Judit",
@@ -48,7 +53,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 20,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     }
   ]
 }
