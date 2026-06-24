@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.24. 13:44",
+  "frissitve": "2026.06.24. 14:04",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -224,6 +224,14 @@
           "elszamolasi_honap": "2026. Augusztus"
         },
         {
+          "ugyfel": "Budai Krisztián",
+          "termek": "SZK",
+          "bank": "",
+          "statusz": "2. Beadás alatt",
+          "eh": 184,
+          "elszamolasi_honap": ""
+        },
+        {
           "ugyfel": "Hangyási Dávid",
           "termek": "SZK",
           "bank": "UniCredit",
@@ -252,6 +260,14 @@
           "termek": "Bankszámla",
           "bank": "UniCredit",
           "statusz": "2. Kötési kiküldve",
+          "eh": 46,
+          "elszamolasi_honap": ""
+        },
+        {
+          "ugyfel": "Budai Krisztián",
+          "termek": "Bankszámla",
+          "bank": "",
+          "statusz": "1. Kalkuláció kiküldve",
           "eh": 46,
           "elszamolasi_honap": ""
         },
