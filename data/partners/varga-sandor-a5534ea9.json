@@ -1,6 +1,6 @@
 {
   "partner": "Varga Sándor",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Szabó Dávid",
@@ -8,7 +8,8 @@
       "bank": "Raiffeisen",
       "statusz": "2. Beadás alatt",
       "eh": 333,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Tóth Barnabás",
@@ -16,7 +17,8 @@
       "bank": "Raiffeisen",
       "statusz": "5. Folyósítva",
       "eh": 280,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Tóth Ádám",
@@ -24,7 +26,8 @@
       "bank": "K&H",
       "statusz": "5. Folyósítva",
       "eh": 266,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Szabó Dávid",
@@ -32,7 +35,8 @@
       "bank": "Raiffeisen",
       "statusz": "0. Új",
       "eh": 46,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Hunyák Dávid",
@@ -40,7 +44,8 @@
       "bank": "Erste",
       "statusz": "2. Kötési kiküldve",
       "eh": 42,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Szigetvári Emma",
@@ -48,7 +53,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 20,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Szigetvári Emma",
@@ -56,7 +62,8 @@
       "bank": "Raiffeisen",
       "statusz": "5. Folyósítva",
       "eh": 16,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Július",
+      "ping": null
     },
     {
       "ugyfel": "Móra Alexandra",
@@ -64,7 +71,8 @@
       "bank": "UniCredit",
       "statusz": "5. Folyósítva",
       "eh": 8,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Barta Dénes",
@@ -72,7 +80,8 @@
       "bank": "",
       "statusz": "1. Előminősítés alatt",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Barta Dénes",
@@ -80,7 +89,8 @@
       "bank": "",
       "statusz": "0. Új",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Barta Dénes felesége- Diána",
@@ -88,7 +98,8 @@
       "bank": "",
       "statusz": "0. Új",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     }
   ],
   "csapat": [
@@ -101,7 +112,8 @@
           "bank": "MBH",
           "statusz": "5. Folyósítva",
           "eh": 266,
-          "elszamolasi_honap": "2026. Július"
+          "elszamolasi_honap": "2026. Július",
+          "ping": null
         },
         {
           "ugyfel": "Szilágyi Csaba",
@@ -109,7 +121,8 @@
           "bank": "CIB",
           "statusz": "2. Kötési kiküldve",
           "eh": 25,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "",
+          "ping": "PING 2"
         },
         {
           "ugyfel": "Scsibrán Ádám",
@@ -117,7 +130,8 @@
           "bank": "Raiffeisen",
           "statusz": "Pingelés",
           "eh": 20,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "",
+          "ping": null
         },
         {
           "ugyfel": "Máté Gábor",
@@ -125,7 +139,8 @@
           "bank": "",
           "statusz": "2. Beadás alatt",
           "eh": 0,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "",
+          "ping": null
         },
         {
           "ugyfel": "Máté Gábor",
@@ -133,7 +148,8 @@
           "bank": "",
           "statusz": "0. Új",
           "eh": 0,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "",
+          "ping": null
         },
         {
           "ugyfel": "Törös Gábor",
@@ -141,7 +157,8 @@
           "bank": "",
           "statusz": "0. Új",
           "eh": 0,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "",
+          "ping": null
         }
       ]
     }
