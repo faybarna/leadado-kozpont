@@ -1,6 +1,6 @@
 {
   "partner": "Petrei Tamás",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Nagy Zoltán",
@@ -8,7 +8,8 @@
       "bank": "Erste",
       "statusz": "4. Jóváhagyva",
       "eh": 633,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     }
   ]
 }
