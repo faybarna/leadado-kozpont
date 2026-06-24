@@ -1,6 +1,6 @@
 {
   "partner": "Encz Emese Sarolta",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Encz István",
@@ -8,7 +8,8 @@
       "bank": "Erste",
       "statusz": "3. Megkötve",
       "eh": 60,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Encz Emese",
@@ -16,7 +17,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 47,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     }
   ]
 }
