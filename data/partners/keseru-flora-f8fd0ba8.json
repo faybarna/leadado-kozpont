@@ -1,6 +1,6 @@
 {
   "partner": "Keserű Flóra Luca",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Mészáros László",
@@ -8,7 +8,8 @@
       "bank": "CIB",
       "statusz": "2. Beadás alatt",
       "eh": 266,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Bálint Erika",
@@ -16,7 +17,8 @@
       "bank": "K&H",
       "statusz": "3. Bírálat",
       "eh": 176,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Július",
+      "ping": null
     },
     {
       "ugyfel": "Mártanfalvi Zoltán",
@@ -24,7 +26,8 @@
       "bank": "Erste",
       "statusz": "2. Kötési kiküldve",
       "eh": 60,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Mártanfalvi Zoltán",
@@ -32,7 +35,8 @@
       "bank": "CIB",
       "statusz": "2. Kötési kiküldve",
       "eh": 50,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Erdős Attila",
@@ -40,7 +44,8 @@
       "bank": "CIB",
       "statusz": "2. Kötési kiküldve",
       "eh": 50,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Irlanda Benedek",
@@ -48,7 +53,8 @@
       "bank": "CIB",
       "statusz": "2. Kötési kiküldve",
       "eh": 50,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Kőszegi Kornél",
@@ -56,7 +62,8 @@
       "bank": "CIB",
       "statusz": "2. Kötési kiküldve",
       "eh": 50,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Mártanfalvi Zoltán",
@@ -64,7 +71,8 @@
       "bank": "UniCredit",
       "statusz": "2. Kötési kiküldve",
       "eh": 46,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Irlanda Benedek",
@@ -72,7 +80,8 @@
       "bank": "UniCredit",
       "statusz": "2. Kötési kiküldve",
       "eh": 46,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Erdős Attila",
@@ -80,7 +89,8 @@
       "bank": "Raiffeisen",
       "statusz": "5. Folyósítva",
       "eh": 8,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Július",
+      "ping": null
     }
   ],
   "csapat": [
@@ -93,7 +103,8 @@
           "bank": "Erste",
           "statusz": "2. Kötési kiküldve",
           "eh": 60,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "",
+          "ping": "PING 2"
         },
         {
           "ugyfel": "Séra Milán",
@@ -101,7 +112,8 @@
           "bank": "Erste",
           "statusz": "3. Megkötve",
           "eh": 60,
-          "elszamolasi_honap": "2026. Június"
+          "elszamolasi_honap": "2026. Június",
+          "ping": null
         },
         {
           "ugyfel": "Hörnyéki Johanna",
@@ -109,7 +121,8 @@
           "bank": "UniCredit",
           "statusz": "1. Kalkuláció kiküldve",
           "eh": 46,
-          "elszamolasi_honap": ""
+          "elszamolasi_honap": "",
+          "ping": "PING 1"
         }
       ]
     }
