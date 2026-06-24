@@ -1,6 +1,6 @@
 {
   "partner": "Perecz Gergely",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Nagy István",
@@ -8,7 +8,8 @@
       "bank": "Raiffeisen",
       "statusz": "2. Beadás alatt",
       "eh": 480,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Nagy István",
@@ -16,7 +17,8 @@
       "bank": "Raiffeisen",
       "statusz": "1. Kalkuláció kiküldve",
       "eh": 46,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": "PING 1"
     }
   ]
 }
