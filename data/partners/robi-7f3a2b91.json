@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.24. 08:40",
+  "frissitve": "2026.06.24. 09:08",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -107,15 +107,15 @@
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Sztárosztenkó Gabriella",
+      "ugyfel": "Dancs Norbert",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
-      "statusz": "1. Kalkuláció kiküldve",
+      "statusz": "2. Kötési kiküldve",
       "eh": 33,
       "elszamolasi_honap": ""
     },
     {
-      "ugyfel": "Dancs Norbert",
+      "ugyfel": "Sztárosztenkó Gabriella",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
