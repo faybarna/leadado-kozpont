@@ -1,6 +1,6 @@
 {
   "partner": "Gaál Philip Paul",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Kakucsi Sándor",
@@ -8,7 +8,8 @@
       "bank": "CIB",
       "statusz": "5. Folyósítva",
       "eh": 226,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Magyariné Szén Fruzsina",
@@ -16,7 +17,8 @@
       "bank": "MBH",
       "statusz": "5. Folyósítva",
       "eh": 74,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Sántha Amália",
@@ -24,7 +26,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 33,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Sántha Amália",
@@ -32,7 +35,8 @@
       "bank": "Raiffeisen",
       "statusz": "5. Folyósítva",
       "eh": 33,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Július",
+      "ping": null
     },
     {
       "ugyfel": "Mártha Márk",
@@ -40,7 +44,8 @@
       "bank": "CIB",
       "statusz": "1. Kalkuláció kiküldve",
       "eh": 25,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Nagy Nikolett Bodza",
@@ -48,7 +53,8 @@
       "bank": "CIB",
       "statusz": "2. Kötési kiküldve",
       "eh": 20,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Gaál Kincső",
@@ -56,7 +62,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 20,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Heliman Benjámin és párja",
@@ -64,7 +71,8 @@
       "bank": "CIB",
       "statusz": "3. Bírálat",
       "eh": 16,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Július",
+      "ping": null
     },
     {
       "ugyfel": "Száva Katalin",
@@ -72,7 +80,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 8,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Mártha Márk",
@@ -80,7 +89,8 @@
       "bank": "CIB",
       "statusz": "2. Beadás alatt",
       "eh": 8,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     }
   ]
 }
