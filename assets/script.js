@@ -190,6 +190,13 @@
     return '<span class="' + cls + '">' + statusz + '</span>';
   }
 
+  // BSZ ping jelzés — a Master Board "Következő feladat" cellából (PING 1 / PING 2).
+  // Piros badge: a leadadó látja, melyik bankszámla-ügyletet kell sürgetni.
+  function pingBadge(u) {
+    if (!u || !u.ping) return "";
+    return ' <span class="ping-badge">🔴 ' + u.ping + '</span>';
+  }
+
   function renderPipelineTable(data) {
     if (!data.ugyletek || data.ugyletek.length === 0) {
       return '<div class="sajat-empty">Jelenleg nincs aktív ügyleted.</div>';
@@ -199,11 +206,11 @@
       var ehStr  = u.eh ? u.eh + " EH" : "—";
       var honap  = u.elszamolasi_honap || "—";
       return (
-        "<tr>" +
+        "<tr" + (u.ping ? ' class="pipeline-row--ping"' : "") + ">" +
           "<td>" + u.ugyfel + "</td>" +
           "<td>" + u.termek + "</td>" +
           "<td>" + u.bank + "</td>" +
-          "<td>" + statuszBadge(u.statusz) + "</td>" +
+          "<td>" + statuszBadge(u.statusz) + pingBadge(u) + "</td>" +
           '<td class="eh-cell">' + ehStr + "</td>" +
           "<td>" + honap + "</td>" +
         "</tr>"
@@ -289,11 +296,11 @@
       var rows = tag.ugyletek.map(function(u) {
         var ehStr = u.eh ? u.eh + " EH" : "—";
         return (
-          "<tr>" +
+          "<tr" + (u.ping ? ' class="pipeline-row--ping"' : "") + ">" +
             "<td>" + u.ugyfel + "</td>" +
             "<td>" + u.termek + "</td>" +
             "<td>" + u.bank + "</td>" +
-            "<td>" + statuszBadge(u.statusz) + "</td>" +
+            "<td>" + statuszBadge(u.statusz) + pingBadge(u) + "</td>" +
             '<td class="eh-cell">' + ehStr + "</td>" +
             "<td>" + (u.elszamolasi_honap || "—") + "</td>" +
           "</tr>"
