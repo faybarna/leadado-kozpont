@@ -1,6 +1,6 @@
 {
   "partner": "Bencsik Pál",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Kovács Sándor",
@@ -8,7 +8,8 @@
       "bank": "OTP",
       "statusz": "2. Beadás alatt",
       "eh": 353,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Németh András",
@@ -16,7 +17,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 220,
-      "elszamolasi_honap": "2026. Augusztus"
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
     },
     {
       "ugyfel": "Virágos Tóth család",
@@ -24,7 +26,8 @@
       "bank": "MBH",
       "statusz": "3. Bírálat",
       "eh": 200,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Július",
+      "ping": null
     },
     {
       "ugyfel": "Bágyi István",
@@ -32,7 +35,8 @@
       "bank": "MBH",
       "statusz": "3. Bírálat",
       "eh": 150,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Kocsis Sarolta",
@@ -40,7 +44,8 @@
       "bank": "MBH",
       "statusz": "5. Folyósítva",
       "eh": 150,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Kis Attila",
@@ -48,7 +53,8 @@
       "bank": "UniCredit",
       "statusz": "3. Bírálat",
       "eh": 136,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Július",
+      "ping": null
     },
     {
       "ugyfel": "Spillenberg Richárd",
@@ -56,7 +62,8 @@
       "bank": "MBH",
       "statusz": "3. Bírálat",
       "eh": 116,
-      "elszamolasi_honap": "2026. Július"
+      "elszamolasi_honap": "2026. Július",
+      "ping": null
     },
     {
       "ugyfel": "Jahoda Ágota",
@@ -64,7 +71,8 @@
       "bank": "Raiffeisen",
       "statusz": "5. Folyósítva",
       "eh": 84,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Kocsis Sarolta",
@@ -72,7 +80,8 @@
       "bank": "Erste",
       "statusz": "3. Megkötve",
       "eh": 60,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Spillenberg Richárd",
@@ -80,7 +89,8 @@
       "bank": "Erste",
       "statusz": "2. Kötési kiküldve",
       "eh": 42,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Baranyi Fábián",
@@ -88,7 +98,8 @@
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
       "eh": 33,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Bak Alexandra",
@@ -96,7 +107,8 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 33,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Farkas Barna Norbert",
@@ -104,7 +116,8 @@
       "bank": "CIB",
       "statusz": "5. Folyósítva",
       "eh": 16,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     },
     {
       "ugyfel": "Kosiczki József",
@@ -112,7 +125,8 @@
       "bank": "MBH",
       "statusz": "2. Beadás alatt",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Szabó Attila",
@@ -120,7 +134,8 @@
       "bank": "",
       "statusz": "1. Előminősítés alatt",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Szalinka Richárd",
@@ -128,7 +143,8 @@
       "bank": "",
       "statusz": "1. Kalkuláció kiküldve",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Szalinka Richárd",
@@ -136,7 +152,8 @@
       "bank": "",
       "statusz": "1. Előminősítés alatt",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Spillenberg Réka",
@@ -144,7 +161,8 @@
       "bank": "MBH",
       "statusz": "2. Kötési kiküldve",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Petrikovits család",
@@ -152,7 +170,8 @@
       "bank": "MBH",
       "statusz": "2. Beadás alatt",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Spillengerg Réka",
@@ -160,7 +179,8 @@
       "bank": "MBH",
       "statusz": "Ügyfélre/munkatársra várunk",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Papp Szabó Vivien",
@@ -168,7 +188,8 @@
       "bank": "",
       "statusz": "0. Új",
       "eh": 0,
-      "elszamolasi_honap": ""
+      "elszamolasi_honap": "",
+      "ping": null
     }
   ]
 }
