@@ -1,6 +1,6 @@
 {
   "partner": "Rostás Tibor",
-  "frissitve": "2026.06.24. 16:13",
+  "frissitve": "2026.06.24. 16:40",
   "ugyletek": [
     {
       "ugyfel": "Patkó Tamásné",
@@ -8,7 +8,8 @@
       "bank": "CIB",
       "statusz": "5. Folyósítva",
       "eh": 12,
-      "elszamolasi_honap": "2026. Június"
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
     }
   ]
 }
