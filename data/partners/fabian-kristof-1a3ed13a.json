@@ -1,6 +1,6 @@
 {
   "partner": "Fábián Kristóf",
-  "frissitve": "2026.06.24. 09:33",
+  "frissitve": "2026.06.24. 13:44",
   "ugyletek": [
     {
       "ugyfel": "Róth István",
@@ -81,6 +81,14 @@
       "statusz": "3. Megkötve",
       "eh": 46,
       "elszamolasi_honap": "2026. Június"
+    },
+    {
+      "ugyfel": "Szabóné Pleiveisz Anikó",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 42,
+      "elszamolasi_honap": ""
     },
     {
       "ugyfel": "Zalavári Ádám",
