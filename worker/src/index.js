@@ -45,7 +45,13 @@ export default {
 
   /* ----------------------- CRON — diff + push ----------------------- */
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(runDiffAndNotify(env));
+    // Két ütemezés fut: gyakori diff (pl. */20) és heti összefoglaló (hétfő).
+    // A heti digest csak akkor megy, ha WEEKLY_ENABLED = "true" (alapból ki).
+    if (event.cron === env.WEEKLY_CRON) {
+      if (env.WEEKLY_ENABLED === "true") ctx.waitUntil(runWeeklyDigest(env));
+    } else {
+      ctx.waitUntil(runDiffAndNotify(env));
+    }
   },
 };
 
@@ -129,10 +135,11 @@ async function runDiffAndNotify(env) {
 
     const changes = diffPipeline(prev, fingerprint);
     if (changes.length > 0) {
-      const msg = summarize(changes);
+      const hasZaras = changes.some((c) => c.tipus === "lezart");
       await sendToToken(env, token, {
-        title: "Mozdult egy ügyleted",
-        body: msg,
+        // Sikeres bankszámla-kötés / folyósítás → ünneplős cím.
+        title: hasZaras ? "Gratulálok! 🎉" : "Mozdult egy ügyleted",
+        body: summarize(changes),
         url: `${BASE}/?p=${token}`,
       });
     }
@@ -173,12 +180,56 @@ function summarize(changes) {
   const ping = changes.filter((c) => c.tipus === "ping").length;
   const stat = changes.filter((c) => c.tipus === "statusz").length;
   const parts = [];
-  if (lezart) parts.push(`${lezart} folyósítás/lezárás`);
+  if (lezart) parts.push(`${lezart} lezárás/folyósítás 🎉`);
   if (stat) parts.push(`${stat} státuszváltás`);
-  if (ping) parts.push(`${ping} sürgetendő`);
+  if (ping) parts.push(`${ping} sürgetendő 🔴`);
   if (uj) parts.push(`${uj} új ügylet`);
   const txt = parts.join(" · ");
   return (txt || "Frissült a pipeline-od") + " — nézd meg a Saját Ügyleteimben.";
+}
+
+/* ===================== HETI ÖSSZEFOGLALÓ (opcionális) =====================
+   Hétfő reggel egy PII-mentes pillanatkép: aktív ügyletek db, összes EH,
+   e havi elszámolások száma. Csak akkor fut, ha WEEKLY_ENABLED = "true".     */
+const HONAP = ["Január","Február","Március","Április","Május","Június",
+               "Július","Augusztus","Szeptember","Október","November","December"];
+
+function aktualisHonap() {
+  const d = new Date();
+  return `${d.getFullYear()}. ${HONAP[d.getMonth()]}`;
+}
+
+async function runWeeklyDigest(env) {
+  const tokens = await activeTokens(env);
+  const honap = aktualisHonap();
+
+  for (const token of tokens) {
+    let data;
+    try {
+      const res = await fetch(`${BASE}/data/partners/${token}.json`, { cf: { cacheTtl: 0 } });
+      if (!res.ok) continue;
+      data = await res.json();
+    } catch {
+      continue;
+    }
+
+    const ugyletek = data.ugyletek || [];
+    const aktiv = ugyletek.filter((u) => !LEZART.has(u.statusz));
+    const ehAktiv = aktiv.reduce((s, u) => s + (u.eh || 0), 0);
+    const eHavi = aktiv.filter((u) => (u.elszamolasi_honap || "").trim() === honap).length;
+
+    if (ugyletek.length === 0) continue; // akinek nincs ügylete, ne kapjon
+
+    const parts = [`${aktiv.length} aktív ügylet (${ehAktiv} EH)`];
+    if (eHavi) parts.push(`${eHavi} elszámolás e hónapban`);
+
+    await sendToToken(env, token, {
+      title: "Heti pillanatkép",
+      body: parts.join(" · ") + " — részletek a Saját Ügyleteimben.",
+      url: `${BASE}/?p=${token}`,
+      tag: "leadado-heti",
+    });
+  }
 }
 
 /* ===================== PUSH KÜLDÉS ===================== */

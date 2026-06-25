@@ -142,7 +142,8 @@
       'iPhone-on így telepítheted: koppints alul a <strong>Megosztás</strong> ' +
         '(<span aria-hidden="true">⬆️</span>) ikonra, majd válaszd a ' +
         '<strong>„Főképernyőhöz adás"</strong> opciót. Ezután kapsz értesítést is, ' +
-        'ha mozdul egy ügyleted.',
+        'ha mozdul egy ügyleted. ' +
+        '<a href="onboarding/telepites.html" target="_blank" rel="noopener">Képes útmutató →</a>',
       null // iOS-en nincs egygombos telepítés
     );
     document.body.appendChild(card);

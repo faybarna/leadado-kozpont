@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telepítés a kezdőképernyőre · Leadadó Központ</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --ink:#1a2420; --paper:#f4efe3; --card:#fafaf7; --line:#ddd5c0;
+    --brass:#9e6a2e; --brass-soft:#f0e3cd; --text:#2a322e; --text-soft:#6d7670;
+    --radius:6px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    background:var(--paper); color:var(--text); line-height:1.6;
+    padding:24px 16px 60px;
+  }
+  .wrap{max-width:560px;margin:0 auto}
+  .brand{text-align:center;margin-bottom:28px}
+  .brand-badge{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:64px;height:64px;border-radius:16px;background:#0f1117;
+    color:#c9a84c;font-family:Georgia,serif;font-weight:600;font-size:30px;
+    margin-bottom:12px;
+  }
+  .brand-name{font-family:Georgia,serif;font-weight:600;font-size:22px;color:var(--ink)}
+  .brand-sub{font-size:13px;color:var(--text-soft)}
+  h1{font-family:Georgia,serif;font-weight:600;font-size:24px;color:var(--ink);
+     margin:0 0 6px;text-align:center;line-height:1.25}
+  .intro{text-align:center;color:var(--text-soft);font-size:14px;margin-bottom:24px}
+
+  .tabs{display:flex;gap:8px;margin-bottom:20px}
+  .tab{
+    flex:1;padding:11px;border:1px solid var(--line);background:var(--card);
+    border-radius:var(--radius);font-weight:600;font-size:14px;color:var(--text-soft);
+    cursor:pointer;text-align:center;transition:.15s;
+  }
+  .tab.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+  .panel{display:none}
+  .panel.active{display:block}
+
+  .step{
+    display:flex;gap:14px;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:16px;margin-bottom:12px;align-items:flex-start;
+  }
+  .step-num{
+    flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--brass);
+    color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;
+    justify-content:center;
+  }
+  .step-body{flex:1;min-width:0}
+  .step-title{font-weight:600;color:var(--ink);margin-bottom:2px}
+  .step-text{font-size:13.5px;color:var(--text-soft)}
+  .step-icon{
+    flex-shrink:0;width:38px;height:38px;display:flex;align-items:center;justify-content:center;
+    background:var(--brass-soft);border-radius:8px;
+  }
+  .step-icon svg{width:22px;height:22px;fill:none;stroke:var(--brass);stroke-width:2;
+    stroke-linecap:round;stroke-linejoin:round}
+
+  .why{
+    margin-top:22px;background:var(--brass-soft);border-radius:var(--radius);
+    padding:16px;font-size:13.5px;color:#5a4a2e;
+  }
+  .why strong{color:#4a3c22}
+  .done{
+    margin-top:18px;text-align:center;font-size:14px;color:var(--text);
+    background:#d8ebe1;border-radius:var(--radius);padding:14px;font-weight:600;
+  }
+  .foot{text-align:center;margin-top:28px;font-size:12px;color:var(--text-soft)}
+  .foot a{color:var(--brass)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand">
+    <div class="brand-badge">LK</div>
+    <div class="brand-name">Leadadó Központ</div>
+    <div class="brand-sub">Fáy Barna · Hitelspecialista</div>
+  </div>
+
+  <h1>Tedd ki a kezdőképernyőre</h1>
+  <p class="intro">2 perc, és úgy nyílik majd, mint egy app — gyorsabban, és kapsz
+    értesítést, ha mozdul egy ügyleted.</p>
+
+  <div class="tabs">
+    <button class="tab" id="tab-ios" onclick="show('ios')">📱 iPhone / iPad</button>
+    <button class="tab" id="tab-android" onclick="show('android')">🤖 Android</button>
+  </div>
+
+  <!-- ===== iOS ===== -->
+  <div class="panel" id="panel-ios">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-title">Nyisd meg Safariban</div>
+        <div class="step-text">A saját linkedet Safariban nyisd meg (ne Chrome-ban) —
+          iPhone-on csak így telepíthető.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-title">Koppints a Megosztás ikonra</div>
+        <div class="step-text">Alul középen a négyzet felfelé mutató nyíllal.</div>
+      </div>
+      <div class="step-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M8 7l4-4 4 4"/>
+          <path d="M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7"/></svg>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-title">„Főképernyőhöz adás"</div>
+        <div class="step-text">Görgess le a menüben, és válaszd a
+          <strong>Főképernyőhöz adás</strong> sort.</div>
+      </div>
+      <div class="step-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/>
+          <path d="M12 8v8"/><path d="M8 12h8"/></svg>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <div class="step-title">Hozzáadás</div>
+        <div class="step-text">Jobb felül koppints a <strong>Hozzáadás</strong> gombra.
+          Az ikon megjelenik a kezdőképernyődön.</div>
+      </div>
+    </div>
+    <div class="done">✅ Kész! Nyisd meg az új ikont, és engedélyezd az értesítést.</div>
+  </div>
+
+  <!-- ===== Android ===== -->
+  <div class="panel" id="panel-android">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-title">Nyisd meg Chrome-ban</div>
+        <div class="step-text">A saját linkedet Chrome böngészőben nyisd meg.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-title">Telepítés felajánlása</div>
+        <div class="step-text">A legtöbb telefonon felugrik egy
+          <strong>„Alkalmazás telepítése"</strong> sáv — koppints rá. Ha nem,
+          lépj a 3. pontra.</div>
+      </div>
+      <div class="step-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M8 11l4 4 4-4"/>
+          <path d="M5 19h14"/></svg>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-title">Menü → Telepítés</div>
+        <div class="step-text">Jobb felül a <strong>⋮</strong> (három pont) menüben
+          válaszd: <strong>Alkalmazás telepítése</strong> vagy
+          <strong>Hozzáadás a kezdőképernyőhöz</strong>.</div>
+      </div>
+      <div class="step-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.4" fill="var(--brass)" stroke="none"/>
+          <circle cx="12" cy="12" r="1.4" fill="var(--brass)" stroke="none"/>
+          <circle cx="12" cy="19" r="1.4" fill="var(--brass)" stroke="none"/></svg>
+      </div>
+    </div>
+    <div class="done">✅ Kész! Nyisd meg az új ikont, és engedélyezd az értesítést.</div>
+  </div>
+
+  <div class="why">
+    <strong>Miért éri meg?</strong> A telepített appban kapsz <strong>push
+    értesítést</strong>, ha mozdul egy ügyleted — státuszváltás, sürgetendő tétel,
+    vagy épp egy sikeres folyósítás. Nincs spam, napi 1-2 üzenet.
+  </div>
+
+  <div class="foot">
+    Kérdés? Írj Barnának: <a href="mailto:fay.barna@ovb.hu">fay.barna@ovb.hu</a>
+  </div>
+</div>
+
+<script>
+  function show(which){
+    document.getElementById('panel-ios').classList.toggle('active', which==='ios');
+    document.getElementById('panel-android').classList.toggle('active', which==='android');
+    document.getElementById('tab-ios').classList.toggle('active', which==='ios');
+    document.getElementById('tab-android').classList.toggle('active', which==='android');
+  }
+  // Platform szerinti alapértelmezett fül
+  (function(){
+    var ua = navigator.userAgent;
+    var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    show(isIOS ? 'ios' : 'android');
+  })();
+</script>
+</body>
+</html>

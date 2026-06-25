@@ -51,6 +51,13 @@
   color: var(--text-soft, #6d7670);
 }
 .pwa-install-text strong { color: var(--text, #2a322e); }
+.pwa-install-text a {
+  color: var(--brass, #9e6a2e);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.pwa-install-text a:hover { text-decoration: underline; }
 
 .pwa-install-actions {
   display: flex;

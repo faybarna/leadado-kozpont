@@ -303,6 +303,38 @@ hivatkozott — ezeket az `icon.svg`-ből legeneráltam. Enélkül a telepített
 - **`@block65/webcrypto-web-push` verzió**: a `package.json`-ban `^1.0.0` van
   feltüntetve — deploykor `npm install` rögzíti a pontos verziót; ha API-eltérés
   van, a `sendToToken` egy függvénye igazítandó (jelölve a kódban).
-- **Push szöveg finomhangolása**: most általános („1 státuszváltás — nézd meg").
-  Ha akarsz termék-szintű, de PII-mentes szöveget (pl. „egy jelzálogod
-  folyósult"), az 1 sor a Workerben — döntésre vár.
+
+---
+
+## 11. Döntések rögzítve (2026-06-25) + mi került még be
+
+**A te döntéseid:**
+1. Irány: **PWA marad GitHub Pages-en** ✅
+2. Push trigger: **szétválasztott Worker-diff** ✅ (a meglévő automatizációhoz nem nyúlunk)
+3. Push események: **státuszváltás · új PING · új ügylet · lezárás/folyósítás**
+   (sikeres bankszámla-kötés + folyósítás **ünneplős** üzenettel). Heti
+   összefoglaló: **kapcsolóval beépítve, alapból ki** („megnézzük").
+4. iOS onboarding: **képes útmutató appban + e-mailben** ✅
+5. Auth: **marad a mostani** (titkos link + jelszó), később visszatérünk rá ✅
+6. Kezdés: **Fázis 1-2 mehet** ✅
+
+**Amit ezek alapján megépítettem (a branchen, deploy nélkül):**
+| Mi | Hol | Állapot |
+|---|---|---|
+| Push események a döntésed szerint + ünneplős zárás-szöveg | `worker/src/index.js` | ✅ |
+| Heti összefoglaló push (PII-mentes, `WEEKLY_ENABLED` kapcsoló) | `worker/src/index.js` | ✅ kész, **kikapcsolva** |
+| Két cron (20 perces diff + hétfői digest) | `worker/wrangler.toml.example` | ✅ |
+| iOS+Android **képes** telepítési útmutató | `onboarding/telepites.html` | ✅ tesztelve |
+| Kiküldhető **e-mail sablon** (telepítés + személyes link) | `onboarding/email-sablon.html` | ✅ |
+| Az app iOS-kártyája a képes útmutatóra linkel | `assets/pwa.js` | ✅ |
+
+**Push szövegpéldák, amik élesben mennének:**
+- Cím: *„Gratulálok! 🎉"* · Törzs: *„1 lezárás/folyósítás 🎉 — nézd meg a Saját Ügyleteimben."*
+- Cím: *„Mozdult egy ügyleted"* · Törzs: *„2 státuszváltás · 1 sürgetendő 🔴 — …"*
+- Cím: *„Heti pillanatkép"* · Törzs: *„5 aktív ügylet (1240 EH) · 2 elszámolás e hónapban — …"*
+
+### Ami már CSAK rajtad áll (én ezt nem tudom megtenni helyetted)
+A push tényleges élesítéséhez kell a **te Cloudflare-fiókod** — a `worker/README.md`
+végigvezet (VAPID kulcs, KV, deploy), és a végén az `assets/pwa.js` `PWA_CONFIG`
+kitöltése. Amíg ez nincs meg, minden marad kikapcsolva. A **Fázis 0** (gyorsítótár
++ telepítés + onboarding) viszont a PR mergelésével azonnal élesíthető, push nélkül is.
