@@ -1,6 +1,6 @@
 {
   "partner": "Lamatsch Roland",
-  "frissitve": "2026.06.25. 09:03",
+  "frissitve": "2026.06.25. 09:58",
   "ugyletek": [
     {
       "ugyfel": "Montvai Gábor",
@@ -85,10 +85,10 @@
     },
     {
       "vezeto": "Lőrinc Róbert",
-      "ugyletek_db": 43,
-      "eh_sum": 4894,
+      "ugyletek_db": 42,
+      "eh_sum": 4494,
       "honap_bontas": {
-        "2026. Augusztus": 2829,
+        "2026. Augusztus": 2429,
         "2026. Július": 740,
         "2026. Június": 627
       }
