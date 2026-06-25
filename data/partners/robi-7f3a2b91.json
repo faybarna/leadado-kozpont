@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.25. 09:03",
+  "frissitve": "2026.06.25. 09:58",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -36,15 +36,6 @@
       "statusz": "5. Folyósítva",
       "eh": 420,
       "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Czira Csilla",
-      "termek": "Jelzálog",
-      "bank": "Raiffeisen",
-      "statusz": "3. Bírálat",
-      "eh": 400,
-      "elszamolasi_honap": "2026. Augusztus",
       "ping": null
     },
     {
