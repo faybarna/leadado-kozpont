@@ -1,6 +1,6 @@
 {
   "partner": "Angelcsev Zoé",
-  "frissitve": "2026.06.25. 09:58",
+  "frissitve": "2026.06.25. 10:17",
   "ugyletek": [
     {
       "ugyfel": "Ernszt Ildikó",
@@ -60,9 +60,9 @@
       "ugyfel": "Vértesi Gábor Ödön",
       "termek": "Bankszámla",
       "bank": "CIB",
-      "statusz": "2. Kötési kiküldve",
+      "statusz": "3. Megkötve",
       "eh": 25,
-      "elszamolasi_honap": "",
+      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
