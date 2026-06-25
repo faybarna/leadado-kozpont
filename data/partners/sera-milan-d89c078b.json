@@ -1,6 +1,6 @@
 {
   "partner": "Séra Milán",
-  "frissitve": "2026.06.25. 18:35",
+  "frissitve": "2026.06.25. 19:31",
   "ugyletek": [
     {
       "ugyfel": "Pásztor Jázmin",
@@ -12,12 +12,48 @@
       "ping": "PING 2"
     },
     {
+      "ugyfel": "Sóki Viktória",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Kiss Márton",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
       "ugyfel": "Séra Milán",
       "termek": "Bankszámla",
       "bank": "Erste",
       "statusz": "3. Megkötve",
       "eh": 60,
       "elszamolasi_honap": "2026. Június",
+      "ping": null
+    },
+    {
+      "ugyfel": "Sóki Viktória",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Kiss Márton",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": "",
       "ping": null
     },
     {
@@ -28,6 +64,15 @@
       "eh": 46,
       "elszamolasi_honap": "",
       "ping": "PING 1"
+    },
+    {
+      "ugyfel": "Kiss Márton",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": "",
+      "ping": null
     }
   ]
 }
