@@ -260,3 +260,49 @@ Ha rábólintasz, **Fázis 0-val kezdek** (service worker + telepítési nudge) 
 ez backend nélkül, kockázat nélkül azonnali sebességet és tisztább telepítést
 ad, és lerakja a service worker alapot, amire a push épül. A Worker (Fázis 1-2)
 jöhet utána, amikor a VAPID + Cloudflare fiók megvan.
+
+---
+
+## 10. Mi készült el már (háttérben, élesítés NÉLKÜL)
+
+A `claude/mobile-context-visibility-7wu8w4` branch-en lerakott alap. **Semmi
+nem él** belőle a production oldalon, amíg a branch nincs összefésülve és a
+push nincs konfigurálva. Apple ÉS Android felhasználóra is figyelve.
+
+| Terület | Fájl | Állapot |
+|---|---|---|
+| Service worker (gyorsítótár + push fogadás) | `service-worker.js` | ✅ kész, tesztelve |
+| SW regisztráció + frissítés-jelzés | `assets/pwa.js` | ✅ kész |
+| Telepítési nudge — **Android** (`beforeinstallprompt`) | `assets/pwa.js` | ✅ kész |
+| Telepítési nudge — **Apple** (kézi „Megosztás → Főképernyő" útmutató) | `assets/pwa.js` | ✅ kész |
+| Push opt-in kártya (config mögött, rejtve) | `assets/pwa.js` | ✅ kész, **kikapcsolva** |
+| Kártya/toast stílus (meglévő dizájnhoz illesztve) | `assets/pwa.css` | ✅ kész |
+| Hiányzó app-ikonok pótlása (192/512 PNG) | `icon-192.png`, `icon-512.png` | ✅ generálva |
+| Push Worker (feliratkozás + cron diff + küldés) | `worker/` | ✅ váz, deploy nélkül |
+| Beüzemelési útmutató | `worker/README.md` | ✅ kész |
+
+**Tesztelve (lokálisan, headless Chromiummal):** az oldal hiba nélkül tölt, a
+jelszókapu működik, a service worker regisztrál, a push kártya helyesen **nem**
+jelenik meg (mert nincs konfig) → bizonyítottan semmi sem élesedik magától.
+
+### Pótolt hiányosság menet közben
+A `manifest.json` eddig **nem létező** `icon-192.png` / `icon-512.png` fájlokra
+hivatkozott — ezeket az `icon.svg`-ből legeneráltam. Enélkül a telepített app
+és a push értesítés ikonja töredezett/üres lett volna.
+
+### Mi kell az élesítéshez (sorrendben)
+1. **Fázis 0 már mehet élesbe önmagában** (gyorsítótár + telepítés) — csak a
+   branch összefésülése kell, push nélkül is értékes.
+2. **Push-hoz** (amikor szeretnéd): Cloudflare fiók → VAPID kulcs → KV →
+   `worker/` deploy → az `assets/pwa.js` `PWA_CONFIG` kitöltése. A teljes
+   recept: `worker/README.md`.
+
+### Ami még tisztázandó / nyitott (a 7-8. ponton túl)
+- **iOS push valós eszközös teszt**: a kódszint kész, de iPhone-on telepítve
+  kell egyszer végigpróbálni (ez a kézbesítés természetéből adódik).
+- **`@block65/webcrypto-web-push` verzió**: a `package.json`-ban `^1.0.0` van
+  feltüntetve — deploykor `npm install` rögzíti a pontos verziót; ha API-eltérés
+  van, a `sendToToken` egy függvénye igazítandó (jelölve a kódban).
+- **Push szöveg finomhangolása**: most általános („1 státuszváltás — nézd meg").
+  Ha akarsz termék-szintű, de PII-mentes szöveget (pl. „egy jelzálogod
+  folyósult"), az 1 sor a Workerben — döntésre vár.

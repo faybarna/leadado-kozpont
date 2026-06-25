@@ -1,0 +1,29 @@
+# =========================================================================
+# Leadadó Push Worker — wrangler konfig MINTA
+# Másold át "wrangler.toml" néven, és töltsd ki a KV namespace ID-t.
+# A titkokat NEM ide írjuk — azokat `wrangler secret put` adja meg (lásd README).
+# =========================================================================
+
+name = "leadado-push"
+main = "src/index.js"
+compatibility_date = "2024-09-01"
+
+# --- KV namespace a feliratkozásokhoz + diff-állapothoz ---
+# Hozd létre:  npx wrangler kv namespace create SUBS
+# majd másold ide a kapott id-t:
+[[kv_namespaces]]
+binding = "SUBS"
+id = "IDE_JON_A_KV_NAMESPACE_ID"
+
+# --- Cron trigger: 20 percenként diffel + push ---
+[triggers]
+crons = ["*/20 * * * *"]
+
+# --- Nyilvános (nem titkos) változók ---
+[vars]
+VAPID_SUBJECT = "mailto:fay.barna@ovb.hu"
+
+# Titkok (NE ide írd — parancssorból):
+#   npx wrangler secret put VAPID_PUBLIC_KEY
+#   npx wrangler secret put VAPID_PRIVATE_KEY
+#   npx wrangler secret put ADMIN_KEY
