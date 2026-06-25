@@ -430,12 +430,76 @@
       });
   }
 
-  if (partnerToken) {
+  // Telepített (standalone) app a start_url-ből indul, ?p= token nélkül. Az iPhone
+  // a telepített appnak külön tárolót ad, ezért a Safariban mentett token nem mindig
+  // elérhető itt. Megoldás: ilyenkor egyszeri "add meg a linked" mezőt mutatunk,
+  // amit az app utána megjegyez.
+  function isStandaloneApp() {
+    return window.navigator.standalone === true ||
+      (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches);
+  }
+
+  function revealSajat() {
     if (sajatSection) sajatSection.style.display = "";
-    if (sajatNav)     sajatNav.style.display      = "";
-    loadPartnerData(partnerToken);
+    if (sajatNav)     sajatNav.style.display     = "";
+    var mmpSajatEl = document.getElementById("mmp-sajat");
+    if (mmpSajatEl)   mmpSajatEl.style.display    = "";
+  }
+
+  function activatePartner(token) {
+    try { localStorage.setItem(PARTNER_TOKEN_KEY, token); } catch (e) {}
+    partnerToken = token;
+    revealSajat();
+    loadPartnerData(token);
+  }
+
+  // Token kinyerése a beillesztett szövegből: lehet teljes link (?p=…) vagy maga a token.
+  function extractToken(raw) {
+    var s = (raw || "").trim();
+    if (!s) return "";
+    var m = s.match(/[?&]p=([^&\s]+)/);
+    if (m) return decodeURIComponent(m[1]);
+    if (s.indexOf("/") !== -1) return s.replace(/^.*\//, "").replace(/[?#].*$/, "");
+    return s;
+  }
+
+  function renderTokenEntry(msg) {
+    if (!sajatTar) return;
+    sajatTar.innerHTML =
+      '<div class="card">' +
+        '<div class="sajat-locked" style="margin-bottom:12px">' +
+          (msg || 'Első indítás: illeszd be a személyes linkedet (amit Barnától kaptál), és az app megjegyzi — legközelebb már magától betölt.') +
+        '</div>' +
+        '<div style="display:flex;gap:8px;flex-wrap:wrap">' +
+          '<input id="token-entry-input" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" ' +
+            'placeholder="https://…?p=…  vagy a tokened" ' +
+            'style="flex:1;min-width:200px;padding:10px 12px;border:1px solid #c9bfa6;border-radius:8px;font-size:15px;background:#fff">' +
+          '<button id="token-entry-btn" class="btn-brass" style="padding:10px 18px">Betöltés</button>' +
+        '</div>' +
+      '</div>';
+    var input = document.getElementById("token-entry-input");
+    var btn   = document.getElementById("token-entry-btn");
+    function submit() {
+      var tok = extractToken(input ? input.value : "");
+      if (!tok) { if (input) input.focus(); return; }
+      if (btn) { btn.disabled = true; btn.textContent = "Töltés…"; }
+      fetch("data/partners/" + tok + ".json")
+        .then(function(res){ if(!res.ok) throw new Error("404"); return res.json(); })
+        .then(function(){ activatePartner(tok); })
+        .catch(function(){ renderTokenEntry('Ezt a linket/tokent nem találtam. Ellenőrizd, és próbáld újra.'); });
+    }
+    if (btn)   btn.addEventListener("click", submit);
+    if (input) input.addEventListener("keydown", function(e){ if (e.key === "Enter") submit(); });
+  }
+
+  if (partnerToken) {
+    activatePartner(partnerToken);
+  } else if (isStandaloneApp()) {
+    // Telepített app token nélkül → mutassuk a Saját fület és a beviteli mezőt.
+    revealSajat();
+    renderTokenEntry();
   } else {
-    // Nincs token — szekció rejtett, de ha valaki direktben navigál rá, mutatjuk az üzenetet
+    // Sima böngésző, token nélkül — személyre szabott nézet, a link kell hozzá.
     if (sajatTar) {
       sajatTar.innerHTML = '<div class="card"><div class="sajat-locked">Ez a nézet személyre szabott — kérd el a saját linkedet Barnától.</div></div>';
     }
