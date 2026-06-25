@@ -1,7 +1,16 @@
 {
   "partner": "Gentischer Richárd",
-  "frissitve": "2026.06.25. 10:17",
+  "frissitve": "2026.06.25. 10:47",
   "ugyletek": [
+    {
+      "ugyfel": "Kummer Mirtill",
+      "termek": "SZK",
+      "bank": "Erste",
+      "statusz": "2. Beadás alatt",
+      "eh": 233,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
     {
       "ugyfel": "Sárkövi Ádám",
       "termek": "Jelzálog",
@@ -9,6 +18,15 @@
       "statusz": "2. Beadás alatt",
       "eh": 186,
       "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
+    },
+    {
+      "ugyfel": "Kummer Mirtill",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "0. Új",
+      "eh": 60,
+      "elszamolasi_honap": "",
       "ping": null
     },
     {
