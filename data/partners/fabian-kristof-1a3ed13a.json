@@ -1,6 +1,6 @@
 {
   "partner": "Fábián Kristóf",
-  "frissitve": "2026.06.25. 18:35",
+  "frissitve": "2026.06.25. 19:31",
   "ugyletek": [
     {
       "ugyfel": "Róth István",
@@ -208,6 +208,15 @@
       "eh": 0,
       "elszamolasi_honap": "",
       "ping": "PING 2"
+    },
+    {
+      "ugyfel": "Steigler Csaba",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 0,
+      "elszamolasi_honap": "",
+      "ping": null
     }
   ],
   "csapat": [
