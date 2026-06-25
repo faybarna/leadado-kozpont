@@ -444,6 +444,14 @@
     if (sajatNav)     sajatNav.style.display     = "";
     var mmpSajatEl = document.getElementById("mmp-sajat");
     if (mmpSajatEl)   mmpSajatEl.style.display    = "";
+    // Lenti sáv átrendezése partnernek: Saját csempe be, CHK át a „Több" panelbe,
+    // hogy a leadadó legfontosabb nézete egy koppintásra legyen (ne a Több alatt).
+    var mbnSajat = document.getElementById("mbn-sajat");
+    var mbnChk   = document.getElementById("mbn-chk");
+    var mmpChk   = document.getElementById("mmp-chk");
+    if (mbnSajat) mbnSajat.style.display = "";
+    if (mbnChk)   mbnChk.style.display   = "none";
+    if (mmpChk)   mmpChk.style.display   = "";
   }
 
   function activatePartner(token) {
@@ -636,6 +644,71 @@
       renderSearch("");
       searchInput.focus();
     });
+  }
+
+  /* ---------------- 8) MOBIL „LAPOZÓS" NÉZET ----------------
+     Mobilon nem egy hosszú görgetős oldal: egyszerre EGY szekció látszik,
+     koppintásra váltunk (mint egy natív app). Így megszűnik a görgetés a
+     szekciók KÖZÖTT. Desktopon (≥861px) marad a megszokott görgetős oldal. */
+
+  var mqMobile     = window.matchMedia("(max-width: 860px)");
+  var allSections  = Array.prototype.slice.call(document.querySelectorAll(".main > .section"));
+  var DEFAULT_SECTION = "attekintes";
+
+  function showSection(id) {
+    var target = document.getElementById(id);
+    if (!target || !target.classList.contains("section")) return;
+    if (target.style.display === "none") return;   // rejtett (pl. Saját token nélkül) — ne ugorjunk rá
+    allSections.forEach(function(s){ s.classList.remove("section--active"); });
+    target.classList.add("section--active");
+    setMbnActive(id);
+    navItems.forEach(function(n){ n.classList.remove("active"); });
+    var navMatch = document.querySelector('.nav-item[href="#' + id + '"]');
+    if (navMatch) navMatch.classList.add("active");
+    window.scrollTo(0, 0);              // minden új „lap" a tetejéről indul
+    var mainEl = document.querySelector(".main");
+    if (mainEl) mainEl.scrollTop = 0;
+  }
+
+  function defaultSection() {
+    // Push / mély link, vagy telepített app: a Saját nézet a cél (oda visz a push is).
+    var nyit = new URLSearchParams(window.location.search).get("nyit");
+    var sajatLathato = sajatSection && sajatSection.style.display !== "none";
+    if (nyit === "sajat" && sajatLathato) return "sajat-ugyletek";
+    if (isStandaloneApp() && sajatLathato) return "sajat-ugyletek";
+    return DEFAULT_SECTION;
+  }
+
+  function enableTabbed() {
+    document.body.classList.add("tabbed");
+    if (!document.querySelector(".main > .section.section--active")) {
+      showSection(defaultSection());
+    }
+  }
+  function disableTabbed() {
+    document.body.classList.remove("tabbed");   // desktop: a görgetős oldal visszatér
+  }
+
+  // Lapon belüli horgony-link (#…) tabbed módban lapváltást jelent — nincs görgetés.
+  document.addEventListener("click", function(e){
+    if (!document.body.classList.contains("tabbed")) return;
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var id = a.getAttribute("href").slice(1);
+    if (!id) return;
+    var target = document.getElementById(id);
+    if (!target || !target.classList.contains("section")) return;
+    e.preventDefault();
+    showSection(id);
+    closeMorePanel();
+    if (searchInput && searchInput.value) { searchInput.value = ""; renderSearch(""); }
+  });
+
+  if (mqMobile.matches) enableTabbed();
+  if (mqMobile.addEventListener) {
+    mqMobile.addEventListener("change", function(e){ e.matches ? enableTabbed() : disableTabbed(); });
+  } else if (mqMobile.addListener) {           // régi Safari
+    mqMobile.addListener(function(e){ e.matches ? enableTabbed() : disableTabbed(); });
   }
 
 })();

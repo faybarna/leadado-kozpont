@@ -13,7 +13,7 @@
    "frissült az app" jelzést kaphat (lásd pwa.js).
    ========================================================================= */
 
-const CACHE_VERSION = "lk-v3";
+const CACHE_VERSION = "lk-v4";
 const CACHE_NAME = "leadado-" + CACHE_VERSION;
 
 // App-váz — ezek ritkán változnak, cache-first a sebességért.

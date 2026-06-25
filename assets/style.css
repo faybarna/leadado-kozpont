@@ -1013,6 +1013,17 @@ body.locked .app{ display: none; }
     padding: 4px 0 env(safe-area-inset-bottom, 8px);
     box-shadow: 0 -4px 20px rgba(26,36,32,.08);
   }
+
+  /* Saját — kiemelt csempe a lenti sávban (partnernek) */
+  .mbn-item--sajat.active{ color: var(--new); }
+
+  /* ── „LAPOZÓS" NÉZET ──────────────────────────────────────────────
+     Mobilon nem egy hosszú görgetős oldal: egyszerre egy szekció látszik,
+     koppintásra váltunk. Így nincs görgetés a szekciók KÖZÖTT.
+     A keresősáv (.main > .search-bar, .search-result-list) mindig marad. */
+  body.tabbed .main > .section{ display: none; }
+  body.tabbed .main > .section.section--active{ display: block; }
+  body.tabbed .main{ padding-top: 14px; }
 }
 
 /* ============================== REDUCED MOTION ============================== */
