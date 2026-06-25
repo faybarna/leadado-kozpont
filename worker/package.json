@@ -1,0 +1,18 @@
+{
+  "name": "leadado-push-worker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Leadadó Központ — Web Push küldő Worker (feliratkozás-tárolás + cron diff)",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "dependencies": {
+    "@block65/webcrypto-web-push": "^1.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

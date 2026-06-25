@@ -1,0 +1,134 @@
+/* =========================================================================
+   LEADADÓ KÖZPONT — pwa.css
+   Telepítési / push kártya + "frissült" toast. A meglévő design tokeneket
+   (style.css :root) használja, hogy egységes legyen a megjelenés.
+   Mobil-first, alulról beúszó kártya — a bottom nav fölött.
+   ========================================================================= */
+
+/* ---- Telepítési + push kártya (alulról beúszik) ---- */
+.pwa-install-card {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 78px;                 /* a mobil bottom nav (kb. 64px) fölött */
+  z-index: 1200;
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--card, #fafaf7);
+  border: 1px solid var(--line, #ddd5c0);
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(26, 36, 32, 0.22);
+  transform: translateY(140%);
+  opacity: 0;
+  transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.32s ease;
+}
+.pwa-install-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.pwa-install-icon {
+  font-size: 26px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pwa-install-body { flex: 1; min-width: 0; }
+
+.pwa-install-title {
+  font-family: var(--font-display, Georgia, serif);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text, #2a322e);
+  margin-bottom: 4px;
+}
+
+.pwa-install-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-soft, #6d7670);
+}
+.pwa-install-text strong { color: var(--text, #2a322e); }
+.pwa-install-text a {
+  color: var(--brass, #9e6a2e);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.pwa-install-text a:hover { text-decoration: underline; }
+
+.pwa-install-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  justify-content: flex-end;
+}
+
+/* Gombok — a meglévő réz/bross paletta */
+.pwa-install-actions .btn-brass,
+.pwa-install-actions .btn-ghost,
+.pwa-toast-btn {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--radius, 4px);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.pwa-install-actions .btn-brass {
+  background: var(--brass, #9e6a2e);
+  color: #fff;
+}
+.pwa-install-actions .btn-brass:hover { filter: brightness(1.05); }
+.pwa-install-actions .btn-ghost {
+  background: transparent;
+  color: var(--text-soft, #6d7670);
+  border-color: var(--line, #ddd5c0);
+}
+.pwa-install-actions .btn-ghost:hover { background: var(--brass-soft, #f0e3cd); }
+
+/* ---- "Frissült az app" toast (fent középen) ---- */
+.pwa-toast {
+  position: fixed;
+  left: 50%;
+  top: 14px;
+  transform: translateX(-50%) translateY(-140%);
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--ink, #1a2420);
+  color: var(--paper, #f4efe3);
+  border-radius: 8px;
+  box-shadow: 0 6px 22px rgba(26, 36, 32, 0.3);
+  font-size: 13px;
+  white-space: nowrap;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.pwa-toast.show { transform: translateX(-50%) translateY(0); }
+.pwa-toast-btn {
+  background: var(--brass, #9e6a2e);
+  color: #fff;
+}
+.pwa-toast-btn:hover { filter: brightness(1.08); }
+
+/* ---- Desktop: jobb alsó sarok, keskenyebb ---- */
+@media (min-width: 860px) {
+  .pwa-install-card {
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+    max-width: 380px;
+  }
+}
+
+/* ---- Csökkentett mozgás kérése esetén ---- */
+@media (prefers-reduced-motion: reduce) {
+  .pwa-install-card,
+  .pwa-toast { transition: opacity 0.2s ease; }
+  .pwa-install-card { transform: none; }
+}
