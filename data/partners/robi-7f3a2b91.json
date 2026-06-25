@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.24. 16:40",
+  "frissitve": "2026.06.25. 07:27",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -126,7 +126,7 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 33,
       "elszamolasi_honap": "",
-      "ping": "PING 1"
+      "ping": null
     },
     {
       "ugyfel": "Sztárosztenkó Gabriella",
@@ -135,7 +135,7 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 33,
       "elszamolasi_honap": "",
-      "ping": "PING 1"
+      "ping": null
     },
     {
       "ugyfel": "Bugyis Dominika",
@@ -293,7 +293,7 @@
           "statusz": "2. Kötési kiküldve",
           "eh": 46,
           "elszamolasi_honap": "",
-          "ping": "PING 1"
+          "ping": null
         },
         {
           "ugyfel": "Budai Krisztián",
