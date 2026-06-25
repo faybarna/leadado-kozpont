@@ -15,9 +15,10 @@
 
   /* ============ KONFIG — ezt kell kitölteni a push élesítéséhez ============ */
   var PWA_CONFIG = {
-    pushEnabled: false,        // ⬅ állítsd true-ra, ha kész a Worker + VAPID
-    workerUrl: "",             // pl. "https://leadado-push.<fiok>.workers.dev"
-    vapidPublicKey: "",        // a VAPID PUBLIKUS kulcs (base64url) — lásd worker/README.md
+    pushEnabled: false,        // ⬅ állítsd true-ra, ha a workerUrl is megvan
+    workerUrl: "",             // ⬅ ide jön a Worker URL a deploy után
+    // A VAPID PUBLIKUS kulcs (ez nyilvános, mehet a repóba):
+    vapidPublicKey: "BHyP3m9h5NP36VnsWO5tdazrMbOhfXSxjE8kJMmvG98HkHPT7N0a4HpRhiVwga1ul_DsqtcelS7iZjPRCxH_ICk",
   };
 
   /* ---------------- segéd: partner token a ?p= paraméterből ---------------- */
