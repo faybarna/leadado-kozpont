@@ -1,6 +1,6 @@
 {
   "partner": "Gentischer Richárd",
-  "frissitve": "2026.06.25. 12:03",
+  "frissitve": "2026.06.25. 18:35",
   "ugyletek": [
     {
       "ugyfel": "Kummer Mirtill",
@@ -27,15 +27,6 @@
       "statusz": "0. Új",
       "eh": 60,
       "elszamolasi_honap": "",
-      "ping": null
-    },
-    {
-      "ugyfel": "Csordásék",
-      "termek": "Jelzálog",
-      "bank": "CIB",
-      "statusz": "3. Bírálat",
-      "eh": 50,
-      "elszamolasi_honap": "2026. Augusztus",
       "ping": null
     },
     {
