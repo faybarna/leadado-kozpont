@@ -24,7 +24,11 @@
   /* ---------------- segéd: partner token a ?p= paraméterből ---------------- */
   function getPartnerToken() {
     try {
-      return new URLSearchParams(window.location.search).get("p");
+      var t = new URLSearchParams(window.location.search).get("p");
+      // Telepített app a start_url-ből indul (?p= nélkül) → a script.js által
+      // elmentett tokent használjuk, hogy a push-kártya itt is megjelenjen.
+      if (!t) t = localStorage.getItem("lk_partner_token");
+      return t;
     } catch (e) {
       return null;
     }

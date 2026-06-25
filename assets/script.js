@@ -182,6 +182,19 @@
   var urlParams = new URLSearchParams(window.location.search);
   var partnerToken = urlParams.get("p");
 
+  // Telepített app (PWA) a start_url-ből indul, ?p= token NÉLKÜL. Hogy az ikonról
+  // indított app is tudja, ki a partner: ha most jött token az URL-ben, elmentjük;
+  // ha nincs token, visszatöltjük a korábban mentettet.
+  var PARTNER_TOKEN_KEY = "lk_partner_token";
+  try {
+    if (partnerToken) {
+      localStorage.setItem(PARTNER_TOKEN_KEY, partnerToken);
+    } else {
+      var savedToken = localStorage.getItem(PARTNER_TOKEN_KEY);
+      if (savedToken) partnerToken = savedToken;
+    }
+  } catch (e) { /* localStorage nem elérhető — marad az URL-token (ha volt) */ }
+
   var LEZART_STATUSZOK = ["5. Folyósítva", "3. Megkötve"];
 
   function statuszBadge(statusz) {
