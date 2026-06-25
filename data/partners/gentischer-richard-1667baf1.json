@@ -1,6 +1,6 @@
 {
   "partner": "Gentischer Richárd",
-  "frissitve": "2026.06.25. 18:35",
+  "frissitve": "2026.06.25. 19:31",
   "ugyletek": [
     {
       "ugyfel": "Kummer Mirtill",
@@ -24,7 +24,7 @@
       "ugyfel": "Kummer Mirtill",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "0. Új",
+      "statusz": "1. Kalkuláció kiküldve",
       "eh": 60,
       "elszamolasi_honap": "",
       "ping": null
@@ -96,8 +96,8 @@
     },
     {
       "vezeto": "Holló Bernadett",
-      "ugyletek_db": 11,
-      "eh_sum": 564,
+      "ugyletek_db": 13,
+      "eh_sum": 630,
       "honap_bontas": {
         "2026. Július": 40,
         "2026. Augusztus": 100,
