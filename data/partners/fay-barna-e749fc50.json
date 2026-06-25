@@ -1,0 +1,52 @@
+{
+  "partner": "Fay Barna",
+  "frissitve": "2026.06.25. 20:30",
+  "ugyletek": [
+    {
+      "ugyfel": "Teszt Ügyfél 1",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "3. Bírálat",
+      "eh": 540,
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
+    },
+    {
+      "ugyfel": "Teszt Ügyfél 2",
+      "termek": "Jelzálog",
+      "bank": "CIB",
+      "statusz": "5. Folyósítva",
+      "eh": 410,
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
+    },
+    {
+      "ugyfel": "Teszt Ügyfél 3",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": "",
+      "ping": "PING 2"
+    },
+    {
+      "ugyfel": "Teszt Ügyfél 4",
+      "termek": "Babaváró",
+      "bank": "K&H",
+      "statusz": "2. Beadás alatt",
+      "eh": 33,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Teszt Ügyfél 5",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": "",
+      "ping": null
+    }
+  ],
+  "csapat": []
+}
