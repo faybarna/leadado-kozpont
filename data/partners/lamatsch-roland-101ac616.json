@@ -1,6 +1,6 @@
 {
   "partner": "Lamatsch Roland",
-  "frissitve": "2026.06.25. 18:35",
+  "frissitve": "2026.06.25. 19:31",
   "ugyletek": [
     {
       "ugyfel": "Montvai Gábor",
@@ -75,8 +75,8 @@
     },
     {
       "vezeto": "Keserű Flóra Luca",
-      "ugyletek_db": 10,
-      "eh_sum": 812,
+      "ugyletek_db": 15,
+      "eh_sum": 1078,
       "honap_bontas": {
         "2026. Augusztus": 266,
         "2026. Július": 184,
@@ -85,8 +85,8 @@
     },
     {
       "vezeto": "Lőrinc Róbert",
-      "ugyletek_db": 42,
-      "eh_sum": 4494,
+      "ugyletek_db": 43,
+      "eh_sum": 4527,
       "honap_bontas": {
         "2026. Augusztus": 2429,
         "2026. Július": 740,
@@ -95,8 +95,8 @@
     },
     {
       "vezeto": "Pirka András Levente",
-      "ugyletek_db": 30,
-      "eh_sum": 1638,
+      "ugyletek_db": 31,
+      "eh_sum": 1684,
       "honap_bontas": {
         "2026. Július": 646,
         "2026. Augusztus": 113,
@@ -105,7 +105,7 @@
     },
     {
       "vezeto": "Fábián Kristóf",
-      "ugyletek_db": 24,
+      "ugyletek_db": 25,
       "eh_sum": 1488,
       "honap_bontas": {
         "2026. Augusztus": 166,
