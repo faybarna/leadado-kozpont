@@ -424,10 +424,24 @@
           html += renderVezetiView(data.vezeti);
         }
         sajatTar.innerHTML = html;
+        updateAppBadge(data);
       })
       .catch(function() {
         sajatTar.innerHTML = '<div class="card"><div class="sajat-empty">Az adatok jelenleg nem elérhetők. Kérjük, próbáld újra később.</div></div>';
       });
+  }
+
+  // App-ikon badge (Badging API): a saját sürgetendő (PING) tételek száma.
+  // Csak telepített PWA-ban látszik; böngészőben no-op. Feature-detect kötelező.
+  function updateAppBadge(data) {
+    if (!("setAppBadge" in navigator)) return;
+    try {
+      var ping = (data && data.ugyletek ? data.ugyletek : []).filter(function(u) {
+        return u && u.ping;
+      }).length;
+      if (ping > 0) navigator.setAppBadge(ping);
+      else navigator.clearAppBadge();
+    } catch (e) { /* a badge csak kényelmi extra — hiba ne törje meg az oldalt */ }
   }
 
   // Telepített (standalone) app a start_url-ből indul, ?p= token nélkül. Az iPhone

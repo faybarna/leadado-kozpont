@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Leadadó — Push küldő (admin)</title>
+<style>
+  :root { --brass:#b08d57; --brass-d:#8f6f3e; --bg:#0f1115; --card:#191c22; --line:#2a2f3a; --txt:#e7e9ee; --muted:#9aa3b2; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--txt); padding:18px; }
+  .wrap { max-width:520px; margin:0 auto; }
+  h1 { font-size:1.25rem; margin:.2rem 0 .1rem; }
+  .sub { color:var(--muted); font-size:.85rem; margin-bottom:1rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; margin-bottom:14px; }
+  label { display:block; font-size:.82rem; color:var(--muted); margin:10px 0 4px; }
+  input, textarea, select { width:100%; padding:11px; border-radius:9px; border:1px solid var(--line); background:#11141a; color:var(--txt); font-size:1rem; }
+  textarea { resize:vertical; min-height:70px; }
+  .row { display:flex; gap:8px; align-items:center; }
+  .row > * { flex:1; }
+  .counter { text-align:right; font-size:.72rem; color:var(--muted); margin-top:2px; }
+  button { cursor:pointer; border:none; border-radius:9px; padding:12px 14px; font-size:.95rem; font-weight:600; }
+  .btn-brass { background:var(--brass); color:#1a1205; }
+  .btn-brass:hover { background:var(--brass-d); }
+  .btn-ghost { background:transparent; color:var(--txt); border:1px solid var(--line); }
+  .send { width:100%; margin-top:14px; font-size:1.05rem; padding:14px; }
+  .out { margin-top:12px; padding:11px; border-radius:9px; font-size:.9rem; white-space:pre-wrap; display:none; }
+  .out.ok { background:#13301c; border:1px solid #2c6b3f; color:#bfe9cd; display:block; }
+  .out.err { background:#341417; border:1px solid #7a2b30; color:#f3c2c6; display:block; }
+  .note { font-size:.75rem; color:var(--muted); margin-top:8px; line-height:1.4; }
+  .chk { display:flex; align-items:center; gap:8px; margin-top:10px; }
+  .chk input { width:auto; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📣 Push küldő — admin</h1>
+  <div class="sub">Manuális értesítés küldése a feliratkozott partnereknek. Csak neked.</div>
+
+  <div class="card">
+    <label for="worker">Worker URL</label>
+    <input id="worker" type="url" placeholder="https://leadado-push.<aldomain>.workers.dev"
+           value="https://leadado-push.fayb-office.workers.dev">
+
+    <label for="key">ADMIN_KEY</label>
+    <div class="row">
+      <input id="key" type="password" placeholder="a Cloudflare-secret ADMIN_KEY" autocomplete="off">
+      <button type="button" class="btn-ghost" id="loadBtn" style="flex:0 0 auto;">Partnerek betöltése</button>
+    </div>
+    <div class="chk"><input type="checkbox" id="remember"><label for="remember" style="margin:0;">Jegyezze meg ezen az eszközön</label></div>
+    <div class="note">Az ADMIN_KEY a te kulcsod — ne add tovább. A „megjegyzés" csak ezen az eszközön, a böngésződ tárolójában marad.</div>
+  </div>
+
+  <div class="card">
+    <label for="cimzett">Címzett</label>
+    <select id="cimzett">
+      <option value="all">📢 Mindenki (broadcast)</option>
+    </select>
+    <div class="note" id="partnerNote">„Partnerek betöltése" után itt jelennek meg a feliratkozott partnerek.</div>
+
+    <label for="title">Cím</label>
+    <input id="title" type="text" maxlength="60" placeholder="Pl. Hajrá! 💪">
+    <div class="counter"><span id="titleCount">0</span>/60</div>
+
+    <label for="msg">Üzenet</label>
+    <textarea id="msg" maxlength="140" placeholder="Pl. 3 nap van zárásig — nyomjad! Nézd meg a Saját Ügyleteimben."></textarea>
+    <div class="counter"><span id="msgCount">0</span>/140</div>
+
+    <button type="button" class="btn-brass send" id="sendBtn">Küldés</button>
+    <div class="out" id="out"></div>
+    <div class="note">A push a zárolt képernyőn is megjelenhet — ne írj bele ügyfélnevet/összeget (PII-mentes).</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var LS = { worker: "lk_admin_worker", key: "lk_admin_key", rem: "lk_admin_remember" };
+
+  // Mentett értékek visszatöltése.
+  try {
+    if (localStorage.getItem(LS.rem) === "1") {
+      $("remember").checked = true;
+      var w = localStorage.getItem(LS.worker); if (w) $("worker").value = w;
+      var k = localStorage.getItem(LS.key);    if (k) $("key").value = k;
+    }
+  } catch (e) {}
+
+  function persist() {
+    try {
+      if ($("remember").checked) {
+        localStorage.setItem(LS.rem, "1");
+        localStorage.setItem(LS.worker, $("worker").value.trim());
+        localStorage.setItem(LS.key, $("key").value);
+      } else {
+        localStorage.removeItem(LS.rem);
+        localStorage.removeItem(LS.worker);
+        localStorage.removeItem(LS.key);
+      }
+    } catch (e) {}
+  }
+
+  function base() { return $("worker").value.trim().replace(/\/$/, ""); }
+  function adminKey() { return $("key").value; }
+
+  function show(msg, ok) {
+    var o = $("out");
+    o.textContent = msg;
+    o.className = "out " + (ok ? "ok" : "err");
+  }
+
+  // Karakter-számlálók.
+  function wire(id, countId) {
+    var el = $(id), c = $(countId);
+    var upd = function () { c.textContent = el.value.length; };
+    el.addEventListener("input", upd); upd();
+  }
+  wire("title", "titleCount");
+  wire("msg", "msgCount");
+
+  // Partnerek betöltése (admin-gated) → dropdown.
+  $("loadBtn").addEventListener("click", function () {
+    if (!base() || !adminKey()) { show("Add meg a Worker URL-t és az ADMIN_KEY-t.", false); return; }
+    persist();
+    $("loadBtn").disabled = true;
+    show("Partnerek betöltése…", true);
+    fetch(base() + "/partners", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-admin-key": adminKey() },
+      body: "{}"
+    })
+      .then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j }; }); })
+      .then(function (res) {
+        if (res.status === 401) { show("Hibás ADMIN_KEY.", false); return; }
+        if (!res.j || !res.j.partnerek) { show("Váratlan válasz a workertől.", false); return; }
+        var sel = $("cimzett");
+        sel.querySelectorAll("option[data-p]").forEach(function (o) { o.remove(); });
+        res.j.partnerek.forEach(function (p) {
+          var opt = document.createElement("option");
+          opt.value = p.token; opt.textContent = p.nev; opt.setAttribute("data-p", "1");
+          sel.appendChild(opt);
+        });
+        $("partnerNote").textContent = res.j.partnerek.length + " feliratkozott partner betöltve.";
+        show(res.j.partnerek.length + " partner betöltve. ✅", true);
+      })
+      .catch(function () { show("Nem sikerült elérni a workert (URL / hálózat?).", false); })
+      .finally(function () { $("loadBtn").disabled = false; });
+  });
+
+  // Küldés.
+  $("sendBtn").addEventListener("click", function () {
+    var title = $("title").value.trim();
+    var msg = $("msg").value.trim();
+    if (!base() || !adminKey()) { show("Add meg a Worker URL-t és az ADMIN_KEY-t.", false); return; }
+    if (!title || !msg) { show("A cím és az üzenet is kötelező.", false); return; }
+    var cimzett = $("cimzett").value;
+    var nev = $("cimzett").options[$("cimzett").selectedIndex].textContent;
+    if (cimzett === "all" && !confirm("Biztosan kimegy MINDENKINEK?")) return;
+    persist();
+    $("sendBtn").disabled = true;
+    show("Küldés…", true);
+    fetch(base() + "/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-admin-key": adminKey() },
+      body: JSON.stringify({ token: cimzett, title: title, body: msg })
+    })
+      .then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j }; }); })
+      .then(function (res) {
+        if (res.status === 401) { show("Hibás ADMIN_KEY.", false); return; }
+        if (!res.j || !res.j.ok) { show("Hiba: " + (res.j && res.j.error ? res.j.error : "ismeretlen"), false); return; }
+        if (res.j.cimzett === "mindenki")
+          show("Elküldve mindenkinek. Partner: " + res.j.partnerek + " · eszköz: " + res.j.kuldve + " ✅", true);
+        else
+          show("Elküldve (" + nev + "). Eszköz: " + res.j.kuldve + (res.j.kuldve ? " ✅" : " — nincs feliratkozott eszköz"), res.j.kuldve > 0);
+      })
+      .catch(function () { show("Nem sikerült elérni a workert (URL / hálózat?).", false); })
+      .finally(function () { $("sendBtn").disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>

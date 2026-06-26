@@ -78,6 +78,33 @@ curl -X POST https://leadado-push.<aldomain>.workers.dev/test \
 ```
 (Előbb iratkozz fel azzal a tokennel egy telepített appban.)
 
+### Heti összefoglaló előnézete (élesítés előtt)
+A heti digest szövege a cron bekapcsolása nélkül is megnézhető — egy tokenre azonnal küld:
+```bash
+curl -X POST https://leadado-push.<aldomain>.workers.dev/test-weekly \
+  -H "x-admin-key: <ADMIN_KEY>" -H "Content-Type: application/json" \
+  -d '{"token":"robi-7f3a2b91"}'
+```
+Ha tetszik a szöveg, élesítsd: `WEEKLY_ENABLED = "true"` (a `0 6 * * 1` cron már be van állítva).
+
+### Manuális push küldése (admin)
+A `admin/kuldes.html` oldal (a Pages-en: `.../leadado-kozpont/admin/kuldes.html`) egy
+egyszerű küldő felület — terminál nélkül, telefonról is. ADMIN_KEY → „Partnerek betöltése"
+→ válassz címzettet (egy partner vagy „Mindenki") → cím + üzenet → Küldés.
+
+A háttérben két végpont:
+```bash
+# Egy partnernek VAGY mindenkinek (token: "<token>" | "all")
+curl -X POST https://leadado-push.<aldomain>.workers.dev/send \
+  -H "x-admin-key: <ADMIN_KEY>" -H "Content-Type: application/json" \
+  -d '{"token":"all","title":"Hajrá! 💪","body":"3 nap van zárásig — nyomjad!"}'
+
+# A feliratkozott partnerek listája (token + név) — a küldő felület dropdownjához
+curl -X POST https://leadado-push.<aldomain>.workers.dev/partners \
+  -H "x-admin-key: <ADMIN_KEY>" -H "Content-Type: application/json" -d '{}'
+```
+A push a zárolt képernyőn is megjelenhet → **ne írj bele ügyfélnevet/összeget**.
+
 ## Költség
 Ingyenes tier: napi 100k kérés + KV ingyenes kvóta. ~32 partner ezt meg sem közelíti.
 

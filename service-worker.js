@@ -13,7 +13,7 @@
    "frissült az app" jelzést kaphat (lásd pwa.js).
    ========================================================================= */
 
-const CACHE_VERSION = "lk-v4";
+const CACHE_VERSION = "lk-v5";
 const CACHE_NAME = "leadado-" + CACHE_VERSION;
 
 // App-váz — ezek ritkán változnak, cache-first a sebességért.
@@ -138,6 +138,15 @@ self.addEventListener("push", (event) => {
     renotify: true,
     data: { url: data.url || "./?nyit=sajat" },
   };
+
+  // App-ikon badge: a Worker a payloadban küldi a sürgetendő (PING) tételek számát.
+  // Így zárt appnál is frissül az ikon. Feature-detect — ahol nincs, csendben kihagyjuk.
+  if (typeof data.badge === "number" && "setAppBadge" in self.navigator) {
+    try {
+      if (data.badge > 0) self.navigator.setAppBadge(data.badge);
+      else self.navigator.clearAppBadge();
+    } catch (e) { /* a badge csak extra — ne bukjon el rajta a push */ }
+  }
 
   event.waitUntil(self.registration.showNotification(title, options));
 });
