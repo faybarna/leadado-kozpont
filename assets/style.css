@@ -757,6 +757,81 @@ body.locked .app{ display: none; }
   font-size: 14px;
 }
 
+/* ===== Személyes összegző kártya (Saját Ügyleteim teteje) ===== */
+.osszegzo-card{
+  margin-bottom: 24px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.osszegzo-head{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.osszegzo-avatar{
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--brass-soft);
+  color: var(--brass);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.osszegzo-nev{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+}
+.osszegzo-sub{
+  font-size: 13px;
+  color: var(--text-soft);
+}
+.osszegzo-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+.osszegzo-tile{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid #b4b2a9;
+  padding: 14px 16px;
+}
+.osszegzo-tile--ho{ border-left-color: var(--new); }
+.osszegzo-tile--ko{ border-left-color: var(--brass); }
+.osszegzo-tile--agg{ border-left-color: var(--ink); }
+.osszegzo-label{
+  font-size: 12px;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+.osszegzo-num{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--ink);
+}
+.osszegzo-num span{
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-left: 4px;
+}
+.osszegzo-tile--ho .osszegzo-num{ color: var(--new); }
+.osszegzo-tile--ko .osszegzo-num{ color: var(--brass); }
+.osszegzo-eh{
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+}
+
 /* ============================== KERESŐSÁV ============================== */
 
 .search-bar{

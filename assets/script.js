@@ -210,6 +210,82 @@
     return ' <span class="ping-badge">🔴 ' + u.ping + '</span>';
   }
 
+  // Személyes összegző kártya — a Saját Ügyleteim tetején.
+  // Havi + következő havi + folyamatban: kliens-oldalon a saját JSON-ból számolva.
+  // lezárt = "3. Megkötve" (bankszámla) VAGY "5. Folyósítva" (hitel) — a versenyek/bónusz is kötés-alapú.
+  // B-READY: ha a Kód.gs később ad egy data.osszegzo precompute mezőt (negyedéves/éves), a tile-ok
+  // automatikusan megjelennek — addig csak a havi/folyamatban látszik (a régebbi lezártak nincsenek a JSON-ban).
+  function renderSzemelyesOsszegzo(data) {
+    var ugyletek = data.ugyletek || [];
+    if (!ugyletek.length) return "";
+
+    var HONAP = ["Január","Február","Március","Április","Május","Június",
+                 "Július","Augusztus","Szeptember","Október","November","December"];
+
+    // Aktuális hónap a "frissitve" bélyegből (pl. "2026.06.26. 17:28"), különben a mai dátumból.
+    var m = String(data.frissitve || "").match(/(\d{4})\.(\d{2})\./);
+    var ev, hoIdx;
+    if (m) { ev = parseInt(m[1], 10); hoIdx = parseInt(m[2], 10) - 1; }
+    else { var d = new Date(); ev = d.getFullYear(); hoIdx = d.getMonth(); }
+    var koHoIdx = (hoIdx + 1) % 12;
+    var koEv = (hoIdx === 11) ? ev + 1 : ev;
+
+    function isLezart(u) {
+      var s = String(u.statusz || "");
+      return s.indexOf("Megkötve") !== -1 || s.indexOf("Folyósítva") !== -1;
+    }
+    function illeszkedik(honapStr, y, hi) {
+      if (!honapStr) return false;
+      if (parseInt(honapStr, 10) !== y) return false;
+      return honapStr.indexOf(HONAP[hi]) !== -1;
+    }
+    function fmt(n) { return String(n || 0).replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
+
+    var dbHo = 0, ehHo = 0, dbKo = 0, ehKo = 0, dbFoly = 0, ehFoly = 0;
+    ugyletek.forEach(function(u) {
+      if (isLezart(u)) {
+        if (illeszkedik(u.elszamolasi_honap, ev, hoIdx)) { dbHo++; ehHo += (u.eh || 0); }
+        else if (illeszkedik(u.elszamolasi_honap, koEv, koHoIdx)) { dbKo++; ehKo += (u.eh || 0); }
+      } else { dbFoly++; ehFoly += (u.eh || 0); }
+    });
+
+    function tile(mod, label, db, dbSzo, ehVal) {
+      return (
+        '<div class="osszegzo-tile osszegzo-tile--' + mod + '">' +
+          '<div class="osszegzo-label">' + label + '</div>' +
+          '<div class="osszegzo-num">' + db + ' <span>' + dbSzo + '</span></div>' +
+          '<div class="osszegzo-eh">' + fmt(ehVal) + ' EH</div>' +
+        '</div>'
+      );
+    }
+
+    var tiles = tile("ho", "Ez a hónap · " + HONAP[hoIdx], dbHo, "lezárt ügylet", ehHo);
+    if (dbKo > 0) tiles += tile("ko", HONAP[koHoIdx] + "i elszámolás", dbKo, "lezárt ügylet", ehKo);
+    tiles += tile("foly", "Folyamatban", dbFoly, "nyitott ügylet", ehFoly);
+
+    // B-hook: negyedéves/éves a Kód.gs precompute-ból (data.osszegzo = { negyedev:{db,eh,cimke}, ev:{db,eh} }).
+    var o = data.osszegzo;
+    if (o && o.negyedev) tiles += tile("agg", "Idei negyedév" + (o.negyedev.cimke ? " · " + o.negyedev.cimke : ""), o.negyedev.db || 0, "lezárt ügylet", o.negyedev.eh || 0);
+    if (o && o.ev)       tiles += tile("agg", "Idén összesen", o.ev.db || 0, "lezárt ügylet", o.ev.eh || 0);
+
+    // Avatar-monogram a partner nevéből (pl. "Lőrinc Róbert" -> "LR").
+    var nev = data.partner || "";
+    var pr = nev.trim().split(/\s+/);
+    var mono = ((pr[0] || "").charAt(0) + (pr.length > 1 ? pr[pr.length - 1].charAt(0) : "")).toUpperCase();
+
+    return (
+      '<div class="osszegzo-card">' +
+        '<div class="osszegzo-head">' +
+          '<div class="osszegzo-avatar">' + mono + '</div>' +
+          '<div><div class="osszegzo-nev">' + nev + '</div>' +
+          '<div class="osszegzo-sub">Az én teljesítményem</div></div>' +
+        '</div>' +
+        '<div class="osszegzo-grid">' + tiles + '</div>' +
+        '<div class="osszegzo-foot">Lezárt = megkötött bankszámla vagy folyósított hitel.</div>' +
+      '</div>'
+    );
+  }
+
   function renderPipelineTable(data) {
     if (!data.ugyletek || data.ugyletek.length === 0) {
       return '<div class="sajat-empty">Jelenleg nincs aktív ügyleted.</div>';
@@ -231,6 +307,7 @@
     }).join("");
 
     return (
+      renderSzemelyesOsszegzo(data) +
       '<p class="pipeline-meta">Frissítve: ' + (data.frissitve || "—") + " · " + data.ugyletek.length + " aktív ügylet</p>" +
       '<div style="overflow-x:auto"><table class="pipeline-table">' +
         "<thead><tr>" +
