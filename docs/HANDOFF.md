@@ -65,7 +65,7 @@ Jelzáloghitel-közvetítő cég (~32 partner) belső portálja. Statikus oldal 
 | Mi | Érték | Hol él |
 |---|---|---|
 | VAPID PUBLIC | `BHyP3m9h5NP36VnsWO5tdazrMbOhfXSxjE8kJMmvG98HkHPT7N0a4HpRhiVwga1ul_DsqtcelS7iZjPRCxH_ICk` | `assets/pwa.js` (nyilvános, OK) |
-| VAPID PRIVATE | `fw5hCAIbHa2Rhd-0Qo5ITJeVynghPkvhJh-b9tPhybU` | **CSAK** Cloudflare secrets |
+| VAPID PRIVATE | *(nem a repóban — csak Cloudflare secrets)* | **CSAK** Cloudflare secrets |
 | ADMIN_KEY | — | **CSAK** Cloudflare secrets |
 | Worker URL | `https://leadado-push.fayb-office.workers.dev` | `assets/pwa.js` |
 | Teszt partner | `fay-barna-e749fc50` | `data/partners/` |
