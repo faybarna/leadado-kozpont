@@ -78,6 +78,15 @@ curl -X POST https://leadado-push.<aldomain>.workers.dev/test \
 ```
 (Előbb iratkozz fel azzal a tokennel egy telepített appban.)
 
+### Heti összefoglaló előnézete (élesítés előtt)
+A heti digest szövege a cron bekapcsolása nélkül is megnézhető — egy tokenre azonnal küld:
+```bash
+curl -X POST https://leadado-push.<aldomain>.workers.dev/test-weekly \
+  -H "x-admin-key: <ADMIN_KEY>" -H "Content-Type: application/json" \
+  -d '{"token":"robi-7f3a2b91"}'
+```
+Ha tetszik a szöveg, élesítsd: `WEEKLY_ENABLED = "true"` (a `0 6 * * 1` cron már be van állítva).
+
 ## Költség
 Ingyenes tier: napi 100k kérés + KV ingyenes kvóta. ~32 partner ezt meg sem közelíti.
 

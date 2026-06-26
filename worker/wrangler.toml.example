@@ -25,6 +25,7 @@ crons = ["*/20 * * * *", "0 6 * * 1"]
 [vars]
 VAPID_SUBJECT = "mailto:fay.barna@ovb.hu"
 # A heti összefoglaló kapcsolója. Alapból KI — állítsd "true"-ra, ha kéred.
+# Élesítés előtt a szöveg előnézhető: POST /test-weekly  (x-admin-key fejléc + {"token":"..."}).
 WEEKLY_ENABLED = "false"
 # Melyik cron a heti (a fenti crons listából). Ezt diffeli a kód.
 WEEKLY_CRON = "0 6 * * 1"

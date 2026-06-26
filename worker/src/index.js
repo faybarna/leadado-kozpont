@@ -32,6 +32,8 @@ export default {
       return cors(await handleUnsubscribe(request, env));
     if (url.pathname === "/test" && request.method === "POST")
       return cors(await handleTest(request, env));
+    if (url.pathname === "/test-weekly" && request.method === "POST")
+      return cors(await handleTestWeekly(request, env));
     return cors(new Response("Leadadó Push Worker", { status: 200 }));
   },
 
@@ -79,6 +81,26 @@ async function handleTest(request, env) {
   return json({ ok: true, kuldve: sent });
 }
 
+// Heti digest ELŐNÉZET egy tokenre — hogy a szöveg élesítés (cron) előtt látható legyen.
+async function handleTestWeekly(request, env) {
+  if (request.headers.get("x-admin-key") !== env.ADMIN_KEY)
+    return json({ error: "nincs jogosultság" }, 401);
+  let body;
+  try { body = await request.json(); } catch { return json({ error: "rossz JSON" }, 400); }
+  const { token } = body || {};
+  if (!token) return json({ error: "hiányzó token" }, 400);
+  let data;
+  try {
+    const res = await fetch(`${BASE}/data/partners/${token}.json`, { cf: { cacheTtl: 0 } });
+    if (!res.ok) return json({ error: "partner JSON nem elérhető" }, 404);
+    data = await res.json();
+  } catch { return json({ error: "partner JSON letöltés hiba" }, 502); }
+  const payload = weeklyPayload(data, aktualisHonap(), token);
+  if (!payload) return json({ ok: true, kuldve: 0, megjegyzes: "nincs aktív ügylet" });
+  const sent = await sendToToken(env, token, payload);
+  return json({ ok: true, kuldve: sent, elonezet: payload.body });
+}
+
 /* ===================== CRON: diff + push ===================== */
 async function runDiffAndNotify(env) {
   for (const token of await activeTokens(env)) {
@@ -89,27 +111,56 @@ async function runDiffAndNotify(env) {
       data = await res.json();
     } catch { continue; }
 
-    const fingerprint = pipelineFingerprint(data);
+    const state = buildState(data);
     const prevRaw = await env.SUBS.get(`state:${token}`);
-    if (!prevRaw) { await env.SUBS.put(`state:${token}`, JSON.stringify(fingerprint)); continue; }
+    if (!prevRaw) { await env.SUBS.put(`state:${token}`, JSON.stringify(state)); continue; }
 
-    const changes = diffPipeline(JSON.parse(prevRaw), fingerprint);
+    const prev = migrateState(JSON.parse(prevRaw));
+    const changes = diffPipeline(prev.own, state.own).concat(diffTeam(prev.team, state.team));
     if (changes.length > 0) {
       const hasZaras = changes.some((c) => c.tipus === "lezart");
+      const onlyCsapat = changes.every((c) => c.tipus === "csapat");
+      const title = hasZaras
+        ? "Gratulálok! 🎉"
+        : onlyCsapat ? "Mozdult a csapatodban" : "Mozdult egy ügyleted";
       await sendToToken(env, token, {
-        title: hasZaras ? "Gratulálok! 🎉" : "Mozdult egy ügyleted",
+        title,
         body: summarize(changes),
         url: `${BASE}/?p=${token}`,
+        badge: pingCount(data),
       });
     }
-    await env.SUBS.put(`state:${token}`, JSON.stringify(fingerprint));
+    await env.SUBS.put(`state:${token}`, JSON.stringify(state));
   }
 }
 
-function pipelineFingerprint(data) {
+// Tárolt állapot: { own: saját ügyletek, team: csapattagok ügyletei }.
+function buildState(data) {
+  return { own: pipelineFingerprint(data.ugyletek), team: csapatFingerprint(data) };
+}
+
+// Visszafelé kompatibilitás: a régi állapot egy sima saját-map volt (nincs `own`).
+function migrateState(parsed) {
+  if (parsed && parsed.own) return { own: parsed.own || {}, team: parsed.team || {} };
+  return { own: parsed || {}, team: {} };
+}
+
+function pipelineFingerprint(ugyletek) {
   const map = {};
-  (data.ugyletek || []).forEach((u, i) => {
+  (ugyletek || []).forEach((u, i) => {
     map[`${u.ugyfel || "?"}|${u.termek || "?"}|${i}`] = { statusz: u.statusz || "", ping: u.ping || null };
+  });
+  return map;
+}
+
+// A csapatvezető data.csapat[]-ja: [{ partner, ugyletek: [...] }].
+function csapatFingerprint(data) {
+  const map = {};
+  (data.csapat || []).forEach((tag) => {
+    (tag.ugyletek || []).forEach((u, i) => {
+      map[`${tag.partner || "?"}|${u.ugyfel || "?"}|${u.termek || "?"}|${i}`] =
+        { statusz: u.statusz || "", ping: u.ping || null };
+    });
   });
   return map;
 }
@@ -125,6 +176,17 @@ function diffPipeline(prev, now) {
   return changes;
 }
 
+// Csapatra a részlet kevésbé fontos: bármilyen mozdulás egy "csapat" esemény.
+function diffTeam(prev, now) {
+  const changes = [];
+  for (const id in now) {
+    const a = prev[id], b = now[id];
+    if (!a) changes.push({ tipus: "csapat" });
+    else if (a.statusz !== b.statusz || (!a.ping && b.ping)) changes.push({ tipus: "csapat" });
+  }
+  return changes;
+}
+
 function summarize(changes) {
   const n = (t) => changes.filter((c) => c.tipus === t).length;
   const parts = [];
@@ -132,7 +194,13 @@ function summarize(changes) {
   if (n("statusz")) parts.push(`${n("statusz")} státuszváltás`);
   if (n("ping")) parts.push(`${n("ping")} sürgetendő 🔴`);
   if (n("uj")) parts.push(`${n("uj")} új ügylet`);
+  if (n("csapat")) parts.push(`${n("csapat")} mozdulás a csapatodban`);
   return (parts.join(" · ") || "Frissült a pipeline-od") + " — nézd meg a Saját Ügyleteimben.";
+}
+
+// Saját sürgetendő (PING) tételek száma — az app-ikon badge-hez.
+function pingCount(data) {
+  return (data.ugyletek || []).filter((u) => u.ping).length;
 }
 
 /* ===================== CRON: heti összefoglaló ===================== */
@@ -149,20 +217,29 @@ async function runWeeklyDigest(env) {
       if (!res.ok) continue;
       data = await res.json();
     } catch { continue; }
-    const ugyletek = data.ugyletek || [];
-    if (ugyletek.length === 0) continue;
-    const aktiv = ugyletek.filter((u) => !LEZART.has(u.statusz));
-    const ehAktiv = aktiv.reduce((s, u) => s + (u.eh || 0), 0);
-    const eHavi = aktiv.filter((u) => (u.elszamolasi_honap || "").trim() === honap).length;
-    const parts = [`${aktiv.length} aktív ügylet (${ehAktiv} EH)`];
-    if (eHavi) parts.push(`${eHavi} elszámolás e hónapban`);
-    await sendToToken(env, token, {
-      title: "Heti pillanatkép",
-      body: parts.join(" · ") + " — részletek a Saját Ügyleteimben.",
-      url: `${BASE}/?p=${token}`,
-      tag: "leadado-heti",
-    });
+    const payload = weeklyPayload(data, honap, token);
+    if (payload) await sendToToken(env, token, payload);
   }
+}
+
+// A heti összefoglaló szövege — a cron és a /test-weekly előnézet közös forrása.
+function weeklyPayload(data, honap, token) {
+  const ugyletek = data.ugyletek || [];
+  if (ugyletek.length === 0) return null;
+  const aktiv = ugyletek.filter((u) => !LEZART.has(u.statusz));
+  const ehAktiv = aktiv.reduce((s, u) => s + (u.eh || 0), 0);
+  const eHavi = aktiv.filter((u) => (u.elszamolasi_honap || "").trim() === honap).length;
+  const surgos = aktiv.filter((u) => u.ping).length;
+  const parts = [`${aktiv.length} aktív ügylet (${ehAktiv} EH)`];
+  if (eHavi) parts.push(`${eHavi} elszámolás e hónapban`);
+  if (surgos) parts.push(`${surgos} sürgetendő 🔴`);
+  return {
+    title: "Heti pillanatkép",
+    body: parts.join(" · ") + " — részletek a Saját Ügyleteimben.",
+    url: `${BASE}/?p=${token}`,
+    tag: "leadado-heti",
+    badge: pingCount(data),
+  };
 }
 
 /* ===================== Push küldés ===================== */
@@ -323,5 +400,9 @@ function cors(res) {
   return new Response(res.body, { status: res.status, headers: h });
 }
 
-// Tesztelhetőség: a kripto-segédek exportja (a Worker futásra nincs hatással)
-export const __test = { encryptPayload, vapidAuth, importVapidKey, b64url, b64urlToBytes, concat, hmac };
+// Tesztelhetőség: a kripto- és diff-segédek exportja (a Worker futásra nincs hatással)
+export const __test = {
+  encryptPayload, vapidAuth, importVapidKey, b64url, b64urlToBytes, concat, hmac,
+  buildState, migrateState, diffPipeline, diffTeam, summarize, pingCount, weeklyPayload,
+  pipelineFingerprint, csapatFingerprint, aktualisHonap,
+};
