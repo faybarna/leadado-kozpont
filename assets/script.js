@@ -653,7 +653,7 @@
   // IntersectionObserver szinkronizálása a bottom nav-val
   if ("IntersectionObserver" in window) {
     var mbnSectionIds = ["attekintes","ai-asszisztens","hiteladatlapok","igenylistak",
-                         "kepzes","ujdonsagok","versenyek","faq","sajat-ugyletek"];
+                         "kepzes","ujdonsagok","faq","sajat-ugyletek"]; // LAUNCH: "versenyek" kivéve — vissza a ranglistával
     var mbnObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -682,7 +682,8 @@
     { tag: "CHK", title: "Dokumentum-igénylisták",       href: "#igenylistak",     keywords: "dokumentum igénylista checklist ügyfél irat bekérés" },
     { tag: "EDU", title: "Képzési anyagok",              href: "#kepzes",          keywords: "képzés oktatás tananyag hitel bankszámla folyamat" },
     { tag: "ÚJ",  title: "Újdonságok",                  href: "#ujdonsagok",      keywords: "újdonság változás frissítés napló changelog" },
-    { tag: "🏆",  title: "Versenyek",                   href: "#versenyek",       keywords: "verseny eredmény feltétel" },
+    // LAUNCH: Versenyek kivéve a keresőből — vissza a nevesített ranglistával
+    // { tag: "🏆",  title: "Versenyek",                   href: "#versenyek",       keywords: "verseny eredmény feltétel" },
     { tag: "?",   title: "Gyakori kérdések (GYIK)",      href: "#faq",             keywords: "faq gyik kérdés válasz" },
     { tag: "FŐ",  title: "Áttekintés",                  href: "#attekintes",      keywords: "áttekintés főoldal kezdőlap összefoglaló" }
   ];
