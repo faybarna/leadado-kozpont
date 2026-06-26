@@ -1,6 +1,6 @@
 {
   "partner": "Steinmetz Edvárd",
-  "frissitve": "2026.06.26. 16:44",
+  "frissitve": "2026.06.26. 16:45",
   "ugyletek": [
     {
       "ugyfel": "Kacsics István",
@@ -60,9 +60,9 @@
       "ugyfel": "Peitli Bence",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "2. Kötési kiküldve",
+      "statusz": "3. Megkötve",
       "eh": 42,
-      "elszamolasi_honap": "",
+      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
