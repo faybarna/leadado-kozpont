@@ -13,7 +13,7 @@
    "frissült az app" jelzést kaphat (lásd pwa.js).
    ========================================================================= */
 
-const CACHE_VERSION = "lk-v5";
+const CACHE_VERSION = "lk-v6";
 const CACHE_NAME = "leadado-" + CACHE_VERSION;
 
 // App-váz — ezek ritkán változnak, cache-first a sebességért.
@@ -88,9 +88,12 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(staleWhileRevalidate(req));
 });
 
-/* Network-first: mindig a hálózatot próbálja, offline esetén cache-ből. */
+/* Network-first: mindig a hálózatot próbálja, offline esetén cache-ből.
+   A `no-store` megkerüli a böngésző HTTP-cache-ét / a Pages-CDN-t is, így a
+   partner-pipeline soha nem ragad be elavult példányra. Offline esetén a
+   korábban elrakott (cache-elt) válasz szolgál ki. */
 function networkFirst(req) {
-  return fetch(req)
+  return fetch(req, { cache: "no-store" })
     .then((res) => {
       if (res && res.ok) {
         const copy = res.clone();
