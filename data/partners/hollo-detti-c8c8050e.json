@@ -1,6 +1,6 @@
 {
   "partner": "Holló Bernadett",
-  "frissitve": "2026.06.26. 15:33",
+  "frissitve": "2026.06.26. 16:03",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -18,6 +18,15 @@
       "statusz": "3. Megkötve",
       "eh": 60,
       "elszamolasi_honap": "2026. Június",
+      "ping": null
+    },
+    {
+      "ugyfel": "Holló Dénes",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 42,
+      "elszamolasi_honap": "",
       "ping": null
     },
     {
@@ -70,6 +79,15 @@
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Holló Dénes",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "1. Kalkuláció kiküldve",
       "eh": 33,
       "elszamolasi_honap": "",
       "ping": null
