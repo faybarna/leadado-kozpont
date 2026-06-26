@@ -1,6 +1,6 @@
 {
   "partner": "Lőrincz Sándor",
-  "frissitve": "2026.06.26. 16:03",
+  "frissitve": "2026.06.26. 16:08",
   "ugyletek": [
     {
       "ugyfel": "Takács Makó Eszter",
@@ -117,6 +117,24 @@
       "statusz": "3. Megkötve",
       "eh": 33,
       "elszamolasi_honap": "2026. Június",
+      "ping": null
+    },
+    {
+      "ugyfel": "Víg Józsefné",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Víg Ágnes",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": "",
       "ping": null
     },
     {
