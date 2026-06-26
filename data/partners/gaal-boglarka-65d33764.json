@@ -1,16 +1,7 @@
 {
   "partner": "Gaál Boglárka",
-  "frissitve": "2026.06.26. 16:45",
+  "frissitve": "2026.06.26. 17:28",
   "ugyletek": [
-    {
-      "ugyfel": "Berki",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "2. Kötési kiküldve",
-      "eh": 20,
-      "elszamolasi_honap": "",
-      "ping": "PING 2"
-    },
     {
       "ugyfel": "Túróné Burai",
       "termek": "Bankszámla",
@@ -31,15 +22,6 @@
     },
     {
       "ugyfel": "Berkiné Varga Beatrix",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 20,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Bogye Judit",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
