@@ -165,9 +165,14 @@ async function runDiffAndNotify(env) {
 
     const state = buildState(data);
     const prevRaw = await env.SUBS.get(`state:${token}`);
-    if (!prevRaw) { await env.SUBS.put(`state:${token}`, JSON.stringify(state)); continue; }
-
-    const prev = migrateState(JSON.parse(prevRaw));
+    const prev = prevRaw ? JSON.parse(prevRaw) : null;
+    // Első futás VAGY régi séma (más diff-kulcs formátum) → csendben újra-nullpontozzuk,
+    // push nélkül; értesítés csak a következő valódi változástól megy. Enélkül a
+    // kulcs-formátum váltása (index → stabil kulcs) egyszeri téves push-záport szülne.
+    if (!prev || prev.v !== STATE_VERSION) {
+      await env.SUBS.put(`state:${token}`, JSON.stringify(state));
+      continue;
+    }
     const changes = diffPipeline(prev.own, state.own).concat(diffTeam(prev.team, state.team));
     if (changes.length > 0) {
       const hasZaras = changes.some((c) => c.tipus === "lezart");
@@ -186,21 +191,26 @@ async function runDiffAndNotify(env) {
   }
 }
 
-// Tárolt állapot: { own: saját ügyletek, team: csapattagok ügyletei }.
+// Tárolt állapot: { v, own: saját ügyletek, team: csapattagok ügyletei }.
+// `v` = az állapot-séma verziója. Ha a diff-kulcs formátuma változik, a régi
+// állapotot el kell dobni (runDiffAndNotify), különben téves "új ügylet" push menne ki.
+const STATE_VERSION = 2; // 2: stabil ügylet-kulcs (a korábbi index-alapú helyett)
 function buildState(data) {
-  return { own: pipelineFingerprint(data.ugyletek), team: csapatFingerprint(data) };
+  return { v: STATE_VERSION, own: pipelineFingerprint(data.ugyletek), team: csapatFingerprint(data) };
 }
 
-// Visszafelé kompatibilitás: a régi állapot egy sima saját-map volt (nincs `own`).
-function migrateState(parsed) {
-  if (parsed && parsed.own) return { own: parsed.own || {}, team: parsed.team || {} };
-  return { own: parsed || {}, team: {} };
+// Stabil ügylet-azonosító a diffhez. Elsődlegesen a Master Board P-oszlop egyedi
+// ID-ja (`u.id`), ha a JSON exportálja; fallback: ügyfél|termék|bank — szándékosan
+// INDEX NÉLKÜL, hogy sor törlése/átrendezése (pl. Off-ra állítás → kiesik a listából)
+// ne tolja el a kulcsokat, és ne szüljön téves "új ügylet" push-t a megmaradókra.
+function dealKey(u) {
+  return u.id || `${u.ugyfel || "?"}|${u.termek || "?"}|${u.bank || "?"}`;
 }
 
 function pipelineFingerprint(ugyletek) {
   const map = {};
-  (ugyletek || []).forEach((u, i) => {
-    map[`${u.ugyfel || "?"}|${u.termek || "?"}|${i}`] = { statusz: u.statusz || "", ping: u.ping || null };
+  (ugyletek || []).forEach((u) => {
+    map[dealKey(u)] = { statusz: u.statusz || "", ping: u.ping || null };
   });
   return map;
 }
@@ -209,8 +219,8 @@ function pipelineFingerprint(ugyletek) {
 function csapatFingerprint(data) {
   const map = {};
   (data.csapat || []).forEach((tag) => {
-    (tag.ugyletek || []).forEach((u, i) => {
-      map[`${tag.partner || "?"}|${u.ugyfel || "?"}|${u.termek || "?"}|${i}`] =
+    (tag.ugyletek || []).forEach((u) => {
+      map[`${tag.partner || "?"}|${dealKey(u)}`] =
         { statusz: u.statusz || "", ping: u.ping || null };
     });
   });
@@ -455,6 +465,6 @@ function cors(res) {
 // Tesztelhetőség: a kripto- és diff-segédek exportja (a Worker futásra nincs hatással)
 export const __test = {
   encryptPayload, vapidAuth, importVapidKey, b64url, b64urlToBytes, concat, hmac,
-  buildState, migrateState, diffPipeline, diffTeam, summarize, pingCount, weeklyPayload,
-  pipelineFingerprint, csapatFingerprint, aktualisHonap,
+  buildState, diffPipeline, diffTeam, summarize, pingCount, weeklyPayload,
+  pipelineFingerprint, csapatFingerprint, dealKey, aktualisHonap,
 };
