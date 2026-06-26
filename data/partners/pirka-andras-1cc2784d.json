@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.26. 16:03",
+  "frissitve": "2026.06.26. 16:08",
   "ugyletek": [
     {
       "ugyfel": "Simon Bálint",
@@ -265,6 +265,15 @@
           "eh": 20,
           "elszamolasi_honap": "",
           "ping": "PING 2"
+        },
+        {
+          "ugyfel": "Túróné Burai",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "3. Megkötve",
+          "eh": 20,
+          "elszamolasi_honap": "2026. Június",
+          "ping": null
         },
         {
           "ugyfel": "Berkiné Varga Beatrix",
