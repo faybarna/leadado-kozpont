@@ -1,6 +1,6 @@
 {
   "partner": "Lamatsch Roland",
-  "frissitve": "2026.06.26. 16:03",
+  "frissitve": "2026.06.26. 16:08",
   "ugyletek": [
     {
       "ugyfel": "Montvai Gábor",
@@ -95,12 +95,12 @@
     },
     {
       "vezeto": "Pirka András Levente",
-      "ugyletek_db": 28,
-      "eh_sum": 1272,
+      "ugyletek_db": 29,
+      "eh_sum": 1292,
       "honap_bontas": {
         "2026. Július": 313,
         "2026. Augusztus": 113,
-        "2026. Június": 589
+        "2026. Június": 609
       }
     },
     {
