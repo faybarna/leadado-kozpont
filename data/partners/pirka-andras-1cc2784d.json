@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.26. 13:08",
+  "frissitve": "2026.06.26. 15:33",
   "ugyletek": [
     {
       "ugyfel": "Simon Bálint",
@@ -175,15 +175,6 @@
     {
       "partner": "Nánási Fatime",
       "ugyletek": [
-        {
-          "ugyfel": "Nánási Noémi",
-          "termek": "Jelzálog",
-          "bank": "Erste",
-          "statusz": "5. Folyósítva",
-          "eh": 333,
-          "elszamolasi_honap": "2026. Július",
-          "ping": null
-        },
         {
           "ugyfel": "Nánási Noémi",
           "termek": "Bankszámla",
