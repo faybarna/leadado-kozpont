@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.26. 15:33",
+  "frissitve": "2026.06.26. 16:03",
   "ugyletek": [
     {
       "ugyfel": "Simon Bálint",
@@ -248,24 +248,6 @@
     {
       "partner": "Gaál Boglárka",
       "ugyletek": [
-        {
-          "ugyfel": "Tyukodi Dávid",
-          "termek": "Bankszámla",
-          "bank": "UniCredit",
-          "statusz": "Pingelés",
-          "eh": 46,
-          "elszamolasi_honap": "",
-          "ping": null
-        },
-        {
-          "ugyfel": "Túróné Burai",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "Pingelés",
-          "eh": 33,
-          "elszamolasi_honap": "",
-          "ping": null
-        },
         {
           "ugyfel": "Bakó Klaudia",
           "termek": "Bankszámla",
