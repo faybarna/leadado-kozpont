@@ -159,16 +159,29 @@ Három fejlesztés, kódszinten kész és tesztelve (15/15 worker unit-teszt zö
 - Heti szöveg bővült: PING-szám is megjelenik („… · 1 sürgetendő 🔴").
 - `weeklyPayload()` közös forrás a cron és a /test-weekly között.
 
+### 4. Manuális push küldő (admin) ✅ (kód)
+- Új admin felület: `admin/kuldes.html` — terminál nélkül, telefonról is használható.
+  ADMIN_KEY → partnerek betöltése → célzott (egy partner) VAGY broadcast (mindenki) → cím+üzenet.
+- Worker: `POST /send` ({token|"all", title, body}) + `POST /partners` (token+név lista,
+  ADMIN_KEY mögött — a titkos tokenek így NEM kerülnek statikus publikus oldalra).
+- Use-case: „3 nap van zárásig — nyomjad!" célzott bökés, vagy hír mindenkinek.
+- **„X nap a zárásig" automatikusan NEM megy** (nincs zárási dátum az adatban) — de manuálisan bármikor küldhető.
+- **CORS-javítás közben:** a worker `Access-Control-Allow-Origin` eddig `BASE`-t (útvonallal)
+  küldött, ami érvénytelen origin → most `https://faybarna.github.io` (séma+host). Ez a
+  /subscribe böngészős hívását is megbízhatóbbá teszi.
+
 ## Mi a KÖVETKEZŐ LÉPÉS? (a USER teendői)
 
 A kliens (badge, cache) a `main`-re merge után **automatikusan él** (GitHub Pages).
 A worker NEM deployol magától:
 
 1. **Worker újradeploy** Cloudflare-en (teljes `worker/src/index.js` bemásolása vagy `wrangler deploy`)
-   → ezzel él a csapat-push és a `/test-weekly`.
+   → ezzel él a csapat-push, a `/test-weekly`, valamint a `/send` + `/partners` (admin küldő).
 2. **Csapat-push teszt:** `/test` a `robi-7f3a2b91` tokennel (nem üres `data.csapat`).
 3. **Badge teszt:** telepített appban PING-es partner → ikonon szám; push → zárt appnál is frissül.
 4. **Heti digest:** előbb `/test-weekly` előnézet; ha jó → `WEEKLY_ENABLED = "true"` (a cron már be van állítva).
+5. **Admin küldő:** `.../leadado-kozpont/admin/kuldes.html` → ADMIN_KEY → partnerek betöltése → küldés.
+   (A lap a merge után él; a /send + /partners a worker-redeploy után.)
 
 Még nyitott (a user korábbi tesztje): a lapozós mobil nézet visszajelzése (szekció-váltás,
 sorrend FŐ·★Saját·AI·DOK·Több, push→Saját deep link). Fázis 3 maradék opció: havi

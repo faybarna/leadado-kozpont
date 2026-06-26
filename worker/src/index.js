@@ -20,6 +20,9 @@
    ========================================================================= */
 
 const BASE = "https://faybarna.github.io/leadado-kozpont";
+// CORS origin: a böngésző origin-je csak séma+host, ÚTVONAL NÉLKÜL.
+// (A BASE útvonalat is tartalmaz, ezért nem használható Allow-Origin értéknek.)
+const ORIGIN = "https://faybarna.github.io";
 const LEZART = new Set(["5. Folyósítva", "3. Megkötve"]);
 
 export default {
@@ -34,6 +37,10 @@ export default {
       return cors(await handleTest(request, env));
     if (url.pathname === "/test-weekly" && request.method === "POST")
       return cors(await handleTestWeekly(request, env));
+    if (url.pathname === "/send" && request.method === "POST")
+      return cors(await handleSend(request, env));
+    if (url.pathname === "/partners" && request.method === "POST")
+      return cors(await handlePartners(request, env));
     return cors(new Response("Leadadó Push Worker", { status: 200 }));
   },
 
@@ -67,8 +74,7 @@ async function handleUnsubscribe(request, env) {
 }
 
 async function handleTest(request, env) {
-  if (request.headers.get("x-admin-key") !== env.ADMIN_KEY)
-    return json({ error: "nincs jogosultság" }, 401);
+  if (!isAdmin(request, env)) return json({ error: "nincs jogosultság" }, 401);
   let body;
   try { body = await request.json(); } catch { return json({ error: "rossz JSON" }, 400); }
   const { token } = body || {};
@@ -83,8 +89,7 @@ async function handleTest(request, env) {
 
 // Heti digest ELŐNÉZET egy tokenre — hogy a szöveg élesítés (cron) előtt látható legyen.
 async function handleTestWeekly(request, env) {
-  if (request.headers.get("x-admin-key") !== env.ADMIN_KEY)
-    return json({ error: "nincs jogosultság" }, 401);
+  if (!isAdmin(request, env)) return json({ error: "nincs jogosultság" }, 401);
   let body;
   try { body = await request.json(); } catch { return json({ error: "rossz JSON" }, 400); }
   const { token } = body || {};
@@ -99,6 +104,53 @@ async function handleTestWeekly(request, env) {
   if (!payload) return json({ ok: true, kuldve: 0, megjegyzes: "nincs aktív ügylet" });
   const sent = await sendToToken(env, token, payload);
   return json({ ok: true, kuldve: sent, elonezet: payload.body });
+}
+
+function isAdmin(request, env) {
+  return request.headers.get("x-admin-key") === env.ADMIN_KEY;
+}
+
+// Manuális admin push: célzott (egy token) VAGY broadcast (mindenki).
+// Body: { token: "<token>" | "all", title, body, url? }
+async function handleSend(request, env) {
+  if (!isAdmin(request, env)) return json({ error: "nincs jogosultság" }, 401);
+  let body;
+  try { body = await request.json(); } catch { return json({ error: "rossz JSON" }, 400); }
+  const { token, title, body: text, url } = body || {};
+  if (!title || !text) return json({ error: "hiányzó cím vagy szöveg" }, 400);
+
+  const base = { title: String(title), body: String(text), tag: "leadado-admin", renotify: true };
+
+  if (token && token !== "all") {
+    const sent = await sendToToken(env, token, { ...base, url: url || `${BASE}/?p=${token}` });
+    return json({ ok: true, cimzett: token, kuldve: sent });
+  }
+
+  // Broadcast: minden feliratkozott partnernek.
+  let kuldve = 0, partnerek = 0;
+  for (const t of await activeTokens(env)) {
+    const s = await sendToToken(env, t, { ...base, url: url || `${BASE}/?p=${t}` });
+    if (s > 0) partnerek++;
+    kuldve += s;
+  }
+  return json({ ok: true, cimzett: "mindenki", partnerek, kuldve });
+}
+
+// Admin: a feliratkozott partnerek listája (token + név) a küldő felület dropdownjához.
+// A tokenek így NEM kerülnek statikus publikus oldalra — csak ADMIN_KEY-vel kérhetők le.
+async function handlePartners(request, env) {
+  if (!isAdmin(request, env)) return json({ error: "nincs jogosultság" }, 401);
+  const out = [];
+  for (const token of await activeTokens(env)) {
+    let nev = token;
+    try {
+      const res = await fetch(`${BASE}/data/partners/${token}.json`, { cf: { cacheTtl: 0 } });
+      if (res.ok) { const d = await res.json(); nev = d.partner || token; }
+    } catch { /* a név lekérése best-effort; a token mindig megvan */ }
+    out.push({ token, nev });
+  }
+  out.sort((a, b) => a.nev.localeCompare(b.nev, "hu"));
+  return json({ partnerek: out });
 }
 
 /* ===================== CRON: diff + push ===================== */
@@ -394,7 +446,7 @@ function json(obj, status = 200) {
 
 function cors(res) {
   const h = new Headers(res.headers);
-  h.set("Access-Control-Allow-Origin", BASE);
+  h.set("Access-Control-Allow-Origin", ORIGIN);
   h.set("Access-Control-Allow-Methods", "POST, OPTIONS");
   h.set("Access-Control-Allow-Headers", "Content-Type, x-admin-key");
   return new Response(res.body, { status: res.status, headers: h });
