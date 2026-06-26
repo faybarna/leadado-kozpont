@@ -832,6 +832,58 @@ body.locked .app{ display: none; }
   margin-top: 6px;
 }
 
+/* ===== GYIK accordion (natív <details>) ===== */
+.faq-list{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.faq-item{
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+  overflow: hidden;
+}
+.faq-item > summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 18px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.faq-item > summary::-webkit-details-marker{ display: none; }
+.faq-item > summary::after{
+  content: "+";
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--brass);
+  flex-shrink: 0;
+}
+.faq-item[open] > summary::after{ content: "–"; }
+.faq-item[open] > summary{ border-bottom: 1px solid var(--line); }
+.faq-item > summary:hover{ color: var(--brass); }
+.faq-answer{
+  padding: 12px 18px 16px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.faq-answer p{ margin: 8px 0; }
+.faq-answer p:first-child{ margin-top: 0; }
+.faq-answer p:last-child{ margin-bottom: 0; }
+.faq-answer ul{ margin: 8px 0; padding-left: 18px; }
+.faq-answer li{ margin: 5px 0; }
+.faq-answer strong{ font-weight: 600; }
+.faq-answer em{ color: var(--text-soft); font-style: normal; }
+
 /* ============================== KERESŐSÁV ============================== */
 
 .search-bar{
