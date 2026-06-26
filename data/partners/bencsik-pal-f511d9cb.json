@@ -1,6 +1,6 @@
 {
   "partner": "Bencsik Pál",
-  "frissitve": "2026.06.26. 07:27",
+  "frissitve": "2026.06.26. 08:05",
   "ugyletek": [
     {
       "ugyfel": "Kovács Sándor",
@@ -99,7 +99,7 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 33,
       "elszamolasi_honap": "",
-      "ping": null
+      "ping": "PING 2"
     },
     {
       "ugyfel": "Bak Alexandra",
