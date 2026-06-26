@@ -1,0 +1,146 @@
+# Leadadó Központ — Handoff (2026-06-26)
+
+Ez a dokumentum egy új Claude Code session-nek szól, hogy azonnal képben legyen.
+
+---
+
+## Mi ez a projekt?
+
+Jelzáloghitel-közvetítő cég (~32 partner) belső portálja. Statikus oldal GitHub Pages-en (`faybarna.github.io/leadado-kozpont`), amit egy automatizáció frissít (Auto pipeline commitok a `main`-re). Minden partner egy titkos `?p=<token>` linken éri el a saját nézetét.
+
+**Tech stack:** vanilla JS + CSS, nincs framework, nincs build step. PWA (service worker + manifest). Push értesítések Cloudflare Worker-en keresztül.
+
+---
+
+## Fájlstruktúra (lényeges fájlok)
+
+| Fájl | Sorok | Szerep |
+|---|---|---|
+| `index.html` | 361 | Fő HTML — szekciók, bottom nav, "Több" panel |
+| `assets/script.js` | 714 | Jelszókapu, partner pipeline, keresés, bottom nav, **lapozós mobil nézet** |
+| `assets/style.css` | 1034 | Teljes stílus, benne a `.tabbed` módú CSS |
+| `assets/pwa.js` | 302 | SW regisztráció, telepítési nudge (iOS/Android), push feliratkozás |
+| `service-worker.js` | ~160 | Cache (v4), push fogadás, notification click deep link |
+| `worker/src/index.js` | 327 | Cloudflare Worker: push küldés, 20 perces pipeline diff, heti digest |
+| `worker/wrangler.toml.example` | — | Worker config minta |
+| `worker/README.md` | — | Beüzemelési útmutató (terminál nélkül is) |
+| `onboarding/telepites.html` | — | Képes telepítési útmutató (iOS + Android) |
+| `onboarding/email-sablon.html` | — | Kiküldhető e-mail sablon partnereknek |
+| `data/partners/*.json` | 33 fájl | Partner pipeline adatok (Auto pipeline frissíti) |
+| `docs/mobil-app-push-terv.md` | — | Eredeti tervdokumentum, döntési pontokkal |
+| `manifest.json` | — | PWA manifest (`start_url: "/leadado-kozpont/"`) |
+
+---
+
+## Mi van KÉSZ és ÉL
+
+### 1. PWA (Progressive Web App) ✅
+- Service worker (`lk-v4`): cache-first az app shell-re, network-first a partner JSON-re
+- Telepítési nudge: Android (beforeinstallprompt) + iOS (kézi útmutató link)
+- "Frissült az app" toast új SW verziónál
+- Standalone app emlékezik a partner tokenre (`localStorage`)
+- iOS standalone külön tároló kezelve (egyszeri link-bevitel)
+
+### 2. Push értesítések ✅
+- **Cloudflare Worker** élesítve: `https://leadado-push.fayb-office.workers.dev`
+- KV namespace: `SUBS`
+- 20 perces cron: pipeline diff → push (státuszváltás, PING, új ügylet, lezárás 🎉)
+- Heti összefoglaló: megépítve, de **kikapcsolva** (`WEEKLY_ENABLED=false`)
+- Push deep link: `?nyit=sajat` → megnyitja a Saját Ügyleteim szekciót
+- Push szöveg PII-mentes (nincs ügyfélnév/összeg a lock screen-en)
+- Tesztelve, működik end-to-end
+
+### 3. Mobil lapozós nézet ✅ (legutóbbi fejlesztés)
+- ≤860px: `body.tabbed` osztály, egyszerre EGY szekció látszik
+- Bottom nav: **FŐ · ★Saját · AI · DOK · Több** (partner esetén)
+- CHK → "Több" panelbe költözött, Saját a fő sávba került
+- Standalone app + push → alapból "Saját Ügyleteim" nyílik
+- Desktop (≥861px): változatlan görgetős nézet
+- **Commit `fa6a985`** — cherry-pick-kel került main-re
+
+---
+
+## Kulcsok és azonosítók
+
+| Mi | Érték | Hol él |
+|---|---|---|
+| VAPID PUBLIC | `BHyP3m9h5NP36VnsWO5tdazrMbOhfXSxjE8kJMmvG98HkHPT7N0a4HpRhiVwga1ul_DsqtcelS7iZjPRCxH_ICk` | `assets/pwa.js` (nyilvános, OK) |
+| VAPID PRIVATE | `fw5hCAIbHa2Rhd-0Qo5ITJeVynghPkvhJh-b9tPhybU` | **CSAK** Cloudflare secrets |
+| ADMIN_KEY | — | **CSAK** Cloudflare secrets |
+| Worker URL | `https://leadado-push.fayb-office.workers.dev` | `assets/pwa.js` |
+| Teszt partner | `fay-barna-e749fc50` | `data/partners/` |
+
+---
+
+## Biztonsági szabályok (KÖTELEZŐ)
+
+1. **VAPID privát kulcs SOHA nem kerül a repóba** — csak Cloudflare secrets
+2. **ADMIN_KEY SOHA nem kerül a repóba** — csak Cloudflare secrets
+3. **Push szöveg PII-mentes** — nincs ügyfélnév/összeg, mert lock screen-en jelenik meg
+4. **Jelszó**: kliens-oldali SHA-256 hash gate (`lead123!` → `c2d127...`), `localStorage` emlékezés
+
+---
+
+## Hogyan működik a partner rendszer
+
+1. Partner kap egy linket: `https://faybarna.github.io/leadado-kozpont/?p=fay-barna-e749fc50`
+2. `script.js` kiolvassa a `?p=` paramétert → `fetch("data/partners/<token>.json")`
+3. Megjelennek a Saját Ügyletek (+ csapat + vezeti nézetek ha van)
+4. Token elmentődik `localStorage`-ba (`lk_partner_token`)
+5. Telepített app: `manifest.json` start_url `?p=` nélkül → localStorage-ból veszi a tokent
+6. iOS standalone: külön tároló → egyszeri link-beviteli mező, utána megjegyzi
+
+---
+
+## Hogyan működik a lapozós nézet (script.js 649–713. sor)
+
+```
+mqMobile = matchMedia("(max-width: 860px)")
+  → enableTabbed(): body.tabbed, showSection(defaultSection())
+  → disableTabbed(): görgetős desktop nézet
+
+showSection(id): section--active toggle, scrollTo(0,0), bottom nav szinkron
+defaultSection(): standalone/push → sajat-ugyletek, egyébként attekintes
+```
+
+Click delegation: `a[href^="#"]` kattintás tabbed módban `showSection()` hívás (nem görgetés).
+
+---
+
+## Hogyan működik a push (worker/src/index.js)
+
+1. **POST /subscribe**: kliens feliratkozás → KV-ba menti (`sub:<token>:<hash>`)
+2. **Cron 20 perc**: letölti a partner JSON-öket GitHub-ról, diffeli az előző állapottal (KV `prev:<token>`), push-t küld változásnál
+3. **Push típusok**: státuszváltás, PING (sürgetendő), új ügylet, lezárás (🎉)
+4. **POST /test**: admin teszt push (x-admin-key header kell)
+5. **Cron hétfő 06:00**: heti összefoglaló (kikapcsolva)
+
+---
+
+## Git állapot
+
+- **main branch** — ez a production, GitHub Pages erről deployal
+- Auto pipeline commitok folyamatosan jönnek külső automatizációtól
+- Feature branch `claude/mobile-context-visibility-7wu8w4` — a lapozós nézet fejlesztése volt, **már mergelve** (cherry-pick)
+
+---
+
+## A user (Fáy Barna) kommunikációs stílusa
+
+- Magyarul beszél, tegező, laza
+- "mehet" = csináld meg / merge-elj / élesíts
+- "ne élesíts semmit" = ne deployal (de ezt később feloldotta)
+- Rövid válaszokat szeret, nem kell túlmagyarázni
+- Apple ÉS Android userek is vannak a partnerek közt
+
+---
+
+## Mi a KÖVETKEZŐ LÉPÉS?
+
+A user telefonon teszteli a lapozós mobil nézetet. Várjuk a visszajelzését:
+- Működik-e a szekció-váltás koppintással?
+- Jó-e a sorrend (FŐ · ★Saját · AI · DOK · Több)?
+- A push → Saját deep link működik-e?
+- Kell-e módosítás / további szekciónál egyedi nézet?
+
+Nincs más függő feladat — az iteráció a user tesztjétől függ.
