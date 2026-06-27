@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.27. 09:32",
+  "frissitve": "2026.06.27. 09:44",
   "ugyletek": [
     {
       "ugyfel": "Simon Bálint",
@@ -42,9 +42,9 @@
       "ugyfel": "Kiss Ádám",
       "termek": "Bankszámla",
       "bank": "CIB",
-      "statusz": "2. Kötési kiküldve",
+      "statusz": "3. Megkötve",
       "eh": 50,
-      "elszamolasi_honap": "",
+      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
