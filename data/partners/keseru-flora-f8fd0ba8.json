@@ -1,6 +1,6 @@
 {
   "partner": "Keserű Flóra Luca",
-  "frissitve": "2026.06.27. 09:32",
+  "frissitve": "2026.06.27. 09:44",
   "ugyletek": [
     {
       "ugyfel": "Mészáros László",
@@ -113,7 +113,7 @@
           "statusz": "1. Kalkuláció kiküldve",
           "eh": 50,
           "elszamolasi_honap": "",
-          "ping": null
+          "ping": "PING 1"
         },
         {
           "ugyfel": "Kiss Márton",
@@ -122,7 +122,7 @@
           "statusz": "1. Kalkuláció kiküldve",
           "eh": 50,
           "elszamolasi_honap": "",
-          "ping": null
+          "ping": "PING 1"
         },
         {
           "ugyfel": "Hörnyéki Johanna",
@@ -140,7 +140,7 @@
           "statusz": "1. Kalkuláció kiküldve",
           "eh": 46,
           "elszamolasi_honap": "",
-          "ping": null
+          "ping": "PING 1"
         }
       ]
     }
