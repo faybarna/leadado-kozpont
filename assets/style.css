@@ -1139,6 +1139,13 @@ body.locked .app{ display: none; }
     border-top: 1px solid var(--line);
     padding: 4px 0 env(safe-area-inset-bottom, 8px);
     box-shadow: 0 -4px 20px rgba(26,36,32,.08);
+    /* iOS Safari: saját kompozit-rétegre emeljük, hogy görgetés közben
+       a viewporthoz ragadjon és ne „ússzon be" a tartalom közepébe. */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
 
   /* Saját — kiemelt csempe a lenti sávban (partnernek) */
