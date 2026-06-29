@@ -1,6 +1,6 @@
 {
   "partner": "Gentischer Richárd",
-  "frissitve": "2026.06.29. 08:56",
+  "frissitve": "2026.06.29. 09:17",
   "ugyletek": [
     {
       "ugyfel": "Kummer Mirtill",
@@ -72,6 +72,24 @@
       "statusz": "3. Megkötve",
       "eh": 46,
       "elszamolasi_honap": "2026. Június",
+      "ping": null
+    },
+    {
+      "ugyfel": "Bartos Máté",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Bartos Máté",
+      "termek": "SZK",
+      "bank": "Raiffeisen",
+      "statusz": "2. Beadás alatt",
+      "eh": 33,
+      "elszamolasi_honap": "",
       "ping": null
     },
     {
