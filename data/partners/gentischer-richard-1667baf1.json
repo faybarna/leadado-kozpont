@@ -1,6 +1,6 @@
 {
   "partner": "Gentischer Richárd",
-  "frissitve": "2026.06.29. 16:24",
+  "frissitve": "2026.06.29. 16:51",
   "ugyletek": [
     {
       "ugyfel": "Kummer Mirtill",
@@ -88,6 +88,15 @@
       "termek": "SZK",
       "bank": "Raiffeisen",
       "statusz": "2. Beadás alatt",
+      "eh": 33,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Pisák Roland",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "0. Új",
       "eh": 33,
       "elszamolasi_honap": "",
       "ping": null
