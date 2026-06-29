@@ -1,6 +1,6 @@
 {
   "partner": "Holló Bernadett",
-  "frissitve": "2026.06.29. 08:47",
+  "frissitve": "2026.06.29. 08:50",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -48,24 +48,6 @@
       "ping": null
     },
     {
-      "ugyfel": "Dzsudzsák Nóra",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "1. Kalkuláció kiküldve",
-      "eh": 33,
-      "elszamolasi_honap": "",
-      "ping": "PING 1"
-    },
-    {
-      "ugyfel": "Kaszár Nándor",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "1. Kalkuláció kiküldve",
-      "eh": 33,
-      "elszamolasi_honap": "",
-      "ping": "PING 1"
-    },
-    {
       "ugyfel": "Murinai-Angelusz Röné",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
@@ -82,6 +64,24 @@
       "eh": 33,
       "elszamolasi_honap": "",
       "ping": null
+    },
+    {
+      "ugyfel": "Dzsudzsák Nóra",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": "",
+      "ping": "PING 1"
+    },
+    {
+      "ugyfel": "Kaszár Nándor",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": "",
+      "ping": "PING 1"
     },
     {
       "ugyfel": "Pápai Péter",
