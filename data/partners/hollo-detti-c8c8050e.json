@@ -1,6 +1,6 @@
 {
   "partner": "Holló Bernadett",
-  "frissitve": "2026.06.29. 09:17",
+  "frissitve": "2026.06.29. 09:27",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -63,7 +63,7 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 33,
       "elszamolasi_honap": "",
-      "ping": null
+      "ping": "PING 2"
     },
     {
       "ugyfel": "Dzsudzsák Nóra",
