@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.29. 08:56",
+  "frissitve": "2026.06.29. 09:17",
   "ugyletek": [
     {
       "ugyfel": "Simon Bálint",
@@ -182,6 +182,15 @@
           "statusz": "3. Megkötve",
           "eh": 60,
           "elszamolasi_honap": "2026. Június",
+          "ping": null
+        },
+        {
+          "ugyfel": "Nánási Imréné",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "1. Kalkuláció kiküldve",
+          "eh": 20,
+          "elszamolasi_honap": "",
           "ping": null
         },
         {
