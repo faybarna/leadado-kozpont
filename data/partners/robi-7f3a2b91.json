@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.29. 13:01",
+  "frissitve": "2026.06.29. 13:26",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -247,7 +247,7 @@
           "bank": "UniCredit",
           "statusz": "3. Bírálat",
           "eh": 184,
-          "elszamolasi_honap": "",
+          "elszamolasi_honap": "2026. Augusztus",
           "ping": null
         },
         {
@@ -283,7 +283,7 @@
           "bank": "UniCredit",
           "statusz": "2. Kötési kiküldve",
           "eh": 46,
-          "elszamolasi_honap": "",
+          "elszamolasi_honap": "2026. Július",
           "ping": null
         },
         {
@@ -292,7 +292,7 @@
           "bank": "UniCredit",
           "statusz": "2. Kötési kiküldve",
           "eh": 46,
-          "elszamolasi_honap": "",
+          "elszamolasi_honap": "2026. Július",
           "ping": null
         },
         {
@@ -345,15 +345,6 @@
           "termek": "Jelzálog",
           "bank": "",
           "statusz": "Ügyfélre/munkatársra várunk",
-          "eh": 0,
-          "elszamolasi_honap": "",
-          "ping": null
-        },
-        {
-          "ugyfel": "Tamási Győző",
-          "termek": "Bankszámla",
-          "bank": "",
-          "statusz": "2. Kötési kiküldve",
           "eh": 0,
           "elszamolasi_honap": "",
           "ping": null
