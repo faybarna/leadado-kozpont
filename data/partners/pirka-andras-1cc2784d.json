@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.29. 16:52",
+  "frissitve": "2026.06.29. 17:05",
   "ugyletek": [
     {
       "ugyfel": "Simon Bálint",
@@ -51,7 +51,16 @@
       "ugyfel": "Papp Marianna Teréz",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
-      "statusz": "1. Kalkuláció kiküldve",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Horváth Panna",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
       "eh": 46,
       "elszamolasi_honap": "",
       "ping": null
