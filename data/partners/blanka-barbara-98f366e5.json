@@ -1,0 +1,42 @@
+{
+  "partner": "Blanka Barbara",
+  "frissitve": "2026.06.29. 17:15",
+  "ugyletek": [
+    {
+      "ugyfel": "Blanka Barbara",
+      "termek": "Bankszámla",
+      "bank": "Erste",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 60,
+      "elszamolasi_honap": "",
+      "ping": "PING 2"
+    },
+    {
+      "ugyfel": "Kékesi Liza",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Kékesi Viktória",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 50,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Blanka Brigitta",
+      "termek": "Bankszámla",
+      "bank": "CIB",
+      "statusz": "3. Megkötve",
+      "eh": 50,
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
+    }
+  ]
+}
