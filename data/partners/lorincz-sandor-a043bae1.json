@@ -1,6 +1,6 @@
 {
   "partner": "Lőrincz Sándor",
-  "frissitve": "2026.06.29. 14:33",
+  "frissitve": "2026.06.29. 16:24",
   "ugyletek": [
     {
       "ugyfel": "Takács Makó Eszter",
@@ -33,7 +33,7 @@
       "ugyfel": "Szakmárié",
       "termek": "Jelzálog",
       "bank": "Raiffeisen",
-      "statusz": "2. Beadás alatt",
+      "statusz": "3. Bírálat",
       "eh": 260,
       "elszamolasi_honap": "2026. Augusztus",
       "ping": null
@@ -136,6 +136,15 @@
       "eh": 20,
       "elszamolasi_honap": "",
       "ping": "PING 1"
+    },
+    {
+      "ugyfel": "Juhász Zsombor",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Lőrincz Sándor",
