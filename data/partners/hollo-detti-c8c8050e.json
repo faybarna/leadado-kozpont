@@ -1,6 +1,6 @@
 {
   "partner": "Holló Bernadett",
-  "frissitve": "2026.06.29. 10:24",
+  "frissitve": "2026.06.29. 11:47",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -84,6 +84,15 @@
       "ping": "PING 1"
     },
     {
+      "ugyfel": "Murinai Dániel",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "1. Kalkuláció kiküldve",
+      "eh": 33,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
       "ugyfel": "Pápai Péter",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
@@ -146,7 +155,17 @@
     },
     {
       "partner": "Bagócsi Renáta",
-      "ugyletek": []
+      "ugyletek": [
+        {
+          "ugyfel": "Harkai Péter",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "1. Kalkuláció kiküldve",
+          "eh": 33,
+          "elszamolasi_honap": "",
+          "ping": null
+        }
+      ]
     }
   ]
 }
