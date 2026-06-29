@@ -1,6 +1,6 @@
 {
   "partner": "Fábián Kristóf",
-  "frissitve": "2026.06.29. 07:27",
+  "frissitve": "2026.06.29. 08:47",
   "ugyletek": [
     {
       "ugyfel": "Róth István",
@@ -166,6 +166,15 @@
     },
     {
       "ugyfel": "Pipics-Lysewycz Adrienn",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 33,
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
+    },
+    {
+      "ugyfel": "Kovács Gergő",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
