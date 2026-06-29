@@ -1,6 +1,6 @@
 {
   "partner": "Fábián Kristóf",
-  "frissitve": "2026.06.29. 09:17",
+  "frissitve": "2026.06.29. 09:27",
   "ugyletek": [
     {
       "ugyfel": "Róth István",
@@ -96,9 +96,9 @@
       "ugyfel": "Szabóné Pleiveisz Anikó",
       "termek": "Bankszámla",
       "bank": "Erste",
-      "statusz": "2. Kötési kiküldve",
+      "statusz": "3. Megkötve",
       "eh": 42,
-      "elszamolasi_honap": "",
+      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
@@ -198,7 +198,7 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 20,
       "elszamolasi_honap": "",
-      "ping": null
+      "ping": "PING 2"
     },
     {
       "ugyfel": "Szimeiszter Blanka",
@@ -207,7 +207,7 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 20,
       "elszamolasi_honap": "",
-      "ping": null
+      "ping": "PING 2"
     },
     {
       "ugyfel": "Magyar Zsolt",
