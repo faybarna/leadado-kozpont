@@ -1,6 +1,6 @@
 {
   "partner": "Lőrincz Sándor",
-  "frissitve": "2026.06.29. 09:17",
+  "frissitve": "2026.06.29. 09:27",
   "ugyletek": [
     {
       "ugyfel": "Takács Makó Eszter",
@@ -126,7 +126,7 @@
       "statusz": "1. Kalkuláció kiküldve",
       "eh": 20,
       "elszamolasi_honap": "",
-      "ping": null
+      "ping": "PING 1"
     },
     {
       "ugyfel": "Víg Ágnes",
@@ -135,7 +135,7 @@
       "statusz": "1. Kalkuláció kiküldve",
       "eh": 20,
       "elszamolasi_honap": "",
-      "ping": null
+      "ping": "PING 1"
     },
     {
       "ugyfel": "Lőrincz Sándor",
