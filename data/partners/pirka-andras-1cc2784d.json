@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.29. 09:17",
+  "frissitve": "2026.06.29. 09:27",
   "ugyletek": [
     {
       "ugyfel": "Simon Bálint",
@@ -188,7 +188,7 @@
           "ugyfel": "Nánási Imréné",
           "termek": "Bankszámla",
           "bank": "Raiffeisen",
-          "statusz": "1. Kalkuláció kiküldve",
+          "statusz": "2. Kötési kiküldve",
           "eh": 20,
           "elszamolasi_honap": "",
           "ping": null
@@ -232,7 +232,7 @@
           "statusz": "2. Kötési kiküldve",
           "eh": 46,
           "elszamolasi_honap": "",
-          "ping": null
+          "ping": "PING 2"
         },
         {
           "ugyfel": "Márkus Molli",
@@ -268,6 +268,15 @@
         },
         {
           "ugyfel": "Bakó Klaudia",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "3. Megkötve",
+          "eh": 20,
+          "elszamolasi_honap": "2026. Június",
+          "ping": null
+        },
+        {
+          "ugyfel": "Berki",
           "termek": "Bankszámla",
           "bank": "Raiffeisen",
           "statusz": "3. Megkötve",
