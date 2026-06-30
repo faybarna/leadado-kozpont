@@ -1,6 +1,6 @@
 {
   "partner": "Gentischer Richárd",
-  "frissitve": "2026.06.30. 15:19",
+  "frissitve": "2026.06.30. 16:27",
   "ugyletek": [
     {
       "ugyfel": "Kummer Mirtill",
@@ -124,12 +124,12 @@
     },
     {
       "vezeto": "Holló Bernadett",
-      "ugyletek_db": 17,
-      "eh_sum": 771,
+      "ugyletek_db": 19,
+      "eh_sum": 824,
       "honap_bontas": {
         "2026. Július": 40,
         "2026. Augusztus": 100,
-        "2026. Június": 300
+        "2026. Június": 353
       }
     },
     {
