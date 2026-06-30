@@ -1,6 +1,6 @@
 {
   "partner": "Holló Bernadett",
-  "frissitve": "2026.06.30. 15:19",
+  "frissitve": "2026.06.30. 16:27",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -134,6 +134,24 @@
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
       "eh": 33,
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
+    },
+    {
+      "ugyfel": "Budavári Dezső",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 33,
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
+    },
+    {
+      "ugyfel": "György-Vince Gitta",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 20,
       "elszamolasi_honap": "2026. Június",
       "ping": null
     }
