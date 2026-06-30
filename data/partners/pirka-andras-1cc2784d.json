@@ -1,6 +1,6 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.30. 20:40",
+  "frissitve": "2026.06.30. 20:48",
   "ugyletek": [
     {
       "ugyfel": "Martina és párja",
@@ -226,18 +226,18 @@
       "partner": "Kis Izabella",
       "ugyletek": [
         {
-          "ugyfel": "Kis Izabella",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "2. Kötési kiküldve",
-          "eh": 46,
-          "elszamolasi_honap": "",
-          "ping": "PING 2"
-        },
-        {
           "ugyfel": "Márkus Molli",
           "termek": "Bankszámla",
           "bank": "UniCredit",
+          "statusz": "3. Megkötve",
+          "eh": 46,
+          "elszamolasi_honap": "2026. Június",
+          "ping": null
+        },
+        {
+          "ugyfel": "Kis Izabella",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
           "statusz": "3. Megkötve",
           "eh": 46,
           "elszamolasi_honap": "2026. Június",
