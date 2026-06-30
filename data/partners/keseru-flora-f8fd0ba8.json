@@ -1,6 +1,6 @@
 {
   "partner": "Keserű Flóra Luca",
-  "frissitve": "2026.06.30. 12:43",
+  "frissitve": "2026.06.30. 12:46",
   "ugyletek": [
     {
       "ugyfel": "Mészáros László",
@@ -80,7 +80,7 @@
           "ping": "PING 2"
         },
         {
-          "ugyfel": "Sóki Viktória",
+          "ugyfel": "Kiss Márton",
           "termek": "Bankszámla",
           "bank": "Erste",
           "statusz": "1. Kalkuláció kiküldve",
@@ -89,10 +89,10 @@
           "ping": null
         },
         {
-          "ugyfel": "Kiss Márton",
+          "ugyfel": "Sóki Viktória",
           "termek": "Bankszámla",
           "bank": "Erste",
-          "statusz": "1. Kalkuláció kiküldve",
+          "statusz": "2. Kötési kiküldve",
           "eh": 60,
           "elszamolasi_honap": "",
           "ping": null
@@ -107,19 +107,19 @@
           "ping": null
         },
         {
-          "ugyfel": "Sóki Viktória",
+          "ugyfel": "Kiss Márton",
           "termek": "Bankszámla",
-          "bank": "Raiffeisen",
+          "bank": "CIB",
           "statusz": "1. Kalkuláció kiküldve",
           "eh": 50,
           "elszamolasi_honap": "",
           "ping": "PING 1"
         },
         {
-          "ugyfel": "Kiss Márton",
+          "ugyfel": "Sóki Viktória",
           "termek": "Bankszámla",
-          "bank": "CIB",
-          "statusz": "1. Kalkuláció kiküldve",
+          "bank": "Raiffeisen",
+          "statusz": "2. Kötési kiküldve",
           "eh": 50,
           "elszamolasi_honap": "",
           "ping": "PING 1"
