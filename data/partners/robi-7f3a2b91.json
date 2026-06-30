@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.30. 07:27",
+  "frissitve": "2026.06.30. 08:57",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -91,6 +91,15 @@
       "eh": 50,
       "elszamolasi_honap": "",
       "ping": "PING 2"
+    },
+    {
+      "ugyfel": "Gerényi párja",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 46,
+      "elszamolasi_honap": "",
+      "ping": null
     },
     {
       "ugyfel": "Bácsalmásiné",
@@ -214,15 +223,6 @@
       "termek": "Jelzálog",
       "bank": "Erste",
       "statusz": "2. Beadás alatt",
-      "eh": 0,
-      "elszamolasi_honap": "",
-      "ping": null
-    },
-    {
-      "ugyfel": "Gerényi párja",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "0. Új",
       "eh": 0,
       "elszamolasi_honap": "",
       "ping": null
