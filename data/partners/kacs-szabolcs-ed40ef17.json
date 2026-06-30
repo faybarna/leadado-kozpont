@@ -1,6 +1,6 @@
 {
   "partner": "Kács Szabolcs",
-  "frissitve": "2026.06.30. 12:43",
+  "frissitve": "2026.06.30. 12:46",
   "ugyletek": [
     {
       "ugyfel": "Bánki-Szabó Kristóf",
@@ -72,6 +72,15 @@
       "statusz": "3. Megkötve",
       "eh": 46,
       "elszamolasi_honap": "2026. Július",
+      "ping": null
+    },
+    {
+      "ugyfel": "Tamási Irén",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "2. Kötési kiküldve",
+      "eh": 20,
+      "elszamolasi_honap": "",
       "ping": null
     },
     {
