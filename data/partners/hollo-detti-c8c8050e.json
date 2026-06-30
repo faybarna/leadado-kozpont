@@ -1,6 +1,6 @@
 {
   "partner": "Holló Bernadett",
-  "frissitve": "2026.06.30. 12:34",
+  "frissitve": "2026.06.30. 12:43",
   "ugyletek": [
     {
       "ugyfel": "Czink László",
@@ -55,15 +55,6 @@
       "eh": 33,
       "elszamolasi_honap": "",
       "ping": "PING 1"
-    },
-    {
-      "ugyfel": "Tóth Andrea",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "2. Kötési kiküldve",
-      "eh": 33,
-      "elszamolasi_honap": "",
-      "ping": "PING 2"
     },
     {
       "ugyfel": "Dzsudzsák Nóra",
@@ -121,6 +112,15 @@
     },
     {
       "ugyfel": "Dzsudzsák Alíz",
+      "termek": "Bankszámla",
+      "bank": "Raiffeisen",
+      "statusz": "3. Megkötve",
+      "eh": 33,
+      "elszamolasi_honap": "2026. Június",
+      "ping": null
+    },
+    {
+      "ugyfel": "Tóth Andrea",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
       "statusz": "3. Megkötve",
