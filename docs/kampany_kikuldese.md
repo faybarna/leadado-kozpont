@@ -20,20 +20,29 @@ személyre szabva. A piszkozatokat Barna nézi át és küldi el (Claude nem kü
 ```
 Szia {{NÉV}},
 
-elindult a megújult Leadadó Központ — innentől minden, ami a közös munkához kell,
-egy helyen van, és valós időben látod, hol tartanak a hozzám beküldött ügyfeleid.
+Elindul a legújabb fejlesztésünk, a Leadadó Központ — innentől minden, ami a közös
+munkához kell, egy helyen van, és valós időben látod, hol tartanak a hozzám beküldött
+ügyfeleid.
 
 Mit találsz odabent:
 - Saját Ügyleteim — élőben követed minden ügyfeled állását (kalkulációtól folyósításig),
   egy összegző kártya pedig mutatja a havi lezárt ügyleteidet és az EH-dat.
-- Értesítések a telefonodra — szólok, amint mozdul egy ügyleted: státuszváltás,
-  sürgetendő tétel vagy sikeres folyósítás.
-- AI Asszisztens — bankszámla-feltételek, dokumentumkérdések, tipikus ügyfélhelyzetek;
-  kérdezd meg, mielőtt telefonálnál.
+
+- Értesítések a telefonodra — automata push üzenet, amint mozdul egy ügyleted:
+  státuszváltás, sürgetendő tétel, sikeres folyósítás vagy sikeres számlanyitás.
+
+- AI Asszisztens bekötve — bankszámla-feltételek, dokumentumkérdések, tipikus
+  ügyfélhelyzetek; kérdezd meg, mielőtt telefonálnál.
+
 - Hiteladatlapok és sablonok — termékenként, mindig az aktuális verzió.
+
 - Dokumentum-igénylisták — interaktív checklist: pontosan mit kérj be az ügyféltől
   induláskor, hogy ne akadjon el az ügylet hiánypótláson.
-- GYIK — a leggyakoribb kérdések megválaszolva.
+
+- Lead beküldése egy gombbal — a Saját Ügyleteim tetején a „➕ Új lead leadása"
+  gombbal pár kattintással átadod az új ügyfelet (bankszámla vagy hitel), és egyből
+  a Te neveden érkezik be hozzám. Strukturált űrlap, így rögtön minden fontos adat
+  megvan — nincs többé oda-vissza levelezés.
 
 A személyes hozzáférésed:
 Linked: {{LINK}}
@@ -49,9 +58,9 @@ kaphatsz értesítést:
 
 Ha valami nem nyílik vagy hibás adatot látsz, írj — egy perc és megoldom.
 
-Üdv,
+Sok sikert, sok leadet,
+Üdv
 Barna
-fay.barna@ovb.hu · +36 20 555 7171
 ```
 
 ---
@@ -97,7 +106,7 @@ Jelöld a **Megy?** oszlopot (`I` = megy / `N` = kihagy), és írd be az **Email
 | I | Sellei Abigél | sellei.abigel@ovb.hu | sellei-abigel-3851d6ca |
 | I | Séra Milán | sera.milan@ovb.hu | sera-milan-d89c078b |
 | I | Steinmetz Edvárd | edvard.ovb@gmail.com | steinmetz-edvard-32e97cc3 |
-| I | Varga Glória | ⚠ EMAIL KELL | varga-gloria-548655d6 |
+| N | Varga Glória | ⚠ EMAIL KELL (08.01, ügylettel) | varga-gloria-548655d6 |
 | N | Varga Sándor | sandorvarga000@gmail.com | varga-sandor-a5534ea9 |
 
 > Link teljes alakja: `https://faybarna.github.io/leadado-kozpont/?p=<token>`
