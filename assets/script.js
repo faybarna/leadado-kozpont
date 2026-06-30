@@ -197,6 +197,23 @@
 
   var LEZART_STATUSZOK = ["5. Folyósítva", "3. Megkötve"];
 
+  // „➕ Új lead leadása" CTA — a lead-bekérő landingre (külön Apps Script web app) visz.
+  // A partner saját tokenjét (?p= az URL-ből, vagy a mentett token) hozzáfűzzük, így a
+  // beérkező lead automatikusan a leadadó nevén kerül a Master Boardra.
+  var LEAD_INTAKE_URL = "https://script.google.com/macros/s/AKfycbxiQb1QqT9l2nBcjCZ29XwfTmPTmOF1_zBKhKPnST86j_zMklmVTVkiirwBNiHasTyP/exec";
+
+  function ujLeadGombHtml(token) {
+    var href = LEAD_INTAKE_URL + (token ? "?p=" + encodeURIComponent(token) : "");
+    return (
+      '<div class="sajat-cta">' +
+        '<a class="btn btn-brass sajat-cta-btn" href="' + href + '" target="_blank" rel="noopener">' +
+          '➕ Új lead leadása' +
+        '</a>' +
+        '<span class="sajat-cta-hint">A beküldött lead automatikusan a te neveden érkezik be.</span>' +
+      '</div>'
+    );
+  }
+
   function statuszBadge(statusz) {
     var isLezart = LEZART_STATUSZOK.indexOf(statusz) !== -1;
     var cls = isLezart ? "statusz-badge statusz-badge--lezart" : "statusz-badge";
@@ -493,7 +510,7 @@
       })
       .then(function(data) {
         if (sajatLead) sajatLead.textContent = data.partner + " — aktív ügyletek";
-        var html = '<div class="card">' + renderPipelineTable(data) + "</div>";
+        var html = ujLeadGombHtml(token) + '<div class="card">' + renderPipelineTable(data) + "</div>";
         if (data.csapat && data.csapat.length > 0) {
           html += renderCsapatView(data.csapat);
         }

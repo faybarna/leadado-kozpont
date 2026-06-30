@@ -297,6 +297,11 @@ a:hover{ text-decoration: underline; }
 .btn-brass{ background: var(--brass); }
 .btn-brass:hover{ background: #946635; }
 
+/* „Új lead leadása" CTA — a Saját Ügyleteim tetején, a pipeline fölött */
+.sajat-cta{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
+.sajat-cta-btn{ font-size:14.5px; }
+.sajat-cta-hint{ color: var(--text-soft); font-size:13px; }
+
 .btn-outline{
   background: transparent;
   color: var(--ink);
