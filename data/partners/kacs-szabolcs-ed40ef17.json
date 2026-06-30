@@ -1,6 +1,6 @@
 {
   "partner": "Kács Szabolcs",
-  "frissitve": "2026.06.30. 11:40",
+  "frissitve": "2026.06.30. 11:56",
   "ugyletek": [
     {
       "ugyfel": "Bánki-Szabó Kristóf",
@@ -48,15 +48,6 @@
       "ping": null
     },
     {
-      "ugyfel": "Bánki-Szabó Kristóf",
-      "termek": "Bankszámla",
-      "bank": "UniCredit",
-      "statusz": "2. Kötési kiküldve",
-      "eh": 46,
-      "elszamolasi_honap": "2026. Július",
-      "ping": null
-    },
-    {
       "ugyfel": "Budai Krisztián",
       "termek": "Bankszámla",
       "bank": "UniCredit",
@@ -72,6 +63,15 @@
       "statusz": "3. Megkötve",
       "eh": 46,
       "elszamolasi_honap": "2026. Június",
+      "ping": null
+    },
+    {
+      "ugyfel": "Bánki-Szabó Kristóf",
+      "termek": "Bankszámla",
+      "bank": "UniCredit",
+      "statusz": "3. Megkötve",
+      "eh": 46,
+      "elszamolasi_honap": "2026. Július",
       "ping": null
     },
     {
