@@ -1,6 +1,6 @@
 {
   "partner": "Séra Milán",
-  "frissitve": "2026.06.30. 20:55",
+  "frissitve": "2026.07.01. 07:27",
   "ugyletek": [
     {
       "ugyfel": "Pásztor Jázmin",
@@ -27,15 +27,6 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 60,
       "elszamolasi_honap": "",
-      "ping": null
-    },
-    {
-      "ugyfel": "Séra Milán",
-      "termek": "Bankszámla",
-      "bank": "Erste",
-      "statusz": "3. Megkötve",
-      "eh": 60,
-      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
