@@ -1,6 +1,6 @@
 {
   "partner": "Varga Sándor",
-  "frissitve": "2026.06.30. 20:48",
+  "frissitve": "2026.07.01. 07:27",
   "ugyletek": [
     {
       "ugyfel": "Szabó Dávid",
@@ -9,24 +9,6 @@
       "statusz": "2. Beadás alatt",
       "eh": 333,
       "elszamolasi_honap": "2026. Augusztus",
-      "ping": null
-    },
-    {
-      "ugyfel": "Tóth Barnabás",
-      "termek": "Jelzálog",
-      "bank": "Raiffeisen",
-      "statusz": "5. Folyósítva",
-      "eh": 280,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Tóth Ádám",
-      "termek": "Jelzálog",
-      "bank": "K&H",
-      "statusz": "5. Folyósítva",
-      "eh": 266,
-      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
@@ -49,29 +31,11 @@
     },
     {
       "ugyfel": "Szigetvári Emma",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 20,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Szigetvári Emma",
       "termek": "Babaváró",
       "bank": "Raiffeisen",
       "statusz": "5. Folyósítva",
       "eh": 16,
       "elszamolasi_honap": "2026. Július",
-      "ping": null
-    },
-    {
-      "ugyfel": "Móra Alexandra",
-      "termek": "Munkáshitel",
-      "bank": "UniCredit",
-      "statusz": "5. Folyósítva",
-      "eh": 8,
-      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
@@ -113,6 +77,15 @@
           "statusz": "5. Folyósítva",
           "eh": 266,
           "elszamolasi_honap": "2026. Július",
+          "ping": null
+        },
+        {
+          "ugyfel": "Lamos Dávid",
+          "termek": "Bankszámla",
+          "bank": "MBH",
+          "statusz": "3. Megkötve",
+          "eh": 123,
+          "elszamolasi_honap": "2026. Augusztus",
           "ping": null
         },
         {
