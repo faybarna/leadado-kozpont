@@ -1,6 +1,6 @@
 {
   "partner": "Hajtó Krisztián",
-  "frissitve": "2026.07.01. 07:58",
+  "frissitve": "2026.07.01. 11:09",
   "ugyletek": [
     {
       "ugyfel": "Pálfy András",
@@ -151,6 +151,24 @@
       "termek": "Jelzálog",
       "bank": "K&H",
       "statusz": "4. Jóváhagyva",
+      "eh": 0,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Koska Attila",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Koska Attila",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "2. Beadás alatt",
       "eh": 0,
       "elszamolasi_honap": "",
       "ping": null
