@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.06.30. 20:55",
+  "frissitve": "2026.07.01. 07:27",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -30,12 +30,21 @@
       "ping": null
     },
     {
-      "ugyfel": "Zsoldi Gabriella",
+      "ugyfel": "Czira Csilla",
       "termek": "Jelzálog",
-      "bank": "CIB",
+      "bank": "Raiffeisen",
       "statusz": "5. Folyósítva",
-      "eh": 420,
-      "elszamolasi_honap": "2026. Június",
+      "eh": 400,
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
+    },
+    {
+      "ugyfel": "Szél István",
+      "termek": "Jelzálog",
+      "bank": "Erste",
+      "statusz": "5. Folyósítva",
+      "eh": 400,
+      "elszamolasi_honap": "2026. Augusztus",
       "ping": null
     },
     {
@@ -145,15 +154,6 @@
       "eh": 25,
       "elszamolasi_honap": "",
       "ping": "PING 2"
-    },
-    {
-      "ugyfel": "Gazsi Árpád",
-      "termek": "Bankszámla",
-      "bank": "CIB",
-      "statusz": "3. Megkötve",
-      "eh": 25,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
     },
     {
       "ugyfel": "Hidi Csukoly Annamária",
@@ -269,30 +269,12 @@
           "ping": null
         },
         {
-          "ugyfel": "Tamási Irén",
-          "termek": "Bankszámla",
-          "bank": "Erste",
-          "statusz": "3. Megkötve",
-          "eh": 60,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
           "ugyfel": "Budai Krisztián",
           "termek": "Bankszámla",
           "bank": "UniCredit",
           "statusz": "2. Kötési kiküldve",
           "eh": 46,
           "elszamolasi_honap": "2026. Július",
-          "ping": null
-        },
-        {
-          "ugyfel": "Hangyási Dávid",
-          "termek": "Bankszámla",
-          "bank": "UniCredit",
-          "statusz": "3. Megkötve",
-          "eh": 46,
-          "elszamolasi_honap": "2026. Június",
           "ping": null
         },
         {
@@ -311,33 +293,6 @@
           "statusz": "2. Kötési kiküldve",
           "eh": 20,
           "elszamolasi_honap": "",
-          "ping": null
-        },
-        {
-          "ugyfel": "Varga Ágnes",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 20,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
-          "ugyfel": "Huszti Márk",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 20,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
-          "ugyfel": "Jantek Dóra",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 20,
-          "elszamolasi_honap": "2026. Június",
           "ping": null
         },
         {
