@@ -1,6 +1,6 @@
 {
   "partner": "Bencsik Pál",
-  "frissitve": "2026.06.30. 20:55",
+  "frissitve": "2026.07.01. 07:27",
   "ugyletek": [
     {
       "ugyfel": "Kovács Sándor",
@@ -39,12 +39,12 @@
       "ping": null
     },
     {
-      "ugyfel": "Kocsis Sarolta",
-      "termek": "SZK",
-      "bank": "MBH",
+      "ugyfel": "Bak Alexandra",
+      "termek": "Jelzálog",
+      "bank": "Raiffeisen",
       "statusz": "5. Folyósítva",
-      "eh": 150,
-      "elszamolasi_honap": "2026. Június",
+      "eh": 140,
+      "elszamolasi_honap": "2026. Augusztus",
       "ping": null
     },
     {
@@ -54,33 +54,6 @@
       "statusz": "3. Bírálat",
       "eh": 136,
       "elszamolasi_honap": "2026. Július",
-      "ping": null
-    },
-    {
-      "ugyfel": "Spillenberg Richárd",
-      "termek": "SZK",
-      "bank": "MBH",
-      "statusz": "5. Folyósítva",
-      "eh": 116,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Jahoda Ágota",
-      "termek": "SZK",
-      "bank": "Raiffeisen",
-      "statusz": "5. Folyósítva",
-      "eh": 84,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Kocsis Sarolta",
-      "termek": "Bankszámla",
-      "bank": "Erste",
-      "statusz": "3. Megkötve",
-      "eh": 60,
-      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
@@ -100,24 +73,6 @@
       "eh": 33,
       "elszamolasi_honap": "",
       "ping": "PING 2"
-    },
-    {
-      "ugyfel": "Bak Alexandra",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 33,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Farkas Barna Norbert",
-      "termek": "Babaváró",
-      "bank": "CIB",
-      "statusz": "5. Folyósítva",
-      "eh": 16,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
     },
     {
       "ugyfel": "Kosiczki József",
