@@ -212,6 +212,10 @@
   // beérkező lead automatikusan a leadadó nevén kerül a Master Boardra.
   var LEAD_INTAKE_URL = "https://script.google.com/macros/s/AKfycbxiQb1QqT9l2nBcjCZ29XwfTmPTmOF1_zBKhKPnST86j_zMklmVTVkiirwBNiHasTyP/exec";
 
+  // Specialista Promo — a leadadó saját bemutatkozó landing oldala. Ugyanaz a ?p= token,
+  // amit a Saját Ügyleteim is használ, így a lead-adatbekérőre onnan is a leadadó neve kerül.
+  var LANDING_PAGE_URL = "https://faybarna.github.io/Fay-Barna-Hitelspecialista/";
+
   // A push-workerrel közös URL — szándékosan külön konstans a pwa.js-től (a két fájl
   // nem függ egymástól), ugyanaz az érték: https://leadado-push.fayb-office.workers.dev
   var PUSH_WORKER_URL = "https://leadado-push.fayb-office.workers.dev";
@@ -654,6 +658,69 @@
     partnerToken = token;
     revealSajat();
     loadPartnerData(token);
+    renderPromoSection();
+  }
+
+  // Specialista Promo kártya: ha ismert a token, kimásolható promo-link a landing oldalra;
+  // ha még nem, ugyanaz a beviteli mező, mint a Saját Ügyleteimnél (activatePartner frissíti).
+  var promoCard = document.getElementById("promo-card");
+
+  function renderPromoLink(token) {
+    if (!promoCard) return;
+    var link = LANDING_PAGE_URL + "?p=" + encodeURIComponent(token);
+    promoCard.innerHTML =
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">' +
+        '<input id="promo-link-input" type="text" readonly value="' + escAttr(link) + '" ' +
+          'style="flex:1;min-width:220px;padding:10px 12px;border:1px solid #c9bfa6;border-radius:8px;font-size:14px;background:#fff">' +
+        '<button id="promo-copy-btn" class="btn-brass" style="padding:10px 18px">📋 Másolás</button>' +
+      '</div>' +
+      '<p class="sajat-cta-hint" style="margin-top:10px;display:block">Ezt a linket küldd el az ügyfélnek. A landing oldalon bemutatkozom, ő pedig ugyanitt tölti ki a lead-adatbekérőt — a beküldött lead automatikusan a te neveden érkezik be.</p>';
+    var input = document.getElementById("promo-link-input");
+    var btn   = document.getElementById("promo-copy-btn");
+    if (input) input.addEventListener("click", function() { input.select(); });
+    if (btn) {
+      btn.addEventListener("click", function() {
+        function done() {
+          btn.textContent = "✓ Másolva";
+          setTimeout(function(){ btn.textContent = "📋 Másolás"; }, 1800);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(link).then(done).catch(function() {
+            if (input) { input.select(); document.execCommand("copy"); done(); }
+          });
+        } else if (input) {
+          input.select();
+          document.execCommand("copy");
+          done();
+        }
+      });
+    }
+  }
+
+  function renderPromoTokenEntry() {
+    if (!promoCard) return;
+    promoCard.innerHTML =
+      '<div class="sajat-locked" style="margin-bottom:12px">Ehhez a saját (személyes) linked kell. Illeszd be itt, vagy nyisd meg a Saját Ügyleteim menüt.</div>' +
+      '<div style="display:flex;gap:8px;flex-wrap:wrap">' +
+        '<input id="promo-token-input" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" ' +
+          'placeholder="https://…?p=…  vagy a tokened" ' +
+          'style="flex:1;min-width:200px;padding:10px 12px;border:1px solid #c9bfa6;border-radius:8px;font-size:15px;background:#fff">' +
+        '<button id="promo-token-btn" class="btn-brass" style="padding:10px 18px">Betöltés</button>' +
+      '</div>';
+    var input = document.getElementById("promo-token-input");
+    var btn   = document.getElementById("promo-token-btn");
+    function submit() {
+      var tok = extractToken(input ? input.value : "");
+      if (!tok) { if (input) input.focus(); return; }
+      activatePartner(tok);
+    }
+    if (btn)   btn.addEventListener("click", submit);
+    if (input) input.addEventListener("keydown", function(e){ if (e.key === "Enter") submit(); });
+  }
+
+  function renderPromoSection() {
+    if (partnerToken) renderPromoLink(partnerToken);
+    else renderPromoTokenEntry();
   }
 
   // Token kinyerése a beillesztett szövegből: lehet teljes link (?p=…) vagy maga a token.
@@ -701,11 +768,13 @@
     // Telepített app token nélkül → mutassuk a Saját fület és a beviteli mezőt.
     revealSajat();
     renderTokenEntry();
+    renderPromoSection();
   } else {
     // Sima böngésző, token nélkül — személyre szabott nézet, a link kell hozzá.
     if (sajatTar) {
       sajatTar.innerHTML = '<div class="card"><div class="sajat-locked">Ez a nézet személyre szabott — kérd el a saját linkedet Barnától.</div></div>';
     }
+    renderPromoSection();
   }
 
   /* ---------------- 6) MOBIL BOTTOM NAV ---------------- */
@@ -757,7 +826,7 @@
   // IntersectionObserver szinkronizálása a bottom nav-val
   if ("IntersectionObserver" in window) {
     var mbnSectionIds = ["attekintes","ai-asszisztens","hiteladatlapok","igenylistak",
-                         "kepzes","ujdonsagok","faq","sajat-ugyletek"]; // LAUNCH: "versenyek" kivéve — vissza a ranglistával
+                         "kepzes","ujdonsagok","specialista-promo","faq","sajat-ugyletek"]; // LAUNCH: "versenyek" kivéve — vissza a ranglistával
     var mbnObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -786,6 +855,7 @@
     { tag: "CHK", title: "Dokumentum-igénylisták",       href: "#igenylistak",     keywords: "dokumentum igénylista checklist ügyfél irat bekérés" },
     { tag: "EDU", title: "Képzési anyagok",              href: "#kepzes",          keywords: "képzés oktatás tananyag hitel bankszámla folyamat" },
     { tag: "ÚJ",  title: "Újdonságok",                  href: "#ujdonsagok",      keywords: "újdonság változás frissítés napló changelog" },
+    { tag: "🔗",  title: "Specialista Promo",           href: "#specialista-promo", keywords: "promo landing link lead adatbekérő ügyfél oszd meg promóció" },
     // LAUNCH: Versenyek kivéve a keresőből — vissza a nevesített ranglistával
     // { tag: "🏆",  title: "Versenyek",                   href: "#versenyek",       keywords: "verseny eredmény feltétel" },
     { tag: "?",   title: "Gyakori kérdések (GYIK)",      href: "#faq",             keywords: "faq gyik kérdés válasz" },
