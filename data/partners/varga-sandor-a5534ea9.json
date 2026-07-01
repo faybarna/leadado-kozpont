@@ -1,6 +1,6 @@
 {
   "partner": "Varga Sándor",
-  "frissitve": "2026.07.01. 07:52",
+  "frissitve": "2026.07.01. 07:58",
   "ugyletek": [
     {
       "ugyfel": "Szabó Dávid",
@@ -15,7 +15,7 @@
       "ugyfel": "Szabó Dávid",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
-      "statusz": "0. Új",
+      "statusz": "1. Kalkuláció kiküldve",
       "eh": 46,
       "elszamolasi_honap": "",
       "ping": null
