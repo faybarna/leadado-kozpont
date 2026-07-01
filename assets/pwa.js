@@ -254,7 +254,7 @@
   }
 
   function subscribePush(token) {
-    navigator.serviceWorker.ready
+    return navigator.serviceWorker.ready
       .then(function (reg) {
         return reg.pushManager.getSubscription().then(function (existing) {
           if (existing) return existing;
@@ -276,6 +276,96 @@
         console.warn("[PWA] push feliratkozás sikertelen:", e);
       });
   }
+
+  function unsubscribePush(token) {
+    return navigator.serviceWorker.ready
+      .then(function (reg) { return reg.pushManager.getSubscription(); })
+      .then(function (sub) {
+        if (!sub) return;
+        var endpoint = sub.endpoint;
+        return sub.unsubscribe().then(function () {
+          return fetch(PWA_CONFIG.workerUrl.replace(/\/$/, "") + "/unsubscribe", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token: token, endpoint: endpoint }),
+          });
+        });
+      })
+      .catch(function (e) {
+        console.warn("[PWA] leiratkozás sikertelen:", e);
+      });
+  }
+
+  /* ===================================================================
+     3b) PUSH-ÁLLAPOT WIDGET — állandó be/kikapcsoló a Saját Ügyleteim
+     tetején (a "Kérsz értesítést?" kártya csak egyszer jelenik meg;
+     ha valaki ott "Most nem"-et mond, vagy letiltja, ide térhet vissza).
+     =================================================================== */
+
+  function renderPushStatusWidget(token) {
+    var mount = document.getElementById("push-status-mount");
+    if (!mount) return;
+    if (!token || !pushReady()) { mount.innerHTML = ""; return; }
+
+    navigator.serviceWorker.ready
+      .then(function (reg) { return reg.pushManager.getSubscription(); })
+      .then(function (sub) { paintPushStatus(mount, token, sub); })
+      .catch(function () { paintPushStatus(mount, token, null); });
+  }
+
+  function paintPushStatus(mount, token, existingSub) {
+    // Az elem időközben eltűnhetett (pl. a partner nézet újrarajzolódott) — ne írjunk üres DOM-ba.
+    if (!document.body.contains(mount)) return;
+
+    var perm = Notification.permission; // "granted" | "denied" | "default"
+    var subscribed = perm === "granted" && !!existingSub;
+
+    var icon, text, actionHtml;
+    if (perm === "denied") {
+      icon = "🔕";
+      text = "Értesítések letiltva a böngészőben";
+      actionHtml =
+        '<span class="push-status-hint">Feloldás: kattints a címsor lakat-ikonjára → Értesítések → Engedélyezés, majd told újra az oldalt.</span>';
+    } else if (subscribed) {
+      icon = "🔔";
+      text = "Értesítések bekapcsolva";
+      actionHtml = '<button class="btn btn-outline push-status-btn" id="push-toggle-btn" data-action="off">Kikapcsolás</button>';
+    } else {
+      icon = "🔕";
+      text = "Nincs bekapcsolva az értesítés";
+      actionHtml = '<button class="btn btn-brass push-status-btn" id="push-toggle-btn" data-action="on">Bekapcsolás</button>';
+    }
+
+    mount.innerHTML =
+      '<div class="push-status">' +
+        '<span class="push-status-icon">' + icon + '</span>' +
+        '<span class="push-status-text">' + text + '</span>' +
+        actionHtml +
+      '</div>';
+
+    var btn = document.getElementById("push-toggle-btn");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var action = btn.getAttribute("data-action");
+      btn.disabled = true;
+      if (action === "on") {
+        if (perm === "granted") {
+          subscribePush(token).then(function () { renderPushStatusWidget(token); });
+        } else {
+          Notification.requestPermission().then(function (p) {
+            if (p === "granted") subscribePush(token).then(function () { renderPushStatusWidget(token); });
+            else renderPushStatusWidget(token);
+          });
+        }
+      } else {
+        unsubscribePush(token).then(function () { renderPushStatusWidget(token); });
+      }
+    });
+  }
+
+  document.addEventListener("lk:sajat-rendered", function (e) {
+    renderPushStatusWidget(e.detail && e.detail.token);
+  });
 
   /* ===================================================================
      INDÍTÁS

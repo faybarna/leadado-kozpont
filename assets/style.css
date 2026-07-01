@@ -660,6 +660,23 @@ body.locked .app{ display: none; }
   color: var(--new);
 }
 
+/* Hitel "rajtad a sor" — ügyfélre/leadadóra várunk, nem HQ-ra */
+.statusz-badge--rajtad{
+  background: #fdf0e0;
+  color: #b5651d;
+  font-weight: 600;
+}
+
+.pipeline-table tr.pipeline-row--rajtad td{
+  background: #fdf6ec;
+}
+.pipeline-table tr.pipeline-row--rajtad:hover td{
+  background: #faecd8;
+}
+.pipeline-table tr.pipeline-row--rajtad td:first-child{
+  box-shadow: inset 3px 0 0 #b5651d;
+}
+
 /* BSZ ping — sürgetni kell (kit kell piszkálni) */
 .ping-badge{
   display: inline-block;
@@ -681,6 +698,25 @@ body.locked .app{ display: none; }
 }
 .pipeline-table tr.pipeline-row--ping td:first-child{
   box-shadow: inset 3px 0 0 #c0392b;
+}
+
+/* "Mit változott legutóbb óta" jelzés — informatív, nem sürgetés */
+.changed-badge{
+  display: inline-block;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #e3edfa;
+  color: #2f6fb0;
+  white-space: nowrap;
+}
+
+/* Csak akkor kap kék sávot, ha nincs nála sürgősebb jelzés (piros ping / borostyán
+   "rajtad a sor") — azok mindig elsőbbséget élveznek, a kék csak kiegészítő infó. */
+.pipeline-table tr.pipeline-row--changed:not(.pipeline-row--ping):not(.pipeline-row--rajtad) td:first-child{
+  box-shadow: inset 3px 0 0 #2f6fb0;
 }
 
 .eh-cell{

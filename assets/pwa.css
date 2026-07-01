@@ -116,6 +116,24 @@
 }
 .pwa-toast-btn:hover { filter: brightness(1.08); }
 
+/* ---- Állandó push-állapot sáv — a "Saját Ügyleteim" CTA alatt ---- */
+.push-status{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:16px;
+  padding:10px 14px;
+  background: var(--card, #fafaf7);
+  border: 1px solid var(--line, #ddd5c0);
+  border-radius: var(--radius, 4px);
+}
+.push-status-icon{ font-size:16px; line-height:1; }
+.push-status-text{ flex:1; min-width:160px; font-size:13px; font-weight:600; color: var(--text, #2a322e); }
+.push-status-hint{ flex-basis:100%; font-size:12.5px; color: var(--text-soft, #6d7670); }
+.push-status-btn{ font-size:13px; padding:7px 14px; }
+.push-status-btn:disabled{ opacity:.6; cursor:default; }
+
 /* ---- Desktop: jobb alsó sarok, keskenyebb ---- */
 @media (min-width: 860px) {
   .pwa-install-card {

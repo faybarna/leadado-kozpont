@@ -105,6 +105,18 @@ curl -X POST https://leadado-push.<aldomain>.workers.dev/partners \
 ```
 A push a zárolt képernyőn is megjelenhet → **ne írj bele ügyfélnevet/összeget**.
 
+### "Mit változott" jelzés (frontend, admin nélkül)
+A `/changes` végpontot a `script.js` hívja minden Saját Ügyleteim-betöltéskor (nem
+admin-gated, csak a saját token diffjét adja vissza — nem érzékenyebb, mint a
+partner-JSON, ami már úgyis publikusan letölthető). Saját "seen" alapot tart a KV-ban
+(`seen:{token}`), FÜGGETLENÜL a push-cron `state:{token}` alapjától.
+```bash
+curl -X POST https://leadado-push.<aldomain>.workers.dev/changes \
+  -H "Content-Type: application/json" -d '{"token":"robi-7f3a2b91"}'
+```
+Válasz: `{"valtozott":["dealKey1","dealKey2",...]}` — a hívás egyben elmenti az új
+alapot is, tehát a következő hívás már csak az EZUTÁN történt változásokat adja vissza.
+
 ## Költség
 Ingyenes tier: napi 100k kérés + KV ingyenes kvóta. ~32 partner ezt meg sem közelíti.
 

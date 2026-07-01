@@ -41,6 +41,8 @@ export default {
       return cors(await handleSend(request, env));
     if (url.pathname === "/partners" && request.method === "POST")
       return cors(await handlePartners(request, env));
+    if (url.pathname === "/changes" && request.method === "POST")
+      return cors(await handleChanges(request, env));
     return cors(new Response("Leadadó Push Worker", { status: 200 }));
   },
 
@@ -151,6 +153,45 @@ async function handlePartners(request, env) {
   }
   out.sort((a, b) => a.nev.localeCompare(b.nev, "hu"));
   return json({ partnerek: out });
+}
+
+// "Mit változott legutóbb óta" — a frontend a Saját Ügyleteim minden betöltésekor
+// hívja. Az itt tárolt "seen" alap FÜGGETLEN a push-cron "state" alapjától (az 20
+// percenként frissül, nem a leadadó látogatásához igazodik) — ez a leadadó UTOLSÓ
+// OLDALBETÖLTÉSE óta változott tételeket adja vissza, majd rögtön el is menti az
+// új alapot, hogy a KÖVETKEZŐ betöltéskor csak az azóta történtek jöjjenek.
+// Több eszköz/tab esetén az első betöltés "elfogyasztja" a jelzést a többinek —
+// ismert, elfogadott korlát (a push már úgyis real-time szólt).
+const SEEN_VERSION = 1;
+async function handleChanges(request, env) {
+  let body;
+  try { body = await request.json(); } catch { return json({ error: "rossz JSON" }, 400); }
+  const { token } = body || {};
+  if (!token) return json({ error: "hiányzó token" }, 400);
+
+  let data;
+  try {
+    const res = await fetch(`${BASE}/data/partners/${token}.json`, { cf: { cacheTtl: 0 } });
+    if (!res.ok) return json({ error: "partner JSON nem elérhető" }, 404);
+    data = await res.json();
+  } catch { return json({ error: "partner JSON letöltés hiba" }, 502); }
+
+  const now = pipelineFingerprint(data.ugyletek);
+  const seenRaw = await env.SUBS.get(`seen:${token}`);
+  const seen = seenRaw ? JSON.parse(seenRaw) : null;
+
+  let valtozott = [];
+  // Első hívás VAGY régi séma → csendben nullpontozzuk (mint a push state-nél) — nincs
+  // mihez képest jelezni, false pozitívot okozna, ha a teljes listát "változottnak" jeleznénk.
+  if (seen && seen.v === SEEN_VERSION) {
+    for (const id in now) {
+      const a = seen.own[id], b = now[id];
+      if (!a || a.statusz !== b.statusz || (!a.ping && b.ping)) valtozott.push(id);
+    }
+  }
+
+  await env.SUBS.put(`seen:${token}`, JSON.stringify({ v: SEEN_VERSION, own: now }));
+  return json({ valtozott });
 }
 
 /* ===================== CRON: diff + push ===================== */

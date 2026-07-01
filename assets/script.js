@@ -197,10 +197,67 @@
 
   var LEZART_STATUSZOK = ["5. Folyósítva", "3. Megkötve"];
 
+  // Hitel-oldali "rajtad a sor" jelzés: ez a státusz azt jelenti, hogy a labda
+  // a leadadó térfelén pattog — vagy az ügyfélnek kell döntenie/lépnie (pl. ingatlan
+  // kiválasztása, dokumentum gyűjtése), vagy magának a leadadónak kell valamit tennie
+  // (bekérni, beküldeni). Egyik ág sem Barnán/Bogin múlik, ezért mindkettőt kiemeljük.
+  var RAJTAD_A_SOR_STATUSZ = "Ügyfélre/munkatársra várunk";
+
+  function isRajtadASor(statusz) {
+    return statusz === RAJTAD_A_SOR_STATUSZ;
+  }
+
   // „➕ Új lead leadása" CTA — a lead-bekérő landingre (külön Apps Script web app) visz.
   // A partner saját tokenjét (?p= az URL-ből, vagy a mentett token) hozzáfűzzük, így a
   // beérkező lead automatikusan a leadadó nevén kerül a Master Boardra.
   var LEAD_INTAKE_URL = "https://script.google.com/macros/s/AKfycbxiQb1QqT9l2nBcjCZ29XwfTmPTmOF1_zBKhKPnST86j_zMklmVTVkiirwBNiHasTyP/exec";
+
+  // A push-workerrel közös URL — szándékosan külön konstans a pwa.js-től (a két fájl
+  // nem függ egymástól), ugyanaz az érték: https://leadado-push.fayb-office.workers.dev
+  var PUSH_WORKER_URL = "https://leadado-push.fayb-office.workers.dev";
+
+  // Ugyanaz a stabil ügylet-kulcs, mint a worker `dealKey()`-je — ez alapján
+  // párosítjuk a /changes válaszát a táblázat soraihoz.
+  function dealKey(u) {
+    return (u && u.id) || ((u && u.ugyfel) || "?") + "|" + ((u && u.termek) || "?") + "|" + ((u && u.bank) || "?");
+  }
+
+  function escAttr(s) {
+    return String(s == null ? "" : s).replace(/"/g, "&quot;");
+  }
+
+  // A /changes végpont eredménye alapján utólag ráfesti a "● Frissült" jelzést
+  // a saját pipeline-tábla érintett soraira (a csapat-táblákra nem — az külön kör).
+  function markChangedRows(keys) {
+    if (!keys || !keys.length || !sajatTar) return;
+    var table = sajatTar.querySelector(".pipeline-table");
+    if (!table) return;
+    keys.forEach(function(k) {
+      var row = table.querySelector('tr[data-key="' + CSS.escape(k) + '"]');
+      if (!row) return;
+      row.classList.add("pipeline-row--changed");
+      var statuszTd = row.children[3];
+      if (statuszTd && !statuszTd.querySelector(".changed-badge")) {
+        statuszTd.insertAdjacentHTML("beforeend", ' <span class="changed-badge" title="Változott a legutóbbi látogatásod óta">● Frissült</span>');
+      }
+    });
+  }
+
+  // A worker /changes válasza (a legutóbbi oldalbetöltésed óta változott ügyletek).
+  // Ez egyben elmenti a workernél az új alapot is — hiba esetén (offline, worker
+  // fenn se áll) csendben elmarad a jelzés, az oldal ettől még normálisan működik.
+  function fetchAndMarkChanges(token) {
+    fetch(PUSH_WORKER_URL + "/changes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token: token }),
+    })
+      .then(function(res) { return res.ok ? res.json() : null; })
+      .then(function(result) {
+        if (result && result.valtozott) markChangedRows(result.valtozott);
+      })
+      .catch(function() { /* csak kényelmi extra — hiba ne törje meg az oldalt */ });
+  }
 
   function ujLeadGombHtml(token) {
     var href = LEAD_INTAKE_URL + (token ? "?p=" + encodeURIComponent(token) : "");
@@ -210,14 +267,39 @@
           '➕ Új lead leadása' +
         '</a>' +
         '<span class="sajat-cta-hint">A beküldött lead automatikusan a te neveden érkezik be.</span>' +
-      '</div>'
+      '</div>' +
+      // A tényleges tartalmat a pwa.js tölti be (állandó push be/kikapcsoló —
+      // nem csak egyszeri kártya, ld. "lk:sajat-rendered" esemény lent).
+      '<div id="push-status-mount"></div>'
     );
   }
 
   function statuszBadge(statusz) {
     var isLezart = LEZART_STATUSZOK.indexOf(statusz) !== -1;
-    var cls = isLezart ? "statusz-badge statusz-badge--lezart" : "statusz-badge";
+    var cls = "statusz-badge";
+    if (isLezart) cls += " statusz-badge--lezart";
+    else if (isRajtadASor(statusz)) cls += " statusz-badge--rajtad";
     return '<span class="' + cls + '">' + statusz + '</span>';
+  }
+
+  // Rendezés: a sürgős tételek (piros BSZ-ping VAGY "rajtad a sor" hitel-státusz)
+  // a lista élére kerülnek, a többi a Master Board-beli eredeti sorrendjében marad
+  // (stabil partícionálás — filter megőrzi a relatív sorrendet mindkét csoporton belül).
+  function isUrgent(u) {
+    return !!(u && (u.ping || isRajtadASor(u.statusz)));
+  }
+  function sortUgyletek(list) {
+    var urgent = list.filter(isUrgent);
+    var rest   = list.filter(function(u) { return !isUrgent(u); });
+    return urgent.concat(rest);
+  }
+
+  // Sor-kiemelés class-a: piros a BSZ-pingnek (erősebb, ha mindkettő igaz lenne),
+  // borostyán a hitel-oldali "rajtad a sor" státusznak.
+  function rowUrgencyClass(u) {
+    if (u && u.ping) return ' class="pipeline-row--ping"';
+    if (u && isRajtadASor(u.statusz)) return ' class="pipeline-row--rajtad"';
+    return "";
   }
 
   // BSZ ping jelzés — a Master Board "Következő feladat" cellából (PING 1 / PING 2).
@@ -308,11 +390,12 @@
       return '<div class="sajat-empty">Jelenleg nincs aktív ügyleted.</div>';
     }
 
-    var rows = data.ugyletek.map(function(u) {
+    var rendezett = sortUgyletek(data.ugyletek);
+    var rows = rendezett.map(function(u) {
       var ehStr  = u.eh ? u.eh + " EH" : "—";
       var honap  = u.elszamolasi_honap || "—";
       return (
-        "<tr" + (u.ping ? ' class="pipeline-row--ping"' : "") + ">" +
+        '<tr data-key="' + escAttr(dealKey(u)) + '"' + rowUrgencyClass(u) + ">" +
           "<td>" + u.ugyfel + "</td>" +
           "<td>" + u.termek + "</td>" +
           "<td>" + u.bank + "</td>" +
@@ -400,10 +483,10 @@
           '</div>'
         );
       }
-      var rows = tag.ugyletek.map(function(u) {
+      var rows = sortUgyletek(tag.ugyletek).map(function(u) {
         var ehStr = u.eh ? u.eh + " EH" : "—";
         return (
-          "<tr" + (u.ping ? ' class="pipeline-row--ping"' : "") + ">" +
+          "<tr" + rowUrgencyClass(u) + ">" +
             "<td>" + u.ugyfel + "</td>" +
             "<td>" + u.termek + "</td>" +
             "<td>" + u.bank + "</td>" +
@@ -519,6 +602,10 @@
         }
         sajatTar.innerHTML = html;
         updateAppBadge(data);
+        // A pwa.js ezt figyeli, hogy a #push-status-mount-ot (fenti CTA mellett)
+        // minden újratöltéskor újrarajzolja az aktuális feliratkozási állapottal.
+        document.dispatchEvent(new CustomEvent("lk:sajat-rendered", { detail: { token: token } }));
+        fetchAndMarkChanges(token);
       })
       .catch(function() {
         sajatTar.innerHTML = '<div class="card"><div class="sajat-empty">Az adatok jelenleg nem elérhetők. Kérjük, próbáld újra később.</div></div>';
