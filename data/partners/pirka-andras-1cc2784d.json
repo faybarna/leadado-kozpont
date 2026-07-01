@@ -1,7 +1,16 @@
 {
   "partner": "Pirka András Levente",
-  "frissitve": "2026.06.30. 20:55",
+  "frissitve": "2026.07.01. 07:27",
   "ugyletek": [
+    {
+      "ugyfel": "Simon Bálint",
+      "termek": "Jelzálog",
+      "bank": "UniCredit",
+      "statusz": "5. Folyósítva",
+      "eh": 113,
+      "elszamolasi_honap": "2026. Augusztus",
+      "ping": null
+    },
     {
       "ugyfel": "Martina és párja",
       "termek": "Jelzálog",
@@ -12,51 +21,6 @@
       "ping": null
     },
     {
-      "ugyfel": "Molnár Tamás",
-      "termek": "SZK",
-      "bank": "Erste",
-      "statusz": "5. Folyósítva",
-      "eh": 66,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Ökrös Szabolcs",
-      "termek": "SZK",
-      "bank": "Raiffeisen",
-      "statusz": "5. Folyósítva",
-      "eh": 58,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Kiss Ádám",
-      "termek": "Bankszámla",
-      "bank": "CIB",
-      "statusz": "3. Megkötve",
-      "eh": 50,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Papp Marianna Teréz",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 46,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Horváth Panna",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 46,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
       "ugyfel": "Pirka András Levente",
       "termek": "Bankszámla",
       "bank": "Raiffeisen",
@@ -64,15 +28,6 @@
       "eh": 33,
       "elszamolasi_honap": "",
       "ping": "PING 2"
-    },
-    {
-      "ugyfel": "Szabó Dominik",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 20,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
     },
     {
       "ugyfel": "Martina és párja",
@@ -114,33 +69,6 @@
           "eh": 233,
           "elszamolasi_honap": "2026. Július",
           "ping": null
-        },
-        {
-          "ugyfel": "Sellei Abigél",
-          "termek": "Bankszámla",
-          "bank": "Erste",
-          "statusz": "3. Megkötve",
-          "eh": 60,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
-          "ugyfel": "Sellei Abigél",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 46,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
-          "ugyfel": "Sellei Abigél",
-          "termek": "Bankszámla",
-          "bank": "UniCredit",
-          "statusz": "3. Megkötve",
-          "eh": 46,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
         }
       ]
     },
@@ -160,37 +88,18 @@
     },
     {
       "partner": "Encz Emese Sarolta",
-      "ugyletek": [
-        {
-          "ugyfel": "Encz István",
-          "termek": "Bankszámla",
-          "bank": "Erste",
-          "statusz": "3. Megkötve",
-          "eh": 60,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
-          "ugyfel": "Encz Emese",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 47,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        }
-      ]
+      "ugyletek": []
     },
     {
       "partner": "Nánási Fatime",
       "ugyletek": [
         {
           "ugyfel": "Nánási Noémi",
-          "termek": "Bankszámla",
+          "termek": "Jelzálog",
           "bank": "Erste",
-          "statusz": "3. Megkötve",
-          "eh": 60,
-          "elszamolasi_honap": "2026. Június",
+          "statusz": "5. Folyósítva",
+          "eh": 333,
+          "elszamolasi_honap": "2026. Augusztus",
           "ping": null
         },
         {
@@ -201,90 +110,16 @@
           "eh": 20,
           "elszamolasi_honap": "",
           "ping": null
-        },
-        {
-          "ugyfel": "Hidasiné Nánási Nikolett",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 20,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
-          "ugyfel": "Hidasi Zsolt Milán",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 20,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
         }
       ]
     },
     {
       "partner": "Kis Izabella",
-      "ugyletek": [
-        {
-          "ugyfel": "Márkus Molli",
-          "termek": "Bankszámla",
-          "bank": "UniCredit",
-          "statusz": "3. Megkötve",
-          "eh": 46,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
-          "ugyfel": "Kis Izabella",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 46,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        }
-      ]
+      "ugyletek": []
     },
     {
       "partner": "Gaál Boglárka",
-      "ugyletek": [
-        {
-          "ugyfel": "Túróné Burai",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 20,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
-          "ugyfel": "Bakó Klaudia",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 20,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
-          "ugyfel": "Berki",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 20,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        },
-        {
-          "ugyfel": "Berkiné Varga Beatrix",
-          "termek": "Bankszámla",
-          "bank": "Raiffeisen",
-          "statusz": "3. Megkötve",
-          "eh": 20,
-          "elszamolasi_honap": "2026. Június",
-          "ping": null
-        }
-      ]
+      "ugyletek": []
     }
   ]
 }
