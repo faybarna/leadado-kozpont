@@ -1,6 +1,6 @@
 {
   "partner": "Bencsik Pál",
-  "frissitve": "2026.07.01. 07:58",
+  "frissitve": "2026.07.01. 11:09",
   "ugyletek": [
     {
       "ugyfel": "Kovács Sándor",
@@ -111,28 +111,10 @@
       "ping": null
     },
     {
-      "ugyfel": "Spillenberg Réka",
-      "termek": "Bankszámla",
-      "bank": "MBH",
-      "statusz": "2. Kötési kiküldve",
-      "eh": 0,
-      "elszamolasi_honap": "",
-      "ping": null
-    },
-    {
       "ugyfel": "Petrikovits család",
       "termek": "Jelzálog",
       "bank": "MBH",
       "statusz": "2. Beadás alatt",
-      "eh": 0,
-      "elszamolasi_honap": "",
-      "ping": null
-    },
-    {
-      "ugyfel": "Spillengerg Réka",
-      "termek": "Jelzálog",
-      "bank": "MBH",
-      "statusz": "Ügyfélre/munkatársra várunk",
       "eh": 0,
       "elszamolasi_honap": "",
       "ping": null
