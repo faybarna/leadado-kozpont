@@ -1,6 +1,6 @@
 {
   "partner": "Kács Szabolcs",
-  "frissitve": "2026.07.01. 16:18",
+  "frissitve": "2026.07.01. 18:13",
   "ugyletek": [
     {
       "ugyfel": "Bánki-Szabó Kristóf",
@@ -39,7 +39,7 @@
       "ping": null
     },
     {
-      "ugyfel": "Pálfi Attila",
+      "ugyfel": "Pálfi Krisztián",
       "termek": "Bankszámla",
       "bank": "Erste",
       "statusz": "1. Kalkuláció kiküldve",
@@ -84,7 +84,7 @@
       "ping": null
     },
     {
-      "ugyfel": "Pálfi Attila",
+      "ugyfel": "Pálfi Krisztián",
       "termek": "Babaváró",
       "bank": "Erste",
       "statusz": "2. Beadás alatt",
