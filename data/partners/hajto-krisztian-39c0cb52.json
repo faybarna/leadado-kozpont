@@ -1,16 +1,7 @@
 {
   "partner": "Hajtó Krisztián",
-  "frissitve": "2026.06.30. 20:55",
+  "frissitve": "2026.07.01. 07:27",
   "ugyletek": [
-    {
-      "ugyfel": "Kohut Szilárd",
-      "termek": "Jelzálog",
-      "bank": "K&H",
-      "statusz": "5. Folyósítva",
-      "eh": 430,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
     {
       "ugyfel": "Pálfy András",
       "termek": "Jelzálog",
@@ -36,24 +27,6 @@
       "statusz": "5. Folyósítva",
       "eh": 282,
       "elszamolasi_honap": "2026. Július",
-      "ping": null
-    },
-    {
-      "ugyfel": "Varga Balázs",
-      "termek": "Jelzálog",
-      "bank": "Raiffeisen",
-      "statusz": "5. Folyósítva",
-      "eh": 219,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Tóth Balázs",
-      "termek": "Jelzálog",
-      "bank": "Erste",
-      "statusz": "5. Folyósítva",
-      "eh": 200,
-      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
@@ -108,15 +81,6 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 60,
       "elszamolasi_honap": "",
-      "ping": null
-    },
-    {
-      "ugyfel": "Varga Balázs",
-      "termek": "SZK",
-      "bank": "CIB",
-      "statusz": "5. Folyósítva",
-      "eh": 54,
-      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
