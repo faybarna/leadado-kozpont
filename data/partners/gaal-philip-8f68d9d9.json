@@ -1,34 +1,7 @@
 {
   "partner": "Gaál Philip Paul",
-  "frissitve": "2026.06.30. 20:55",
+  "frissitve": "2026.07.01. 07:27",
   "ugyletek": [
-    {
-      "ugyfel": "Kakucsi Sándor",
-      "termek": "SZK",
-      "bank": "CIB",
-      "statusz": "5. Folyósítva",
-      "eh": 226,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Magyariné Szén Fruzsina",
-      "termek": "SZK",
-      "bank": "MBH",
-      "statusz": "5. Folyósítva",
-      "eh": 74,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Sántha Amália",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 33,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
     {
       "ugyfel": "Sántha Amália",
       "termek": "SZK",
@@ -54,15 +27,6 @@
       "statusz": "2. Kötési kiküldve",
       "eh": 20,
       "elszamolasi_honap": "",
-      "ping": null
-    },
-    {
-      "ugyfel": "Gaál Kincső",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 20,
-      "elszamolasi_honap": "2026. Június",
       "ping": null
     },
     {
