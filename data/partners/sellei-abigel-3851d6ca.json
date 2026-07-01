@@ -1,6 +1,6 @@
 {
   "partner": "Sellei Abigél",
-  "frissitve": "2026.06.30. 20:55",
+  "frissitve": "2026.07.01. 07:27",
   "ugyletek": [
     {
       "ugyfel": "Sellei Abigél",
@@ -9,33 +9,6 @@
       "statusz": "5. Folyósítva",
       "eh": 233,
       "elszamolasi_honap": "2026. Július",
-      "ping": null
-    },
-    {
-      "ugyfel": "Sellei Abigél",
-      "termek": "Bankszámla",
-      "bank": "Erste",
-      "statusz": "3. Megkötve",
-      "eh": 60,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Sellei Abigél",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 46,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Sellei Abigél",
-      "termek": "Bankszámla",
-      "bank": "UniCredit",
-      "statusz": "3. Megkötve",
-      "eh": 46,
-      "elszamolasi_honap": "2026. Június",
       "ping": null
     }
   ]
