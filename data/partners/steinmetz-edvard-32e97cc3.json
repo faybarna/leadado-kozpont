@@ -1,7 +1,16 @@
 {
   "partner": "Steinmetz Edvárd",
-  "frissitve": "2026.07.01. 15:53",
+  "frissitve": "2026.07.01. 16:18",
   "ugyletek": [
+    {
+      "ugyfel": "Egri Diána",
+      "termek": "Jelzálog",
+      "bank": "",
+      "statusz": "1. Előminősítés alatt",
+      "eh": 300,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
     {
       "ugyfel": "Kacsics István",
       "termek": "SZK",
@@ -76,6 +85,15 @@
     },
     {
       "ugyfel": "Schettrer Mónika",
+      "termek": "Bankszámla",
+      "bank": "",
+      "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Egri Diána",
       "termek": "Bankszámla",
       "bank": "",
       "statusz": "0. Új",
