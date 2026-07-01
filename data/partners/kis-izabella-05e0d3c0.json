@@ -1,24 +1,5 @@
 {
   "partner": "Kis Izabella",
-  "frissitve": "2026.06.30. 20:55",
-  "ugyletek": [
-    {
-      "ugyfel": "Márkus Molli",
-      "termek": "Bankszámla",
-      "bank": "UniCredit",
-      "statusz": "3. Megkötve",
-      "eh": 46,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    },
-    {
-      "ugyfel": "Kis Izabella",
-      "termek": "Bankszámla",
-      "bank": "Raiffeisen",
-      "statusz": "3. Megkötve",
-      "eh": 46,
-      "elszamolasi_honap": "2026. Június",
-      "ping": null
-    }
-  ]
+  "frissitve": "2026.07.01. 07:27",
+  "ugyletek": []
 }
