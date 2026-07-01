@@ -1,6 +1,6 @@
 {
   "partner": "Gentischer Richárd",
-  "frissitve": "2026.07.01. 07:52",
+  "frissitve": "2026.07.01. 07:58",
   "ugyletek": [
     {
       "ugyfel": "Kummer Mirtill",
@@ -80,15 +80,6 @@
       "bank": "Raiffeisen",
       "statusz": "3. Bírálat",
       "eh": 33,
-      "elszamolasi_honap": "",
-      "ping": null
-    },
-    {
-      "ugyfel": "Sárkövi Ádám",
-      "termek": "Bankszámla",
-      "bank": "",
-      "statusz": "0. Új",
-      "eh": 0,
       "elszamolasi_honap": "",
       "ping": null
     }
