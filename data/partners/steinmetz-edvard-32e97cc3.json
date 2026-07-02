@@ -1,6 +1,6 @@
 {
   "partner": "Steinmetz Edvárd",
-  "frissitve": "2026.07.02. 07:27",
+  "frissitve": "2026.07.02. 09:03",
   "ugyletek": [
     {
       "ugyfel": "Egri Diána",
@@ -97,6 +97,15 @@
       "termek": "Bankszámla",
       "bank": "",
       "statusz": "0. Új",
+      "eh": 0,
+      "elszamolasi_honap": "",
+      "ping": null
+    },
+    {
+      "ugyfel": "Steinmetz Edvárd",
+      "termek": "SZK",
+      "bank": "Erste",
+      "statusz": "2. Beadás alatt",
       "eh": 0,
       "elszamolasi_honap": "",
       "ping": null
