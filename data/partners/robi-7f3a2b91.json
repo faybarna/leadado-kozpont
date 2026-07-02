@@ -1,6 +1,6 @@
 {
   "partner": "Lőrinc Róbert",
-  "frissitve": "2026.07.01. 18:53",
+  "frissitve": "2026.07.02. 07:27",
   "ugyletek": [
     {
       "ugyfel": "Nagy Petra",
@@ -269,15 +269,6 @@
           "ping": null
         },
         {
-          "ugyfel": "Pálfi Krisztián",
-          "termek": "Bankszámla",
-          "bank": "Erste",
-          "statusz": "1. Kalkuláció kiküldve",
-          "eh": 60,
-          "elszamolasi_honap": "",
-          "ping": null
-        },
-        {
           "ugyfel": "Budai Krisztián",
           "termek": "Bankszámla",
           "bank": "UniCredit",
@@ -291,6 +282,15 @@
           "termek": "Bankszámla",
           "bank": "UniCredit",
           "statusz": "1. Kalkuláció kiküldve",
+          "eh": 46,
+          "elszamolasi_honap": "",
+          "ping": null
+        },
+        {
+          "ugyfel": "Pálfi Krisztián",
+          "termek": "Bankszámla",
+          "bank": "Raiffeisen",
+          "statusz": "2. Kötési kiküldve",
           "eh": 46,
           "elszamolasi_honap": "",
           "ping": null
@@ -316,7 +316,7 @@
         {
           "ugyfel": "Pálfi Krisztián",
           "termek": "Babaváró",
-          "bank": "Erste",
+          "bank": "Raiffeisen",
           "statusz": "2. Beadás alatt",
           "eh": 16,
           "elszamolasi_honap": "",
